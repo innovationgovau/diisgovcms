@@ -1,0 +1,142 @@
+#mission {
+  text-align: center;
+  background: #FFDFDF;
+  p {
+    font-size: xx-large;
+    padding: 1em;
+  }
+}
+
+#baig-home {
+  background: #FFDFFF;
+}
+
+#resources-home {
+  background: #E1E1FF;
+}
+
+#science-home {
+  background: #E3FBE9;
+}
+
+#government-home {
+  background: #FAFBDF;
+}
+
+#news-home {
+  background: #C9EAF3
+}
+
+h2.pane-title {
+  text-align: center;
+  padding: 1em;
+}
+
+.home330{
+	max-width: 330px;
+}
+/*
+.home {
+	max-width: 300px;
+}*/
+
+
+
+#baig-home,
+#resources-home,
+#science-home,
+#government-home,
+#news-home {
+  padding: 0;
+  .view-content {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+    .home, .home330 {
+      padding: 1em;
+      margin-bottom: 2em;
+      flex: 0 1 100%;
+      padding-bottom: $horz-spacing-unit;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-self: flex-end;
+    }
+
+    .button {
+      align-self: flex-end;
+      text-align: center;
+      width: 100%;
+      a {
+        color: black;
+      }
+    }
+    .img{
+    	text-align: center;
+    }
+  p.article-author-date{
+  	text-align: center;
+  }
+  }
+
+}
+
+
+@include breakpoint(tablet) {
+
+#baig-home,
+#resources-home,
+#science-home,
+#government-home,
+#news-home {
+    .view-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    .home, .home330 {
+        margin: 0.5em;
+        flex: 0 1 30%;
+        padding-bottom: $horz-spacing-unit;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .button {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}
+
+
+@include breakpoint(desktop) {
+#baig-home,
+#resources-home,
+#science-home,
+#government-home,
+#news-home {
+   padding: 0 $horz-spacing-unit;
+    .view-content {
+      /*display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .home, .home330  {
+        align-items: flex-start;
+        padding-bottom: $horz-spacing-unit;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .button {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}
+*/
+  display: flex;
+            flex: 1 0;
+          
+            }}}

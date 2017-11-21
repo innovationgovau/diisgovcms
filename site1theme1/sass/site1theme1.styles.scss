@@ -1,0 +1,25 @@
+// Import variables, abstractions, base styles and components.
+// Uncomment the next lines and adjust them to your needs.
+//@import "variables/{YOUR FILE NAME HERE}";
+//@import "abstractions/{YOUR FILE NAME HERE}";
+//@import "base/{YOUR FILE NAME HERE}";
+//@import "components/{YOUR FILE NAME HERE}";
+
+$output-bourbon-deprecation-warnings: false !default;
+
+@import "bourbon/bourbon"; 
+
+@import "../node_modules/susy/sass/susy";
+@import "variables/colors";
+@import "variables/layout";
+@import "variables/legacy";
+
+
+@import "base/base";
+
+@import "abstractions/mixins";
+
+
+@import "base/layout";
+
+@import "components/homepage";

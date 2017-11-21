@@ -1,0 +1,32 @@
+
+ /*.search {
+    width: 50%;
+    margin: auto;}
+
+
+@include breakpoint(tablet) {
+ .search {
+    width: 50%;
+    margin: auto;
+  #edit-submit.form-submit{
+  	    float: right;
+    margin-top: -5em;
+  }
+  }
+
+}
+
+*/
+
+@include breakpoint(tablet) {
+
+	.logo{
+		margin-left:3em;
+	}
+	.search{
+		margin-right:3em;
+	}
+	.search-block-form .container-inline{
+	width: 40%;
+    float: right;
+    margin-top: -7em;}}

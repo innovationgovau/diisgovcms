@@ -1,4 +1,4 @@
-name = theme1
+name = site1theme1
 description = Please provide a description for your theme.
 base theme = omega
 screenshot = screenshot.png
@@ -8,13 +8,13 @@ core = 7.x
 ; ========================================
 ; Stylesheets
 ; ========================================
-stylesheets[all][] = css/theme1.reset.css
-stylesheets[all][] = css/theme1.styles.css
+stylesheets[all][] = css/site1theme1.reset.css
+stylesheets[all][] = css/site1theme1.styles.css
 
 ; ========================================
 ; Scripts
 ; ========================================
-scripts[] = js/theme1.behaviors.js
+scripts[] = js/site1theme1.behaviors.js
 
 ; ========================================
 ; Regions
@@ -22,5 +22,7 @@ scripts[] = js/theme1.behaviors.js
 regions[branding] = Branding
 regions[header] = Header
 regions[navigation] = Navigation
+regions[highlighted] = Highlighted
 regions[content] = Content
-regions[footer] = Footer
+regions[ffooter] = First Footer
+regions[sfooter] = Second Footer

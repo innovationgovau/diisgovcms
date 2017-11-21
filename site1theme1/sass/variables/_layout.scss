@@ -1,0 +1,46 @@
+// Set consistent vertical and horizontal spacing units.
+$vert-spacing-unit: 1rem;
+$horz-spacing-unit: 1rem;
+$all-round: $vert-spacing-unit $horz-spacing-unit;
+
+// Susy Variables
+
+$susy: (
+	columns: 12,
+	container: 1280px,
+);
+
+//Breakpoints. Names are what the size 'breaks into' from below, for example, mobile->tablet = $bp-tablet
+$bp-mobile: 399px;
+$bp-tablet: 768px;
+$bp-desk: 1280px;
+
+//Column counts. The larger the screen size, the more columns we can have.
+$mob-cols: 6;
+$tab-cols: 12;
+$desk-cols: 12;
+
+/*********************
+BREAKPOINTS
+*********************/
+
+ @mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: $bp-desk) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: 64em) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (min-width: $bp-tablet) { @content ; }
+  }
+   @else if $point == phablet {
+     @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobile {
+    @media (max-width: $bp-mobile)  { @content ; }
+  }
+}
