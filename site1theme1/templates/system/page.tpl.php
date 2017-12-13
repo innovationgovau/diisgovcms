@@ -72,7 +72,9 @@
 ?>
 <div class="l-page">
   <header class="l-header" role="banner">
+
     <div class="l-branding">
+
 		<div class="logo">
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
             <img src="<?php print base_path() . path_to_theme() . '/images/crest-inline-black.png' ?>" alt="<?php print t('Home'); ?>" />
@@ -94,12 +96,22 @@
         <?php print render($menu_block['content']); ?>
       </div>
   </header>
-
+    <div class="backtotop"><a href="#" class="back-to-top">Back to Top</a></div>
   <div class="l-main">
+
     <div class="l-content" role="main">
       <?php print render($page['highlighted']); ?>
       <?php print $breadcrumb; ?>
-      <a id="main-content"></a>
+    <div class="l-services">
+
+<div class="print"><a href="javascript:window.print()" title="Print this page">Print This Page  <img src="<?php print base_path() . path_to_theme() . '/images/icon_print.png' ?>" </a></a>
+<div id="sizeDown" title="Set font size to 85%"><img src="<?php print base_path() . path_to_theme() . '/images/down.png' ?>" </a></div>
+<div id="normal" title="Set font size to 100%"><img src="<?php print base_path() . path_to_theme() . '/images/reset.png' ?>" </a></div>
+<div id="sizeUp" title="Set font size to 115%"><img src="<?php print base_path() . path_to_theme() . '/images/up.png' ?>" </a></div>
+
+       <?php print render($page['services']); ?>
+  </div>    </div>
+    <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
         <h1><?php print $title; ?></h1>

@@ -1,0 +1,30 @@
+/* ul.breadcrumb is via the crumbs module, .breadcrumb is manually entered as the path is too short*/
+
+
+/* eg: <p><a href="/front">Home</a>&nbsp; » About us</p> */
+
+ul.breadcrumb,
+.breadcrumb {
+  display: flex;
+  margin-bottom: $vert-spacing-unit;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 1em;
+  padding-left: 0;
+  padding-bottom: 1em;
+  border-bottom: 2px solid black;
+  a {
+    border-bottom: none;
+  }
+  li {
+    &:after {
+      content: '\000BB';
+      padding: 0 $small-spacing / 2;
+    }
+    &:last-child {
+      &:after {
+        content: '';
+      }
+    }
+  }
+}
