@@ -1,0 +1,35 @@
+name = govcms theme
+description = A lightweight responsive theme based on Bootstrap.
+core = 7.x
+
+; based off static HTML mockup version:
+; https://fribibb.github.io/new-govcms/
+
+settings[breadcrumb_display] = 1
+settings[scrolltop_display] = 1
+settings[responsive_respond] = 1
+settings[bootstrap_css_cdn] = 3.3.7  ; FYI this isn't used - edit 'templates/html.tpl.php'
+; number of columns in each megamenu drop down
+settings[sub_menu_columns] = 4;
+; number of items in homepage carousel
+settings[num_carousel_items] = 8;
+
+plugins[panels][layouts] = panels-layouts
+
+scripts[] = js/jquery.fitvids.js
+scripts[] = js/govcms.js
+scripts[] = js/validate.js
+scripts[] = js/easyBakeOrderForm.js
+scripts[] = js/marge.js
+
+stylesheets[all][] = css/styles.css
+
+regions[header_menu] = Header Menu
+regions[header] = Header
+regions[content] = Content
+regions[sidebar_first] = Sidebar First
+regions[sidebar_second] = Sidebar Second
+regions[footer] = Footer
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[footer_menu] = Footer Menu

@@ -1,0 +1,44 @@
+// IE 10 & 11
+@media all and (-ms-high-contrast:none) {
+  // *::-ms-backdrop {     // IE11 only
+
+  .split.testimonial {
+    .arrow:after {
+      border: 0 !important;  // hide the arrow
+      content: "" !important;  // hide the arrow
+    }
+    .section-two {
+      padding: 0;
+      background-image: none !important;
+      img {
+        transform: translateY(-50%);
+        margin: 0;
+        padding: 40px 0 0 50px;
+        top: 150px;
+      }
+    }
+  }
+
+}
+
+
+// Microsoft Edge Browser 12+
+@supports (-ms-accelerator:true) {
+  .split.testimonial {
+    .section-two {
+      img {
+        transform: translateY(-145px);
+      }
+    }
+  }
+}
+
+
+
+// Andriod only, see http://browserhacks.com/ for logic details
+//@media screen and (min-width:0\0) {
+//  .coa-stacked:not(*:root) {
+//    display: none !important;
+//  }
+//}
+//doesn't work

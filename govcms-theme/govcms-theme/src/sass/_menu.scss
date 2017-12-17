@@ -1,0 +1,403 @@
+// Note: we use Autoprefixer to add vendor prefixes to our CSS -> https://github.com/postcss/autoprefixer
+//@import 'partials/variables'; // colors, fonts etc...
+$dark: #1A1A1A; // Cod Gray
+
+/* --------------------------------
+
+Responsive grid and media queries
+
+-------------------------------- */
+// Breakpoints
+$S:     480px;
+$M:     600px;
+$L:     1000px;
+
+// Media queries
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; }
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; }
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; }
+  }
+}
+
+// Super light grid system
+@mixin column($percentage, $float-direction:left) {
+  width: 100% * $percentage;
+  float: $float-direction;
+}
+
+
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+.cd-morph-dropdown {
+	position: relative;
+	height: 60px;
+	background-color: rgba(#fff,0.95);
+	margin-top: 2em;
+	&:before {
+		// Never visible - used in JS to check mq
+		content: 'mobile';
+		display: none;
+	}
+	.nav-trigger {
+		// menu icon - visible on small screens only
+    width: 100%;
+		display: block;
+		min-height: 60px;
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: underline;
+		}
+		.menu-text {
+			top: 3.7em;
+			position: relative;
+			text-align: center;
+			font-size: 74%;
+		}
+		span, span::after, span::before {
+			// these are the 3 lines of the menu icon
+			position: absolute;
+			background-color: $dark;
+			height: 3px;
+			width: 26px;
+		}
+		span {
+			left: 50%;
+			top: 40%;
+			bottom: auto;
+			right: auto;
+			transform: translateX(-50%) translateY(-50%);
+			transition: background-color .3s;
+		}
+		span::after, span::before {
+			content: '';
+			left: 0;
+			transition: transform .3s;
+		}
+		span::before {
+			transform: translateY(-9px);
+		}
+		span::after {
+			transform: translateY(9px);
+		}
+	}
+	&.nav-open {
+		background-color: rgba(#fff,0.85);
+		.nav-trigger span {
+			background-color: transparent;
+			&:before {
+				transform: rotate(45deg);
+			}
+			&:after {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+	.main-nav {
+		display: none;
+	}
+	.morph-dropdown-wrapper {
+		display: none;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		width: 100%;
+		padding: 1.2em 5%;
+		//box-shadow: inset 0 1px 0 shade(#fff, 10%);
+		background-color: rgba(#fff,0.95);
+		@include blurBG();
+		@supports ( -webkit-backdrop-filter: blur(10px) ) {
+			background-color: rgba(#fff,0.8);
+		}
+		z-index: 3;
+	}
+	&.nav-open .morph-dropdown-wrapper {
+		display: block;
+		border: 1px solid $highlightBright;
+		box-shadow: 0px 6px 10px rgba(#000,0.2);
+	}
+	.dropdown-list  {
+		ul {
+			list-style: none;
+			a {
+				text-align: left;
+				padding-left: 0;
+				font-size: 17.5px;
+			}
+			h2 {
+				margin-left: 0;
+			}
+		}
+		> ul {
+			padding-left: 0;
+			> li {
+				margin-bottom: 3em;
+				ul {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+	.label {
+		display: block;
+		margin-bottom: .5em;
+	}
+	.dd-content li {
+		@include clearfix;
+	}
+	// Uncomment below if we start using the gallery style drop down menus
+	//.gallery .dd-content li {
+	//	margin-bottom: 1.4em;
+	//}
+	//.gallery .dd-content a {
+	//	display: block;
+	//	&::before {
+	//		/* icon on the left */
+	//		content: '';
+	//		display: inline-block;
+	//		float: left;
+	//		height: 54px;
+	//		width: 54px;
+	//		margin-right: .6em;
+	//		background: red;
+	//		border-radius: 50%;
+	//		transition: background .2s;
+	//	}
+	//	span,
+	//	em {
+	//		display: block;
+	//		line-height: 1.2;
+	//	}
+	//	em {
+	//		font-size: 1.8rem;
+	//		padding: .4em 0 .2em;
+	//		color: $dark;
+	//	}
+	//	span {
+	//		font-size: 1.4rem;
+	//		color: shade(#fff, 35%);
+	//	}
+	//	&:hover::before {
+	//		background-color: $dark;
+	//	}
+	//}
+	//.gallery li:nth-of-type(1) a::before {
+	//	background: #f4e58a url(../img/cd-gallery-icons.svg) no-repeat 0 0;
+	//}
+	//
+	//.gallery li:nth-of-type(2) a::before {
+	//	background: #F4AF6D url(../img/cd-gallery-icons.svg) no-repeat -54px 0;
+	//}
+	//
+	//.gallery li:nth-of-type(3) a::before {
+	//	background: #DB6356 url(../img/cd-gallery-icons.svg) no-repeat -108px 0;
+	//}
+	//
+	//.gallery li:nth-of-type(4) a::before {
+	//	background: #8D4645 url(../img/cd-gallery-icons.svg) no-repeat -162px 0;
+	//}
+	.links .dd-content > ul > li > ul > li {
+		margin-top: 0.5em;
+	}
+	.links-list a,
+	.btn {
+		display: block;
+	}
+	.dd-content h2 {
+		color: $textGreyLight;
+		margin: 20px 0 10px 14px;
+    font-size: 16px;
+	}
+	@include MQ(L) {
+		position: absolute;
+		height: 80px;
+		left: 0;
+		top: 0;
+		width: 100%;
+		padding: 0;
+		text-align: center;
+		background-color: transparent;
+		&:before {
+			content: 'desktop';
+		}
+		.nav-trigger {
+			display: none;
+		}
+		.main-nav {
+			display: inline-block;
+	    float: right;
+		}
+		.main-nav > ul > li {
+			display: inline-block;
+			float: left;
+		}
+		.main-nav > ul > li > a {
+			display: block;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			transition: opacity .2s;
+		}
+		&.is-dropdown-visible .main-nav > ul > li > a {
+			opacity: .6;
+		}
+		&.is-dropdown-visible .main-nav > ul > li.dd-active > a {
+			opacity: 1;
+		}
+		.morph-dropdown-wrapper {
+			// dropdown wrapper - used to create the slide up/slide down effect when dropdown is revealed/hidden
+			display: block;
+			top: 6em;
+			// overwrite mobile style
+			width: auto;
+			padding: 0;
+			box-shadow: none;
+			background-color: transparent;
+			// Force Hardware acceleration
+			transform: translateZ(0);
+			will-change: transform;
+			transform: translateY(20px);
+			transition: transform .3s;
+		}
+		&.is-dropdown-visible .morph-dropdown-wrapper {
+			transform: translateY(0);
+		}
+		.dropdown-list {
+			position: absolute;
+			top: 0;
+			left: 0;
+			visibility: hidden;
+			transform: translateZ(0);
+			will-change: transform, width, height;
+			transition: visibility .3s;
+			box-shadow: 0 10px 20px rgba(#000, .08);
+			.no-csstransitions & {
+				display: none;
+			}
+			&::before {
+				// dropdown top triangle
+				content: '';
+				position: absolute;
+				bottom: 100%;
+				@include center(x);
+				height: 0;
+				width: 0;
+				border: 8px solid transparent;
+				border-bottom-color: #fff;
+				opacity: 0;
+				transition: opacity .3s;
+			}
+			> ul {
+				position: relative;
+				z-index: 3;
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+			}
+		}
+		&.is-dropdown-visible .dropdown-list {
+			visibility: visible;
+			transition: transform .3s, width .3s, height .3s;
+			&::before {
+				opacity: 1;
+			}
+		}
+		.dropdown {
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			visibility: hidden;
+			width: 100%;
+			transition: opacity .3s, visibility .3s;
+			&.dd-active {
+				opacity: 1;
+				visibility: visible;
+			}
+			&.move-left .dd-content {
+				transform: translateX(-100px);
+			}
+			&.move-right .dd-content {
+				transform: translateX(100px);
+			}
+		}
+		.label {
+			// hide the label on bigger devices
+			display: none;
+		}
+		.dd-content {
+			padding: 2.2em 1.8em;
+			transition: transform .3s;
+			text-align: left;
+			background-color: rgba(#fff, 0.8);
+			@include blurBG();
+			> ul {
+				@include clearfix;
+			}
+			> ul > li {
+				width: 100%;
+			}
+		}
+		.links .dd-content > ul > li {
+			margin-top: 0;
+		}
+		.links .dd-content,
+		.button .dd-content {
+			width: 18em;
+		}
+		.links-list {
+			li {
+				margin-bottom: 1em;
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+			a {
+				margin-left: 0;
+			}
+		}
+		.btn {
+			display: block;
+			width: 100%;
+			margin: 1.5em 0 0;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		.dd-content h2 {
+			color: $dark;
+			margin: 0 0 .6em;
+		}
+		.bg-layer {
+			// morph dropdown background
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 1px;
+			width: 1px;
+			background: #fff;
+			opacity: 0;
+			transition: opacity .3s;
+			transform-origin: top left;
+			transform: translateZ(0);
+			will-change: transform;
+			backface-visibility: hidden;
+		}
+		&.is-dropdown-visible .bg-layer {
+			opacity: 1;
+			transition: transform .3s, opacity .3s;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+dl.node-type-list > dt > a {
+    display: none;
+}
+
+dl.node-type-list > dt > a[href~="govcms"], dl.node-type-list > dt > a[href*="govcms"] {
+    display: block!important;
+}
+
+dl.node-type-list > dt > a[href*="page"] {
+    display: block!important;
+}
+
+dl.node-type-list > dt > a[href$="webform"] {
+    display: block!important;
+}
+
+dl.node-type-list > dt > a[href*="knowledge"] {
+    display: block!important;
+}
+
+dl.node-type-list > dt > a[href*="training"] {
+    display: block!important;
+}
+
+dl.node-type-list > dt > a[href*="main"] {
+    display: block!important;
+}

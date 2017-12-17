@@ -1,0 +1,35 @@
+ .button {
+  appearance: none;
+  border: 0;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: normal;
+
+  font-weight: 500;
+  line-height: 3;
+  text-align: center;
+  text-decoration: none;
+
+  user-select: none;
+  vertical-align: middle;
+
+
+  &:hover,
+  &:focus {
+    background-color: $corporate-accent-1;
+    color: $black;
+  }
+  &:active {
+    background-color: $corporate-primary-2;
+    color: $white;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $corporate-primary-2;
+    }
+  }
+}

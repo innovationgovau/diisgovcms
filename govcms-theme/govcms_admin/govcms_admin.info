@@ -1,0 +1,22 @@
+name = govcms_admin
+description = Administration theme for govCMS.
+core = 7.x
+base theme = shiny
+
+scripts[] = js/govcms_admin.js
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+settings[shortcut_module_link] = 1
+regions[content] = Content
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[sidebar_first] = First sidebar
+regions[footer] = Footer
+regions_hidden[] = sidebar_first
+
+
+stylesheets[all][] = css/styles.css

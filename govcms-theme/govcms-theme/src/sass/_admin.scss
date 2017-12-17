@@ -1,0 +1,16 @@
+// login page
+body.not-front.not-logged-in.page-user {
+  #block-system-main .content {
+    margin: auto;
+    margin-bottom: 2em;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  body.not-front.not-logged-in.page-user {
+    #block-system-main .content {
+      max-width: 1100px;
+    }
+  }
+}
