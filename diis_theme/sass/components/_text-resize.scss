@@ -1,0 +1,47 @@
+// text-resize.scss
+
+ul.text-resize {
+    display: inline-block;
+    float: right;
+
+    li {
+        display: inline-block;
+
+        &:nth-child(1) {
+            a:after {
+                font-size: 80%;
+            }
+        }
+
+        &:nth-child(2) {
+            a:after {
+                font-size: 100%;
+            }
+        }
+
+        &:nth-child(3) {
+            a:after {
+                font-size: 120%;
+            }
+        }
+
+        @extend %no-list;
+
+        a {
+            display: block;
+            position: relative;
+            width: 1.5em;
+            height: 1.5em;
+            overflow: hidden;
+            color: transparent !important;
+
+            &:after {
+                content: 'A';
+                position: absolute;
+                left: 50%;
+                top: 0;
+                color: #333333;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+// _testing.scss
+//
+// THIS PARTIAL IS FOR TESTING CONTENT ONLY
+// DO NOT DEPLOY TO A PRODUCTION ENVIRONMENT
+
+// Media query tests
+
+#main-content {
+    &:before {
+        font-size: 2em;
+        position: fixed;
+        bottom: 0;
+        display: block;
+        padding: 0.25 0.5em;
+        margin: 0 auto;
+        content: 'Mobile';
+        color: black;
+        background: green;
+
+        @include tablet-only {
+            content: 'Tablet';
+            background: red;
+            color: white;
+        }
+
+
+        @include desktop-only {
+            content: 'Desktop';
+            background: blue;
+            color: white;
+        }
+
+
+        @include desktop-lg {
+            content: 'Desktop large';
+            background: pink;
+        }
+    }
+}
+
+// End Media query tests

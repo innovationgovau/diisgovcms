@@ -1,0 +1,10 @@
+// _breadcrumbs.scss
+
+.block-crumbs {
+    display: none;
+
+    @include tablet {
+        display: block;
+        margin: 1em 0;
+    }
+}

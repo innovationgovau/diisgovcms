@@ -1,0 +1,14 @@
+# Stuff we don't want to track
+
+# Ignore NPM modules
+
+node_modules/
+
+# Ignore common development and temporary file extensions
+
+*log
+*.swp
+.sass-cache
+*.tmp
+*.test
+

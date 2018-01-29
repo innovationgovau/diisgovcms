@@ -1,0 +1,130 @@
+// _lists.scss
+
+// Homepage hero list widgets
+
+.pane-taxonomy-sector {
+    &.last-hero-item,
+    &.triple-col {
+        + .panel-separator {
+            clear: both;
+
+            @extend %divider;
+        }
+    }
+}
+
+.hero-list {
+    margin: 1.25em 0;
+
+    .view-header {
+        text-align: center;
+    }
+
+    h2 {
+        margin: 0;
+
+        a {
+            font-size: 20px;
+            position: relative;
+            display: block;
+            margin-top: 0;
+            margin-bottom: 1.25em;
+            padding: 1em .5em 1.5em .5em;
+            text-align: center;
+            color: white;
+            background: $minor-navy;
+
+            &:hover {
+                cursor: pointer;
+                border-color: transparent;
+                background: lighten($minor-navy, 10%);
+            }
+
+            &:focus {
+                background: lighten($minor-navy, 10%);
+            }
+
+            &.hero-list-wrap {
+                border: solid 1px transparent;
+            }
+
+            // Dropdown arrow
+            &:before {
+                position: absolute;
+                z-index: 10;
+                right: 0;
+                bottom: .7em;
+                left: 0;
+                width: .75em;
+                height: .75em;
+                margin: 0 auto;
+                content: ' ';
+                transform: rotate(-135deg);
+                border-top: solid 5px white;
+                border-right: solid 5px transparent;
+                border-bottom: solid 5px transparent;
+                border-left: solid 5px white;
+            }
+
+            &.hero-list-open {
+                // Dropdown arrow when item is open
+                &:before {
+                    bottom: .2em;
+                    transform: rotate(45deg);
+                }
+
+                // Dropdown arrow background
+                &:after {
+                    position: absolute;
+                    right: 0;
+                    bottom: -.5em;
+                    left: 0;
+                    width: 1.25em;
+                    height: 1.25em;
+                    margin: 0 auto;
+                    content: '';
+                    transform: rotate(45deg);
+                    background: $minor-navy;
+                }
+
+                &:hover,
+                &:focus {
+                    &:after {
+                        background: lighten($minor-navy, 10%);
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-list-target {
+        border: solid 1px transparent; // jQuery 'jump' animation fix
+   
+    }
+
+    .view-content {
+        font-weight: 300;
+        margin: 45px;
+    }
+
+    .view-footer {
+        clear: both;
+        margin: .75em;
+        margin-top: 2em;
+    }
+
+    .view-content ul li {
+        margin: .75em 0;
+        list-style: none;
+
+        .button {
+            text-align: left;
+        }
+    }
+
+    &.col-sm-4,
+    &.col-sm-12 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

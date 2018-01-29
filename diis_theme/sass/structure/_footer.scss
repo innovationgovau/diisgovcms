@@ -1,0 +1,29 @@
+// _footer.scss
+
+footer {
+    padding: $xl 0;
+
+    @extend %teal-top-to-navy-bottom;
+
+    color: white;
+
+    li {
+        list-style: none;
+
+        a {
+            color: white;
+        }
+    }
+
+    .region-footer-lower {
+        p {
+            text-align: center;
+        }
+    }
+}
+
+.region-bottom {
+    .block {
+        text-align: center;
+    }
+}

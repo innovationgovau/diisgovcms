@@ -1,0 +1,95 @@
+// components/_widgets.scss
+
+// Homepage panel separator
+.pane-latest-news,
+.pane-consultations {
+    @extend %divider;
+}
+
+// Homepage panel styles
+.front {
+    h2 {
+        &.pane-title {
+            font-size: 2em;
+            color: #005677;
+        }
+    }
+
+    .view-latest-news {
+        h3 {
+            font-size: 1.15em;
+            font-weight: 700;
+
+            a {
+                &:visited {
+                    color: #005677;
+                }
+            }
+        }
+
+        p {
+            font-size: 1.15em $imp;
+        }
+    }
+
+    .pane-taxonomy-sector {
+        ul {
+            li {
+                font-size: 1.3em $imp;
+                margin: .75em 0;
+                list-style: none;
+            }
+        }
+
+        .view-footer {
+            p {
+                font-size: 1.1em $imp;
+            }
+        }
+    }
+
+    .pane-latest-news,
+    .pane-consultations {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .pane-consultations {
+        [class*='col-'] {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .pane-latest-news {
+        .view-content {
+            &:after {
+                position: relative;
+                display: block;
+                clear: both;
+                content: ' ';
+            }
+        }
+    }
+
+    .view-latest-news {
+        .view-content {
+            div {
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    .view-consultations {
+        .views-field-title {
+            font-size: 1.15em;
+            font-weight: 700;
+        }
+    }
+}

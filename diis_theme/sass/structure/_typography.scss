@@ -1,0 +1,145 @@
+/* _typography.scss*/
+
+/**
+ * Fix fonts that render as bold in Firefox
+ *
+ * Put this near the top of your style.css
+ * Before any overriding styles:
+ * https://www.lockedowndesign.com/firefox-font-weight-too-bold/
+ */
+
+html {
+    font-weight: 400;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+/**
+ * Firefox specific rule
+ */
+
+@-moz-document url-prefix() {
+    body {
+        font-weight: lighter !important;
+    }
+}
+
+// End fix
+
+html {
+    font-size: $font-natural; // Set this here to define '1rem'
+
+    text-rendering: optimizeLegibility;
+
+    @include ie {
+        text-rendering: auto;
+    }
+}
+
+body {
+    font-family: "Montserrat", sans-serif $imp;
+    font-size: $font-natural;
+
+    // IE is special and cannot read Monserrat, it displays the incorrect weight
+
+    @include ie {
+        font-family: "Helvetica", sans-serif, "Times New Roman" $imp;
+    }
+
+
+    // End IE :D
+
+    #region-content {
+        *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+            font-size: unset;
+            font-size: 18px;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 22px 0 18px 0;
+    margin: 1.4rem 0 1.2rem 0;
+    color: $primary-blue $imp;
+}
+
+h1 {
+    font-size: 40px;
+    font-size: 2.888rem;
+}
+
+h2 {
+    font-size: 37px;
+    font-size: 2.7rem;
+}
+
+h3 {
+    font-size: 32px;
+    font-size: 2.3rem;
+}
+
+h4 {
+    font-size: 28px;
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 22px;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 20px;
+    font-size: 1.45rem;
+}
+
+p {
+    font-size: $font-natural;
+    font-size: 1rem;
+    line-height: 1.44;
+    margin: 14px 0;
+    margin: 1rem 0;
+}
+
+li {
+    margin: 8px 0;
+    margin: .6rem 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
+a {
+    color: $primary-blue;
+    border: solid 2px transparent;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        border-bottom: dotted 2px $primary-blue;
+    }
+
+    &:active {
+        color: $white;
+        background-color: $purple;
+    }
+}
+
+hr {
+    clear: both;
+    border: none;
+    border-top: solid 1px $off-white;
+}
