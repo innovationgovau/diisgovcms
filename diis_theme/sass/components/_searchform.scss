@@ -1,0 +1,60 @@
+// _searchform.scss
+
+.block-search {
+    margin-top: 3em;
+    clear: both;
+
+    form {
+        position: relative;
+
+        @include desktop {
+            float: right;
+        }
+
+
+        .form-type-textfield {
+            float: left;
+            width: 100%;
+
+            @include desktop {
+                float: none;
+                width: auto;
+            }
+
+
+            input {
+                border: none;
+                background: rgba($white, 0.5);
+                color: $white;
+                padding: 0.75em;
+
+                @include desktop {
+                    padding: 0.25em;
+                }
+
+
+                &[type="text"] {
+                    width: 100%;
+                    padding-right: 5em;
+
+                    @include desktop {
+                        width: auto;
+                        padding-right: inherit;
+                    }
+                }
+            }
+        }
+
+        .form-actions {
+            position: absolute;
+            top: 1em;
+            right: 0;
+
+            @include desktop {
+                position: relative;
+                top: 0;
+                right: auto;
+            }
+        }
+    }
+}

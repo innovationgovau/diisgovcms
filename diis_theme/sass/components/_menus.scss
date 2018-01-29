@@ -1,0 +1,190 @@
+// _menus.scss
+
+// MeanMenu (primary navigation)
+
+$menu-icon-size: 2.5em;
+
+#block-menu-menu-about-us {
+    display: none;
+}
+
+#meanmenu-dest {
+    margin: 0 auto 1em auto;
+}
+
+.mean-container {
+    z-index: 99999;
+    clear: both;
+
+    .mean-bar {
+        width: 90%;
+        margin: 0 auto;
+        padding: 1em;
+
+        //@include bg-opacity($minor-navy, 0.6);
+
+        @include desktop {
+            width: 100%;
+        }
+
+
+        a {
+            position: relative;
+            display: block;
+            color: $white $imp;
+
+            // Hamburger menu icon
+
+            &.meanmenu-reveal {
+                right: 1em $imp;
+                float: right;
+                width: $menu-icon-size;
+                height: $menu-icon-size;
+                color: $white $imp;
+
+                span {
+                    position: relative;
+                    display: block;
+                    height: 3px;
+                    background: $white;
+
+                    &:nth-child(2) {
+                        margin: .75em 0;
+                    }
+
+                    &:last-child {
+                        background: none;
+                    }
+                }
+            }
+
+            &.meanclose {
+                @extend %no-margin-padding;
+
+                & + .mean-nav {
+                    @include bg-opacity($minor-navy, 0.6);
+
+                    padding: 1em;
+                }
+            }
+        }
+
+        nav {
+            &.mean-nav {
+                position: relative;
+                margin-top: 4em;
+                clear: both;
+
+                .menu:first-child {
+                    // TESTING - force menu to display on load without clicking
+                    //     display: block $imp;
+               
+                }
+
+                // Submenus (ul)
+
+                ul {
+                    margin: 0;
+
+                    &.menu {
+                        @extend %no-margin-padding;
+
+                        // Submenu warppers (ul) spacing
+                        .menu {
+                            margin-top: .75em;
+
+                            .expanded {
+                                .active {
+                                    color: rgba($white, 0.7) $imp;
+                                }
+                            }
+                        }
+
+                        // submenu expand-contract icons
+                        .mean-expand {
+                            font-size: $lg $imp;
+                            font-weight: bold;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            display: inline-block;
+                            min-width: 2em;
+                            padding: .25em .6em;
+                            text-align: center;
+
+                            &:hover,
+                            &:focus,
+                            &:active {
+                                text-decoration: none;
+                            }
+                        }
+                    }
+
+                    // Menu items
+                    li {
+                        padding: 0.75em 0 0.75em 0.75em;
+                        border-bottom: solid 1px $white;
+
+                        &:last-child {
+                            border: none;
+                        }
+
+                        a {
+                            display: inline;
+                        }
+                    }
+
+                    > li {
+                        position: relative;
+
+                        @extend %no-margin-padding;
+
+                        @extend %no-list;
+
+                        li {
+                            margin-left: $lg;
+                            border-color: rgba($white, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Top Links Menu
+
+#block-menu-block-2 {
+    display: none;
+
+    @include desktop {
+        display: block;
+    }
+}
+
+.block-menu-block {
+    float: right;
+    clear: both;
+
+    .menu-name-menu-header-links-menu {
+        margin-bottom: $xl;
+
+        .menu { // ul
+            @extend %no-list;
+
+            li {
+                display: inline-block;
+                padding: 0 0.25em;
+                margin: 0;
+
+                &:nth-child(n):not(:last-child) {
+                    border-right: solid 1px $white;
+                }
+
+                a {
+                    color: $white $imp;
+                }
+            }
+        }
+    }
+}

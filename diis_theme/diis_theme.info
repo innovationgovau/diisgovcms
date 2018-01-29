@@ -1,0 +1,40 @@
+; Theme information
+name = DIIS Theme
+description = A subtheme based on the govCMS Theme. Requires govCMS theme to be enabled
+core = 7.x
+base theme = govcms_theme
+
+
+; **** OVERRIDES ****
+
+
+; **** ADDITIONS ****
+
+; Additional stylesheets
+
+stylesheets[all][] 		= stylesheets/diis_theme.css
+stylesheets[all][]		= styesheets/vendor/meanmenu.min.css
+stylesheets[all][] 		= stylesheets/ie.css
+stylesheets[print][]	= stylesheets/print.css
+
+
+; Additional JavaScript
+
+scripts[]				= js/vendor/jquery.meanmenu.min.js
+scripts[] 				= js/scripts.js
+
+
+; ***** REGIONS *****
+
+regions[page_top] 			= Page top ;system only, invisible to users
+regions[top]	 			= Top
+regions[header]				= Header
+regions[highlighted] 		= Highlighted
+;regions[sidebar_first] 	= Sidebar First
+regions[content] 			= Content
+regions[sidebar_second] 	= Sidebar Second
+regions[footer_main] 		= Footer Main
+regions[footer_lower] 		= Footer Lower
+regions[footer_minor] 		= Footer Minor
+regions[bottom] 			= Bottom
+regions[page_bottom] 		= Page bottom ; system only, invivisble to users

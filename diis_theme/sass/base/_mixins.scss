@@ -1,0 +1,105 @@
+// _mixins.scss
+
+// strip list styles
+
+%no-list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+// Building helpers
+
+%no-margin {
+    margin: 0;
+}
+
+%no-padding {
+    padding: 0;
+}
+
+%no-margin-padding {
+    @extend %no-margin;
+
+    @extend %no-padding;
+}
+
+// Layout
+
+@mixin tablet {
+    @media (min-width: #{$screen-tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$screen-desktop}) {
+        @content;
+    }
+}
+
+@mixin desktop-lg {
+    @media (min-width: #{$screen-desktop-lg}) {
+        @content;
+    }
+}
+
+@mixin mobile-only {
+    @media (max-width: #{$screen-tablet}) {
+        @content;
+    }
+}
+
+@mixin tablet-only {
+    @media (min-width: #{$screen-tablet}) and (max-width: #{$screen-desktop}) {
+        @content;
+    }
+}
+
+@mixin desktop-only {
+    @media (min-width: #{$screen-desktop}) and (max-width: #{$screen-desktop-lg}) {
+        @content;
+    }
+}
+
+// IE :(
+
+// IE 10+
+@mixin ie {
+    _:-ms-lang(x), .ie10up {
+        @content;
+    }
+}
+
+// Colours
+
+// Allow generation of opaque backgrounds from hex values:
+// https://stackoverflow.com/questions/10929458/sass-converting-hex-to-rgba-for-background-opacity
+@mixin bg-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+// Gradients
+
+%teal-top-to-navy-bottom {
+    background: $minor-teal-1;
+    background: -moz-linear-gradient(top, $minor-teal-1 0%, $minor-navy 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, $minor-teal-1), color-stop(100%, $minor-navy));
+    background: -webkit-linear-gradient(top, $minor-teal-1 0%, $minor-navy 100%);
+    background: -o-linear-gradient(top, $minor-teal-1 0%, $minor-navy 100%);
+    background: -ms-linear-gradient(top, $minor-teal-1 0%, $minor-navy 100%);
+    background: linear-gradient(to bottom, $minor-teal-1 0%, $minor-navy 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$minor-teal-1', endColorstr='$minor-navy', GradientType=0 );
+}
+
+%navy-top-to-teal-bottom {
+    background: $minor-navy;
+    background: -moz-linear-gradient(top, $minor-navy 0%, $minor-teal-1 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, $minor-navy), color-stop(100%, $minor-teal-1));
+    background: -webkit-linear-gradient(top, $minor-navy 0%, $minor-teal-1 100%);
+    background: -o-linear-gradient(top, $minor-navy 0%, $minor-teal-1 100%);
+    background: -ms-linear-gradient(top, $minor-navy 0%, $minor-teal-1 100%);
+    background: linear-gradient(to bottom, $minor-navy 0%, $minor-teal-1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$minor-navy', endColorstr='$minor-teal-1', GradientType=0 );
+}

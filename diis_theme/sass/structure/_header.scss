@@ -1,0 +1,28 @@
+// _header.scss
+
+// override govCMS header
+#top-and-first-wrapper {
+    background: none;
+}
+
+header {
+    #main-page-top {
+        padding-top: 2em;
+
+        @extend %navy-top-to-teal-bottom;
+
+        // Mission statement
+        #mission-statement {
+            border-top: solid 1px $white;
+
+            p {
+                font-size: 2em;
+                max-width: 24em;
+                margin: 0 auto;
+                padding: 1em;
+                text-align: center;
+                color: $white;
+            }
+        }
+    }
+}

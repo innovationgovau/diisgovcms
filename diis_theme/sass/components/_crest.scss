@@ -1,0 +1,53 @@
+// _crest.scss
+
+.logos {
+    float: left $imp;
+    margin: 0 $imp;
+
+    .coa-inline {
+        // inline styles
+   
+    }
+
+    .coa-titles {
+        text-shadow: none;
+
+        @include ie {
+            min-width: 20em;
+        }
+
+
+        a {
+            display: block;
+            padding: 1em;
+        }
+
+        span {
+            border: none;
+
+            &:first-child {
+                border-bottom: solid 1px $white;
+            }
+
+            &:last-child {
+                margin-top: 3px;
+            }
+        }
+
+        .coa-img {
+            max-width: 6.5em;
+
+            + div {
+                float: right;
+                margin: 20px 0 0 10px; // use px here as the crest is a fixed size and spacing must be maintained for branding purposes
+           
+            }
+        }
+
+        .coa-img,
+        span[class*='coa-lines-'] {
+            padding: 0;
+            color: white;
+        }
+    }
+}
