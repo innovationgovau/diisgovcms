@@ -88,6 +88,24 @@
 		<a class="element-invisible element-focusable" href="#meanmenu-dest">Skip to Main Navigation</a>
 		<a class="element-invisible element-focusable" href="#block-search-form">Skip to Search</a>
 	</div>
+	<div id="print-crest" class="logos">
+		<div class="coa-inline">
+			<div class="coa-titles-inline">
+				<div class="coa-titles">
+					<a href="/">
+						<img src=<?php print("/" . path_to_theme() . "/img/crest-black-256.png"); ?> alt="Home" class="coa-img" />
+						<div>
+							<span class="coa-line-one coa-lines-2">Australian Government</span>
+							<span class="coa-line-one coa-lines-1">Department of Industry,<br>Innovation and Science</span>
+						</div>
+						<p>Beta</p>
+						<span class="clearboth"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	<?php print $page_top; ?>
 	<?php print $page; ?>
 	<div id="is_tablet"></div>

@@ -95,7 +95,7 @@
 			<div class="coa-titles-inline">
 				<div class="coa-titles">
 					<a href="/">
-						<img src="/sites/all/themes/diis_theme/img/crest-black-256.png" alt="Home" class="coa-img" />
+						<img src=<?php print("/" . path_to_theme() . "/img/crest-black-256.png"); ?> alt="Home" class="coa-img" />
 						<div>
 							<span class="coa-line-one coa-lines-2">Australian Government</span>
 							<span class="coa-line-one coa-lines-1">Department of Industry,<br>Innovation and Science</span>
