@@ -1,29 +1,34 @@
 // print.scss
 
-// Variables
-
-
-@import "variables/variables";
-
 // Base
 
+@import "base/variables";
 @import "base/mixins";
+@import "base/builders";
 
 // Layout
 
-@import "structure/layout";
-@import "structure/header";
-@import "structure/footer";
+@import "structure/typography";
+
+//@import "structure/layout";
+//@import "structure/header";
+//@import "structure/footer";
+@import "structure/searchpage";
 
 // Components
 
+@import "components/print";
+
+//@import "components/animations";
+//@import "components/backtotop";
+@import "components/breadcrumbs";
+@import "components/beta";
 @import "components/button";
 @import "components/crest";
 @import "components/images";
 @import "components/menus";
 @import "components/searchform";
-@import "components/text-resize";
-@import "components/typography";
 
+//@import "components/text-resize";
 
-@import "components/print";
+//@import "components/testing";

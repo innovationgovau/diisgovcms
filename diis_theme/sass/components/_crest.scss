@@ -1,25 +1,69 @@
 // _crest.scss
 
+#print-crest {
+    display: none;
+
+    @include print {
+        display: block;
+
+        a {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
 .logos {
-    float: left $imp;
     margin: 0 $imp;
+
+    @include desktop {
+        float: left $imp;
+    }
+
 
     .coa-inline {
         // inline styles
-   
-    }
+        float: none;
 
-    .coa-titles {
-        text-shadow: none;
-
-        @include ie {
-            min-width: 20em;
+        @include mobile-sm-only {
+            position: relative;
+            z-index: 500;
+            left: -2em;
+            transform: scale(0.8);
         }
 
 
-        a {
+        @include desktop {
+            float: left;
+        }
+
+
+        @include print {
             display: block;
+            width: 100%;
+        }
+    }
+
+    .coa-titles {
+        position: relative;
+        width: 100%;
+        min-height: 8.5em;
+        text-shadow: none;
+
+        a {
+            position: absolute;
+            z-index: 500;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 20em;
             padding: 1em;
+
+            @include desktop {
+                position: relative;
+                width: auto;
+            }
         }
 
         span {
@@ -27,6 +71,10 @@
 
             &:first-child {
                 border-bottom: solid 1px $white;
+
+                @include print {
+                    border-bottom: solid 1px $black;
+                }
             }
 
             &:last-child {
@@ -37,17 +85,41 @@
         .coa-img {
             max-width: 6.5em;
 
+            @include print {
+                width: 6rem;
+            }
+
+
             + div {
                 float: right;
                 margin: 20px 0 0 10px; // use px here as the crest is a fixed size and spacing must be maintained for branding purposes
-           
+                + p {
+                    font-size: 2em;
+                    font-weight: bold;
+                    position: absolute;
+                    top: 2rem;
+                    right: -6rem;
+                }
             }
         }
 
         .coa-img,
         span[class*='coa-lines-'] {
             padding: 0;
-            color: white;
+            color: $white;
         }
     }
 }
+
+@include ie {
+    .logos {
+        .coa-titles {
+            min-width: 20em;
+        }
+    }
+}
+
+
+// @TODO: Get the Browser Hack mixins importing correctly...
+// IE :(
+//@include only_ie10_above(".logos .coa-titles", (min-width: 20em));

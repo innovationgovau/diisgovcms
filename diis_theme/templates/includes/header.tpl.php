@@ -31,7 +31,7 @@
 		</div>
 		<?php if (drupal_is_front_page()): ?>
 		<div id="mission-statement" class="container">
-			<p>Our vision is to enable growth and productivity for globally competitive industries.</p>
+			<p>We enable growth and productivity for globally competitive industries.</p>
 		</div>
 		<?php endif; ?>
 	</div>

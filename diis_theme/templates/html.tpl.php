@@ -70,12 +70,43 @@
 	<meta name="theme-color" content="#4F82A2">
 	<link rel="mask-icon" href="<?php print '/' . path_to_theme(); ?>/favicons/outline.svg" color="#4F82A2">
 	<?php print $head; ?>
-	<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400i">
-	<link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i,700,700i" >
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TKM5HKB');</script>
+	<!-- End Google Tag Manager -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+	<!-- Social media Share icons -->
+	<script>window.twttr=function(t,e,n){var i,o=t.getElementsByTagName(e)[0],r=window.twttr||{};return t.getElementById(n)?r:((i=t.createElement(e)).id=n,i.src="https://platform.twitter.com/widgets.js",o.parentNode.insertBefore(i,o),r._e=[],r.ready=function(t){r._e.push(t)},r)}(document,"script","twitter-wjs");var l=window.location,t=document.title;function linkedIn(){window.location="https://www.linkedin.com/shareArticle?mini=true&url="+l}function emailPage(){window.location="mailto:?subject="+t+"&body="+l}</script>
 	<?php print $styles; ?>
 	<?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKM5HKB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div id="skip-links">
+		<a class="element-invisible element-focusable" href="#main-content-anchor">Skip to Content</a>
+		<a class="element-invisible element-focusable" href="#meanmenu-dest">Skip to Main Navigation</a>
+		<a class="element-invisible element-focusable" href="#block-search-form">Skip to Search</a>
+	</div>
+	<div id="print-crest" class="logos">
+		<div class="coa-inline">
+			<div class="coa-titles-inline">
+				<div class="coa-titles">
+					<a href="/">
+						<img src="/sites/all/themes/diis_theme/img/crest-black-256.png" alt="Home" class="coa-img" />
+						<div>
+							<span class="coa-line-one coa-lines-2">Australian Government</span>
+							<span class="coa-line-one coa-lines-1">Department of Industry,<br>Innovation and Science</span>
+						</div>
+						<p>Beta</p>
+						<span class="clearboth"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div id="main-body">
 		<?php print $page_top; ?>
 		<?php print $page; ?>

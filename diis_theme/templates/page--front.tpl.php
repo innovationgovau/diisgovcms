@@ -51,6 +51,7 @@
 <div class="container">
 	<div class="row">
 		<?php if ($page['content']): ?>
+		<a id="main-content-anchor" tabindex="-1"></a>
 		<?php print render($page['content']); ?>
 		<?php endif; ?>
 	</div>

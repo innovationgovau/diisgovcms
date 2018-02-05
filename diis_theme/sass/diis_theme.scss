@@ -1,16 +1,15 @@
 // diis_theme.scss - main stylesheet
 
-// Variables
-
-@import "variables/variables";
-
 // Base
 
+@import "base/variables";
+@import "base/browser-hacks";
 @import "base/mixins";
 @import "base/builders";
 
 // Layout
 
+@import "structure/typography";
 @import "structure/layout";
 @import "structure/header";
 @import "structure/footer";
@@ -25,9 +24,10 @@
 @import "components/button";
 @import "components/crest";
 @import "components/images";
+@import "components/lists";
 @import "components/menus";
 @import "components/searchform";
 @import "components/text-resize";
-@import "components/typography";
+@import "components/widgets";
 
 @import "components/testing";

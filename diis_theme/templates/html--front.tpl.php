@@ -51,8 +51,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
 	<link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
 	<title><?php print $head_title; ?></title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta property="og:title" content="<?php print $head_title; ?>">
 	<meta property="og:locale" content="en_AU">
 	<meta property="og:type" content="website">
@@ -70,12 +70,24 @@
 	<meta name="theme-color" content="#4F82A2">
 	<link rel="mask-icon" href="<?php print '/' . path_to_theme(); ?>/favicons/outline.svg" color="#4F82A2">
 	<?php print $head; ?>
-	<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400i">
-	<link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i,700,700i" >
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TKM5HKB');</script>
+	<!-- End Google Tag Manager -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 	<?php print $styles; ?>
 	<?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?> homepage" <?php print $attributes;?>>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKM5HKB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div id="skip-links">
+		<a class="element-invisible element-focusable" href="#main-content-anchor">Skip to Content</a>
+		<a class="element-invisible element-focusable" href="#meanmenu-dest">Skip to Main Navigation</a>
+		<a class="element-invisible element-focusable" href="#block-search-form">Skip to Search</a>
+	</div>
 	<?php print $page_top; ?>
 	<?php print $page; ?>
 	<div id="is_tablet"></div>

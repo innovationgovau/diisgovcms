@@ -4,17 +4,8 @@
 	<section class="about" id="about">
 		<div class="container">
 			<div class="row">
-				<?php if ($breadcrumb && theme_get_setting('breadcrumb_display')): ?>
-				<div class="col-md-10 col-md-offset-1">
-					<ul class="pager back">
-						<li class="previous">
-							<?php print $breadcrumb; ?>
-						</li>
-					</ul>
-				</div>
-				<?php endif; ?>
-				<div class="col-md-12 text-center">
-					<h1 class="title" id="page-title"><?php print $title; ?></h1>
+				<div class="col-md-12">
+					<h1><?php print $title; ?></h1>
 				</div>
 			</div>
 		</div>
@@ -25,13 +16,14 @@
 	<!-- #page -->
 	<div id="page" class="clearfix">
 		<!-- #main-content -->
+		<a id="main-content-anchor" tabindex="-1"></a>
 		<div id="main-content" data-js="responsive-video">
-			<?php if ($messages || $tabs || $action_links): ?>
 			<div class="container">
 				<div id="region-highlighted">
 					<?php print render($page['highlighted']); ?>
 				</div>
 			</div>
+			<?php if ($messages || $tabs || $action_links): ?>
 			<!-- #EOF region-higlighted parent container -->
 			<div class="container">
 				<div class="col-md-12">

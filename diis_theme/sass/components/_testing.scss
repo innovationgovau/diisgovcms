@@ -1,33 +1,37 @@
 // _testing.scss
-//
-// THIS PARTIAL IS FOR TESTING CONTENT ONLY
-// DO NOT DEPLOY TO A PRODUCTION ENVIRONMENT
 
-// Media query tests
+/*
+ * THIS PARTIAL IS FOR TESTING CONTENT ONLY. 
+ * ALL CONTENT MUST BE VISIBLE ONLY TO AUTHENTICATED UESRS
+*/
+body.logged-in {
+    /* Content goes below this line:
+    ----------------------------------------------- */
 
-#main-content {
+    // Media query tests
     &:before {
-        font-size: 2em;
+        font-size: 1.2em;
         position: fixed;
         bottom: 0;
         display: block;
-        padding: 0.25 0.5em;
         margin: 0 auto;
+        padding: .25 .5em;
         content: 'Mobile';
         color: black;
         background: green;
+        z-index: 9999;
 
         @include tablet-only {
             content: 'Tablet';
-            background: red;
             color: white;
+            background: red;
         }
 
 
         @include desktop-only {
             content: 'Desktop';
-            background: blue;
             color: white;
+            background: blue;
         }
 
 
@@ -35,7 +39,17 @@
             content: 'Desktop large';
             background: pink;
         }
-    }
-}
 
-// End Media query tests
+
+        @include print {
+            content: 'Print';
+            background: red;
+        }
+    }
+
+    // End Media query tests
+
+    /*
+    ----------------------------------
+     END CONTENT */
+}

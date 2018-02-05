@@ -3,8 +3,12 @@
 .block-crumbs {
     display: none;
 
-    @include tablet {
+    @include desktop {
         display: block;
         margin: 1em 0;
+
+        .breadcrumb {
+            background-color: transparent;
+        }
     }
 }

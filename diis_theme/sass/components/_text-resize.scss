@@ -1,5 +1,13 @@
 // text-resize.scss
 
+#block-block-26 {
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+}
+
 ul.text-resize {
     display: inline-block;
     float: right;
@@ -38,7 +46,7 @@ ul.text-resize {
             &:after {
                 content: 'A';
                 position: absolute;
-                left: 50%;
+                left: 0;
                 top: 0;
                 color: #333333;
             }

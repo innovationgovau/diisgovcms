@@ -7,17 +7,21 @@
 
 header {
     #main-page-top {
-        padding-top: 2em;
+        @include desktop {
+            padding-top: 2em;
+        }
 
-        @extend %navy-top-to-teal-bottom;
+
+        @extend %dark-blue-top-to-light-blue-bottom;
 
         // Mission statement
         #mission-statement {
             border-top: solid 1px $white;
 
             p {
-                font-size: 2em;
-                max-width: 24em;
+                font-size: 2.277rem;
+                font-weight: 300;
+                max-width: 20em;
                 margin: 0 auto;
                 padding: 1em;
                 text-align: center;

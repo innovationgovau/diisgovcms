@@ -3,9 +3,9 @@
 // strip list styles
 
 %no-list {
-    list-style: none;
     margin-left: 0;
     padding-left: 0;
+    list-style: none;
 }
 
 // Building helpers
@@ -44,6 +44,12 @@
     }
 }
 
+@mixin mobile-sm-only {
+    @media (max-width: #{$screen-mobile}) {
+        @content;
+    }
+}
+
 @mixin mobile-only {
     @media (max-width: #{$screen-tablet}) {
         @content;
@@ -62,11 +68,22 @@
     }
 }
 
+@mixin print {
+    @media print {
+        @content;
+    }
+}
+
 // IE :(
 
 // IE 10+
-@mixin ie {
+/*@mixin ie {
     _:-ms-lang(x), .ie10up {
+        @content;
+    }
+}*/
+@mixin ie {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
         @content;
     }
 }
@@ -82,24 +99,30 @@
 
 // Gradients
 
-%teal-top-to-navy-bottom {
-    background: $minor-teal-1;
-    background: -moz-linear-gradient(top, $minor-teal-1 0%, $minor-navy 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, $minor-teal-1), color-stop(100%, $minor-navy));
-    background: -webkit-linear-gradient(top, $minor-teal-1 0%, $minor-navy 100%);
-    background: -o-linear-gradient(top, $minor-teal-1 0%, $minor-navy 100%);
-    background: -ms-linear-gradient(top, $minor-teal-1 0%, $minor-navy 100%);
-    background: linear-gradient(to bottom, $minor-teal-1 0%, $minor-navy 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$minor-teal-1', endColorstr='$minor-navy', GradientType=0 );
+%light-blue-top-to-dark-blue-bottom {
+    background: $primary-blue-light;
+    background: -moz-linear-gradient(top, $primary-blue-light 0%, $navy 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, $primary-blue-light), color-stop(100%, $navy));
+    background: -webkit-linear-gradient(top, $primary-blue-light 0%, $navy 100%);
+    background: -o-linear-gradient(top, $primary-blue-light 0%, $navy 100%);
+    background: -ms-linear-gradient(top, $primary-blue-light 0%, $navy 100%);
+    background: linear-gradient(to bottom, $primary-blue-light 0%, $navy 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$primary-blue-light', endColorstr='$navy', GradientType=0 );
 }
 
-%navy-top-to-teal-bottom {
-    background: $minor-navy;
-    background: -moz-linear-gradient(top, $minor-navy 0%, $minor-teal-1 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, $minor-navy), color-stop(100%, $minor-teal-1));
-    background: -webkit-linear-gradient(top, $minor-navy 0%, $minor-teal-1 100%);
-    background: -o-linear-gradient(top, $minor-navy 0%, $minor-teal-1 100%);
-    background: -ms-linear-gradient(top, $minor-navy 0%, $minor-teal-1 100%);
-    background: linear-gradient(to bottom, $minor-navy 0%, $minor-teal-1 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$minor-navy', endColorstr='$minor-teal-1', GradientType=0 );
+%dark-blue-top-to-light-blue-bottom {
+    background: $navy;
+    background: -moz-linear-gradient(top, $navy 0%, $primary-blue-light 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, $navy), color-stop(100%, $primary-blue-light));
+    background: -webkit-linear-gradient(top, $navy 0%, $primary-blue-light 100%);
+    background: -o-linear-gradient(top, $navy 0%, $primary-blue-light 100%);
+    background: -ms-linear-gradient(top, $navy 0%, $primary-blue-light 100%);
+    background: linear-gradient(to bottom, $navy 0%, $primary-blue-light 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$navy', endColorstr='$primary-blue-light', GradientType=0 );
+}
+
+%divider {
+    min-height: 1px;
+    margin: 1.25em 0;
+    border-top: solid 1px $navy;
 }
