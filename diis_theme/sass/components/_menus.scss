@@ -17,6 +17,7 @@
 }
 
 // Main nav - normally hidden by MeanMenu
+// @TODO: Make this appear inline like Superfish, to make the MeanMenu 'jump' on load more graceful
 
 #block-menu-menu-about-us {
     clear: both;
@@ -122,13 +123,20 @@ $menu-icon-size: 2.5em;
                     }
 
                     &:last-child {
+                        font-size: 80%;
                         position: absolute;
-                        bottom: 0;
+                        bottom: -3px;
                         background: none;
                     }
                 }
 
+                &:hover {
+                    border-bottom: none;
+                }
+
                 + .mean-nav {
+                    padding: 0 1em;
+
                     @include bg-opacity($minor-navy, 0.95);
                 }
             }
@@ -144,11 +152,12 @@ $menu-icon-size: 2.5em;
                     }
 
                     &:first-child {
-                        top: 5px;
+                        top: 8px;
                         transform: rotate(-45deg);
                     }
 
                     &:nth-child(2) {
+                        top: 3px;
                         margin: 0;
                     }
                 }

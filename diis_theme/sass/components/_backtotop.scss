@@ -1,35 +1,41 @@
 $arrow: 3px;
 
 a.back-to-top {
-    display: none;
     position: fixed;
-    width: 4em;
-    height: 4em;
+    z-index: 990;
     right: 3em;
     bottom: 3em;
+    display: none;
+    width: 4em;
+    height: 4em;
+    text-indent: -9999px;
     border-radius: 50%;
     background-color: $primary-grey-light;
-    z-index: 990;
-    text-indent: -9999px;
 
     &:after {
-        content: ' ';
         position: absolute;
-        top: 1.7em;
-        left: 1.25em;
+        z-index: 9999;
+        top: 1.5em;
+        right: 0;
+        left: 0;
         width: 1.5em;
         height: 1.5em;
-        background-color: transparent;
-        border-top: solid $arrow white;
-        border-left: solid $arrow white;
-        border-bottom: solid $arrow transparent;
-        border-right: solid $arrow transparent;
-        z-index: 9999;
+        margin: 0 auto;
+        content: ' ';
         transform: rotate(45deg);
+        border-top: solid $arrow white;
+        border-right: solid $arrow transparent;
+        border-bottom: solid $arrow transparent;
+        border-left: solid $arrow white;
+        background-color: transparent;
     }
 
     &:hover,
     &:active {
         background-color: $primary-grey-dark;
+    }
+
+    &:focus {
+        border: none;
     }
 }

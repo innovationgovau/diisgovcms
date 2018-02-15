@@ -90,10 +90,8 @@ body {
   }
 }
 
-body #region-content *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+body #region-content p, body #region-content span, body #region-content ul, body #region-content ol, body #region-content li, body #region-content dd, body #region-content dt, body #region-content dl, body #region-content table, body #region-content td, body #region-content th, body #region-content address, body #region-content blockquote, body #region-content a {
   font-size: unset;
-  font-size: 18px;
-  font-size: 1.3rem;
 }
 
 h1,
@@ -102,53 +100,53 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 22px 0 18px 0;
-  margin: 1.4rem 0 1.2rem 0;
+  margin: 14px 0 12px 0;
+  margin: .8em 0;
   color: #005677 !important;
 }
 
 h1 {
   font-size: 40px;
-  font-size: 2.888rem;
+  font-size: 2.888em;
 }
 
 h2 {
   font-size: 37px;
-  font-size: 2.7rem;
+  font-size: 2.7em;
 }
 
 h3 {
   font-size: 32px;
-  font-size: 2.3rem;
+  font-size: 2.3em;
 }
 
 h4 {
   font-size: 28px;
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 h5 {
   font-size: 22px;
-  font-size: 1.6rem;
+  font-size: 1.6em;
   font-weight: 600;
 }
 
 h6 {
   font-size: 20px;
-  font-size: 1.45rem;
+  font-size: 1.45em;
 }
 
 p {
   font-size: 14px;
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 1.44;
   margin: 14px 0;
-  margin: 1rem 0;
+  margin: 1em 0;
 }
 
 li {
   margin: 8px 0;
-  margin: .6rem 0;
+  margin: .6em 0;
 }
 
 strong {
@@ -171,7 +169,7 @@ a:hover, a:focus {
 
 a:active {
   color: #FFFFFF;
-  background-color: #a16aa3;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 hr {
@@ -230,9 +228,7 @@ footer,
 }
 
 .button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   border: 0;
   color: #FFFFFF;
   cursor: pointer;
@@ -241,10 +237,7 @@ footer,
   font-weight: 500;
   text-align: center;
   text-decoration: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   vertical-align: middle;
 }
 
@@ -299,8 +292,7 @@ footer,
     position: relative;
     z-index: 500;
     left: -2em;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    transform: scale(0.8);
   }
 }
 
@@ -360,6 +352,7 @@ footer,
 }
 
 .logos .coa-titles .coa-img {
+  float: left;
   max-width: 6.5em;
 }
 
@@ -370,7 +363,7 @@ footer,
 }
 
 .logos .coa-titles .coa-img + div {
-  float: right;
+  float: left;
   margin: 20px 0 0 10px;
 }
 
@@ -505,12 +498,18 @@ img {
 }
 
 .mean-container .mean-bar a.meanmenu-reveal span:last-child {
+  font-size: 80%;
   position: absolute;
-  bottom: 0;
+  bottom: -3px;
   background: none;
 }
 
+.mean-container .mean-bar a.meanmenu-reveal:hover {
+  border-bottom: none;
+}
+
 .mean-container .mean-bar a.meanmenu-reveal + .mean-nav {
+  padding: 0 1em;
   background: #00283e;
   /* The Fallback */
   background: rgba(0, 40, 62, 0.95);
@@ -518,19 +517,17 @@ img {
 
 .mean-container .mean-bar a.meanclose span:not(:last-child) {
   position: relative;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
+  transform: rotate(45deg);
+  transform-origin: center center;
 }
 
 .mean-container .mean-bar a.meanclose span:first-child {
-  top: 5px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  top: 8px;
+  transform: rotate(-45deg);
 }
 
 .mean-container .mean-bar a.meanclose span:nth-child(2) {
+  top: 3px;
   margin: 0;
 }
 
@@ -674,18 +671,6 @@ img {
   background: rgba(255, 255, 255, 0.3);
 }
 
-.block-search form .form-type-textfield input::-webkit-input-placeholder {
-  color: #FFFFFF;
-}
-
-.block-search form .form-type-textfield input:-ms-input-placeholder {
-  color: #FFFFFF;
-}
-
-.block-search form .form-type-textfield input::-ms-input-placeholder {
-  color: #FFFFFF;
-}
-
 .block-search form .form-type-textfield input::placeholder {
   color: #FFFFFF;
 }
@@ -722,13 +707,7 @@ img {
   width: 13px;
   height: 4px;
   content: '';
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  transform: rotate(45deg);
+  transform-origin: bottom right;
   background: #FFFFFF;
 }
-
-/*# sourceMappingURL=print.css.map */
-
-/*# sourceMappingURL=print.css.map */

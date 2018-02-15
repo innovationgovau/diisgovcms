@@ -1,7 +1,7 @@
 // JavaScript and jQuery goodness. Don't binge on it.
 
 (function($, Drupal) {
-	// No code above this line VVVVV 
+	// No code above this line VVVVV
 	/* -------------------------------------------- */
 
 
@@ -99,30 +99,32 @@
 	};
 
 
-	//Font resize
+	// Font resize
+	// Brought to you by a dude called Eric: https://davidwalsh.name/change-text-size-onclick-with-javascript
 	Drupal.behaviors.fontResize = {
 		attach: function(context, settings) {
 
-			// Collect the original font size on page load, to provide a fixed value 
-			// from which to calculate new sizes. This avoid relative messes, literally. 
-			var origFontSize = parseInt($('body').css('font-size'));
+			function resizeText(e, multiplier) {
 
-			$('.text-resize li a').on('click touch', function(e) {
-				// Prevent the link from going anywhere. Don't even think about it, link. 
 				e.preventDefault();
-			})
 
-			$("#text-resize-large").on('click touch', function() {
-				$("body").css("font-size", origFontSize * 1.2 + 'px');
+				if (document.body.style.fontSize == "") {
+					document.body.style.fontSize = "1.0em";
+				}
+				// Target just the main Content area
+				document.getElementById('block-system-main').style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 0.2) + "em";
+			}
+
+			$('#text-resize-large').on('click touch', function(e) {
+				resizeText(e, 1)
 			});
-
-			$("#text-resize-reset").on('click touch', function() {
-				$("body").css("font-size", origFontSize + 'px');
-			})
-
-			$("#text-resize-small").on('click touch', function() {
-				$("body").css("font-size", origFontSize * 0.8 + 'px');
-			})
+			$('#text-resize-reset').on('click touch', function(e) {
+				resizeText(e, 0);
+				//$('#main-content').css('font-size', document.body.style.fontSize); // Simply strip the inline styles to reset the font size
+			});
+			$('#text-resize-small').on('click touch', function(e) {
+				resizeText(e, -1)
+			});
 		}
 	};
 
@@ -153,6 +155,31 @@
 	};
 
 
+	Drupal.behaviors.homepageSliders = {
+		attach: function(context, settings) {
+
+			$('.hero-list h2 a').each(function() {
+
+				var $link = $(this);
+
+				$link.parents('.view-taxonomy-sector')
+					.find('.view-content, .view-content + .view-footer')
+					.wrapAll('<div class="hero-list-target"></div>');
+
+				var $target = $link.parents('.view-taxonomy-sector').find('.hero-list-target');
+
+				// Hide targets with JS, lest JS is disabled
+				$target.hide();
+
+				$link.on('click touch', function(e) {
+					e.preventDefault();
+					$link.toggleClass('hero-list-open');
+					$target.slideToggle(250).toggleClass('hero-list-target-open');
+				});
+			});
+		}
+	}
+
 
 
 	Drupal.behaviors.isMeanMenuOpen = {
@@ -163,13 +190,13 @@
 			$('.meanmenu-reveal').on('load', function() {
 				console.log('clicked');
 				/*
-					if ($(this).hasClass('meanclose')) {
-						console.log('This has class meanclose')
-						return false;
-					} else {
-						console.log('This DOES NOT have the class meanclose')
-						return true;
-					}*/
+				if ($(this).hasClass('meanclose')) {
+				console.log('This has class meanclose')
+				return false;
+				} else {
+				console.log('This DOES NOT have the class meanclose')
+				return true;
+				}*/
 			});
 		}
 	}
@@ -186,7 +213,7 @@
 					hasAnchor = false,
 					hasVoid = false;
 
-				// If the item already contains links, don't run	
+				// If the item already contains links, don't run
 				if ($this.html().indexOf('<a') >= 0) {
 					hasAnchor = true;
 					// Check for oldschool 'expand-collapse' javascript links that used 'href="javascript: void(0)"'
@@ -229,7 +256,7 @@
 					// Also remove the class from the child element
 					item.next('.expand-item').removeClass('expand-item');
 				}
-				// Check each fail condition, but not with 'else if's - this way, every problem is noted at the start 
+				// Check each fail condition, but not with 'else if's - this way, every problem is noted at the start
 				if ($alreadyLinked > 0) {
 					$message += 'It already contains the auto-link code \'.expand-link-ja-a\'. ';
 					itemFail = true;
@@ -260,13 +287,13 @@
 						$this.html(linkStart + $contents + linkEnd);
 					}
 					// Bind the Click and Keyup events to the dynamically-generated links
-					$this.children('a.expand-link-js-a').on('click keyup', function(e) {
+					$this.children('a.expand-link-js-a').on('click touch keyup', function(e) {
 						// If the spacebar is used, prevent it from scrolling the page down
 						/*if (e.keyCode == 32) {
 						// TODO: Spacebar still scrolls down #http://stackoverflow.com/questions/22559830/html-prevent-space-bar-from-scrolling-page
-							e.preventDefault();
-							console.log('spacebar detected');
-							showHide($this);
+						e.preventDefault();
+						console.log('spacebar detected');
+						showHide($this);
 						}*/
 						// Only fire if the key pressed is 'Enter', or the event type is a 'click'
 						if (e.keyCode == 13 || e.type == 'click') {
@@ -305,10 +332,10 @@
 
 	// Anything that doesn't need a Drupal Behaviour and needs to runs on doc load goes in here VVVV
 	/* $(function() {
-
-
+	
+	
 	}); // End $(function())
 	*/
-	// No code below this line VVVVV 
+	// No code below this line VVVVV
 	/* -------------------------------------------- */
 })(jQuery, Drupal);

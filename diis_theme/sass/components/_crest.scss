@@ -83,6 +83,7 @@
         }
 
         .coa-img {
+            float: left;
             max-width: 6.5em;
 
             @include print {
@@ -91,7 +92,7 @@
 
 
             + div {
-                float: right;
+                float: left;
                 margin: 20px 0 0 10px; // use px here as the crest is a fixed size and spacing must be maintained for branding purposes
                 + p {
                     font-size: 2em;
