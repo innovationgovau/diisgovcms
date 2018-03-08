@@ -12,6 +12,7 @@ body.logged-in {
     &:before {
         font-size: 1.2em;
         position: fixed;
+        z-index: 9999;
         bottom: 0;
         display: block;
         margin: 0 auto;
@@ -19,7 +20,6 @@ body.logged-in {
         content: 'Mobile';
         color: black;
         background: green;
-        z-index: 9999;
 
         @include tablet-only {
             content: 'Tablet';
@@ -48,6 +48,28 @@ body.logged-in {
     }
 
     // End Media query tests
+
+    &.logged-in {
+        #region-content {
+            background-color: #a3a3f1 !important;
+        }
+
+        #region-highlighted {
+            background-color: #f2f2f2 !important;
+        }
+
+        #region-sidebar-first {
+            background-color: #f1a3ae !important;
+        }
+
+        #region-sidebar-second {
+            background-color: #a6f3a6 !important;
+        }
+
+        #about {
+            background-color: orange !important;
+        }
+    }
 
     /*
     ----------------------------------

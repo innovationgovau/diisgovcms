@@ -1,0 +1,826 @@
+// * Based off Start Bootstrap - Stylish Portfolio Bootstrap Theme
+
+
+// Global Styles.
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  @include body-font();
+}
+
+.vertical-center {
+  padding: 30px 0;
+  img.features-logo {
+    height: 27em;
+  }
+}
+.text-vertical-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+  }
+}
+
+
+// For iPhone X.
+.container .row {
+	padding-left: constant(safe-area-inset-left);
+	padding-right: constant(safe-area-inset-right);
+}
+
+
+// General Overrides.
+a {
+  color: $secondary;
+  transition: 0.3s;
+}
+.text-primary {
+  color: $secondaryDark;
+}
+.bg-primary {
+  background-color: $secondaryDark;
+  color: #fff;
+  h3,
+  h4 {
+    color: #fff;
+  }
+  hr.small {
+    border-color: $highlight;
+    height: 0;          // needed in drupal version
+    border-bottom: 0;   // needed in drupal version
+  }
+  [class^="icon-"], [class*=" icon-"] {
+    &.text-primary {
+      color: #fff;
+    }
+  }
+}
+abbr[data-original-title],
+abbr[title],
+abbr {
+  text-decoration: none;    // stop Chrome overriding
+  // border-bottom: none;   // alternate for when many browsers support "text-decoration: underline dotted;"
+}
+
+
+
+
+
+
+
+
+// Custom Button Styles.
+.btn-primary {
+  transition: 0.3s;
+  color: $secondaryDark;
+  background-color: darken($highlightBright, 10%);
+  border-color: darken($highlight, 8%);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: darken($highlightDarker, 2%);
+  border-color: darken($highlightDark, 10%);
+}
+.btn-default {
+  color: $highlightDarker;
+  border-color: $highlightDarker;
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    color: darken($highlightDarker, 10%);
+    background-color: lighten($highlight, 38%);
+    border-color: $highlightBright;
+  }
+}
+.btn-dark {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  &:hover, &:focus, &:active {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+.btn-light {
+  &:hover,
+  &:focus,
+  &:active {
+    color: #333;
+    background-color: #fff;
+  }
+  &.btn-primary {
+    color: $secondaryDark;
+    background-color: #fff;
+    &:hover, &:focus, &:active {
+      color: #fff;
+      background-color: $highlightDark;
+    }
+  }
+}
+.light-bg .btn-light {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $highlightDarker;
+    background-color: rgba($secondary, 0.1);
+  }
+}
+.bg-primary {
+  .btn-light {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+      border-color: $highlightBright;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+#top-and-first-wrapper {
+  .btn-primary.btn-light {
+    color: $secondaryDark;
+    background-color: transparent;
+    border-color: $secondaryDark;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+      border-color: #fff;
+      background-color: rgba($highlightDarker, 0.4);
+    }
+  }
+  .btn-default.btn-light {
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: $highlightBright;
+    }
+  }
+}
+
+
+
+// Forms.
+form {
+  fieldset {
+    margin-top: 2em;
+    legend {
+      margin-bottom: 15px;
+      color: $secondaryDark;
+      .required {
+        font-size: 0.65em;
+      }
+    }
+  }
+  label {
+    margin-top: 1em;
+    color: $secondary;
+    font-weight: 400;
+    width: 100%;
+  }
+  .checkbox label {
+    margin-top: 0;
+    min-height: 25px;
+  }
+  small {
+    color: $textGreyLight;
+  }
+  .checkbox input[type=checkbox],
+  .checkbox-inline input[type=checkbox],
+  .radio input[type=radio],
+  .radio-inline input[type=radio] {
+    margin-left: 0px;
+  }
+  .form-actions {
+    margin-top: 2em;
+  }
+  .form-required {
+    color: $mandatoryColour;
+  }
+  .optional,
+  .required {
+    color: $textGreyLight;
+    float: right;
+  }
+  .btn {
+    margin-top: 20px;
+  }
+}
+
+
+// Make basic content text larger.
+.region-content {
+  .content,
+  .content .text-content,
+  .content .clients,
+  .split {
+    p,
+    li {
+      //font-size: 125%;
+      font-size: 17.5px;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+  }
+}
+
+
+// Custom Horizontal Rule.
+hr.small {
+  max-width: 100px;
+  border-color: $borderGrey;
+}
+
+
+
+
+
+// Header.
+.logos {
+  margin-top: 21px;
+  .logo {
+    margin-left: 30px;
+    // These might fix weird Android issue with wrapping.
+    clear: both;
+    float: none;
+  }
+}
+
+
+
+
+
+
+
+// Call to Action.
+.call-to-action {
+  @include background-gradient( darken($secondary,10%), $secondary, lighten($secondary,10%) );
+  padding: 50px 0;
+  .btn {
+    margin: 10px;
+    font-size: 1.3em;
+  }
+  h2 {
+    font-size: 24px; // like a h3 visually
+  }
+}
+
+
+// Nav Pill, active/selected item.
+.nav-pills > li {
+  padding: 0;
+  &.active > a {
+    font-weight: bold !important;
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+      color: $secondary;
+      border-bottom: 1px solid $highlightBright;
+    }
+  }
+  & > a {
+    border-radius: 0;
+    font-size: 17.5px;
+    &:focus,
+    &:active,
+    &:hover {
+      text-decoration: none;
+      background-color: transparent;
+      border-bottom: 1px solid #fff;
+    }
+  }
+}
+
+
+header {
+  .nav-pills {
+    margin-top: 10px;
+    font-size: 16px;
+    li a {
+      border-bottom: 1px solid transparent;
+    }
+    li.last {
+      margin-left: 5px;
+    }
+  }
+  .btn.btn-light {
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+    padding: 8px 15px;
+    margin: 2px auto;
+    border-radius: $radius;
+    font-size: 96%;
+    &:focus,
+    &:active,
+    &:hover {
+      background-color: rgba(#fff, 0.95);
+      @include body-font();
+      border-color: $highlightBright;
+      color: $highlightDarker !important;
+    }
+  }
+  .active {
+    .btn.btn-light {
+      border-color: $highlightBright;
+      box-shadow: none;
+      color: #fff;
+      &:focus,
+      &:active,
+      &:hover {
+        color: $highlightBright !important;
+      }
+    }
+  }
+}
+
+
+
+// Header section on all pages.
+#top-and-first-wrapper {
+  //@include background-gradient( $highlightBright, $aqua, darken($secondary,1%)); // this passes AA for large text everywhere on homepage
+  @include background-gradient( $highlightBright, $aqua, lighten($secondary,8%) ); // this looks a bit brighter :)  - based off linear-gradient(11deg,#69d4ac 0,#50bdba 40%,#3b7498 80%)
+  p,
+  a:not(.btn) {
+    color: $secondaryDark;
+    & .coa-titles {
+      color: #19305a;
+    }
+  }
+  .nav {
+    a {
+      &:not(.btn-light) {
+        color: #fff;
+      }
+    }
+  }
+  .pager {
+    a {
+      //border-color: $secondaryDark;
+      border-color: #fff;
+    }
+  }
+
+
+  #about {
+    background: transparent;
+    h1,
+    h2 {
+      font-size: 380%;
+      font-weight: 300;
+      padding: 0 5%;
+      //color: $secondaryDark;
+      // these lines if going with a white header: (also, change $aqua, see _vars.scss)
+      color: #fff;
+    }
+    .btn {
+      float: right;
+    }
+    .lead {
+      //color: $secondaryDark;
+      color: #fff;
+      margin-top: -5px;
+    }
+    small {
+      color: $secondaryDark;
+      font-size: 90%;
+      margin-top: -2px;
+      margin-bottom: 1.1em;
+    }
+    a {
+      text-decoration: underline;
+      color: #fff;
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+    .previous a {
+      text-decoration: none;
+    }
+    &.news-item-header {
+      h1,
+      h2 {
+        margin-bottom: 1em;
+      }
+      .news-meta {
+        color: #fff;
+        .divider {
+          opacity: .4;
+        }
+      }
+    }
+  }
+}
+
+
+
+// About ID
+#about {
+  background: #f5f7f9;
+  padding: 30px 0;
+  margin: 25px 0 0;
+  h1,
+  h2 {
+    color: $secondary;
+    margin-bottom: 1.1em;
+  }
+  .btn-lg {
+    float: left;
+  }
+}
+body.front {
+  #about {
+    small {
+      display: block;
+      float: left;
+      width: 50%;
+      margin-left: 25px;
+    }
+  }
+}
+.about,
+.services {
+  padding: 50px 0;
+}
+
+
+
+
+
+// Backgrounds.
+.icons-grid,
+.alternating {
+  padding: 30px 0;
+  &.bg-primary {
+    color: #fff;
+    //@include background-gradient(mix($highlight,$secondary,80%), mix($highlight,$secondary,20%), $secondary);
+    //@include background-gradient( $highlightBright, $aqua, $secondary);
+    @include background-gradient( mix($highlightDark,$highlight,50%), mix($aqua,lighten($secondary,8%),50%), lighten($secondary,8%) );
+    a:not(.btn) {
+      &:hover,
+      &:active,
+      &:focus {
+        color: #fff;
+        [class^="icon-"],
+        [class*=" icon-"] {
+          color: #fff;
+        }
+      }
+    }
+    a {
+      color: #fff;
+    }
+    [class*=" icon-"],
+    [class^=icon-] {
+      :before {
+        @include color-gradient($secondary, $highlightDark);
+      }
+    }
+  }
+}
+
+
+
+
+// Used on "Why use govCMS?" and support homepage.
+.icons-grid {
+  padding: 25px 0;
+  h2 {
+    margin-bottom: 2em;
+  }
+  span.int,
+  [class^="icon-"],
+  [class*=" icon-"] {
+    transition: all .2s;
+    border: 2px solid;
+    border-radius: 100%;
+    position: relative;
+    line-height: 2em;
+    vertical-align: middle;
+    display: inline-block;
+    min-width: 104px;
+    br {
+      border-color: #fff;
+      margin: 1em;
+    }
+  }
+  span.int {
+    font-size: 3em;
+    line-height: 2.35em;
+    min-width: 2.45em;
+    font-weight: 300;
+  }
+  h3,
+  h4 {
+    margin-top: 1em;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .grid-item {
+    margin-bottom: 3em;
+    display: block;
+    p {
+      color: $textGrey;
+      padding-top: 0.4em;
+    }
+  }
+  a.grid-item {
+    transition: all .2s;
+    color: $highlightDark;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      color: $secondary;
+      [class^="icon-"],
+      [class*=" icon-"],
+      p {
+        color: $secondary;
+      }
+    }
+    [class^="icon-"],
+    [class*=" icon-"] {
+      color: $highlightDark;
+    }
+    h2,
+    h3,
+    h4 {
+      text-decoration: underline;
+    }
+  }
+  &.bg-primary {
+    a.grid-item {
+      [class^="icon-"],
+      [class*=" icon-"] {
+        color: #fff;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: 0.85;
+        h2,
+        h3,
+        h4 {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .btn {
+    margin: 0.3em 0 1em 0;
+  }
+  &.light {
+    background: #fff;
+    color: $textGrey;
+    h3, h4, p, span, i {
+      //color: $secondary !important;   makes it look like a link, but its not.
+      color: $secondaryDark !important;
+    }
+  }
+}
+
+
+
+
+
+
+// Split section
+.split {
+  background: linear-gradient(90deg, #fff 50%, #f5f7f9 50%);
+  .container {
+    .section-one,
+    .section-two {
+      //h2 {
+      //  color: $secondary;
+      //}
+      p > a {
+        text-decoration: underline;
+      }
+    }
+  }
+  .section-one {
+    // padding: 50px 80px 50px 0; not on mobile thanks
+    .btn {
+      margin: 1.75em 0 1em 0;
+    }
+  }
+  .section-two {
+    // padding: 50px 0 50px 80px; not on mobile thanks
+    label {
+      margin-top: 0.5em;
+      font-weight: 300;
+      color: $secondaryDark;
+    }
+    .btn {
+      margin-top: 1em;
+    }
+    input {
+      text-align: right;
+      padding: 6px 2px;
+    }
+  }
+  .arrow:after {
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid #fff;
+    content: " ";
+    float: right;
+    position: absolute;
+    display: inherit;
+    right: -59px;
+    top: 33%;
+    top: calc(50% - 51px);
+    z-index: 1;
+  }
+  &.testimonial {
+    .section-two {
+      img {
+        margin-left: 100px;
+        margin-right: 30px;
+        height: auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    blockquote {
+      border-left: 0;
+      margin: 1em;
+      margin-right: 3em;
+      quotes: "\201C" "\201D" "\2018" "\2019";
+      &:before,
+      &:after {
+        color: $highlight;
+        font-size: 5em;
+      }
+      &:before {
+        content: open-quote;
+        line-height: 0;
+        margin-right: 0.05em;
+        vertical-align: -0.32em;
+        margin-left: -0.45em;
+      }
+      &:after {
+        content: close-quote;
+        line-height: 0.15em;
+        float: right;
+        margin-top: 0.48em;
+        margin-right: -0.41em;
+        opacity: 0.4;
+      }
+    }
+    cite {
+      font-style: normal;
+      span {
+        display: block;
+      }
+      .cite-name {
+        color: $highlightDarker;
+      }
+      .cite-pos {
+        color: $textGreyLight;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+// Footer
+footer {
+  padding: 50px 0;
+  ul.social {
+    margin-bottom: 0;
+    a {
+      color: $secondary;
+      opacity: 0.9;
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: 1;
+        text-decoration: none;
+        color: $highlightDark;
+      }
+      i.icon-community-bubble {   // Dodgy quick fix  -  TODO: re-do svg with more padding (make it smaller) and then add it into icon font
+        font-size: 43px;
+        top: -2px;
+        position: relative;
+      }
+    }
+  }
+  .region-footer-menu,
+  .small-links {
+    padding-top: 4px;
+    li {
+      margin-right: 14px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+.pager {
+  li {
+    &>a,
+    &>span {
+      border-radius: 6px;
+    }
+    a {
+      text-decoration: none;
+    }
+    .pager-current.first {
+      margin-right: 0.4em;
+    }
+  }
+  &.back {
+    a {
+      background-color: transparent;
+      &:hover {
+        background-color: $highlightDark;
+      }
+    }
+  }
+}
+
+
+
+
+
+// Required overrides for new colour scheme, but should be done properly
+//#top-and-first-wrapper,
+//.alternating.bg-primary,
+//.icons-grid.bg-primary {
+//  // One of these:
+//  // background: linear-gradient(11deg,#5FD7C9, #5EBBC7, #337bab);  // nice version of the existing colours (roughly)
+//  background: linear-gradient(11deg, $bubbleGum, #4a6f9d);          // different colour scheme, but nice assuming we update the logo to drop the green
+//}
+//#clients .highlight,
+//#clients h2 {
+//  color: #fff;
+//}
+//.call-to-action {
+//  background: linear-gradient(11deg,$brighterBlue,$brighterBlueFaded);
+//}
+//.bg-primary .btn-light,
+//header .btn.btn-light {
+//  color: #fff;
+//  border-color: #fff;
+//  &:hover,
+//  &:active,
+//  &:focus {
+//    color: $bubbleGum;
+//    border-color: $bubbleGum;
+//    background-color: $secondary;
+//  }
+//}
+//.btn-primary {
+//  color: $secondary;
+//  border-color: $secondary;
+//  background-color: $bubbleGum;
+//  &:active,
+//  &:focus,
+//  &:hover {
+//    color: $bubbleGum;
+//    border-color: $bubbleGum;
+//    background-color: $secondary;
+//  }
+//}
+//.btn-default {
+//  color: $secondary;
+//  border-color: $secondary;
+//}
+//footer ul.social a {
+//  &:active, &:focus, &:hover {
+//    color: $bubbleGum;
+//  }
+//}

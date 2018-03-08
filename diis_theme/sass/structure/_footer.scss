@@ -1,18 +1,66 @@
 // _footer.scss
-
 footer {
     padding: $xl 0;
+    margin-top: 2em;
     color: white;
+    line-height: 15px;
 
     @extend %light-blue-top-to-dark-blue-bottom;
 
     a {
         color: white;
+        display: inline-block;
+        max-width: 100%;
+        text-decoration: none;
 
         &:hover,
         &:focus {
             color: $white;
             border-bottom-color: $white;
+        }
+    }
+
+    #footer_second nav li a,
+    #footer_third nav li a,
+    #footer_first nav li a {
+        color: white;
+        display: inline-block;
+        max-width: 100%;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: $white;
+            border-bottom-color: $white;
+            background: none;
+        }
+    }
+
+    #footer_third nav .last li {
+        margin-top: 1em;
+        display: block;
+    }
+
+    #footer_third p.nolink {
+        font-size: 14px;
+        font-weight: bold;
+        color: $white;
+        margin-bottom: auto;
+    }
+
+    #footer_third .wepweb ul li {
+        display: block;
+        margin: auto;
+        padding-left: 3px;
+    }
+
+    #footer_third .wepweblast ul {
+        padding-top: 30px;
+
+        li {
+            display: block;
+            margin: auto;
+            padding-left: 3px;
         }
     }
 
@@ -73,9 +121,7 @@ footer {
             ul.menu a {
                 color: white;
             }
-        }
-
-        // Social media Follow icons
+        } // Social media Follow icons
         > nav {
             &:last-child {
                 a {
@@ -97,9 +143,7 @@ footer {
                 }
             }
         }
-    }
-
-    // Apply top and bottom margins to footer sections
+    } // Apply top and bottom margins to footer sections
     div[id^='footer_'] {
         margin: 1.5em 0;
 
@@ -138,5 +182,26 @@ footer {
         p {
             font-size: .85rem;
         }
+    }
+}
+
+footer {
+    font-size: .95rem;
+}
+
+#footer_second nav li a,
+#footer_third nav li a {
+    position: relative;
+    display: block;
+    padding: 0px;
+}
+
+#footer_first ul li {
+    display: block;
+
+    a {
+        position: relative;
+        display: block;
+        padding: 0px;
     }
 }

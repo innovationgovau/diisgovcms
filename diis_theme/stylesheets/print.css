@@ -190,18 +190,26 @@ footer,
   display: block;
 }
 
-.block-crumbs {
+.block-crumbs-wrapper {
   display: none;
+  margin: 1em 0;
 }
 
 @media (min-width: 62.1rem) {
-  .block-crumbs {
+  .block-crumbs-wrapper {
     display: block;
-    margin: 1em 0;
   }
-  .block-crumbs .breadcrumb {
-    background-color: transparent;
-  }
+}
+
+.block-crumbs-wrapper li + li:before {
+  padding: 0;
+  content: '> ';
+  color: black;
+}
+
+.block-crumbs-wrapper .breadcrumb {
+  padding: 0;
+  background-color: transparent;
 }
 
 #top p.beta {
@@ -228,36 +236,47 @@ footer,
 }
 
 .button {
-  appearance: none;
-  border: 0;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
   font-size: normal;
   font-weight: 500;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   text-align: center;
-  text-decoration: none;
-  user-select: none;
   vertical-align: middle;
+  text-decoration: none;
+  color: #FFFFFF;
+  border: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .button:hover, .button:focus {
-  background-color: #9cd9e0;
   color: #000000;
+  background-color: #9cd9e0;
 }
 
 .button:active {
-  background-color: #00283e;
   color: #FFFFFF;
+  background-color: #00283e;
 }
 
 .button:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: .5;
 }
 
 .button:disabled:hover {
   background-color: #00283e;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  font-size: inherit;
+  font-family: "Montserrat", sans-serif;
 }
 
 #print-crest {
@@ -292,7 +311,8 @@ footer,
     position: relative;
     z-index: 500;
     left: -2em;
-    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 
@@ -310,6 +330,8 @@ footer,
 }
 
 .logos .coa-titles {
+  font-family: 'Times New Roman', Arial;
+  font-weight: bold;
   position: relative;
   width: 100%;
   min-height: 8.5em;
@@ -333,11 +355,21 @@ footer,
   }
 }
 
+.logos .coa-titles a:after {
+  position: relative;
+  clear: both;
+  width: 100%;
+  content: '';
+}
+
 .logos .coa-titles span {
+  display: block;
   border: none;
 }
 
 .logos .coa-titles span:first-child {
+  margin-bottom: 3px;
+  padding-bottom: 3px !important;
   border-bottom: solid 1px #FFFFFF;
 }
 
@@ -349,6 +381,12 @@ footer,
 
 .logos .coa-titles span:last-child {
   margin-top: 3px;
+}
+
+.logos .coa-titles p {
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
 }
 
 .logos .coa-titles .coa-img {
@@ -393,6 +431,7 @@ img {
 
 #skip-links a {
   visibility: none;
+  width: 100%;
   padding: .5em;
   color: #FFFFFF;
   background-color: #58595b;
@@ -404,6 +443,7 @@ img {
 
 #block-menu-menu-about-us {
   clear: both;
+  display: none;
 }
 
 #block-menu-menu-about-us ul {
@@ -517,13 +557,16 @@ img {
 
 .mean-container .mean-bar a.meanclose span:not(:last-child) {
   position: relative;
-  transform: rotate(45deg);
-  transform-origin: center center;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
 }
 
 .mean-container .mean-bar a.meanclose span:first-child {
   top: 8px;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .mean-container .mean-bar a.meanclose span:nth-child(2) {
@@ -545,11 +588,11 @@ img {
   margin: 0;
 }
 
-.mean-container .mean-bar nav.mean-nav ul.menu .menu {
+.mean-container .mean-bar nav.mean-nav ul.menu .dropdown-menu {
   margin-top: .75em;
 }
 
-.mean-container .mean-bar nav.mean-nav ul.menu .menu .expanded .active {
+.mean-container .mean-bar nav.mean-nav ul.menu .dropdown-menu .expanded .active {
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
@@ -605,6 +648,17 @@ img {
   }
 }
 
+#block-menu-block-2 ul li a {
+  position: relative;
+  display: block;
+  padding: 0;
+}
+
+#block-menu-block-2 ul li a:hover, #block-menu-block-2 ul li a:focus {
+  border-bottom-color: #FFFFFF;
+  background: none;
+}
+
 .block-menu-block {
   float: right;
   clear: both;
@@ -626,6 +680,14 @@ img {
 
 .block-menu-block .menu-name-menu-header-links-menu .menu li a {
   color: #FFFFFF !important;
+}
+
+form .btn {
+  margin-top: 0;
+}
+
+.form-control {
+  height: auto;
 }
 
 .block-search {
@@ -653,43 +715,66 @@ img {
   }
 }
 
-.block-search form .form-type-textfield {
+.block-search form .btn {
+  padding: 0 !important;
+}
+
+.block-search form #edit-submit,
+.block-search form #edit-submit--2 {
+  display: none;
+}
+
+.block-search form .input-group {
+  display: block;
   margin: .5em auto;
 }
 
 @media (min-width: 62.1rem) {
-  .block-search form .form-type-textfield {
+  .block-search form .input-group {
     float: none;
     width: auto;
   }
 }
 
-.block-search form .form-type-textfield input {
+.block-search form .input-group input {
   padding: .75em;
   color: #FFFFFF;
   border: none;
+  border-radius: 0;
   background: rgba(255, 255, 255, 0.3);
 }
 
-.block-search form .form-type-textfield input::placeholder {
+.block-search form .input-group input::-webkit-input-placeholder {
   color: #FFFFFF;
 }
 
-.block-search form .form-type-textfield input[type='text'] {
+.block-search form .input-group input:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+.block-search form .input-group input::-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+.block-search form .input-group input::placeholder {
+  color: #FFFFFF;
+}
+
+.block-search form .input-group input[type='text'] {
   width: calc(100% - 3em);
 }
 
-.block-search form .form-actions {
+.block-search form .input-group .input-group-btn {
   position: absolute;
   top: .5em;
-  right: 0;
+  right: 20px;
 }
 
-.block-search form .form-actions .form-submit {
+.block-search form .input-group .input-group-btn .btn-primary {
   font-size: 0;
   position: relative;
   z-index: 10;
-  top: 0;
+  top: 5px;
   width: 25px;
   height: 25px;
   cursor: pointer;
@@ -699,15 +784,52 @@ img {
   background-color: transparent;
 }
 
-.block-search form .form-actions:after {
+.block-search form .input-group .input-group-btn .btn-primary .icon.glyphicon {
+  display: none;
+}
+
+.block-search form .input-group .input-group-btn:after {
   position: absolute;
   z-index: 9;
-  right: -3px;
-  bottom: -4px;
+  right: -24px;
+  bottom: -9px;
   width: 13px;
   height: 4px;
   content: '';
-  transform: rotate(45deg);
-  transform-origin: bottom right;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
   background: #FFFFFF;
 }
+
+#region-content #edit-basic:before {
+  content: "Enter your keywords:";
+  font-weight: bold;
+}
+
+#region-content #edit-basic button {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: black;
+  background-color: #d3d3d3;
+  border-color: black;
+  border-radius: 0px;
+}
+
+#region-content .glyphicon-search {
+  margin: .5em;
+  border-radius: 0px;
+}
+
+#region-content #edit-basic .input-group-btn {
+  padding-left: 1em;
+}
+
+#region-content .glyphicon-search:before {
+  font-family: "Montserrat", sans-serif !important;
+  content: "Search";
+  padding: 2em;
+}
+
+/*# sourceMappingURL=print.css.map */

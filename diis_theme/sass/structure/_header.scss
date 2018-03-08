@@ -1,10 +1,5 @@
 // _header.scss
 
-// override govCMS header
-#top-and-first-wrapper {
-    background: none;
-}
-
 header {
     #main-page-top {
         @include desktop {
@@ -28,5 +23,19 @@ header {
                 color: $white;
             }
         }
+    }
+}
+
+#about {
+    margin: 0;
+    padding: 1em 0;
+    background-color: transparent;
+
+    .page-header {
+        border: none;
+    }
+
+    h1 {
+        margin-bottom: 0;
     }
 }

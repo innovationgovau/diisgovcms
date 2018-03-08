@@ -14,7 +14,42 @@
 }
 
 .hero-list {
-    margin: 1.25em 0;
+    padding: 0;
+
+    @include tablet {
+        &:nth-child(odd) {
+            clear: left;
+        }
+    }
+
+
+    @include desktop {
+        max-width: none;
+        margin: 0;
+
+        &:nth-child(odd) {
+            clear: none;
+        }
+
+        &:nth-child(4n) {
+            clear: left;
+        }
+    }
+
+
+    @media only screen and (max-width: 768px) {
+        max-width: 80%;
+        margin: 0 auto;
+
+        .content {
+            overflow-y: hidden;
+            height: 15em;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
 
     .view-header {
         text-align: center;
@@ -102,9 +137,16 @@
    
     }
 
+    .view-header .img-responsive {
+        display: inline-block;
+        max-width: 100%;
+        height: auto;
+    }
+
     .view-content {
         font-weight: 300;
-        margin: 45px;
+
+        /*margin: 45px;*/
     }
 
     .view-footer {
@@ -126,5 +168,33 @@
     &.col-sm-12 {
         padding-right: 0;
         padding-left: 0;
+    }
+}
+
+// Homepage Popular Links list
+
+.field-name-field-most-popular-link {
+    margin: 1.25em 0;
+
+    & > .field-items {
+        & > .field-item {
+            display: block;
+            float: left;
+            width: 100%;
+            margin: .5em 0;
+
+            @include tablet {
+                width: 50%;
+            }
+
+
+            @include desktop {
+                width: 33%;
+
+                &:nth-child(3n+1) {
+                    clear: left;
+                }
+            }
+        }
     }
 }

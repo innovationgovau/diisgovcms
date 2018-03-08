@@ -1,0 +1,131 @@
+// Styles for cards of all-sites page
+// - blatantly stolen from timhurely.net's SCSS (also by Tim), then mildly modded..
+.sortableList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .card {
+    flex: 0 0 23%;
+    border-radius: $radius;
+    background: #fff;
+    border: 1px solid $borderGrey;
+    margin: 0 1% 4ex;
+    text-align: left;
+    text-decoration: none;
+    transition: color 0.2s, background-colour 0.2s, border-colour 0.2s;
+    position: relative;
+    vertical-align: top;
+    overflow-wrap: break-word;
+    min-width: 18em;
+    img,
+    svg {
+      border-top-left-radius: $radius - 1;
+      border-top-right-radius: $radius  - 1;
+      min-height: 155px;
+      background: #fff;
+      margin-bottom: 10px !important;
+      width: 100%;
+    }
+    h2,
+    h3 {
+      font-weight: 300;
+      margin: 10px 20px;
+      color: black;
+      transition: color 0.2s;
+      margin-bottom: 0.8em;
+    }
+    p {
+      font-size: 16px;
+      margin: 10px 20px;
+      color: black;
+      opacity: 0.6;
+      transition: all 0.2s;
+      padding-bottom: 2em;
+    }
+    &.disabled {
+      cursor: not-allowed;
+    }
+    .fake-link {
+      line-height: 22px;
+      display: block;
+      height: 17px;
+      border-bottom: 1px solid transparent;
+      transition: all 0.2s;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      opacity: 1;
+      font-weight: 300;
+      &:not(.soon) {
+        text-decoration: underline;
+        color: $highlightDark;
+      }
+      &.soon {
+        color: $textGreyLight;
+        border: 1px solid rgba($borderGrey,0.8);
+        padding: 10px 9px 13px 9px;
+        border-radius: $radius;
+        line-height: 0.1em;
+        bottom: 0;
+      }
+    }
+    i {
+      position: absolute;
+      right: 7px;
+      bottom: 0;
+      color: $secondary;
+      opacity: 0.1;
+      font-size: 1.2em;
+    }
+  }
+  a.card {
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: lighten($secondary, 68%);
+      border-color: $highlight;
+      .fake-link {
+        color: #333;
+      }
+      h2,
+      h3 {
+        color: $secondary;
+      }
+      i {
+        opacity: 0.6;
+      }
+    }
+    &:active,
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px $highlight;
+    }
+  }
+}
+body.page-support-training {
+  .sortableList {
+    margin-top: 50px;
+    .card {
+      flex: 0 0 31%;
+      min-width: 295px;
+      &:hover {
+        .soon {
+          border: 1px solid $highlight;
+        }
+      }
+      h2 {
+        margin-top: 1.1em;
+        margin-bottom: 0.5em;
+      }
+      p {
+        padding-bottom: 0.35em;
+      }
+    }
+  }
+  // Dodgy but effective fix to remove the black bars from sides of YT vid embeds while playing / stop cropping of YT embed preview image
+  .fluid-width-video-wrapper iframe,
+  .fluid-width-video-wrapper object,
+  .fluid-width-video-wrapper embed {
+    height: 113%;
+  }
+}

@@ -10,10 +10,10 @@
 						<div class="coa-titles-inline">
 							<div class="coa-titles">
 								<a href="/">
-									<img src=<?php print("/" . path_to_theme() . "/img/crest-64.png"); ?> alt="Home" class="coa-img" />
+									<img src=<?php print("/" . drupal_get_path('theme',$GLOBALS['theme']) . "/img/crest-64.png"); ?> alt="Home" class="coa-img" />
 									<div>
 										<span class="coa-line-one coa-lines-2">Australian Government</span>
-										<span class="coa-line-one coa-lines-1">Department of Industry,<br>Innovation and Science</span>
+										<span class="coa-line-one coa-lines-1"><?php $node = node_load(13256); print $node->body['und'][0]['value']; ?></span>
 									</div>
 									<span class="clearboth"></span>
 								</a>
@@ -31,7 +31,7 @@
 		</div>
 		<?php if (drupal_is_front_page()): ?>
 		<div id="mission-statement" class="container">
-			<p>We enable growth and productivity for globally competitive industries.</p>
+			<?php $node = node_load(13281); print $node->body['und'][0]['value']; ?>
 		</div>
 		<?php endif; ?>
 	</div>

@@ -48,14 +48,21 @@
         }
     }
 
+    .pane-bean-most-popular,
     .pane-latest-news,
     .pane-consultations {
-        padding-left: 0;
-        padding-right: 0;
+        @include desktop {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 
     .pane-consultations {
-        [class*='col-'] {
+        .views-row {
+            padding: 1.25em;
+        }
+
+        *[class*='col-'] {
             padding-left: 0;
             padding-right: 0;
         }
@@ -75,12 +82,14 @@
     .view-latest-news {
         .view-content {
             div {
-                &:first-child {
-                    padding-left: 0;
-                }
+                @include desktop {
+                    &:first-child {
+                        padding-left: 0;
+                    }
 
-                &:last-child {
-                    padding-right: 0;
+                    &:last-child {
+                        padding-right: 0;
+                    }
                 }
             }
         }

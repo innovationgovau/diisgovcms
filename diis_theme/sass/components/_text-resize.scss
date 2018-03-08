@@ -1,9 +1,9 @@
 // text-resize.scss
 
-#block-block-26 {
+.text-resize-social-widget-wrapper {
     display: none;
 
-    @include tablet {
+    @include desktop {
         display: block;
     }
 }
@@ -14,6 +14,8 @@ ul.text-resize {
 
     li {
         display: inline-block;
+
+        @extend %no-list;
 
         &:nth-child(1) {
             a:after {
@@ -33,22 +35,20 @@ ul.text-resize {
             }
         }
 
-        @extend %no-list;
-
         a {
-            display: block;
             position: relative;
+            display: block;
+            overflow: hidden;
             width: 1.5em;
             height: 1.5em;
-            overflow: hidden;
             color: transparent !important;
 
             &:after {
-                content: 'A';
                 position: absolute;
-                left: 0;
                 top: 0;
-                color: #333333;
+                left: 0;
+                content: 'A';
+                color: #333;
             }
         }
     }

@@ -1,5 +1,25 @@
 // diis_theme.scss - main stylesheet
 
+// Inherit govCMS theme styles
+
+@import "vendor/govcms/vars";
+@import "vendor/govcms/mixins";
+
+@import "vendor/govcms/admin";
+@import "vendor/govcms/animate";
+@import "vendor/govcms/base";
+@import "vendor/govcms/browserhacks";
+@import "vendor/govcms/cards";
+@import "vendor/govcms/coas";
+@import "vendor/govcms/content";
+@import "vendor/govcms/dashboard";
+@import "vendor/govcms/govcms-icons";
+@import "vendor/govcms/homepage";
+@import "vendor/govcms/menu";
+@import "vendor/govcms/print";
+@import "vendor/govcms/responsive";
+@import "vendor/govcms/support";
+
 // Base
 
 @import "base/variables";
@@ -30,4 +50,4 @@
 @import "components/text-resize";
 @import "components/widgets";
 
-@import "components/testing";
+//@import "components/testing";

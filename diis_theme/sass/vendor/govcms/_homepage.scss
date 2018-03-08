@@ -1,0 +1,72 @@
+.homepage {
+  //#about {
+  //  h1 {
+  //    margin-bottom: 1em;
+  //  }
+  //}
+  #services {
+    // padding: 0;
+    padding: 15px 0;
+  }
+  // for large homepage header with big centered logo once we update it
+  //.lead {
+  //  font-size: 30px;
+  //  padding-top: 0.8em;
+  //}
+  #clients,
+  .portfolio{
+    padding: 35px 0;
+  }
+}
+
+
+// Portfolio
+.portfolio {
+  padding: 50px 0;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.img-portfolio {
+  margin: 0 auto;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+
+//.homepage .split.testimonial {
+//  border-top: 1px solid $borderGrey;
+//}
+
+#clients {
+  margin: 25px 0 0 0;
+  padding: 50px 0;
+  img {
+    margin-bottom: 30px;
+    opacity: 0.66;
+  }
+  a {
+    &:hover,
+    &:active,
+    &:focus {
+      img {
+        opacity: 1;
+        background-color: transparentize($highlight, 0.91);
+      }
+    }
+  }
+  .highlight {
+    color: $secondaryDark;
+  }
+  .btn {
+    margin-bottom: 20px;
+  }
+  &.bg-primary {
+    img {
+      opacity: 1;
+    }
+  }
+}

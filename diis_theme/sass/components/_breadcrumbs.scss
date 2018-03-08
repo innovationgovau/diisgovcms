@@ -1,14 +1,21 @@
 // _breadcrumbs.scss
-
-.block-crumbs {
+.block-crumbs-wrapper {
     display: none;
+    margin: 1em 0;
 
     @include desktop {
         display: block;
-        margin: 1em 0;
+    }
 
-        .breadcrumb {
-            background-color: transparent;
-        }
+
+    & li + li:before {
+        padding: 0;
+        content: '> ';
+        color: black;
+    }
+
+    .breadcrumb {
+        padding: 0;
+        background-color: transparent;
     }
 }

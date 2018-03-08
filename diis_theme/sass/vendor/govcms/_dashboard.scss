@@ -1,0 +1,97 @@
+body.node-type-dashboard {
+  #about {
+    margin-bottom: 0;
+  }
+}
+
+.dashboard {
+  padding: 0;
+  margin-bottom: 1.5em;
+  &.bg-primary {
+    @include background-gradient(mix($highlight,$secondary,80%), mix($highlight,$secondary,20%), $secondary);
+    .grid-item {
+      .int {
+        strong {
+          color: #fff;
+        }
+      }
+    }
+  }
+  &.light {
+    .grid-item {
+      .int {
+        // the below is a Sass function in the Drupal theme's Sass:
+        background: -webkit-linear-gradient(25deg,$secondary,$highlightDark)!important;
+        -webkit-background-clip: text!important;
+        -webkit-text-fill-color: transparent;
+        color: $highlightDarker;
+        display: block;
+      }
+      [class*=" icon-"],
+      [class^=icon-] {
+        font-size: 100px;
+        &:before {
+          padding: 5px;
+          // the below is a Sass function in the Drupal theme's Sass:
+          background: -webkit-linear-gradient(25deg,$secondary,$highlightDark)!important;
+          -webkit-background-clip: text!important;
+          -webkit-text-fill-color: transparent;
+          color: $highlightDarker;
+        }
+      }
+    }
+  }
+  .grid-item {
+    margin: 3em 0 3.5em;
+    [class*=" icon-"],
+    [class^=icon-] {
+      font-size: 100px;
+    }
+    h2,
+    h3 {
+      font-weight: 200;
+      margin: 0;
+    }
+    .int {
+      font-size: 150%;
+      strong {
+        color: $highlightDarker;
+        font-size: 330%;
+        font-weight: 400;
+      }
+      &.fraction {
+        sub,
+        sup {
+          position: initial;
+          font-size: 70%;
+          line-height: 0;
+        }
+        sup {
+          vertical-align: super;
+        }
+        sub {
+          vertical-align: sub;
+        }
+        sub,
+        .slash,
+        sup {
+          margin-left: -5px;
+          margin-right: -5px;
+        }
+      }
+      .slash {
+        //font-size: 330%;
+        margin-right: 5px;
+        font-weight: 200;
+        font-style: normal;
+        background: rgba(#fff, 0.6) !important; // this is layed over the other filter
+        -webkit-background-clip: text!important;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    small {
+      font-size: 1em;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+// Create an animated background gradient on an angle
+@mixin background-gradient($colour1,$colour2,$colour3) {
+  background-color: $colour1;
+  background: linear-gradient(
+    11deg, $colour1, $colour2, $colour3 );
+  background-size: 400% 400%;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+
+// Globally used body font declaration
+@mixin body-font() {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin blurBG() {
+  $blurAmount: 10px;
+  -webkit-backdrop-filter: blur($blurAmount);
+  backdrop-filter: blur($blurAmount);
+}
+
+
+// Colour text (or font icons!) with a gradient
+// WebKit Only 😕
+// + watch out for MS Edge's stupidity thinking its webkit, but only partly.. 😒
+@mixin color-gradient($colour1, $colour2) {
+  background: -webkit-linear-gradient( 25deg, $colour1, $colour2 ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  color: $colour1;
+  padding: 5px; // this is for the icons cropping too much
+}
+// USAGE: @include color-gradient($colour1, $colour2);
+
+
+// Clear fix
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+// Center vertically and/or horizontally an absolute positioned element
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+}

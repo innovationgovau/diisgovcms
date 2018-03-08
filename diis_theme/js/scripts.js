@@ -182,26 +182,6 @@
 
 
 
-	Drupal.behaviors.isMeanMenuOpen = {
-		attach: function(context, settings) {
-
-			console.log('isMeanMenuOpen firing');
-
-			$('.meanmenu-reveal').on('load', function() {
-				console.log('clicked');
-				/*
-				if ($(this).hasClass('meanclose')) {
-				console.log('This has class meanclose')
-				return false;
-				} else {
-				console.log('This DOES NOT have the class meanclose')
-				return true;
-				}*/
-			});
-		}
-	}
-
-
 	// Expand-Contract widget
 
 	// TODO: Get spacebar working to toggle the buttons: http://fyvr.net/a11y/spacebar-action.html
@@ -329,6 +309,23 @@
 			};
 		}
 	}; // End Expand-contract widget
+
+
+	// Substitute file icon
+	Drupal.behaviors.substituteFileIcon = {
+		attach: function(context, settings) {
+			$('img.file-icon').css("display", "none");
+			var fileTypes = ["txt", "doc", "docx", "xls", "xlsx", "pdf",
+				"ppt", "pptx", "pps", "ppsx", "odt", "ods", "odp",
+				"mp3", "mov", "mp4", "m4a", "m4v", "mpeg", "avi", "ogg", "oga", "ogv",
+				"zip", "csv"
+			];
+			$.each(fileTypes, function(i) {
+				$('#main-content a[href$=".' + fileTypes[i] + '"]').before('<i class="far fa-arrow-alt-circle-down"></i>&nbsp;');
+			});
+		} // End Attach
+	} // End substituteFileIcon
+
 
 	// Anything that doesn't need a Drupal Behaviour and needs to runs on doc load goes in here VVVV
 	/* $(function() {

@@ -46,6 +46,8 @@
     }
 
     .coa-titles {
+        font-family: 'Times New Roman', Arial;
+        font-weight: bold;
         position: relative;
         width: 100%;
         min-height: 8.5em;
@@ -64,12 +66,23 @@
                 position: relative;
                 width: auto;
             }
+
+
+            &:after {
+                position: relative;
+                clear: both;
+                width: 100%;
+                content: '';
+            }
         }
 
         span {
+            display: block;
             border: none;
 
             &:first-child {
+                margin-bottom: 3px;
+                padding-bottom: 3px $imp;
                 border-bottom: solid 1px $white;
 
                 @include print {
@@ -80,6 +93,12 @@
             &:last-child {
                 margin-top: 3px;
             }
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+            color: $white;
         }
 
         .coa-img {

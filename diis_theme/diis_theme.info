@@ -1,8 +1,8 @@
 ; Theme information
 name = DIIS Theme
-description = A subtheme based on the govCMS Theme. Requires govCMS theme to be enabled
+description = A Bootstrap subtheme
 core = 7.x
-base theme = govcms_theme
+base theme = bootstrap
 
 
 ; **** OVERRIDES ****
@@ -30,7 +30,7 @@ regions[page_top] 			= Page top ;system only, invisible to users
 regions[top]	 			= Top
 regions[header]				= Header
 regions[highlighted] 		= Highlighted
-;regions[sidebar_first] 	= Sidebar First
+regions[sidebar_first] 		= Sidebar First
 regions[content] 			= Content
 regions[sidebar_second] 	= Sidebar Second
 regions[footer_main] 		= Footer Main

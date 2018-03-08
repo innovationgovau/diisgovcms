@@ -14,21 +14,22 @@
 @media (max-width: 1300px) {
     .split {
         &timonial .container {
-            padding-left: 0;
             padding-right: 0;
+            padding-left: 0;
 
             .section-one {
+                padding-right: calc( constant(safe-area-inset-right) + 15px ) !important;
+
                 // .section-two {
                 // blockquote,
                 // cite {
                 padding-left: calc( constant(safe-area-inset-left)  + 30px ) !important;
-                padding-right: calc( constant(safe-area-inset-right) + 15px ) !important;
             }
 
             .row {
-                padding-left: 0;
-                padding-right: 0;
                 margin: 0;
+                padding-right: 0;
+                padding-left: 0;
             }
         }
     }
@@ -59,7 +60,7 @@
 
         h2 {
             margin-top: 0;
-            margin-bottom: 0.7em;
+            margin-bottom: .7em;
         }
 
         .section-one {
@@ -73,36 +74,6 @@
 }
 
 @media (max-width: 993px) {
-    #top-and-first-wrapper {
-        #top {
-            .col-md-8 {
-                // main nav in mobile view
-                width: 100%;
-            }
-        }
-
-        #about {
-            h1,
-            h2 {
-                font-size: 300%;
-            }
-        }
-
-        .nav-pills {
-            float: none !important;
-            margin: 2em auto 0;
-            width: 77%;
-        }
-
-        small.pull-right {
-            width: 100%;
-        }
-
-        .btn-lg {
-            float: left !important;
-        }
-    }
-
     .split {
         .container {
             background: #fff;
@@ -112,14 +83,14 @@
             }
 
             .section-two {
-                text-align: left;
                 padding-top: 0;
+                text-align: left;
             }
         }
 
         &.testimonial .container {
-            margin: 0;
             width: 100%;
+            margin: 0;
 
             .section-one,
             .section-two {
@@ -139,9 +110,9 @@
                 margin: 0;
 
                 img {
-                    transform: none !important;
-                    margin: 0 10%;
                     max-height: 250px;
+                    margin: 0 10%;
+                    transform: none !important;
                 }
             }
         }

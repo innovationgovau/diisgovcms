@@ -1,6 +1,31 @@
-<div id="top-and-first-wrapper">
-	<?php include "includes/header.tpl.php"; ?>
-</div>
+<?php include "includes/header.tpl.php"; ?>
+
+
+<section class="about" id="about">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<div class="block-crumbs-wrapper">
+					<p><?php
+									$block = module_invoke('crumbs', 'block_view', 'breadcrumb');
+									print $block['content'];
+					?></p>
+				</div>
+				<?php if (!empty($title)): ?>
+				<div class="title">
+					<h1 class="page-header"><?php print $title; ?></h1>
+				</div>
+				<?php endif; ?>
+			</div>
+			<div class="col-sm-3 text-resize-social-widget-wrapper">
+				<?php $node = node_load(13271); print $node->body['und'][0]['value']; ?>
+				<?php $node = node_load(13276); print $node->body['und'][0]['value']; ?>
+			</div>
+		</div>
+	</div>
+</section>
+
+
 <main>
 	<!-- #page -->
 	<div id="page" class="clearfix">
@@ -8,22 +33,22 @@
 		<a id="main-content-anchor" tabindex="-1"></a>
 		<div id="main-content" data-js="responsive-video">
 			<div class="container">
-				<div id="region-highlighted">
-					<?php print render($page['highlighted']); ?>
+				<div class="row">
+					<div id="region-highlighted">
+						<?php print render($page['highlighted']); ?>
+					</div>
 				</div>
 			</div>
+			
+			
+			<!-- Tabs, messages and links area -->
 			<?php if ($messages || $tabs || $action_links): ?>
-			<!-- #EOF region-higlighted parent container -->
 			<div class="container">
-				<div class="col-md-12">
+				<div>
 					<!-- #messages-console -->
 					<?php if ($messages): ?>
 					<div id="messages-console" class="clearfix">
-						<div class="row">
-							<div class="col-md-12">
-								<?php print $messages; ?>
-							</div>
-						</div>
+						<?php print $messages; ?>
 					</div>
 					<?php endif; ?>
 					<!-- EOF: #messages-console -->
@@ -44,19 +69,17 @@
 				</div>
 			</div>
 			<?php endif; ?>
+			<!-- EOF: Tabs, messages and links area -->
+			
+			
 			<!-- Main page content if not homepage -->
 			<div class="container">
 				<div class="row">
-					<?php /* TESTING
 					<div class="col-md-3" id="region-sidebar-first">
 						<?php print render($page['sidebar_first']); ?>
 					</div>
-					*/ ?>
 					<div class="col-md-9" id="region-content">
 						<?php print render($page['content']); ?>
-					</div>
-					<div class="col-md-3" id="region-sidebar-second">
-						<?php print render($page['sidebar_second']); ?>
 					</div>
 				</div>
 				<!-- EOF:#main-content -->
@@ -65,5 +88,7 @@
 		</div>
 	</div>
 </main>
+
+
 <?php include "includes/footer.tpl.php"; ?>
 <!-- EOF:#footer -->

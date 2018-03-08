@@ -1,0 +1,570 @@
+// Pricing table
+
+.pricingTable {
+  margin: 50px 0 25px 0;
+  color: $secondaryDark;
+  h2 {
+    margin-bottom: 30px;
+  }
+  .panel {
+    border-color: rgba($secondaryDark, .3);
+    .heading-style { // 'heading'
+      color: $secondaryDark;
+      font-size: 150%;
+      font-weight: 300;
+    }
+    .optional { // '(optional)' labels on form elements
+      color: $highlightDarker;
+      font-weight: 300;
+    }
+  }
+  .panel-heading {  // "medium" / "large" etc. label section
+    background-color: $greyLight;
+    border: none;
+    h3 {
+      font-weight: 300;
+      //font-size: 80%;
+      color: $textGrey;
+      strong {
+        font-weight: 300;
+        font-size: 250%;
+        color: $highlightDarker;
+      }
+    }
+  }
+  .panel-body.panel-footer { // "5k" etc. label section
+    background-color: $secondaryDark;
+    color: #fff;
+    border-radius: 0;
+    padding-bottom: 20px;
+    strong {
+      font-size: 200%;
+    }
+  }
+  .lead {
+    p {
+      margin-bottom: 0;
+    }
+    strong {
+      font-size: 250%;
+      font-weight: 400;
+    }
+    &.cost {
+      color: $highlightDark;
+    }
+  }
+  .list-group-item {
+    padding: 35px 15px;
+  }
+}
+
+.pricing-more-btn.btn {
+  margin: 1.5em auto;
+}
+
+.panel-dashed {
+  border-style: dashed;
+  border-width: 2px;
+  .panel-heading {
+    border-style: none;
+    background: #f5f5f5;
+    //h3 strong {
+    //  color: $highlightDarker;
+    //}
+    .lead {
+      strong {
+        opacity: 0.85;
+      }
+    }
+  }
+  // only on desktops
+  // .panel-body {
+  //   min-height: 31em;
+  // }
+  .vertical-center > div {
+    width: 100%;
+  }
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+  height: auto;
+  left: 0;
+  position: relative;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.16s ease-out;
+  height: 0;
+  left: -99999999px;
+  position: relative;
+}
+
+#calcResults {
+  p {
+    margin-top: 2px;
+    margin-bottom: 13px;
+    font-weight: 300;
+  }
+  .lead {
+    font-size: 2em;
+    color: $highlightDark;
+  }
+}
+
+.plus-separator {
+  position: relative;
+  height: 0;
+  &:after {
+    position: absolute;
+    top: -0.8em;
+    left: calc(50% - 0.38em);
+    background-color: white;
+    color: $highlight;
+    font-size: 3em;
+    padding-top: 4px;
+    padding-top: 0.25rem;
+    content: "+";
+    z-index: 2;
+    width: 1em;
+  }
+}
+
+small {
+  a {
+    text-decoration: underline;
+  }
+}
+
+#additional-services-1 {
+  //padding: 25px 0 50px 0;
+  li,
+  p {
+    font-size: 125%; // make the same size as the alternating section below it..
+  }
+}
+
+// News page (Blog listing)
+.node-type-govcms-news {
+  h1#page-title {
+    margin-bottom: 0.5em;
+  }
+}
+
+.news-item-header {
+  padding-bottom: 25px;
+  .lead {
+    em.placeholder {
+      font-style: normal;
+    }
+  }
+}
+
+.post-preview {
+  margin-top: 50px;
+  a {
+    &:hover,
+    &:active,
+    &:focus {
+      //text-decoration: none;  becasue only the header is a link in the Drupal implimention, this isnt needed
+      text-decoration: underline;
+      .post-title {
+        text-decoration: underline;
+        color: $highlightDark;
+      }
+    }
+    .post-subtitle {
+      color: $greyDark;
+    }
+  }
+  .post-meta {
+    color: $textGreyLight;
+    a {
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+  .date-display-interval {
+    color: $textGreyLight;
+    em {
+      font-style: normal;
+    }
+  }
+  &:last-of-type {
+    hr {
+      display: none;
+    }
+  }
+}
+
+.text-content {
+  margin: 25px 0;
+  h2 {
+    margin: 1.25em 0 0.75em;
+    &:first-of-type {
+      margin-top: 0.5em; // get rid of excess padding if the content starts with a heading, but (see next rule)
+    }
+  }
+  p + h2:first-of-type {
+    margin-top: 1.25em; // if there is a paragraph before the first heading, resume regular programming :)
+  }
+  h3 {
+    margin: 1.5em 0 1em 0;
+    font-size: 28px;
+  }
+  a {
+    text-decoration: underline;
+  }
+  a.btn {
+    text-decoration: none;
+  }
+}
+
+.news-item.text-content {
+  margin: 50px 0;
+  .news-content {
+    p:first-of-type:first-letter {
+      font-size: 3em;
+      font-weight: 300;
+      padding-right: 3px;
+      line-height: 0.9em;
+      color: $highlightDark;
+    }
+  }
+}
+
+.alternating {
+  h3 {
+    margin-top: 0;
+  }
+  p {
+    font-size: 125%;
+  }
+  .vertical-center {
+    h2 {
+      margin-top: 0;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .row:not(.vertical-center) {
+    margin-top: 5.7em;
+    margin-bottom: 5.7em;
+  }
+  .icon-huge,
+  .icon-medium {
+    background: #fff;
+    border-radius: 50%;
+    padding: 0.12em;
+    font-size: 9em;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.3em;
+    &:before {
+      @include color-gradient($secondary, $highlightDark);
+    }
+    &.icon-stats-up:before {
+      top: -10px;
+      position: relative;
+    }
+    &.icon-int {
+      @include body-font();
+      //font-size: 12em;
+      //width: 1.4em;
+      //height: 1.4em;
+      //line-height: 1.1em;
+      //margin-top: 5px;
+
+      // for outlined style, just for int class for now
+      border: 3px solid $highlightDark;
+      @include color-gradient($highlightDarker, $highlightBright);
+      font-weight: 200;
+    }
+  }
+  .icon-medium {
+    font-size: 7em;
+    margin-top: 0.2em;
+  }
+  // disabled so using the above outline style instead of filled in style
+  &:not(.bg-primary) .icon-huge {
+    @include background-gradient($highlightDark, $highlightDark, $highlightDarker); // this passes AA for large text everywhere on homepage
+    color: #fff;
+    &:before {
+      color: #fff !important;
+      -webkit-text-fill-color: initial;
+    }
+  }
+  &.text-content {
+    margin: 25px 0 0 0;
+    padding: 0;
+  }
+  &.text-content .icon-hugest {
+    color: #fff !important;
+    background: $highlight;
+    @include background-gradient(adjust-hue(lighten($secondary, 15%), -10%), $secondary, $highlight);
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 21em;
+    width: 1.1em;
+    height: 1.1em;
+    line-height: 1.1em;
+  }
+}
+
+.news-list {
+  margin-bottom: 50px;
+}
+
+// Social share icons (for news-item pages)
+.social-btns {
+  a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 3em;
+    padding: 0;
+    line-height: 1.4;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $highlightDark;
+    }
+  }
+  i {
+    font-size: 2.2em;
+    &:before {
+      top: 1px;
+      position: relative;
+    }
+  }
+  .btn-email {
+    background-color: $secondary;
+  }
+  .btn-github {
+    background-color: #444444;
+  }
+  .btn-google {
+    background-color: #dd4b39;
+  }
+  .btn-facebook {
+    background-color: #3b5998;
+  }
+  .btn-linkedin {
+    background-color: #007bb6;
+  }
+  .btn-twitter {
+    background-color: #55acee;
+  }
+  h2:first-of-type { // first-of-type is just for specificity
+    font-size: 24px; // made to look like a h3 visually
+    margin: 2em 0 1em 0;
+  }
+}
+
+// only if JS is enabled
+html.js {
+  .region-content {
+    .do-fade:before {
+      transition: opacity 1s ease-out 0s;
+      opacity: 0;
+    }
+    .fancyCounter {
+      transition: opacity 2s ease-out 0s !important;
+      transition: color 2.2s ease-out 0s !important;
+      opacity: 0;
+      &:not(.faded) {
+        color: $highlightBright !important;
+      }
+    }
+    .faded:before,
+    .fancyCounter.faded,
+    .faded {
+      opacity: 1;
+    }
+  }
+}
+
+#site-map {
+  margin: 50px auto 35px;
+  // if you want the RSS feed link shown uncomment this:
+  //.site-map-box-front.site-map-box .content {
+  //  a:first-of-type {
+  //    display: none;
+  //  }
+  //  a.feed-link:after {
+  //    content: "RSS Feed";
+  //    margin-left: 8px;
+  //    top: 1px;
+  //    position: relative;
+  //  }
+  //}
+
+  // hide the RSS link:
+  .site-map-front-page {
+    display: none;
+  }
+
+  ul {
+    li {
+      line-height: 1em;
+      padding: 5px 0 15px 0;
+      background: url(../img/dashes.gif) repeat-y;
+      padding-left: 20px;
+      list-style-type: none;
+      list-style-image: none;
+      line-height: 0.95em;
+      padding-bottom: 24px;
+      &.last {
+        background: url(../img/dashes-last.gif) no-repeat;
+        padding-bottom: 0;
+      }
+      ul {
+        padding-top: 1em;
+      }
+    }
+  }
+
+  // just remove the btn classes with JS rather than stuff around trying to reset them.
+  //.btn,
+  //.btn-default,
+  //.btn-light {
+  //  color: #2c5d7e;
+  //  border: none;
+  //  border-radius: 0;
+  //  line-height: 1;
+  //  padding: 0;
+  //}
+
+  .site-map-box-menu-menu-footer-sub-menu {
+    &,
+    .site-map-menu {
+      margin-bottom: 0;
+    }
+    ul {
+      li {
+        &.last {
+          background: url(../img/dashes.gif) no-repeat;
+          padding-bottom: 24px;
+        }
+      }
+    }
+  }
+}
+
+// dodgy work around
+.h2-text-center h2 {
+  text-align: center;
+}
+
+// Responsive video style.
+div.video-filter {
+  max-width: 100%;
+}
+
+
+// Knowledge base page
+#knowledge-base {
+  padding: 25px 0;
+  .label.status {
+    background-color: $highlightBright;
+    color: $textGrey;
+    font-weight: 600;
+    // color: $secondary;
+    // background-color: $bubbleGum;
+  }
+  a.media {
+    display: block;
+    padding-bottom: 10px;
+    border-radius: $radius;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      background-color: $greyLight;
+      .title {
+        text-decoration: underline;
+      }
+      .title ,
+      i {
+        color: $highlightDarker;
+      }
+      .status {
+        opacity: .95;
+      }
+    }
+    .title {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+    .summary {
+      display: block;
+      margin-top: 5px;
+      color: $textGrey;
+    }
+    i {
+      font-size: 54px;
+      color: $secondary;
+    }
+  }
+  .no-results:not(:empty){
+    margin-top: 3em;
+    font-size: 21px;
+  }
+}
+#services .row .row,
+.text-primary {
+  color: $textGreyLight;
+}
+//#services h2 {
+//  color: #2C5D7E;
+//}
+.navbar-form {
+  .input-group-addon {
+    padding-bottom: 2.9em;
+    min-width: 4.6em;
+  }
+  .icon-search {
+    position: relative;
+    top: -0.2em;
+  }
+}
+.search-for {
+  margin-top: 3em !important;
+  font-weight: 400;
+}
+
+
+.page-pricing {
+  .text-content.bg-primary.alternating {
+    h3 {
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// for plain contet pages such as privacy page - may effect others though :/
+.node-type-govcms-page {
+  .text-content {
+    margin: 50px 0;
+  }
+}
+
+
+address {
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: $greyLight;
+  border-radius: $radius;
+  display: inline-block;
+}

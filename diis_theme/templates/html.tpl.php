@@ -87,7 +87,7 @@
 	<!-- End Google Tag Manager (noscript) -->
 	<div id="skip-links">
 		<a class="element-invisible element-focusable" href="#main-content-anchor">Skip to Content</a>
-		<a class="element-invisible element-focusable" href="#meanmenu-dest">Skip to Main Navigation</a>
+		<a class="element-invisible element-focusable" href="#footer_first">Skip to Main Navigation</a>
 		<a class="element-invisible element-focusable" href="#block-search-form">Skip to Search</a>
 	</div>
 	<div id="print-crest" class="logos">
@@ -95,10 +95,10 @@
 			<div class="coa-titles-inline">
 				<div class="coa-titles">
 					<a href="/">
-						<img src=<?php print("/" . path_to_theme() . "/img/crest-black-256.png"); ?> alt="Home" class="coa-img" />
+						<img src=<?php print("/" . drupal_get_path('theme',$GLOBALS['theme']) . "/img/crest-black-256.png"); ?> alt="Home" class="coa-img" />
 						<div>
 							<span class="coa-line-one coa-lines-2">Australian Government</span>
-							<span class="coa-line-one coa-lines-1">Department of Industry,<br>Innovation and Science</span>
+							<span class="coa-line-one coa-lines-1"><?php $node = node_load(13256); print $node->body['und'][0]['value']; ?></span>
 						</div>
 						<p>Beta</p>
 						<span class="clearboth"></span>

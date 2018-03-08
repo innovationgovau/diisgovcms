@@ -35,7 +35,8 @@ a.back-to-top {
         background-color: $primary-grey-dark;
     }
 
+    &:hover,
     &:focus {
-        border: none;
+        border-color: transparent;
     }
 }

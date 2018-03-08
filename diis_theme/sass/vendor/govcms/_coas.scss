@@ -1,0 +1,164 @@
+// Dynamic Crest CSS
+
+.coa-stacked {
+  float: left;
+  margin-left: 20px;
+}
+
+.coa-inline {
+  float: left;
+}
+
+.coa-color-white .coa-titles span {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.coa-titles, .coa-titles-inline {
+  display: inline-block;
+}
+
+.coa-color-black .coa-titles span {
+  border-bottom: 1px solid #000;
+  color: #000;
+}
+
+.coa-titles {
+  // color: $secondaryDark;
+  border-color: $greyDark;
+   text-shadow: 1px 1px 32px rgba(#6ad5ac, .5);
+  span {
+    border-bottom: 1px solid;
+  }
+}
+
+.coa-border-none {
+  border-bottom: none !important;
+  padding-bottom: 21px;
+}
+
+.coa-titles span {
+  display: block;
+  font-family: Times New Roman, serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.coa-coa img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.coa-stacked .coa-coa {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70px;
+  // padding: 21px 21px 5px 21px;
+  padding: 0 0;
+}
+
+.coa-inline .coa-coa {
+  width: 78px;
+}
+
+.coa-titles-stacked {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -20px;
+}
+
+.coa-stacked .coa-titles {
+  text-align: center;
+}
+
+.coa-coa {
+  padding: 23px 5px 21px 21px;
+  margin: 0;
+  height: 64px;
+  float: left;
+  border: 0;
+}
+
+.coa-lines-1 {
+  padding-top: 43px;
+}
+
+.coa-lines-2 {
+  padding-top: 35px;
+}
+
+.coa-lines-3 {
+  padding-top: 21px;
+}
+
+.coa-lines-4 {
+  padding-top: 11px;
+}
+
+.coa-stacked {
+  .coa-lines-1, .coa-lines-2, .coa-lines-3, .coa-lines-4 {
+    padding-top: 15px;
+  }
+}
+.coa-stacked {
+  .coa-lines-1 {
+    border: 0;
+  }
+}
+
+.coa-coa > span {
+  background-image: url('../img/crest-white.png');    // TODO: copy this img from govspace!
+  width: 70px;
+  height: 52px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background-size: 70px 52px;
+}
+
+// span {
+//   &.crest-black {
+//     background-image: url('../images/crest-black.png');
+//   }
+//   &.crest-white {
+//     background-image: url('../images/crest-white.png');
+//   }
+// }
+
+a.coa-link {
+  display: inline-block;
+  height: auto;
+}
+
+.coa-coa .crest {
+  background-image: url('../img/crest-navy.svg');
+  .coa-titles {
+    // Really Tim? !important;
+    color: #fff !important;
+  }
+}
+
+// white version
+.white {
+  .coa-coa .crest {
+    background-image: url('../img/crest-white.svg');
+  }
+  .coa-titles {
+    color: #fff !important;
+  }
+}
+
+// @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+//   span {
+//     &.crest-black {
+//       background-image: url('../images/crest-black@2x.png');
+//       background-size: 70px 52px;
+//     }
+//     &.crest-white {
+//       background-image: url('../images/crest-white@2x.png');
+//       background-size: 70px 52px;
+//     }
+//   }
+// }

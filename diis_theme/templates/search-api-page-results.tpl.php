@@ -37,9 +37,9 @@
 ?>
 
 
-<div id="top-and-first-wrapper">
-    <?php include "includes/header.tpl.php"; ?>
-</div>
+<?php include "includes/header.tpl.php"; ?>
+
+
 <main>
     <!-- #page -->
     <div id="page" class="clearfix">
@@ -110,5 +110,7 @@
         </div>
     </div>
 </main>
+
+
 <?php include "includes/footer.tpl.php"; ?>
 <!-- EOF:#footer -->

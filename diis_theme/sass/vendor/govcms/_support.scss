@@ -1,0 +1,35 @@
+body.page-support,
+body.search-results {
+
+  .about {
+    // jumbo search box
+    .navbar-form {
+      margin-bottom: 25px;
+      .input-group {
+        width: 100%;
+      }
+      .form-control {
+        font-size: 200%;
+        padding: 1.11em 0.5em;
+        width: 80%;
+        width: calc( 100% - 2.97em);
+      }
+      button {
+        transition: color 0.2s, background-colour 0.2s, border-colour 0.2s;
+        &:hover {
+          i {
+            color: $highlightDark;
+          }
+        }
+        &:active,
+        &:focus {
+          background-color: $secondary;
+          i {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+}

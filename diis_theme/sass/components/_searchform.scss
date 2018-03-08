@@ -1,5 +1,19 @@
 // _searchform.scss
 
+// Override some Bootstrap stuff
+
+form {
+    .btn {
+        margin-top: 0;
+    }
+}
+
+.form-control {
+    height: auto;
+}
+
+// End Override
+
 .block-search {
     position: relative;
     clear: both;
@@ -21,8 +35,18 @@
         }
 
 
-        .form-type-textfield {
+        .btn {
+            padding: 0 $imp;
+        }
+
+        #edit-submit,
+        #edit-submit--2 {
+            display: none;
+        }
+
+        .input-group {
             //float: left;
+            display: block;
             margin: .5em auto;
 
             @include desktop {
@@ -35,6 +59,7 @@
                 padding: .75em;
                 color: $white;
                 border: none;
+                border-radius: 0;
                 background: rgba($white, 0.3);
 
                 &::placeholder {
@@ -45,42 +70,74 @@
                     width: calc(100% - 3em);
                 }
             }
-        }
 
-        .form-actions {
-            position: absolute;
-            top: .5em;
-            right: 0;
-
-            // Search form submit button/icon. Uses CSS3 and HTML wrappers to create icon
-            // Magnifying glass lens/search button
-            .form-submit {
-                font-size: 0;
-                position: relative;
-                z-index: 10;
-                top: 0;
-                width: 25px;
-                height: 25px;
-                cursor: pointer;
-                color: white;
-                border: solid 4px white;
-                border-radius: 50%;
-                background-color: transparent;
-            }
-
-            // Magnifying glass handle
-            &:after {
+            .input-group-btn {
                 position: absolute;
-                z-index: 9;
-                right: -3px;
-                bottom: -4px;
-                width: 13px;
-                height: 4px;
-                content: '';
-                transform: rotate(45deg);
-                transform-origin: bottom right;
-                background: $white;
+                top: .5em;
+                right: 20px;
+
+                // Search form submit button/icon. Uses CSS3 and HTML wrappers to create icon
+                // Magnifying glass lens/search button
+                .btn-primary {
+                    font-size: 0;
+                    position: relative;
+                    z-index: 10;
+                    top: 5px;
+                    width: 25px;
+                    height: 25px;
+                    cursor: pointer;
+                    color: white;
+                    border: solid 4px white;
+                    border-radius: 50%;
+                    background-color: transparent;
+
+                    .icon.glyphicon {
+                        display: none;
+                    }
+                }
+
+                // Magnifying glass handle
+                &:after {
+                    position: absolute;
+                    z-index: 9;
+                    right: -24px;
+                    bottom: -9px;
+                    width: 13px;
+                    height: 4px;
+                    content: '';
+                    transform: rotate(45deg);
+                    transform-origin: bottom right;
+                    background: $white;
+                }
             }
         }
     }
+}
+
+#region-content #edit-basic:before {
+    content: "Enter your keywords:";
+    font-weight: bold;
+}
+
+#region-content #edit-basic button {
+    transition: 0.3s;
+    color: black;
+    background-color: #d3d3d3;
+    border-color: black;
+    border-radius: 0px;
+}
+
+#region-content .glyphicon-search {
+    margin: .5em;
+    border-radius: 0px;
+}
+
+#region-content #edit-basic .input-group-btn {
+    padding-left: 1em;
+}
+
+#region-content .glyphicon-search:before {
+    font-family: "Montserrat", sans-serif $imp;
+    content: "Search";
+    padding: 2em;
 }
