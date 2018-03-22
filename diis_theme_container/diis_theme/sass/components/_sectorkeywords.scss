@@ -1,0 +1,23 @@
+#views-exposed-form-taxonomy-term-sector .views-exposed-widget {
+  float: none;
+  padding: none;
+  .views-exposed-form .views-exposed-widget .btn {
+      display: inline-block;
+    }
+}
+
+
+@include desktop {
+  #views-exposed-form-taxonomy-term-sector .views-exposed-widget {
+    float: left;
+    padding: 0.5em 1em 0 0;
+
+    .views-exposed-form .views-exposed-widget .btn {
+      margin-top: 2.8em;
+    }
+  }
+  .view-header {
+    float: right;
+    margin-top: 1.6em;
+  }
+}

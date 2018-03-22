@@ -1,0 +1,45 @@
+// _header.scss
+
+header {
+    #main-page-top {
+        @include desktop {
+            padding-top: 2em;
+        }
+
+
+        @extend %dark-blue-top-to-light-blue-bottom;
+
+        // Mission statement
+        #mission-statement {
+            border-top: solid 1px $white;
+
+            p {
+                font-size: 2.277rem;
+                font-weight: 300;
+                max-width: 100%;
+                margin: 0 auto;
+                padding: 1em;
+                text-align: center;
+                color: $white;
+            }
+        }
+    }
+}
+
+#cs-content{
+    display: none;
+}
+
+#about {
+    margin: 0;
+    padding: 1em 0;
+    background-color: transparent;
+
+    .page-header {
+        border: none;
+    }
+
+    h1 {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,845 @@
+#block-menu-menu-about-us ul > li, .mean-container .mean-bar nav.mean-nav ul > li, .block-menu-block .menu-name-menu-header-links-menu .menu {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+#block-menu-menu-about-us ul > li, .mean-container .mean-bar a.meanclose, .mean-container .mean-bar nav.mean-nav ul.menu, .mean-container .mean-bar nav.mean-nav ul > li {
+  margin: 0;
+}
+
+#block-menu-menu-about-us ul > li, .mean-container .mean-bar a.meanclose, .mean-container .mean-bar nav.mean-nav ul.menu, .mean-container .mean-bar nav.mean-nav ul > li {
+  padding: 0;
+}
+
+/*@mixin ie {
+    _:-ms-lang(x), .ie10up {
+        @content;
+    }
+}*/
+/******************
+ * Builder classes
+ *****************/
+.floatleft {
+  float: left;
+}
+
+.floatright {
+  float: right;
+}
+
+.floatnone {
+  float: none;
+}
+
+.clearleft {
+  clear: left;
+}
+
+.clearright {
+  clear: right;
+}
+
+.clearboth {
+  clear: both;
+}
+
+/* _typography.scss*/
+/**
+ * Fix fonts that render as bold in Firefox
+ *
+ * Put this near the top of your style.css
+ * Before any overriding styles:
+ * https://www.lockedowndesign.com/firefox-font-weight-too-bold/
+ */
+html {
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+/**
+ * Firefox specific rule
+ */
+@-moz-document url-prefix() {
+  body {
+    font-weight: lighter !important;
+  }
+}
+
+html {
+  font-size: 14px;
+  text-rendering: optimizeLegibility;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  html {
+    text-rendering: auto;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 14px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body {
+    font-family: "Helvetica", sans-serif, "Times New Roman" !important;
+  }
+}
+
+body #region-content p, body #region-content span, body #region-content ul, body #region-content ol, body #region-content li, body #region-content dd, body #region-content dt, body #region-content dl, body #region-content table, body #region-content td, body #region-content th, body #region-content address, body #region-content blockquote, body #region-content a {
+  font-size: unset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 14px 0 12px 0;
+  margin: .8em 0;
+  color: #005677 !important;
+}
+
+h1 {
+  font-size: 40px;
+  font-size: 2.888em;
+}
+
+h2 {
+  font-size: 37px;
+  font-size: 2.7em;
+}
+
+h3 {
+  font-size: 32px;
+  font-size: 2.3em;
+}
+
+h4 {
+  font-size: 28px;
+  font-size: 2em;
+}
+
+h5 {
+  font-size: 22px;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 20px;
+  font-size: 1.45em;
+}
+
+p {
+  font-size: 14px;
+  font-size: 1em;
+  line-height: 1.44;
+  margin: 14px 0;
+  margin: 1em 0;
+}
+
+li {
+  margin: 8px 0;
+  margin: .6em 0;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  color: #005677;
+  border: solid 2px transparent;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  border-bottom: dotted 2px #005677;
+}
+
+a:active {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+hr {
+  clear: both;
+  border: none;
+  border-top: solid 1px #cccccc;
+}
+
+header,
+footer,
+.tabs,
+#block-block-26,
+#block-block-41 {
+  display: none;
+}
+
+#region-content {
+  display: block;
+}
+
+.block-crumbs-wrapper {
+  display: none;
+  margin: 1em 0;
+}
+
+@media (min-width: 992px) {
+  .block-crumbs-wrapper {
+    display: block;
+  }
+}
+
+.block-crumbs-wrapper li + li:before {
+  padding: 0;
+  content: '> ';
+  color: black;
+}
+
+.block-crumbs-wrapper .breadcrumb {
+  padding: 0;
+  background-color: transparent;
+}
+
+#top p.beta {
+  font-size: xx-large;
+  margin-bottom: 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+}
+
+#top .beta p {
+  margin: 0;
+  text-align: center;
+  background-color: black;
+}
+
+#top .beta p a {
+  color: white;
+}
+
+#top .beta p .btn {
+  margin: 1em;
+}
+
+.button {
+  font-size: normal;
+  font-weight: 500;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #FFFFFF;
+  border: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.button:hover, .button:focus {
+  color: #000000;
+  background-color: #9cd9e0;
+}
+
+.button:active {
+  color: #FFFFFF;
+  background-color: #00283e;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+.button:disabled:hover {
+  background-color: #00283e;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  font-size: inherit;
+  font-family: "Montserrat", sans-serif;
+}
+
+#print-crest {
+  display: none;
+}
+
+@media print {
+  #print-crest {
+    display: block;
+  }
+  #print-crest a:after {
+    display: none;
+  }
+}
+
+.logos {
+  margin: 0 !important;
+}
+
+@media (min-width: 992px) {
+  .logos {
+    float: left !important;
+  }
+}
+
+.logos .coa-inline {
+  float: none;
+}
+
+@media (max-width: 480px) {
+  .logos .coa-inline {
+    position: relative;
+    z-index: 500;
+    left: -2em;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@media (min-width: 992px) {
+  .logos .coa-inline {
+    float: left;
+  }
+}
+
+@media print {
+  .logos .coa-inline {
+    display: block;
+    width: 100%;
+  }
+}
+
+.logos .coa-titles {
+  font-family: 'Times New Roman', Arial;
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+  min-height: 8.5em;
+  text-shadow: none;
+}
+
+.logos .coa-titles a {
+  position: absolute;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 20em;
+  padding: 1em;
+}
+
+@media (min-width: 992px) {
+  .logos .coa-titles a {
+    position: relative;
+    width: auto;
+  }
+}
+
+.logos .coa-titles a:after {
+  position: relative;
+  clear: both;
+  width: 100%;
+  content: '';
+}
+
+.logos .coa-titles span {
+  display: block;
+  border: none;
+}
+
+.logos .coa-titles span:first-child {
+  margin-bottom: 3px;
+  padding-bottom: 3px !important;
+  border-bottom: solid 1px #FFFFFF;
+}
+
+@media print {
+  .logos .coa-titles span:first-child {
+    border-bottom: solid 1px #000000;
+  }
+}
+
+.logos .coa-titles span:last-child {
+  margin-top: 3px;
+}
+
+.logos .coa-titles p {
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+}
+
+.logos .coa-titles .coa-img {
+  float: left;
+  max-width: 6.5em;
+}
+
+@media print {
+  .logos .coa-titles .coa-img {
+    width: 6rem;
+  }
+}
+
+.logos .coa-titles .coa-img + div {
+  float: left;
+  margin: 20px 0 0 10px;
+}
+
+.logos .coa-titles .coa-img + div + p {
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  top: 2rem;
+  right: -6rem;
+}
+
+.logos .coa-titles .coa-img,
+.logos .coa-titles span[class*='coa-lines-'] {
+  padding: 0;
+  color: #FFFFFF;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .logos .coa-titles {
+    min-width: 20em;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+#skip-links a {
+  visibility: none;
+  width: 100%;
+  padding: .5em;
+  color: #FFFFFF;
+  background-color: #58595b;
+}
+
+#skip-links a:focus, #skip-links a:active {
+  display: block;
+}
+
+#block-menu-menu-about-us {
+  clear: both;
+  display: none;
+}
+
+#block-menu-menu-about-us ul {
+  margin: 0;
+}
+
+#block-menu-menu-about-us ul li {
+  padding: .75em 0 .75em .75em;
+  border-bottom: solid 1px #FFFFFF;
+}
+
+#block-menu-menu-about-us ul li:last-child {
+  border: none;
+}
+
+#block-menu-menu-about-us ul li a {
+  display: inline;
+  color: #FFFFFF !important;
+}
+
+#block-menu-menu-about-us ul li a:hover, #block-menu-menu-about-us ul li a:focus {
+  border-bottom-color: #FFFFFF;
+}
+
+#block-menu-menu-about-us ul > li {
+  position: relative;
+}
+
+#block-menu-menu-about-us ul > li > ul {
+  display: none;
+}
+
+#block-menu-menu-about-us ul > li:hover > ul {
+  display: block;
+}
+
+#block-menu-menu-about-us ul > li li {
+  margin-left: 21px;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+#meanmenu-dest {
+  margin: 0 auto 1em auto;
+}
+
+.mean-container {
+  position: relative;
+  z-index: 50;
+  top: 0;
+  right: 0;
+  left: 0;
+  clear: both;
+}
+
+.mean-container .mean-bar {
+  position: absolute;
+  top: -9em;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+@media (min-width: 992px) {
+  .mean-container .mean-bar {
+    top: -6em;
+  }
+}
+
+.mean-container .mean-bar a {
+  position: relative;
+  display: block;
+  color: #FFFFFF !important;
+}
+
+.mean-container .mean-bar a.meanmenu-reveal {
+  right: 1em !important;
+  float: right;
+  width: 2.5em;
+  height: 2.5em;
+  color: #FFFFFF !important;
+}
+
+.mean-container .mean-bar a.meanmenu-reveal span {
+  position: relative;
+  display: block;
+  height: 5px;
+  background: #FFFFFF;
+}
+
+.mean-container .mean-bar a.meanmenu-reveal span:nth-child(2) {
+  margin: .4em 0;
+}
+
+.mean-container .mean-bar a.meanmenu-reveal span:last-child {
+  font-size: 80%;
+  position: absolute;
+  bottom: -3px;
+  background: none;
+}
+
+.mean-container .mean-bar a.meanmenu-reveal:hover {
+  border-bottom: none;
+}
+
+.mean-container .mean-bar a.meanmenu-reveal + .mean-nav {
+  padding: 0 1em;
+  background: #00283e;
+  /* The Fallback */
+  background: rgba(0, 40, 62, 0.95);
+}
+
+.mean-container .mean-bar a.meanclose span:not(:last-child) {
+  position: relative;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.mean-container .mean-bar a.meanclose span:first-child {
+  top: 8px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.mean-container .mean-bar a.meanclose span:nth-child(2) {
+  top: 3px;
+  margin: 0;
+}
+
+.mean-container .mean-bar a.meanclose + .mean-nav {
+  padding: 1em;
+}
+
+.mean-container .mean-bar nav.mean-nav {
+  position: relative;
+  clear: both;
+  margin-top: 4em;
+}
+
+.mean-container .mean-bar nav.mean-nav ul {
+  margin: 0;
+}
+
+.mean-container .mean-bar nav.mean-nav ul.menu .dropdown-menu {
+  margin-top: .75em;
+}
+
+.mean-container .mean-bar nav.mean-nav ul.menu .dropdown-menu .expanded .active {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.mean-container .mean-bar nav.mean-nav ul.menu .mean-expand {
+  font-size: 21px !important;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  min-width: 2em;
+  padding: .25em .6em;
+  text-align: center;
+}
+
+.mean-container .mean-bar nav.mean-nav ul.menu .mean-expand:hover, .mean-container .mean-bar nav.mean-nav ul.menu .mean-expand:focus, .mean-container .mean-bar nav.mean-nav ul.menu .mean-expand:active {
+  text-decoration: none;
+}
+
+.mean-container .mean-bar nav.mean-nav ul li {
+  padding: .75em 0 .75em .75em;
+  border-bottom: solid 1px #FFFFFF;
+}
+
+.mean-container .mean-bar nav.mean-nav ul li:last-child {
+  border: none;
+}
+
+.mean-container .mean-bar nav.mean-nav ul li a {
+  display: inline;
+}
+
+.mean-container .mean-bar nav.mean-nav ul li a:hover, .mean-container .mean-bar nav.mean-nav ul li a:focus {
+  border-bottom-color: #FFFFFF;
+}
+
+.mean-container .mean-bar nav.mean-nav ul > li {
+  position: relative;
+}
+
+.mean-container .mean-bar nav.mean-nav ul > li li {
+  margin-left: 21px;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+#block-menu-block-2 {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  #block-menu-block-2 {
+    display: block;
+  }
+}
+
+#block-menu-block-2 ul li a {
+  position: relative;
+  display: block;
+  padding: 0;
+}
+
+#block-menu-block-2 ul li a:hover, #block-menu-block-2 ul li a:focus {
+  border-bottom-color: #FFFFFF;
+  background: none;
+}
+
+.block-menu-block {
+  float: right;
+  clear: both;
+}
+
+.block-menu-block .menu-name-menu-header-links-menu {
+  margin-bottom: 28px;
+}
+
+.block-menu-block .menu-name-menu-header-links-menu .menu li {
+  display: inline-block;
+  margin: 0;
+  padding: 0 .5em;
+}
+
+.block-menu-block .menu-name-menu-header-links-menu .menu li:nth-child(n):not(:last-child) {
+  border-right: solid 1px #FFFFFF;
+}
+
+.block-menu-block .menu-name-menu-header-links-menu .menu li a {
+  color: #FFFFFF !important;
+}
+
+form .btn {
+  margin-top: 0;
+}
+
+.form-control {
+  height: auto;
+}
+
+.block-search {
+  position: relative;
+  clear: both;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .block-search {
+    z-index: 500;
+    margin-top: 3em;
+    margin-right: 6em;
+  }
+}
+
+.block-search form {
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .block-search form {
+    float: right;
+  }
+}
+
+.block-search form .btn {
+  padding: 0 !important;
+}
+
+.block-search form #edit-submit,
+.block-search form #edit-submit--2 {
+  display: none;
+}
+
+.block-search form .input-group {
+  display: block;
+  margin: .5em auto;
+}
+
+@media (min-width: 992px) {
+  .block-search form .input-group {
+    float: none;
+    width: auto;
+  }
+}
+
+.block-search form .input-group input {
+  padding: .75em;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.block-search form .input-group input::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+
+.block-search form .input-group input:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+.block-search form .input-group input::-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+.block-search form .input-group input::placeholder {
+  color: #FFFFFF;
+}
+
+.block-search form .input-group input[type='text'] {
+  width: calc(100% - 3em);
+}
+
+.block-search form .input-group .input-group-btn {
+  position: absolute;
+  top: .5em;
+  right: 20px;
+}
+
+.block-search form .input-group .input-group-btn .btn-primary {
+  font-size: 0;
+  position: relative;
+  z-index: 10;
+  top: 5px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  color: white;
+  border: solid 4px white;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.block-search form .input-group .input-group-btn .btn-primary .icon.glyphicon {
+  display: none;
+}
+
+.block-search form .input-group .input-group-btn:after {
+  position: absolute;
+  z-index: 9;
+  right: -24px;
+  bottom: -9px;
+  width: 13px;
+  height: 4px;
+  content: '';
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  background: #FFFFFF;
+}
+
+#region-content #edit-basic:before {
+  content: "Enter your keywords:";
+  font-weight: bold;
+}
+
+#region-content #edit-basic button {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: black;
+  background-color: #d3d3d3;
+  border-color: black;
+  border-radius: 0px;
+}
+
+#region-content .glyphicon-search {
+  margin: .5em;
+  border-radius: 0px;
+}
+
+#region-content #edit-basic .input-group-btn {
+  padding-left: 1em;
+}
+
+#region-content .glyphicon-search:before {
+  font-family: "Montserrat", sans-serif !important;
+  content: "Search";
+  padding: 2em;
+}
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */

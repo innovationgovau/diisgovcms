@@ -1,0 +1,139 @@
+/* Changelog for DIIS theme */
+        
+ HEAD -> features, tag: v1.51  * 2018-03-22 | d312620 | VSTS 75981 Forklift #2 process - discuss with govcms
+ tag: 2018-03-22, origin/features  * 2018-03-21 | f37c184 | Updated changelog to v1.50
+ tag: v1.50  * 2018-03-21 | c656117 | VSTS 76797 - MVP2 - Font sizes, spacing, image, design issues
+   * 2018-03-21 | 8bb684f | Updated changelog to v1.49
+ tag: v1.49  * 2018-03-21 | cb3707b | VSTS 76797 - Font, spacing, image, design issues
+   * 2018-03-21 | 7b9bd73 | VSTS 76797 - MVP #2 - Font, spacing, image, design issues
+ tag: 2018-03-21.0, origin/test-bootstrap-breakpoints  * 2018-03-21 | 5f6f965 | FIX: Updated changelog to v1.48, rather than 1.48 - replaced incorrect tag
+   * 2018-03-21 | 6a637ec | Updated changelog to v1.48
+ tag: 2018-03-19, origin/subtheme, subtheme  * 2018-03-19 | 7ad01bc | VSTS 74224 MVP2 full system test
+   * 2018-03-19 | 228d4b9 | VSTS 70332 - fix breadcrumb display on sector pages
+   * 2018-03-19 | 91e7664 | VSTS 70332 - fix breadcrumb display on sector pages
+ tag: v1.48, tag: 2018-03-21  * 2018-03-16 | 4e51d7a | VSTS 75992 - Rate This Page widget
+   * 2018-03-16 | f7a7e13 | Updated changelog to 1.47
+ tag: v1.47, origin/hotfixes  * 2018-03-16 | 2677833 | FIX: Updated changelog export path to be relative to site root
+ tag: v1.46  * 2018-03-16 | ac050fa | FIX: Sublime Text editor JSBeautifier plugin incorrectly replaced '$(this)' with '$(form)'... yeah
+   * 2018-03-16 | d4dff85 | Updated changelog to v1.45
+ tag: v1.45, origin/changelog-script  * 2018-03-16 | c46fa0d | Updated exported file path destination location
+ tag: 2018-03-20  * 2018-03-16 | 0ccab0d | Updated changelog
+ tag: v1.44  * 2018-03-16 | bde759f | VSTS 75992 - Rate this Page widget
+ tag: 2018-03-16.0, tag: 2018-03-16  * 2018-03-16 | 7fca441 | VSTS Design beta site feedback form in banner
+ tag: v1.43, tag: 2018-03-15  * 2018-03-15 | b894e81 | VSTS 75396 - Tabbing after 'Skip to Search' skip link jumps to previous menu in IE
+ tag: 2018-03-14.0  * 2018-03-15 | 21a258a | Updated Changelog
+ tag: v1.42, tag: 2018-03-14  * 2018-03-14 | 887c8d2 | VSTS 75396 - Tabbing after 'Skip to Search' skip link jumps to previous menu in IE
+   * 2018-03-14 | ea11e4d | VSTS 74224 - full system test
+ tag: 2018-03-13, tag: 2018-03-12  * 2018-03-09 | b51d09a | VSTS 74224 MVP2 full system test
+ tag: 2018-03-08.0, origin/master, origin/HEAD, master  * 2018-03-08 | b15716d | Public Beta release - major updates
+   * 2018-03-08 | eab81d1 | Removed incomplete MeanMenu-detection script
+   * 2018-03-08 | c8a3038 | Updated changelog to v1.41
+ tag: v1.41  * 2018-03-08 | 381dcf3 | Minor CSS cleanup, added margin above Footer, cleaned up Back To Top link
+   * 2018-03-08 | 35a8266 | VSTS 70148 - Implement icons for links to different major file types
+   * 2018-03-08 | cfdaef4 | VSTS 75710 - Login button is not available to log in to DEV, UAT sites
+ tag: 2018-03-08  * 2018-03-08 | eea83db | Updated changelog to v1.40
+ tag: v1.40  * 2018-03-08 | 453352d | VSTS 74428 - Build 'Popular Topics' feature for website homepage
+   * 2018-03-07 | 3d9464c | Disabled testing styles
+   * 2018-03-07 | d8ec4fe | Re-enabled 'First Column' region in diis_theme.info
+ tag: 2018-03-07  * 2018-03-07 | d410d4d | Updated changelog to v1.39
+ tag: v1.39  * 2018-03-07 | 83721f1 | VSTS 75406 - Fix hero tile responsive layout
+   * 2018-03-07 | 8e5e440 | FIX: Updated .gitignore to ignore SASS's *.css.map files
+   * 2018-03-07 | b6e4519 | Updated changelog to v1.38
+ tag: v1.38  * 2018-03-07 | 5485070 | VSTS 69372 - Skip Links in header can be used to navigate the major areas of the webpage
+   * 2018-03-07 | 766ff1e | VSTS 69372 - Skip Links in header
+   * 2018-03-06 | aa29a94 | VSTS 73980 - Ensure main website content is displayed correctly
+ tag: 2018-03-06.0, tag: 2018-03-06  * 2018-03-05 | a8c0e43 | Updated changelog to v1.37
+ tag: v1.37  * 2018-03-05 | 9768054 | VSTS 74974 - Ensure website code is up to date prior to second forklift
+   * 2018-03-05 | b62f214 | VSTS 73212 - update homepage hero tile menu system
+   * 2018-03-05 | 52a00be | VSTS 74123 - Update website menu items
+   * 2018-03-05 | 1ded5d3 | VSTS 74123 - Update website menu items
+   * 2018-03-05 | be53c71 | VSTS 73212 -  Update homepage hero tile memu system
+   * 2018-03-03 | eea82b6 | VSTS 74123 - update website menu items
+ tag: 2018-03-01  * 2018-03-01 | 9fc0d96 | Added bash script for auto-generating the changelog from the Git history
+   * 2018-03-01 | 5cf15ae | Merge branch 'subtheme' into changelog-script
+ tag: v1.36  * 2018-02-28 | 287b75f | VSTS 73980 - Create a special layout for Corporate Publications that has flipped columns
+   * 2018-02-28 | 23b3647 | Fixed issue where Site editor controls had disappeared when logged in and viewing a Standard Page
+   * 2018-02-28 | b50868d | VSTS 74123 - update website menu items
+   * 2018-02-28 | 7542aa4 | undoing mistake
+   * 2018-02-28 | db45df3 | FIX: Removed testing styles from main SASS stylesheet
+   * 2018-02-28 | d9b23c6 | Merge branch 'features' into subtheme
+   * 2018-02-28 | af70993 | VSTS 74123 - Update website menu items and styles for mvp2
+   * 2018-02-28 | 5da65f3 | VSTS 74608 - Updated the search page search button style & added enter your keywords as per mvp1
+   * 2018-02-28 | 70faedc | VSTS 74608 - Updated the search page search button style & added enter your keywords as per mvp1
+   * 2018-02-27 | 5cf28af | Refreshed CSS after some SASS weirdness. Gulp may have half-completed files before they were commited
+   * 2018-02-27 | 2a1b3b6 | VSTS 73829 - Correct theme issues
+   * 2018-02-28 | 1fc23a2 | VSTS 73990 - Update search in header to use bootstrap code
+   * 2018-02-28 | 284c43f | VSTS 73990 - Update search in header to use bootstrap code
+   * 2018-02-27 | 1076fec | VSTS 72528 - Add fortpolio links into footer inc bga nmi
+   * 2018-02-27 | 364cd6a | VSTS 73990 - Update search in header to use boostrap code
+   * 2018-02-27 | bfb00c0 | VSTS 74123 - Update website menu items and styles to be in ine with the mvp2 design
+ tag: v1.35  * 2018-02-27 | f54fecb | VSTS 74123 - Update website menu items and styles to match MVP v2 design
+ origin/74556-footer-portfolio-links  * 2018-02-27 | 2971130 | VSTS 73751 - Allow Content Editors to edit the Vision Statement
+ tag: v1.34, origin/73752-crest-node  * 2018-02-27 | 8ab9c33 | 74123 - Update menu items and styles to be inline with MVP v2 design
+ tag: v1.33  * 2018-02-27 | d0a5093 | 74123 - Update website menu items and styles to be in line with MVP v2 design
+ tag: v1.32  * 2018-02-27 | 312cb54 | 72528 - Add portfolio links to footer, including BGA and NMI
+   * 2018-02-23 | f9c333d | WIP: Changelog bash script
+   * 2018-02-23 | cde8acf | VSTS 73721 - Content Publishers can control some site elements by updating pages
+   * 2018-02-23 | f17d5f4 | VSTS 73751 - Create admin node for Crest text
+ tag: v1.31  * 2018-02-21 | 55f89e9 | Merge branch '73752-crest-node' into features
+ tag: v1.30  * 2018-02-21 | 33ea561 | Merge branch '73758-merge-govcms-functions' into features
+ origin/73991-search-css  * 2018-02-21 | 7ef8807 | VSTS 73991 - updated Search form CSS to match new Bootstrap search form markup
+ tag: v1.29  * 2018-02-21 | 8f320de | VSTS 73832 - update breadcrumb separator following Bootstrap conversion
+ origin/73755-footer-social-node  * 2018-02-20 | e46743b | Replaced footer menu block with new render statement
+ tag: v1.28  * 2018-02-20 | e2e86ce | Merge branch '73757-govcms-styles' into features
+   * 2018-02-20 | aecb033 | Updated crest styles to use proper font, spacing, and weight
+   * 2018-02-20 | 22964a7 | VSTS 73752 - update Crest code to reference a node for the text component
+   * 2018-02-20 | 946402d | Cleaned up search function, corrected typo
+   * 2018-02-20 | 8297a2c | Updated function get theme path in header
+   * 2018-02-20 | d60b163 | Updated subtheme description
+ tag: v1.27, origin/73566-add-bootstrap  * 2018-02-19 | 8faa2f5 | Removed govCMS theme and updated DIIS subtheme to use Bootstrap theme as parent theme
+   * 2018-02-19 | 47f3abd | VSTS 73566 - Added Bootstrap 7.x-3.19
+ tag: v1.26, tag: v1, tag: v, tag: 2018-02-19  * 2018-02-09 | 3aea44b | THEME: cleaned up Back to Top link, annoying unset style
+ tag: 2018-02-09.0  * 2018-02-09 | e04a898 | Merge branch 'features' into subtheme
+ tag: v1.25, origin/72437-text-resize  * 2018-02-09 | 266cea4 | Updated to target #block-system-main, to allow more consistent targeting of all page types including search results
+ tag: 2018-02-09  * 2018-02-09 | ff07193 | THEME: Cleaned up MeanMenu close icon
+ tag: v1.24, origin/70581-crest-breaks  * 2018-02-08 | a819e7a | Updated styles to use left-floating Crest elements to better handle screen size changes, updated Anchor hover styles
+ tag: v1.23  * 2018-02-08 | 5ec59b5 | Updated text-resize script to only target the main page area, not the header and footer
+   * 2018-02-06 | e766db8 | THEME: Tweaks to menu styles for smoother open-closing animation
+ tag: v1.22, tag: 2018-02-05, origin/70194-print-issues  * 2018-02-05 | a30fac1 | Updated file paths referring to theme location to use 'path_to_theme() function'
+ tag: v1.21  * 2018-02-05 | 1e44c9e | VSTS 70341 - Excluded jQuery from aggregatable scripts and removed restriction on enabling JS aggregation in settings.php
+ tag: v1.20, tag: 2018-01-30.0, tag: 2018-01-30, tag: 2018-01-25.2, tag: 2018-01-25.1  * 2018-01-25 | fe56f28 | Updated print styles to hide Social Share links
+ tag: v1.19  * 2018-01-25 | 1020173 | VSTS 70194 - Added Crest to print version and heading colours
+ tag: v1.18, tag: 2018-01-25.0  * 2018-01-25 | 45580f0 | VSTS 70579 - Breadcrumbs should appear on desktops only
+ tag: v1.17, tag: 2018-01-25  * 2018-01-25 | 2674e1b | THEME: Replaced changes to page.tpl.php template with new template specifically for taxonomy terms
+   * 2018-01-25 | cc87e0a | Revert "THEME: Removed unwanted code from page.tpl.php template"
+ tag: v1.16, tag: 2018-01-24.0  * 2018-01-24 | 2aa1e81 | THEME: Removed unwanted code from page.tpl.php template
+ tag: v1.15, tag: 2018-01-24  * 2018-01-24 | f7a24c5 | VSTS 70194 - Print versions. Updated print stylesheet to show only conceal the main header, not the beta banner
+ tag: v1.14  * 2018-01-24 | 461a766 | Merge branch '70167-search-results-layout' into subtheme
+   * 2018-01-24 | 5b3d77b | THEME: Removed drupal tabs from print version
+ tag: v1.13, tag: 2018-01-23.0, tag: 2018-01-23  * 2018-01-23 | 018767c | Added 'Share this Page' script into html template
+   * 2018-01-23 | 1d90417 | 70265 - added Text Resize to Search Results page via adding the basic page HTML wrappers to the template. Merge branch 'features' into subtheme
+ tag: v1.12, tag: 2018-01-22.0, tag: 2018-01-22, tag: 2018-01-21  * 2018-01-22 | 76f050a | THEME: Updated print styles an text-resize widget
+ tag: v1.10  * 2018-01-22 | 4c6c5dd | THEME: Updated print styles an text-resize widget
+ tag: v1.11, tag: 2018-01-19  * 2018-01-19 | 7e34198 | VSTS 69372: Fixed Skiplinks so users can jump to Nav, Search or Content on Content and Home pages
+   * 2018-01-19 | 6282d48 | THEME: fix for Firefox and IE bolding certain fonts
+ tag: 1.10  * 2018-01-18 | 99baf70 | VSTS 70344: Update main nav to be concealed only via JavaScript
+ tag: v1.9  * 2018-01-18 | d4d9b81 | VSTS 70267: UPDATE: Added correct header/footer bg gradient colours, updated link hover/focus styles, corrected footer spacing, styled Follow Social Media links
+ tag: v1.8  * 2018-01-18 | ffceb02 | VSTS 70267: Updated footer with Nic's styles
+   * 2018-01-18 | b6458d0 | THEME: Added Nic's updated homepage styles
+   * 2018-01-18 | f23ba06 | THEME: Moved _typography.scss partial into Structure, to allow more prominent loading
+   * 2018-01-18 | 4646a57 | THEME: removed obsolete Variables container
+   * 2018-01-18 | 7ced99c | FIX: Corrected firing order of Gulp tasks for SASS and Autoprefixer, previously AP was trying to write over SASS's CSS files before it was done
+ tag: v1.7, tag: 2018-01-17.0, tag: 2018-01-17  * 2018-01-17 | 4221e03 | THEME: Updated mission statement max width, after accidentally deleting it
+ tag: v1.6  * 2018-01-17 | 14ba046 | FIX: 70341 - Aggregation of JS causes jQuery not to be loaded
+   * 2018-01-17 | 97e711a | FIX: 70100 - Updated footer menu heading links to be absolute
+   * 2018-01-17 | eec415a | Merge branch 'master' into hotfixes
+   * 2018-01-17 | 8f152d8 | Merge branch 'dev' into hotfixes
+ tag: v1.5  * 2018-01-17 | af51103 | v1.5 Merge branch 'subtheme'
+   * 2018-01-17 | 2540f1e | Added Google Analytics tracking code to page headers
+ tag: v1.4  * 2018-01-16 | 4ae4080 | THEME: CSS Autoprefixer update to styles
+   * 2018-01-16 | f16e6f5 | Merge branch 'dev'
+   * 2018-01-16 | 1289c38 | v1.3 - Merge branch 'subtheme'
+ tag: v1.3  * 2018-01-16 | a5732e9 | VSTS 70139: Major typography update, added Montserrat font
+ tag: v1.0gs  * 2018-01-16 | 75a83d9 | test file
+ tag: v1.1  * 2018-01-16 | b8919b9 | test file
+ tag: v1.2  * 2018-01-16 | c28d517 | THEME: Updated typography, included Monsterrat font, removed blue heading colour for now
+   * 2018-01-16 | 7bf56fa | THEME: Updated footer link styles and <hr>
+ tag: v1.0  * 2018-01-15 | a44adc2 | THEME: Updated anchor link styles, added $purple colour variables
+ tag: 2018-01-15  * 2018-01-15 | cf048bd | Merge branch 'subtheme'
+   * 2018-01-15 | 538423b | THEME: Added 'Skip to Content' links. Not sure why they were missing
