@@ -1,0 +1,132 @@
+// Variables file
+
+// *******************
+// Stock govCMS stuff
+// *******************
+
+$highlight: #005677;
+
+// from the govCMS logo
+$highlightBright: #00283e;
+
+// accessible as bg for $secondaryDark
+$highlightDark: #58595b;
+
+// accessible on white bg - IF larger than 24px
+$highlightDarker: #1b9590;
+
+// accessible on white bg
+
+//$aqua:              #51bfbb; // Not just a Eurodance group - a mix btwn $highlight and $secondary, but in a brighter hue.
+// if $secondaryDark coloured headings change back to #51bfbb
+$aqua: #3db0ac;
+
+// if #fff           coloured headings change back to #3db0ac
+
+$secondary: #2C5D7E;
+
+// light version of $secondaryDark
+$secondary: #3b7498;
+
+// light version of $secondaryDark
+$secondaryDark: #37424A;
+
+// from the govCMS logo
+
+$greyLight: #F5F5F5;
+$greyDark: #333;
+$borderGrey: #D2D2D4;
+
+$textGrey: #555;
+$textGreyLight: #777;
+
+// lightest accessible grey on white bg
+
+$radius: 4px;
+
+$mandatoryColour: #c0392b;
+
+// vars for new colour scheme
+$brighterBlue: #2C5D7E;
+$brighterBlueFaded: #3979a4;
+$bubbleGum: #24d4dc;
+
+// Additional helper colours
+
+$grapefruit: #F58B87;
+$purple: #a16aa3;
+$pink: #F0648B;
+$blue: #718CC7;
+$yellow: #FDC20F;
+$green: #92B36F;
+$red: #f00;
+
+$bright-green: #8DC85C;
+$bright-yellow: #FCEF48;
+$bright-pink: #FF648C;
+$bright-blue: #6E8CCF;
+$super-yellow: #FFDD00;
+$light-pink: #FFD1DD;
+$light-green: #DFE8D4;
+$light-yellow: #FFF7A1;
+$light-blue: #DFEBFB;
+$super-blue: #6494E6;
+$mid-yellow: #F5E40E;
+$dark-purple: #400077;
+
+$light-black: #222222;
+$dark-grey: #3A3A3A;
+$mid-grey: #444;
+$mid-light-grey: #666666;
+$light-grey: #A3A3A3;
+$dark-white: #F0F0F0;
+$mid-white: #dddddd;
+$light-white: #eeeeee;
+$dark-mid-grey: #333333;
+$dark-mid-white: #FEFEFE;
+
+// ***********
+// DIIS Theme
+// ***********
+
+// Corporate branding colours
+
+$black: #000000;
+$white: #FFFFFF;
+$primary-blue: #005677;
+$primary-blue-light: #347C87;
+$primary-grey-dark: #58595b;
+$primary-grey-light: #939598;
+$navy: #022C41;
+$minor-blue: #1b9590;
+$minor-navy: #00283e;
+$minor-pink: #c973af;
+$minor-teal-1: #61c6c6;
+$minor-teal-2: #9cd9e0;
+$lightish-grey: #e1e1e1;
+
+// Tweaked corporate colours
+
+$off-white: darken($white, 20%);
+
+// Fonts
+
+$text-color: $black;
+$font-natural: 14px;
+
+$sm: $font-natural * 0.85;
+$md: $font-natural * 1.2;
+$lg: $font-natural * 1.5;
+$xl: $font-natural * 2;
+
+// Maximum screen sizes, where 1rem = 14px
+
+$screen-mobile-sm: 0rem; // I'll leave this one a mystery
+$screen-mobile: 480px;
+$screen-tablet: 768px; // 480px
+$screen-desktop: 992px; //68.571428rem; // 960px
+$screen-desktop-lg: 1200px; // 1376px
+
+// Shortcuts
+
+$imp: !important;

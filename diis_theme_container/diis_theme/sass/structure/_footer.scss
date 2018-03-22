@@ -1,0 +1,214 @@
+// _footer.scss
+footer {
+    line-height: 15px;
+    margin-top: 2em;
+    padding: $xl 0;
+    color: white;
+
+    @extend %light-blue-top-to-dark-blue-bottom;
+
+    a {
+        display: inline-block;
+        max-width: 100%;
+        text-decoration: none;
+        color: white;
+
+        &:hover,
+        &:focus {
+            color: $white;
+            border-bottom-color: $white;
+        }
+    }
+
+    #footer_second nav li a,
+    #footer_third nav li a,
+    #footer_first nav li a {
+        display: inline-block;
+        max-width: 100%;
+        text-decoration: none;
+        color: white;
+
+        &:hover,
+        &:focus {
+            color: $white;
+            border-bottom-color: $white;
+            background: none;
+        }
+    }
+
+    #footer_third nav .last li {
+        display: block;
+        margin-top: 1em;
+    }
+
+    #footer_third p.nolink {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: auto;
+        color: $white;
+    }
+
+    #footer_third .wepweb ul li {
+        display: block;
+        margin: auto;
+        padding-left: 3px;
+    }
+
+    #footer_third .wepweblast ul {
+        position: relative;
+        top: -14px;
+
+        @include tablet {
+            top: 0;
+            padding-top: 30px;
+        }
+
+
+        li {
+            display: block;
+            margin: auto;
+            padding-left: 3px;
+        }
+    }
+
+    div[class^='region region-'] {
+        position: relative;
+        clear: both;
+    }
+
+    .container {
+        nav {
+            @media (min-width: 768px) {
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .region-footer-lower {
+        margin-top: 2em;
+
+        p {
+            text-align: center;
+        }
+    }
+
+    h2 {
+        margin: 0;
+
+        a {
+            font-size: 14px;
+            font-weight: bold;
+            color: $white;
+
+            &:hover,
+            &:focus {
+                color: $white;
+                border-bottom-color: $white;
+            }
+        }
+    }
+
+    ul.menu {
+        padding-left: 0;
+
+        li {
+            margin: 0;
+            list-style-type: none;
+            list-style-image: none;
+        }
+    }
+
+    #footer_first {
+        .col-md-3 {
+            ul.menu a {
+                color: white;
+            }
+        } // Social media Follow icons
+        > nav {
+            &:last-child {
+                a {
+                    position: relative;
+                    display: inline-block;
+                    width: 2em;
+                    height: 2em;
+                    margin-right: 1em;
+
+                    > svg {
+                        display: block;
+                        width: auto;
+                        height: 100%;
+
+                        path {
+                            fill: $white;
+                        }
+                    }
+                }
+            }
+        }
+    } // Apply top and bottom margins to footer sections
+    div[id^='footer_'] {
+        margin: 1.5em 0;
+
+        &:after {
+            position: relative;
+            display: block;
+            clear: both;
+            content: ' ';
+        }
+    }
+
+    hr {
+        clear: both;
+        border: none;
+        border-top: solid 1px $white;
+    }
+}
+
+.region-bottom {
+    .block {
+        text-align: center;
+    }
+}
+
+.region-footer-lower {
+    #block-block-21,
+    #block-block-11 {
+        padding: 0 15px;
+
+        @include desktop {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+
+        p {
+            font-size: .85rem;
+        }
+    }
+}
+
+footer {
+    font-size: .95rem;
+}
+
+#footer_second nav li a,
+#footer_third nav li a {
+    position: relative;
+    display: block;
+    padding: 0;
+}
+
+#footer_first ul li {
+    display: block;
+
+    a {
+        position: relative;
+        display: block;
+        padding: 0;
+    }
+}
