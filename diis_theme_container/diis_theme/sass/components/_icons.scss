@@ -1,10 +1,14 @@
 // _icons.scss
 
-// Social share icons
 .no-js {
+    // Social share icons
     #share-this-page {
         position: absolute;
         right: 0;
+
+        p {
+            margin: 0;
+        }
 
         a {
             display: block;
@@ -12,16 +16,32 @@
         }
     }
 
+    // Footer links
     #footer-follow-links {
         a {
-            clear: both;
+            position: relative;
             display: block $imp;
-            width: auto $imp;
+            display: inline-block;
+            clear: both;
+            width: 2.5em;
+            height: 2em;
+            margin-right: 1em;
+
+            > svg {
+                display: block;
+                width: auto;
+                height: 100%;
+
+                path {
+                    fill: $white;
+                }
+            }
         }
     }
 }
 
 .js {
+    // Social share icons
     #share-this-page {
         position: relative;
 
@@ -35,6 +55,7 @@
         }
     }
 
+    // Footer links
     #footer-follow-links {
         a {
             display: inline-block $imp;

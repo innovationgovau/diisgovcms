@@ -128,29 +128,13 @@ footer {
             ul.menu a {
                 color: white;
             }
-        } // Social media Follow icons
-        > nav {
-            &:last-child {
-                a {
-                    position: relative;
-                    display: inline-block;
-                    width: 2em;
-                    height: 2em;
-                    margin-right: 1em;
-
-                    > svg {
-                        display: block;
-                        width: auto;
-                        height: 100%;
-
-                        path {
-                            fill: $white;
-                        }
-                    }
-                }
-            }
         }
-    } // Apply top and bottom margins to footer sections
+
+        // Social media Follow icons
+   
+    }
+
+    // Apply top and bottom margins to footer sections
     div[id^='footer_'] {
         margin: 1.5em 0;
 

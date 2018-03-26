@@ -1,7 +1,9 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v1.61  * 2018-03-26 | 872f22f | VSTS 77246 - MVP #2 - Rate this page - Issues when navigating with tab key
- tag: 2018-03-26, origin/features  * 2018-03-23 | 9fcbbdd | Updated changelog to v1.59
+ HEAD -> features, tag: v1.62, origin/features  * 2018-03-26 | d88e066 | VSTS 76353 - Fontawesome icons do not render correctly
+   * 2018-03-26 | 6ff8f67 | Updated changelog to v1.61
+ tag: v1.61  * 2018-03-26 | 872f22f | VSTS 77246 - MVP #2 - Rate this page - Issues when navigating with tab key
+ tag: 2018-03-26  * 2018-03-23 | 9fcbbdd | Updated changelog to v1.59
  tag: v1.59  * 2018-03-23 | a5813e1 | VSTS 76353 - Fontawesome icons do not render correctly when JavaScript is disabled
  tag: 2018-03-23.0  * 2018-03-23 | c08a6aa | Updated changelog to v1.58
  tag: v1.58  * 2018-03-23 | 16244e7 | VSTS 75992 - Platform dev - Rate this page
@@ -154,6 +156,3 @@
  tag: v1.1  * 2018-01-16 | b8919b9 | test file
  tag: v1.2  * 2018-01-16 | c28d517 | THEME: Updated typography, included Monsterrat font, removed blue heading colour for now
    * 2018-01-16 | 7bf56fa | THEME: Updated footer link styles and <hr>
- tag: v1.0  * 2018-01-15 | a44adc2 | THEME: Updated anchor link styles, added $purple colour variables
- tag: 2018-01-15  * 2018-01-15 | cf048bd | Merge branch 'subtheme'
-   * 2018-01-15 | 538423b | THEME: Added 'Skip to Content' links. Not sure why they were missing

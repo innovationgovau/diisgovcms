@@ -3692,24 +3692,6 @@ footer #footer_first .col-md-3 ul.menu a {
   color: white;
 }
 
-footer #footer_first > nav:last-child a {
-  position: relative;
-  display: inline-block;
-  width: 2em;
-  height: 2em;
-  margin-right: 1em;
-}
-
-footer #footer_first > nav:last-child a > svg {
-  display: block;
-  width: auto;
-  height: 100%;
-}
-
-footer #footer_first > nav:last-child a > svg path {
-  fill: #FFFFFF;
-}
-
 footer div[id^='footer_'] {
   margin: 1.5em 0;
 }
@@ -4098,15 +4080,33 @@ a.back-to-top:hover, a.back-to-top:focus {
   right: 0;
 }
 
+.no-js #share-this-page p {
+  margin: 0;
+}
+
 .no-js #share-this-page a {
   display: block;
   width: auto;
 }
 
 .no-js #footer-follow-links a {
-  clear: both;
+  position: relative;
   display: block !important;
-  width: auto !important;
+  display: inline-block;
+  clear: both;
+  width: 2.5em;
+  height: 2em;
+  margin-right: 1em;
+}
+
+.no-js #footer-follow-links a > svg {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+.no-js #footer-follow-links a > svg path {
+  fill: #FFFFFF;
 }
 
 .js #share-this-page {
@@ -4861,62 +4861,6 @@ ul.text-resize li a:after {
   font-size: 1.15em;
   font-weight: 700;
 }
-
-#share-this-page p {
-  margin: 0;
-}
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
-
-/*# sourceMappingURL=diis_theme.css.map */
 
 /*# sourceMappingURL=diis_theme.css.map */
 

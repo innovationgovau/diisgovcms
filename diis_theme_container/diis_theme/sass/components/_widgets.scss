@@ -96,7 +96,7 @@
                     }
 
                     &:last-child {
-                        right: -11px; // using 12 triggers a borizontal scrollbar...
+                        right: -11px; // using 12 triggers a horizontal scrollbar...
                    
                     }
                 }
@@ -111,9 +111,3 @@
         }
     }
 } // End homepage styles
-
-#share-this-page {
-    p {
-        margin: 0;
-    }
-}
