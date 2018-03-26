@@ -119,13 +119,12 @@ $md: $font-natural * 1.2;
 $lg: $font-natural * 1.5;
 $xl: $font-natural * 2;
 
-// Maximum screen sizes, where 1rem = 14px
+// Maximum screen sizes, must match Bootstrap theme's breakpoints
 
-$screen-mobile-sm: 0rem; // I'll leave this one a mystery
 $screen-mobile: 480px;
-$screen-tablet: 768px; // 480px
-$screen-desktop: 992px; //68.571428rem; // 960px
-$screen-desktop-lg: 1200px; // 1376px
+$screen-tablet: 768px;
+$screen-desktop: 992px;
+$screen-desktop-lg: 1200px;
 
 // Shortcuts
 

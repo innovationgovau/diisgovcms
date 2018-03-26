@@ -1,0 +1,40 @@
+// _forms.scss
+
+// Feedback form
+
+#webform-client-form-13321 {
+    margin-top: 1em;
+
+    label {
+        padding-left: 0;
+        color: $black;
+    }
+
+    .form-actions {
+        margin-top: 1em;
+        text-align: right;
+
+        button {
+            color: white;
+        }
+    }
+
+    .webform-component-radios {
+        // Question label
+        &.form-group {
+            margin-bottom: 0;
+
+            > label {
+                &.control-label {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        // Radio checkboxes
+        input[id^='edit-submitted-rating-'] {
+            position: relative;
+            margin-right: 5px;
+        }
+    }
+}

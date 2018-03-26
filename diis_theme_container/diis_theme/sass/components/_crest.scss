@@ -30,6 +30,7 @@
             position: relative;
             z-index: 500;
             left: -2em;
+            zoom: 1; // IE fix :(
             transform: scale(0.8);
         }
 
@@ -57,10 +58,21 @@
             position: absolute;
             z-index: 500;
             top: 0;
-            left: 0;
             display: block;
             width: 20em;
             padding: 1em;
+
+            @media only screen and (max-width: 320px) {
+                padding: 1em 0;
+                left: -2em;
+                transform: scale(0.8);
+            }
+
+            @include tablet {
+                left: 0;
+                transform: none;
+            }
+
 
             @include desktop {
                 position: relative;

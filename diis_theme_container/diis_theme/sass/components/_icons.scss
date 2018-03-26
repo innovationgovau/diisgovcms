@@ -1,0 +1,47 @@
+// _icons.scss
+
+// Social share icons
+.no-js {
+    #share-this-page {
+        position: absolute;
+        right: 0;
+
+        a {
+            display: block;
+            width: auto;
+        }
+    }
+
+    #footer-follow-links {
+        a {
+            clear: both;
+            display: block $imp;
+            width: auto $imp;
+        }
+    }
+}
+
+.js {
+    #share-this-page {
+        position: relative;
+
+        a {
+            display: inline-block;
+            clear: none;
+
+            span {
+                display: none;
+            }
+        }
+    }
+
+    #footer-follow-links {
+        a {
+            display: inline-block $imp;
+        }
+
+        span {
+            display: none;
+        }
+    }
+}

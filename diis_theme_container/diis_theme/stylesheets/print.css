@@ -311,6 +311,7 @@ footer,
     position: relative;
     z-index: 500;
     left: -2em;
+    zoom: 1;
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
   }
@@ -342,10 +343,26 @@ footer,
   position: absolute;
   z-index: 500;
   top: 0;
-  left: 0;
   display: block;
   width: 20em;
   padding: 1em;
+}
+
+@media only screen and (max-width: 320px) {
+  .logos .coa-titles a {
+    padding: 1em 0;
+    left: -2em;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@media (min-width: 768px) {
+  .logos .coa-titles a {
+    left: 0;
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 @media (min-width: 992px) {
@@ -423,6 +440,37 @@ footer,
   .logos .coa-titles {
     min-width: 20em;
   }
+}
+
+#webform-client-form-13321 {
+  margin-top: 1em;
+}
+
+#webform-client-form-13321 label {
+  padding-left: 0;
+  color: #000000;
+}
+
+#webform-client-form-13321 .form-actions {
+  margin-top: 1em;
+  text-align: right;
+}
+
+#webform-client-form-13321 .form-actions button {
+  color: white;
+}
+
+#webform-client-form-13321 .webform-component-radios.form-group {
+  margin-bottom: 0;
+}
+
+#webform-client-form-13321 .webform-component-radios.form-group > label.control-label {
+  font-weight: bold;
+}
+
+#webform-client-form-13321 .webform-component-radios input[id^='edit-submitted-rating-'] {
+  position: relative;
+  margin-right: 5px;
 }
 
 img {
@@ -519,11 +567,13 @@ img {
 }
 
 .mean-container .mean-bar a.meanmenu-reveal {
+  position: relative;
   right: 1em !important;
   float: right;
   width: 2.5em;
   height: 2.5em;
   color: #FFFFFF !important;
+  z-index: 9999;
 }
 
 .mean-container .mean-bar a.meanmenu-reveal span {
@@ -831,6 +881,54 @@ form .btn {
   content: "Search";
   padding: 2em;
 }
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
 
 /*# sourceMappingURL=print.css.map */
 

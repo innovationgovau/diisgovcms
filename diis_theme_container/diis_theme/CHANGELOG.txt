@@ -1,22 +1,42 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v1.51  * 2018-03-22 | d312620 | VSTS 75981 Forklift #2 process - discuss with govcms
- tag: 2018-03-22, origin/features  * 2018-03-21 | f37c184 | Updated changelog to v1.50
+ HEAD -> features, tag: v1.61  * 2018-03-26 | 872f22f | VSTS 77246 - MVP #2 - Rate this page - Issues when navigating with tab key
+ tag: 2018-03-26, origin/features  * 2018-03-23 | 9fcbbdd | Updated changelog to v1.59
+ tag: v1.59  * 2018-03-23 | a5813e1 | VSTS 76353 - Fontawesome icons do not render correctly when JavaScript is disabled
+ tag: 2018-03-23.0  * 2018-03-23 | c08a6aa | Updated changelog to v1.58
+ tag: v1.58  * 2018-03-23 | 16244e7 | VSTS 75992 - Platform dev - Rate this page
+   * 2018-03-23 | 731e2ba | Updated changelog to v1.57
+ tag: v1.57  * 2018-03-23 | b03b9a5 | VSTS 76045 - style feedback form
+   * 2018-03-23 | 967ee6d | Updated changelog to v1.56
+ tag: v1.56, hotfixes  * 2018-03-23 | 37c1b09 | FIX: Tabbing out of Feedback form text field would close the entire form
+ tag: v1.55  * 2018-03-23 | e70b444 | VSTS 75992 - Platform dev - Rate this page
+   * 2018-03-23 | d3b4f09 | Updated changelog to v1.54
+ tag: v1.54  * 2018-03-23 | 79f092b | VSTS 75992 - Platform dev - Rate this page
+ tag: 2018-03-23, origin/subtheme, subtheme  * 2018-03-22 | 5ea681c | Updated changelog to v1.53
+ tag: v1.53  * 2018-03-22 | a6eab1c | VSTS 75535 - MVP#2 - Social Share icons and Resize icon issues
+   * 2018-03-22 | ac6a3c5 | Merge branch 'dev' into features
+ tag: v1.52  * 2018-03-22 | 5dfb4d6 | Updated changelog export script to match new theme filepath
+ tag: v1.51  * 2018-03-22 | d0b23d5 | Merge branch 'dev' into features
+   * 2018-03-22 | 1d9318f | VSTS 76428 - MVP#2 - when the browser size is reduced, the crest does not adjust and collides with the hamburger menu
+   * 2018-03-22 | f95be02 | Updated location paths to match new theme folder structure
+   * 2018-03-22 | d312620 | VSTS 75981 Forklift #2 process - discuss with govcms
+ tag: 2018-03-22  * 2018-03-21 | f37c184 | Updated changelog to v1.50
  tag: v1.50  * 2018-03-21 | c656117 | VSTS 76797 - MVP2 - Font sizes, spacing, image, design issues
    * 2018-03-21 | 8bb684f | Updated changelog to v1.49
  tag: v1.49  * 2018-03-21 | cb3707b | VSTS 76797 - Font, spacing, image, design issues
    * 2018-03-21 | 7b9bd73 | VSTS 76797 - MVP #2 - Font, spacing, image, design issues
  tag: 2018-03-21.0, origin/test-bootstrap-breakpoints  * 2018-03-21 | 5f6f965 | FIX: Updated changelog to v1.48, rather than 1.48 - replaced incorrect tag
    * 2018-03-21 | 6a637ec | Updated changelog to v1.48
- tag: 2018-03-19, origin/subtheme, subtheme  * 2018-03-19 | 7ad01bc | VSTS 74224 MVP2 full system test
+ tag: 2018-03-19  * 2018-03-19 | 7ad01bc | VSTS 74224 MVP2 full system test
    * 2018-03-19 | 228d4b9 | VSTS 70332 - fix breadcrumb display on sector pages
    * 2018-03-19 | 91e7664 | VSTS 70332 - fix breadcrumb display on sector pages
  tag: v1.48, tag: 2018-03-21  * 2018-03-16 | 4e51d7a | VSTS 75992 - Rate This Page widget
+ tag: 1.48  * 2018-03-16 | 2ee6575 | Merge branch '76017-feedback-form' into features
    * 2018-03-16 | f7a7e13 | Updated changelog to 1.47
  tag: v1.47, origin/hotfixes  * 2018-03-16 | 2677833 | FIX: Updated changelog export path to be relative to site root
  tag: v1.46  * 2018-03-16 | ac050fa | FIX: Sublime Text editor JSBeautifier plugin incorrectly replaced '$(this)' with '$(form)'... yeah
    * 2018-03-16 | d4dff85 | Updated changelog to v1.45
- tag: v1.45, origin/changelog-script  * 2018-03-16 | c46fa0d | Updated exported file path destination location
+ tag: v1.45, origin/changelog-script, changelog-script  * 2018-03-16 | c46fa0d | Updated exported file path destination location
  tag: 2018-03-20  * 2018-03-16 | 0ccab0d | Updated changelog
  tag: v1.44  * 2018-03-16 | bde759f | VSTS 75992 - Rate this Page widget
  tag: 2018-03-16.0, tag: 2018-03-16  * 2018-03-16 | 7fca441 | VSTS Design beta site feedback form in banner
@@ -68,8 +88,8 @@
    * 2018-02-27 | 364cd6a | VSTS 73990 - Update search in header to use boostrap code
    * 2018-02-27 | bfb00c0 | VSTS 74123 - Update website menu items and styles to be in ine with the mvp2 design
  tag: v1.35  * 2018-02-27 | f54fecb | VSTS 74123 - Update website menu items and styles to match MVP v2 design
- origin/74556-footer-portfolio-links  * 2018-02-27 | 2971130 | VSTS 73751 - Allow Content Editors to edit the Vision Statement
- tag: v1.34, origin/73752-crest-node  * 2018-02-27 | 8ab9c33 | 74123 - Update menu items and styles to be inline with MVP v2 design
+ origin/74556-footer-portfolio-links, 74556-footer-portfolio-links  * 2018-02-27 | 2971130 | VSTS 73751 - Allow Content Editors to edit the Vision Statement
+ tag: v1.34, origin/73752-crest-node, 73752-crest-node  * 2018-02-27 | 8ab9c33 | 74123 - Update menu items and styles to be inline with MVP v2 design
  tag: v1.33  * 2018-02-27 | d0a5093 | 74123 - Update website menu items and styles to be in line with MVP v2 design
  tag: v1.32  * 2018-02-27 | 312cb54 | 72528 - Add portfolio links to footer, including BGA and NMI
    * 2018-02-23 | f9c333d | WIP: Changelog bash script
@@ -77,25 +97,25 @@
    * 2018-02-23 | f17d5f4 | VSTS 73751 - Create admin node for Crest text
  tag: v1.31  * 2018-02-21 | 55f89e9 | Merge branch '73752-crest-node' into features
  tag: v1.30  * 2018-02-21 | 33ea561 | Merge branch '73758-merge-govcms-functions' into features
- origin/73991-search-css  * 2018-02-21 | 7ef8807 | VSTS 73991 - updated Search form CSS to match new Bootstrap search form markup
+ origin/73991-search-css, 73991-search-css  * 2018-02-21 | 7ef8807 | VSTS 73991 - updated Search form CSS to match new Bootstrap search form markup
  tag: v1.29  * 2018-02-21 | 8f320de | VSTS 73832 - update breadcrumb separator following Bootstrap conversion
- origin/73755-footer-social-node  * 2018-02-20 | e46743b | Replaced footer menu block with new render statement
+ origin/73755-footer-social-node, 73755-footer-social-node  * 2018-02-20 | e46743b | Replaced footer menu block with new render statement
  tag: v1.28  * 2018-02-20 | e2e86ce | Merge branch '73757-govcms-styles' into features
    * 2018-02-20 | aecb033 | Updated crest styles to use proper font, spacing, and weight
    * 2018-02-20 | 22964a7 | VSTS 73752 - update Crest code to reference a node for the text component
    * 2018-02-20 | 946402d | Cleaned up search function, corrected typo
    * 2018-02-20 | 8297a2c | Updated function get theme path in header
    * 2018-02-20 | d60b163 | Updated subtheme description
- tag: v1.27, origin/73566-add-bootstrap  * 2018-02-19 | 8faa2f5 | Removed govCMS theme and updated DIIS subtheme to use Bootstrap theme as parent theme
+ tag: v1.27, origin/73566-add-bootstrap, 73566-add-bootstrap  * 2018-02-19 | 8faa2f5 | Removed govCMS theme and updated DIIS subtheme to use Bootstrap theme as parent theme
    * 2018-02-19 | 47f3abd | VSTS 73566 - Added Bootstrap 7.x-3.19
  tag: v1.26, tag: v1, tag: v, tag: 2018-02-19  * 2018-02-09 | 3aea44b | THEME: cleaned up Back to Top link, annoying unset style
  tag: 2018-02-09.0  * 2018-02-09 | e04a898 | Merge branch 'features' into subtheme
- tag: v1.25, origin/72437-text-resize  * 2018-02-09 | 266cea4 | Updated to target #block-system-main, to allow more consistent targeting of all page types including search results
+ tag: v1.25, origin/72437-text-resize, 72437-text-resize  * 2018-02-09 | 266cea4 | Updated to target #block-system-main, to allow more consistent targeting of all page types including search results
  tag: 2018-02-09  * 2018-02-09 | ff07193 | THEME: Cleaned up MeanMenu close icon
- tag: v1.24, origin/70581-crest-breaks  * 2018-02-08 | a819e7a | Updated styles to use left-floating Crest elements to better handle screen size changes, updated Anchor hover styles
+ tag: v1.24, origin/70581-crest-breaks, 70581-crest-breaks  * 2018-02-08 | a819e7a | Updated styles to use left-floating Crest elements to better handle screen size changes, updated Anchor hover styles
  tag: v1.23  * 2018-02-08 | 5ec59b5 | Updated text-resize script to only target the main page area, not the header and footer
    * 2018-02-06 | e766db8 | THEME: Tweaks to menu styles for smoother open-closing animation
- tag: v1.22, tag: 2018-02-05, origin/70194-print-issues  * 2018-02-05 | a30fac1 | Updated file paths referring to theme location to use 'path_to_theme() function'
+ tag: v1.22, tag: 2018-02-05, origin/70194-print-issues, 70194-print-issues  * 2018-02-05 | a30fac1 | Updated file paths referring to theme location to use 'path_to_theme() function'
  tag: v1.21  * 2018-02-05 | 1e44c9e | VSTS 70341 - Excluded jQuery from aggregatable scripts and removed restriction on enabling JS aggregation in settings.php
  tag: v1.20, tag: 2018-01-30.0, tag: 2018-01-30, tag: 2018-01-25.2, tag: 2018-01-25.1  * 2018-01-25 | fe56f28 | Updated print styles to hide Social Share links
  tag: v1.19  * 2018-01-25 | 1020173 | VSTS 70194 - Added Crest to print version and heading colours

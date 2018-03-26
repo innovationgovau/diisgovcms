@@ -338,9 +338,9 @@
 	} // End substituteFileIcon
 
 
-	// Feedback form auto-hide
+	// Feedback form
 
-	Drupal.behaviors.autohideFeedbackForm = {
+	Drupal.behaviors.setupFeedbackForm = {
 		attach: function(context, settings) {
 
 			// First, check if the form exists
@@ -351,7 +351,7 @@
 					options = $form.find('input[id^=edit-submitted-rating-]');
 
 				// Hide the submit button no matter what
-				submitButton.hide();
+				submitButton.attr('disabled', 'disabled').hide();
 			
 				// Check if a success Alert is visible (which 
 				// implies the User has just submitted the form)
@@ -367,24 +367,58 @@
 					// If no alert is present...
 
 					// When an option is selected, do stuff
-					options.on('click touch keyup', function() {
+					options.on('click touch', function() {
 						// Unhide the submit button, if it isn't already
 						// This isn't really necessary since we're using radio checkboxes, which 
 						// can't be disabled once selected, but what if...?
 						if (!submitButton.is(':visible')) {
-							submitButton.show();
+							submitButton.show().removeAttr('disabled');
 						}
 					})
 
 					// When the submit button is selected, do more stuff 
-					submitButton.on('click touch keyup', function() {
+					submitButton.on('click touch', function() {
 						// Hide the entire form once submitted 
 						$form.slideUp();
 					})
 				}
+
+				// Enforce character limit on free text field responses
+
+				var $textField = $('#edit-submitted-comments'),
+					$wrapper = $textField.parent('div'),
+					$charLimit = 250;
+
+
+				$wrapper.append('<div id="charLimitWrap"><span><strong>' + $charLimit + '</strong> characters remaining' + '</span></div>');
+
+				$charLimitWrap = $('#charLimitWrap > span');
+
+
+				// detect when the form is being used
+				$textField.on('focus, keyup', function() {
+					var $this = $(this);
+					
+					// count the characters present
+					var $charCount = $this.val().length;
+
+					// If the count exceeds the charLimit, block further typing
+					if ($charCount > $charLimit) {
+						// Warn the user how far over the limit they've gone
+						$charLimitWrap.html('<strong style="color: #f00;">' + parseInt(($charLimit - $charCount) * -1) + '</strong> characters over the limit');
+						// Disable the submit button so they can't possibly send the response
+						submitButton.attr('disabled', 'disabled');
+					}
+					else {
+						$charLimitWrap.html('<strong>' + parseInt($charLimit - $charCount) + '</strong> characters remaining');
+						// Enable the submit button
+						submitButton.removeAttr('disabled');
+					}
+				});
 			}
 		}
-	}; // End autohideFeedbackForm
+	}; // End setupFeedbackForm
+
 
 
 	// Anything that doesn't need a Drupal Behaviour and needs to runs on doc load goes in here VVVV

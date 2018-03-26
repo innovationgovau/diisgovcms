@@ -108,11 +108,13 @@ $menu-icon-size: 2.5em;
             // Hamburger menu icon
 
             &.meanmenu-reveal {
+                position: relative;
                 right: 1em $imp;
                 float: right;
                 width: $menu-icon-size;
                 height: $menu-icon-size;
                 color: $white $imp;
+                z-index: 9999;
 
                 span {
                     position: relative;
@@ -297,7 +299,7 @@ $menu-icon-size: 2.5em;
 
                 &:nth-child(n):not(:last-child) {
                     border-right: solid 1px $white;
-                } 
+                }
 
                 a {
                     color: $white $imp;
@@ -305,4 +307,4 @@ $menu-icon-size: 2.5em;
             }
         }
     }
-} 
+}
