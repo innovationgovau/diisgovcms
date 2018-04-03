@@ -31,6 +31,7 @@
             z-index: 500;
             left: -2em;
             zoom: 1; // IE fix :(
+
             transform: scale(0.8);
         }
 
@@ -62,11 +63,13 @@
             width: 20em;
             padding: 1em;
 
-            @media only screen and (max-width: 320px) {
-                padding: 1em 0;
+            @include mobile-only {
                 left: -2em;
+                width: 22em; // larger width handles Android crest-split bug
+                padding: 1em 0;
                 transform: scale(0.8);
             }
+
 
             @include tablet {
                 left: 0;

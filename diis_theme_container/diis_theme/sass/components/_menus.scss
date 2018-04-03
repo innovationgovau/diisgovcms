@@ -21,8 +21,8 @@
 // @TODO: Make this appear inline like Superfish, to make the MeanMenu 'jump' on load more graceful
 
 #block-menu-menu-about-us {
-    clear: both;
     display: none;
+    clear: both;
 
     ul {
         margin: 0;
@@ -104,17 +104,27 @@ $menu-icon-size: 2.5em;
             position: relative;
             display: block;
             color: $white $imp;
+            border: none;
+
+            &:hover {
+                border: none;
+            }
+
+            &:active {
+                border: none;
+                background-color: transparent;
+            }
 
             // Hamburger menu icon
 
             &.meanmenu-reveal {
                 position: relative;
+                z-index: 9999;
                 right: 1em $imp;
                 float: right;
                 width: $menu-icon-size;
                 height: $menu-icon-size;
                 color: $white $imp;
-                z-index: 9999;
 
                 span {
                     position: relative;
@@ -129,7 +139,7 @@ $menu-icon-size: 2.5em;
                     &:last-child {
                         font-size: 80%;
                         position: absolute;
-                        bottom: -3px;
+                        bottom: 8px;
                         background: none;
                     }
                 }
@@ -140,8 +150,7 @@ $menu-icon-size: 2.5em;
 
                 + .mean-nav {
                     padding: 0 1em;
-
-                    @include bg-opacity($minor-navy, 0.95);
+                    background-color: $minor-navy;
                 }
             }
 
@@ -165,10 +174,6 @@ $menu-icon-size: 2.5em;
                         margin: 0;
                     }
                 }
-
-                & + .mean-nav {
-                    padding: 1em;
-                }
             }
         }
 
@@ -178,12 +183,6 @@ $menu-icon-size: 2.5em;
                 clear: both;
                 margin-top: 4em;
 
-                .menu:first-child {
-                    // TESTING - force menu to display on load without clicking
-                    //     display: block $imp;
-               
-                }
-
                 // Submenus (ul)
 
                 ul {
@@ -191,6 +190,8 @@ $menu-icon-size: 2.5em;
 
                     &.menu {
                         @extend %no-margin-padding;
+
+                        margin-top: 0.75em;
 
                         // Submenu warppers (ul) spacing
                         .dropdown-menu {
@@ -271,7 +272,7 @@ $menu-icon-size: 2.5em;
 
 #block-menu-block-2 ul li a {
     position: relative;
-    display: block;
+    display: inline;
     padding: 0;
 
     &:hover,
@@ -295,10 +296,11 @@ $menu-icon-size: 2.5em;
             li {
                 display: inline-block;
                 margin: 0;
-                padding: 0 .5em;
+                padding: 0;
 
-                &:nth-child(n):not(:last-child) {
-                    border-right: solid 1px $white;
+                &:nth-child(n):not(:last-child):after {
+                    content: '\00a0\00a0|\00a0';
+                    color: white;
                 }
 
                 a {

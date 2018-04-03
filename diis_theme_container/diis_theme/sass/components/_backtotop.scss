@@ -1,42 +1,44 @@
 $arrow: 3px;
 
-a.back-to-top {
-    position: fixed;
-    z-index: 990;
-    right: 3em;
-    bottom: 3em;
-    display: none;
-    width: 4em;
-    height: 4em;
-    text-indent: -9999px;
-    border-radius: 50%;
-    background-color: $primary-grey-light;
+a {
+    &.back-to-top {
+        position: fixed;
+        z-index: 990;
+        right: 3em;
+        bottom: 3em;
+        display: none;
+        width: 4em;
+        height: 4em;
+        text-indent: -9999px;
+        border-radius: 50%;
+        background-color: $primary-grey-light;
 
-    &:after {
-        position: absolute;
-        z-index: 9999;
-        top: 1.5em;
-        right: 0;
-        left: 0;
-        width: 1.5em;
-        height: 1.5em;
-        margin: 0 auto;
-        content: ' ';
-        transform: rotate(45deg);
-        border-top: solid $arrow white;
-        border-right: solid $arrow transparent;
-        border-bottom: solid $arrow transparent;
-        border-left: solid $arrow white;
-        background-color: transparent;
-    }
+        &:after {
+            position: absolute;
+            z-index: 9999;
+            top: 1.5em;
+            right: 0;
+            left: 0;
+            width: 1.5em;
+            height: 1.5em;
+            margin: 0 auto;
+            content: ' ';
+            transform: rotate(45deg);
+            border-top: solid $arrow white;
+            border-right: solid $arrow transparent;
+            border-bottom: solid $arrow transparent;
+            border-left: solid $arrow white;
+            background-color: transparent;
+        }
 
-    &:hover,
-    &:active {
-        background-color: $primary-grey-dark;
-    }
+        &:hover,
+        &:active {
+            background-color: $primary-grey-dark;
+        }
 
-    &:hover,
-    &:focus {
-        border-color: transparent;
+        &:hover,
+        &:focus {
+            border-color: transparent;
+        }
     }
 }

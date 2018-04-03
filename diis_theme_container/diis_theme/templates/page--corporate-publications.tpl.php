@@ -18,8 +18,8 @@
 				<?php endif; ?>
 			</div>
 			<div class="col-sm-3 text-resize-social-widget-wrapper">
-				<?php $node = node_load(13271); print $node->body['und'][0]['value']; ?>
-				<?php $node = node_load(13276); print $node->body['und'][0]['value']; ?>
+				<?php $block = module_invoke('bean', 'block_view', 'text-resize-widget'); print render($block['content']); ?>
+				<?php $block = module_invoke('bean', 'block_view', 'share-this-page-widget'); print render($block['content']); ?>
 			</div>
 		</div>
 	</div>

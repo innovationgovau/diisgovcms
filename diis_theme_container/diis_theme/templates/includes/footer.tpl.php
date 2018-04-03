@@ -20,8 +20,7 @@
 					<nav class="col-sm-6 col-md-3">
 						<?php $block = module_invoke('menu_block', 'block_view', '11'); ?> <strong> <?php print render($block['content']); ?></strong>
 					</nav>
-					<nav class="col-md-3" id="footer-follow-links"><?php $node = node_load(13261); print $node->body['und'][0]['value']; ?>
-					</nav>
+					<nav class="col-md-3" id="footer-follow-links"><?php $block = module_invoke('bean', 'block_view', 'follow-us---footer'); print render($block['content']); ?>
 				</div>
 			</div>
 			<hr>

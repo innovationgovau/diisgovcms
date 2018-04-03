@@ -1,24 +1,30 @@
 // _beta.scss
 
-#top p.beta {
-    font-size: xx-large;
-    margin-bottom: 0;
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
-    background-color: black;
-}
-
-#top .beta p {
-    margin: 0;
-    text-align: center;
-    background-color: black;
-
-    a {
-        color: white;
+#top {
+    p {
+        &.beta {
+            font-size: xx-large;
+            margin-bottom: 0;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            background-color: black;
+        }
     }
 
-    .btn {
-        margin: 1em;
+    .beta {
+        p {
+            margin: 0;
+            text-align: center;
+            background-color: black;
+
+            a {
+                color: white;
+            }
+
+            .btn {
+                margin: 1em;
+            }
+        }
     }
 }

@@ -29,8 +29,8 @@
 				<?php endif; ?>
 			</div>
 			<div class="col-sm-3 text-resize-social-widget-wrapper">
-				<?php $node = node_load(13271); print $node->body['und'][0]['value']; ?>
-				<?php $node = node_load(13276); print $node->body['und'][0]['value']; ?>
+				<?php $block = module_invoke('bean', 'block_view', 'text-resize-widget'); print render($block['content']); ?>
+				<?php $block = module_invoke('bean', 'block_view', 'share-this-page-widget'); print render($block['content']); ?>
 			</div>
 		</div>
 	</div>
@@ -86,12 +86,10 @@
 			<!-- Main page content if not homepage -->
 			<div class="container">
 				<div class="row">
-					<div class="col-md-9" id="region-content">
+					<div class="col-md-12" id="region-content">
 						<?php print render($page['content']); ?>
 					</div>
-					<div class="col-md-3" id="region-sidebar-second">
-						<?php print render($page['sidebar_second']); ?>
-					</div>
+					
 				</div>
 				<!-- EOF:#main-content -->
 			</div>

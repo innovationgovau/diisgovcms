@@ -1,43 +1,101 @@
 // _buttons.scss
+/*.button{
+  font-weight: 500;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  color: $white;
+  border: 0;
+  appearance: none;
+  
 
-.button {
-    font-size: normal;
-    font-weight: 500;
-    display: inline-block;
-    cursor: pointer;
-    user-select: none;
-    text-align: center;
-    vertical-align: middle;
-    text-decoration: none;
+  &:hover,
+  &:focus {
+    color: $black;
+    background-color: $minor-teal-2;
+  }
+
+  &:active {
     color: $white;
-    border: 0;
-    appearance: none;
+    background-color: $minor-navy;
+  }
 
-    &:hover,
-    &:focus {
-        color: $black;
-        background-color: $minor-teal-2;
-    }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .5;
 
-    &:active {
-        color: $white;
-        background-color: $minor-navy;
+    &:hover {
+      background-color: $minor-navy;
     }
+  }
+}*/
+ .btn-primary, .btn-info, .btn-default{
+    transition: 0.3s;
+    color: white;
+    background-color: $primary-blue;
+    border-color: $minor-navy;
+
+&:hover,
+  &:focus {
+    background-color: $primary-grey-dark;
+      border-color: $minor-navy;
+  }
+
+ &:active {
+    color: $white;
+    background-color: $minor-navy;
+  }
 
     &:disabled {
-        cursor: not-allowed;
-        opacity: .5;
+    cursor: not-allowed;
+    opacity: .5;
 
-        &:hover {
-            background-color: $minor-navy;
-        }
+    &:hover {
+      background-color: $minor-navy;
     }
+  }
+
 }
 
-// govCMS override
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active{
+    &:hover,
+  &:focus {
+    background-color: $primary-grey-dark;
+      border-color: $minor-navy;
+      color: white;
+  }
+   &:active {
+    color: $white;
+    background-color: $minor-navy;
+  }   
+}
 
+#edit-reset {
+    &:hover,
+  &:focus {
+    background-color: $primary-grey-dark;
+      border-color: $minor-navy;
+      color: white;
+  }
+   &:active {
+    color: $white;
+    background-color: $minor-navy;
+  }
+}
+
+.views-exposed-form .views-exposed-widget .btn {
+    margin-top: 2.9em;
+    font-size: .9em;
+}
+
+
+
+// govCMS override
 [class^='icon-'],
 [class*=' icon-'] {
-    font-size: inherit;
-    font-family: "Montserrat", sans-serif;
+  font-size: inherit;
+  font-family: "Montserrat", sans-serif;
 }

@@ -14,11 +14,25 @@
 }
 
 .hero-list {
-    padding: 0;
-
     @include tablet {
+        padding: 1em 0;
+    }
+
+
+    @include tablet-only {
         &:nth-child(odd) {
             clear: left;
+        }
+
+        &:nth-child(n + 3):nth-child(-n + 4) {
+            margin-top: 1em;
+            padding: 2em 0;
+            border-top: solid 1px $primary-blue;
+        }
+
+        &:nth-child(n + 5) {
+            padding: 2em 0 1em 0;
+            border-top: solid 1px $primary-blue;
         }
     }
 
@@ -34,19 +48,35 @@
         &:nth-child(4n) {
             clear: left;
         }
+
+        &:nth-child(n + 4) {
+            margin-top: 1em;
+            padding: 2em 0 1em 0;
+            border-top: solid 1px $primary-blue;
+        }
     }
 
 
+    .content {
+        max-height: 15em;
+    }
+
     @media only screen and (max-width: 768px) {
-        max-width: 80%;
         margin: 0 auto;
 
         .content {
+            display: inline-block;
             overflow-y: hidden;
-            height: 15em;
+            width: 100%;
+            height: 10em;
+            vertical-align: middle;
 
             img {
                 width: 100%;
+
+                // Make the images sit vertically centered when the aspect ration is skewed
+
+                vertical-align: middle;
             }
         }
     }
@@ -59,11 +89,11 @@
         margin: 0;
 
         a {
-            font-size: 20px;
+            font-size: 24px;
+            font-weight: 600;
             position: relative;
             display: block;
             margin-top: 0;
-            margin-bottom: 1.25em;
             padding: 1em .5em 1.5em .5em;
             text-align: center;
             color: white;
@@ -133,6 +163,7 @@
     }
 
     .hero-list-target {
+        padding-top: .75em;
         border: solid 1px transparent; // jQuery 'jump' animation fix
    
     }
@@ -174,7 +205,7 @@
 // Homepage Popular Links list
 
 .field-name-field-most-popular-link {
-    margin: 1.25em 0;
+    margin: 1em 0;
 
     & > .field-items {
         & > .field-item {
@@ -185,6 +216,7 @@
 
             @include tablet {
                 width: 50%;
+                padding: 0;
             }
 
 

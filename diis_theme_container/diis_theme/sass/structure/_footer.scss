@@ -1,5 +1,6 @@
 // _footer.scss
 footer {
+    font-size: .778rem;
     line-height: 15px;
     margin-top: 2em;
     padding: $xl 0;
@@ -20,60 +21,161 @@ footer {
         }
     }
 
-    #footer_second nav li a,
-    #footer_third nav li a,
-    #footer_first nav li a {
-        display: inline-block;
-        max-width: 100%;
-        text-decoration: none;
-        color: white;
-
-        &:hover,
-        &:focus {
-            color: $white;
-            border-bottom-color: $white;
-            background: none;
+    #footer_second,
+    #footer_third {
+        nav {
+            li {
+                a {
+                    padding: 0;
+                }
+            }
         }
     }
 
-    #footer_third nav .last li {
-        display: block;
-        margin-top: 1em;
-    }
+    #footer_first,
+    #footer_second,
+    #footer_third {
+        & nav {
+            li {
+                a {
+                    position: relative;
+                    display: inline-block;
+                    max-width: 100%;
+                    text-decoration: none;
+                    color: white;
 
-    #footer_third p.nolink {
-        font-size: 14px;
-        font-weight: bold;
-        margin-bottom: auto;
-        color: $white;
-    }
-
-    #footer_third .wepweb ul li {
-        display: block;
-        margin: auto;
-        padding-left: 3px;
-    }
-
-    #footer_third .wepweblast ul {
-        position: relative;
-        top: -14px;
-
-        @include tablet {
-            top: 0;
-            padding-top: 30px;
-        }
-
-
-        li {
-            display: block;
-            margin: auto;
-            padding-left: 3px;
+                    &:hover,
+                    &:focus {
+                        color: $white;
+                        border-bottom-color: $white;
+                        background: none;
+                    }
+                }
+            }
         }
     }
 
-    div[class^='region region-'] {
-        position: relative;
-        clear: both;
+    #footer_first {
+        ul {
+            margin: 0;
+
+            li {
+                display: block;
+                padding: 0.75em 0;
+
+                @include desktop {
+                    padding: 0;
+                }
+
+
+                margin: 0 0;
+
+                a {
+                    position: relative;
+                    display: inline-block;
+                    padding: 0;
+                }
+            }
+        }
+
+        .col-md-3 {
+            ul {
+                &.menu {
+                    a {
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        // Social media Follow icons
+
+        #footer-follow-links {
+            float: left;
+            position: relative;
+            top: -10px;
+        }
+
+        > nav {
+            &:last-child {
+                a {
+                    position: relative;
+                    display: inline-block;
+                    width: 2em;
+                    height: 2em;
+                    margin-right: 1em;
+
+                    > svg {
+                        display: block;
+                        width: auto;
+                        height: 100%;
+
+                        path {
+                            fill: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #footer_third {
+        nav {
+            .last {
+                li {
+                    display: block;
+                    margin-top: 1em;
+                }
+            }
+        }
+
+        p {
+            &.nolink {
+                font-size: 14px;
+                font-weight: bold;
+                margin-bottom: auto;
+                color: $white;
+            }
+        }
+
+        .wepweb {
+            ul {
+                li {
+                    position: relative;
+                    display: block;
+                    margin: .75em auto;
+                    padding-right: 1em;
+                    padding-left: 3px;
+                }
+            }
+        }
+
+        .wepweblast {
+            ul {
+                position: relative;
+                top: -14px;
+
+                @include tablet {
+                    top: 0;
+                    padding-top: 30px;
+                }
+
+
+                li {
+                    display: block;
+                    margin: .75em auto;
+                    padding-right: 1em;
+                    padding-left: 3px;
+                }
+            }
+        }
+    }
+
+    div {
+        &[class^='region region-'] {
+            position: relative;
+            clear: both;
+        }
     }
 
     .container {
@@ -83,10 +185,6 @@ footer {
                 padding-left: 0;
             }
         }
-    }
-
-    li {
-        list-style: none;
     }
 
     .region-footer-lower {
@@ -101,7 +199,7 @@ footer {
         margin: 0;
 
         a {
-            font-size: 14px;
+            font-size: .778rem;
             font-weight: bold;
             color: $white;
 
@@ -113,25 +211,17 @@ footer {
         }
     }
 
-    ul.menu {
-        padding-left: 0;
+    ul {
+        &.menu {
+            padding-right: 1em;
+            padding-left: 0;
 
-        li {
-            margin: 0;
-            list-style-type: none;
-            list-style-image: none;
-        }
-    }
-
-    #footer_first {
-        .col-md-3 {
-            ul.menu a {
-                color: white;
+            li {
+                margin: .75em 0;
+                list-style-type: none;
+                list-style-image: none;
             }
         }
-
-        // Social media Follow icons
-   
     }
 
     // Apply top and bottom margins to footer sections
@@ -147,52 +237,37 @@ footer {
     }
 
     hr {
-        clear: both;
-        border: none;
-        border-top: solid 1px $white;
-    }
-}
+        // Hide on mobiles, as everything is stacked in 1 column
+        display: none;
 
-.region-bottom {
-    .block {
-        text-align: center;
-    }
-}
-
-.region-footer-lower {
-    #block-block-21,
-    #block-block-11 {
-        padding: 0 15px;
-
-        @include desktop {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-
-        p {
-            font-size: .85rem;
+        @include tablet {
+            display: block;
+            clear: both;
+            border: none;
+            border-top: solid 1px $white;
         }
     }
-}
 
-footer {
-    font-size: .95rem;
-}
+    .region-bottom {
+        .block {
+            text-align: center;
+        }
+    }
 
-#footer_second nav li a,
-#footer_third nav li a {
-    position: relative;
-    display: block;
-    padding: 0;
-}
+    .region-footer-lower {
+        #block-block-21,
+        #block-block-11 {
+            padding: 0 15px;
 
-#footer_first ul li {
-    display: block;
+            @include desktop {
+                max-width: 800px;
+                margin: 0 auto;
+            }
 
-    a {
-        position: relative;
-        display: block;
-        padding: 0;
+
+            p {
+                font-size: .5556rem;
+            }
+        }
     }
 }

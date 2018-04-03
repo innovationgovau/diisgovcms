@@ -1,6 +1,41 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v1.62, origin/features  * 2018-03-26 | d88e066 | VSTS 76353 - Fontawesome icons do not render correctly
+ HEAD -> features, tag: v1.77  * 2018-04-03 | 9192b55 | VSTS 77413 - Footer menu links are bunched too close together on mobiles
+ tag: 2018-04-03.0, origin/features  * 2018-04-03 | c655307 | VSTS 71181 fix incorrectly configured content pages
+   * 2018-04-03 | 9bbbe1a | Updated 2-col template file to remove duplicate IDs
+   * 2018-04-03 | 8cad098 | Updated changelog to v1.76
+ tag: v1.76  * 2018-04-03 | 7e57ed9 | Added an alert for when JavaScript is disabled
+   * 2018-04-03 | 0933f15 | Updated changelog to v1.75
+ tag: v1.75  * 2018-04-03 | da4912a | VSTS 75436 - MVP#2 - Mainpage - Most popular section - extra space is displayed below the heading
+   * 2018-04-03 | 7f6cf43 | VSTS 72543 - display sector tage results pages
+   * 2018-04-03 | 7b118a5 | VSTS display sector tag results pages
+ origin/75639-popular-links  * 2018-04-03 | 1529742 | Updated changelog
+ tag: v1.74  * 2018-04-03 | a016214 | Minor JS updates to feedback tab
+ tag: v1.73  * 2018-04-03 | 4b8017c | VSTS 72767 - feature clickable images thumbnail
+ tag: 2018-04-03  * 2018-03-29 | 4b4d6fb | Updated changelog to v1.72
+   * 2018-03-29 | 09865e2 | VSTS 75660 - MVP#2 - iPhone X with safari 11 issues
+ tag: v1.72  * 2018-03-29 | bd3e78d | VSTS 75660 - MVP#2 - iPhone X wiht safari 11 issues
+ origin/gitignore, gitignore  * 2018-03-29 | 6b7e960 | Stopped tracking modules
+ tag: v1.71, tag: 2018-03-29.1, tag: 2018-03-29.0, origin/govcms-update-2.17, govcms-update-2.17  * 2018-03-29 | be0c556 | SECURITY: Update govCMS profile from 2.16 > 2.17, including Drupal Core 7.57 > 7.58 - addresses multiple critical vulnerabilities - https://www.drupal.org/sa-core-2018-002
+ tag: 2018-03-29  * 2018-03-28 | ecd2498 | Updated changelog
+ tag: v1.70  * 2018-03-28 | a2b5a87 | VSTS 73721 - publishers can update admin nodes
+   * 2018-03-28 | f149675 | Updated changelog to v1.69
+ tag: v1.69  * 2018-03-28 | 9f96e31 | VSTS 75660 - MVP#2 - iPhone X with Safari 11 issues
+ tag: v1.68  * 2018-03-28 | 8f5ffe4 | Recompiled SASS after pull/merge.
+   * 2018-03-28 | 2a31059 | Merge branch 'features' of svn-5468.devcloud.hosting.acquia.com:betaindustry into features
+ tag: v1.67  * 2018-03-27 | 9bf585d | VSTS-76883 update to base font size, plus compensating REM sizing for front page headings, list items and text. Header and footer typography fixes relating to base font size and/or matching design. Spacing adjustments on front page headings for "Most popular", "Latest updates from the department" and "Consultations". Added horizontal border above "Most popular".
+ tag: 2018-03-28, origin/77644-beta-charlimit, 77644-beta-charlimit  * 2018-03-27 | f1a8cf2 | Updated changelog to v1.67
+   * 2018-03-27 | 4d0acb9 | VSTS 72491 - DEV: Fix crest display issues
+ tag: v1.66, tag: 2018-03-27.0, origin/76881-crest-overlap, 76881-crest-overlap  * 2018-03-27 | f3ce310 | VSTS 72916 - apply  visual identity colusion for brand exemptions
+   * 2018-03-27 | 542ec6b | Updated changelog to v1.65
+ tag: v1.65  * 2018-03-27 | bfc081a | VSTS 72543 - FEATURE: Display of sector tag results pages
+ origin/dev, dev  * 2018-03-27 | 62e5079 | DEV: Moved SASS source files into separate directory
+ tag: 2018-03-27  * 2018-03-26 | fc4b453 | Updated changelog to v1.64
+ tag: v1.64  * 2018-03-26 | 3c6baa4 | VSTS 75549 - MVP#2 - Extra space displayed between heading and content on IA level 2 pages
+   * 2018-03-26 | 6aa2e62 | Updated changeog to v1.63
+ tag: v1.63  * 2018-03-26 | 13961ac | VSTS 73350 - FEATURE: Review display and heading styles of news landing page
+   * 2018-03-26 | 8385a2b | Updated changelog to v1.62
+ tag: v1.62  * 2018-03-26 | d88e066 | VSTS 76353 - Fontawesome icons do not render correctly
    * 2018-03-26 | 6ff8f67 | Updated changelog to v1.61
  tag: v1.61  * 2018-03-26 | 872f22f | VSTS 77246 - MVP #2 - Rate this page - Issues when navigating with tab key
  tag: 2018-03-26  * 2018-03-23 | 9fcbbdd | Updated changelog to v1.59
@@ -10,12 +45,13 @@
    * 2018-03-23 | 731e2ba | Updated changelog to v1.57
  tag: v1.57  * 2018-03-23 | b03b9a5 | VSTS 76045 - style feedback form
    * 2018-03-23 | 967ee6d | Updated changelog to v1.56
- tag: v1.56, hotfixes  * 2018-03-23 | 37c1b09 | FIX: Tabbing out of Feedback form text field would close the entire form
+ tag: v1.56, origin/hotfixes, hotfixes  * 2018-03-23 | 37c1b09 | FIX: Tabbing out of Feedback form text field would close the entire form
  tag: v1.55  * 2018-03-23 | e70b444 | VSTS 75992 - Platform dev - Rate this page
    * 2018-03-23 | d3b4f09 | Updated changelog to v1.54
  tag: v1.54  * 2018-03-23 | 79f092b | VSTS 75992 - Platform dev - Rate this page
  tag: 2018-03-23, origin/subtheme, subtheme  * 2018-03-22 | 5ea681c | Updated changelog to v1.53
  tag: v1.53  * 2018-03-22 | a6eab1c | VSTS 75535 - MVP#2 - Social Share icons and Resize icon issues
+   * 2018-03-22 | e90d891 | Merged 'origin/features'
    * 2018-03-22 | ac6a3c5 | Merge branch 'dev' into features
  tag: v1.52  * 2018-03-22 | 5dfb4d6 | Updated changelog export script to match new theme filepath
  tag: v1.51  * 2018-03-22 | d0b23d5 | Merge branch 'dev' into features
@@ -35,11 +71,12 @@
  tag: v1.48, tag: 2018-03-21  * 2018-03-16 | 4e51d7a | VSTS 75992 - Rate This Page widget
  tag: 1.48  * 2018-03-16 | 2ee6575 | Merge branch '76017-feedback-form' into features
    * 2018-03-16 | f7a7e13 | Updated changelog to 1.47
- tag: v1.47, origin/hotfixes  * 2018-03-16 | 2677833 | FIX: Updated changelog export path to be relative to site root
+ tag: v1.47  * 2018-03-16 | 2677833 | FIX: Updated changelog export path to be relative to site root
  tag: v1.46  * 2018-03-16 | ac050fa | FIX: Sublime Text editor JSBeautifier plugin incorrectly replaced '$(this)' with '$(form)'... yeah
    * 2018-03-16 | d4dff85 | Updated changelog to v1.45
  tag: v1.45, origin/changelog-script, changelog-script  * 2018-03-16 | c46fa0d | Updated exported file path destination location
  tag: 2018-03-20  * 2018-03-16 | 0ccab0d | Updated changelog
+   * 2018-03-16 | a2de4ab | Merge branch 'master' of svn-5468.devcloud.hosting.acquia.com:betaindustry
  tag: v1.44  * 2018-03-16 | bde759f | VSTS 75992 - Rate this Page widget
  tag: 2018-03-16.0, tag: 2018-03-16  * 2018-03-16 | 7fca441 | VSTS Design beta site feedback form in banner
  tag: v1.43, tag: 2018-03-15  * 2018-03-15 | b894e81 | VSTS 75396 - Tabbing after 'Skip to Search' skip link jumps to previous menu in IE
@@ -47,7 +84,7 @@
  tag: v1.42, tag: 2018-03-14  * 2018-03-14 | 887c8d2 | VSTS 75396 - Tabbing after 'Skip to Search' skip link jumps to previous menu in IE
    * 2018-03-14 | ea11e4d | VSTS 74224 - full system test
  tag: 2018-03-13, tag: 2018-03-12  * 2018-03-09 | b51d09a | VSTS 74224 MVP2 full system test
- tag: 2018-03-08.0, origin/master, origin/HEAD, master  * 2018-03-08 | b15716d | Public Beta release - major updates
+ tag: 2018-03-08.0  * 2018-03-08 | b15716d | Public Beta release - major updates
    * 2018-03-08 | eab81d1 | Removed incomplete MeanMenu-detection script
    * 2018-03-08 | c8a3038 | Updated changelog to v1.41
  tag: v1.41  * 2018-03-08 | 381dcf3 | Minor CSS cleanup, added margin above Footer, cleaned up Back To Top link
@@ -66,6 +103,7 @@
    * 2018-03-06 | aa29a94 | VSTS 73980 - Ensure main website content is displayed correctly
  tag: 2018-03-06.0, tag: 2018-03-06  * 2018-03-05 | a8c0e43 | Updated changelog to v1.37
  tag: v1.37  * 2018-03-05 | 9768054 | VSTS 74974 - Ensure website code is up to date prior to second forklift
+   * 2018-03-05 | 342d177 | Merge branch 'master' of svn-5468.devcloud.hosting.acquia.com:betaindustry
    * 2018-03-05 | b62f214 | VSTS 73212 - update homepage hero tile menu system
    * 2018-03-05 | 52a00be | VSTS 74123 - Update website menu items
    * 2018-03-05 | 1ded5d3 | VSTS 74123 - Update website menu items
@@ -117,6 +155,7 @@
  tag: v1.24, origin/70581-crest-breaks, 70581-crest-breaks  * 2018-02-08 | a819e7a | Updated styles to use left-floating Crest elements to better handle screen size changes, updated Anchor hover styles
  tag: v1.23  * 2018-02-08 | 5ec59b5 | Updated text-resize script to only target the main page area, not the header and footer
    * 2018-02-06 | e766db8 | THEME: Tweaks to menu styles for smoother open-closing animation
+   * 2018-02-05 | 2c04b02 | Acquia dev desktop
  tag: v1.22, tag: 2018-02-05, origin/70194-print-issues, 70194-print-issues  * 2018-02-05 | a30fac1 | Updated file paths referring to theme location to use 'path_to_theme() function'
  tag: v1.21  * 2018-02-05 | 1e44c9e | VSTS 70341 - Excluded jQuery from aggregatable scripts and removed restriction on enabling JS aggregation in settings.php
  tag: v1.20, tag: 2018-01-30.0, tag: 2018-01-30, tag: 2018-01-25.2, tag: 2018-01-25.1  * 2018-01-25 | fe56f28 | Updated print styles to hide Social Share links
@@ -156,3 +195,4 @@
  tag: v1.1  * 2018-01-16 | b8919b9 | test file
  tag: v1.2  * 2018-01-16 | c28d517 | THEME: Updated typography, included Monsterrat font, removed blue heading colour for now
    * 2018-01-16 | 7bf56fa | THEME: Updated footer link styles and <hr>
+ tag: v1.0  * 2018-01-15 | a44adc2 | THEME: Updated anchor link styles, added $purple colour variables

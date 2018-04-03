@@ -681,18 +681,7 @@ function diis_theme_menu_tree__secondary(array &$variables) {
   return '<ul class="menu nav navbar-nav secondary">' . $variables['tree'] . '</ul>';
 }
 
-function diis_theme_menu_tree__book_toc(array &$variables) {
-  $output = '';
-  $output .= ' ';
-  $output .= t('', array(
-    '!icon' => _bootstrap_icon('list'),
-    '!caret' => '',
-  ));
-  $output .= '';
-  $output .= '<ul class="menu" role="menu">' . $variables['tree'] . '</ul>';
-  $output .= '</div>';
-  return $output;
-}
+
 
 function diis_theme_menu_tree__book_toc__sub_menu(array &$variables) {
   return '<ul class="menu" role="menu">' . $variables['tree'] . '</ul>';

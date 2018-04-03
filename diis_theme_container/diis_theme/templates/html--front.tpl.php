@@ -80,6 +80,12 @@
 	<?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?> homepage" <?php print $attributes;?>>
+	<!-- No JavaScript alert -->
+	<noscript id="no-js-alert">
+		<p>You appear to have JavaScript disabled in your browser, and some elements of this website require it to run correctly.</p>
+		<p>For the best experience, please enable JavaScript.</p>
+	</noscript>
+	<!-- End No JavaScript alert -->
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKM5HKB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
@@ -96,7 +102,7 @@
 						<img src=<?php print("/" . drupal_get_path('theme',$GLOBALS['theme']) . "/img/crest-black-256.png"); ?> alt="Home" class="coa-img" />
 						<div>
 							<span class="coa-line-one coa-lines-2">Australian Government</span>
-							<span class="coa-line-one coa-lines-1"><?php $node = node_load(13256); print $node->body['und'][0]['value']; ?></span>
+					<span><?php $block = module_invoke('bean', 'block_view', 'crest---department-name'); print render($block['content']); ?></span>
 						</div>
 						<p>Beta</p>
 						<span class="clearboth"></span>

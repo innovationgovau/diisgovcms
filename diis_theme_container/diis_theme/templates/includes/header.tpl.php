@@ -14,7 +14,7 @@
 									<img src=<?php print("/" . drupal_get_path('theme',$GLOBALS['theme']) . "/img/crest-64.png"); ?> alt="Home" class="coa-img" />
 									<div>
 										<span class="coa-line-one coa-lines-2">Australian Government</span>
-										<span class="coa-line-one coa-lines-1"><?php $node = node_load(13256); print $node->body['und'][0]['value']; ?></span>
+										<span><?php $block = module_invoke('bean', 'block_view', 'crest---department-name'); print render($block['content']); ?></span>
 									</div>
 									<span class="clearboth"></span>
 								</a>
@@ -32,8 +32,7 @@
 		</div>
 		<?php if (drupal_is_front_page()): ?>
 		<div id="mission-statement" class="container">
-			<?php $node = node_load(13281); print $node->body['und'][0]['value']; ?>
-		</div>
+			<?php $block = module_invoke('bean', 'block_view', 'vision-statement'); print render($block['content']); ?>
 		<?php endif; ?>
 	</div>
 </header>

@@ -13,26 +13,35 @@ header {
         #mission-statement {
             border-top: solid 1px $white;
 
+            @include tablet {
+                margin-bottom: 2em;
+            }
+
+
             p {
-                font-size: 2.277rem;
+                font-size: 1.6em;
                 font-weight: 300;
                 max-width: 100%;
                 margin: 0 auto;
-                padding: 1em;
+                padding: 1em 0;
                 text-align: center;
                 color: $white;
+
+                @include tablet {
+                    font-size: 2rem;
+                }
             }
         }
     }
 }
 
-#cs-content{
+#cs-content {
     display: none;
 }
 
 #about {
     margin: 0;
-    padding: 1em 0;
+    padding: 1em 0 0 0;
     background-color: transparent;
 
     .page-header {
@@ -41,5 +50,14 @@ header {
 
     h1 {
         margin-bottom: 0;
+    }
+}
+
+.front {
+    #mission-statement {
+        &.container {
+            padding-right: 0;
+            padding-left: 0;
+        }
     }
 }

@@ -149,7 +149,7 @@
 				meanMenuContainer: '#meanmenu-dest',
 				meanScreenWidth: '9999',
 				meanMenuOpen: '<span></span><span></span><span></span><span>MENU</span>', // hamburger menu + the word 'Menu'
-				meanMenuClose: '<span></span><span></span><span>Close</span>',
+				meanMenuClose: '<span></span><span></span><span>CLOSE</span>',
 				meanMenuCloseSize: 'inherit'
 			});
 		}
@@ -347,8 +347,17 @@
 			if ($('#webform-client-form-13321').length) {
 				
 				var $form = $('#webform-client-form-13321'),
+					tellUsMore = $form.find('.form-actions .form-items-cubmitted-comments'),
 					submitButton = $form.find('.form-actions button.form-submit'),
 					options = $form.find('input[id^=edit-submitted-rating-]');
+
+				// The text area's visibility is controlled via the webform settings. 
+				// Leave this here in case that functionality ever gets moved to scripts
+				/*
+				if (tellUsMore.is(':visible')) {
+					tellUsMore.hide();
+				}
+				*/
 
 				// Hide the submit button no matter what
 				submitButton.attr('disabled', 'disabled').hide();
@@ -371,7 +380,9 @@
 						// Unhide the submit button, if it isn't already
 						// This isn't really necessary since we're using radio checkboxes, which 
 						// can't be disabled once selected, but what if...?
-						if (!submitButton.is(':visible')) {
+						if (!submitButton.is(':visible') && !tellUsMore.is(':visible')) {
+						// Only use this VVVV if the webform configuration is not used to manage field visibility 
+						//	tellUsMore.slideDown();
 							submitButton.show().removeAttr('disabled');
 						}
 					})

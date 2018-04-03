@@ -1,8 +1,23 @@
 // components/_widgets.scss
 
+// No JS alert banner
+
+#no-js-alert {
+    display: block;
+    padding: .75em;
+    text-align: center;
+    background: #f5f502;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
 // Homepage panel separator
 .pane-latest-news,
-.pane-consultations {
+.pane-consultations,
+.pane-bean-most-popular {
     @extend %divider;
 }
 
@@ -10,32 +25,45 @@
 .front {
     h2 {
         &.pane-title {
-            font-size: 2em;
+            font-size: 1.389em;
+            margin-top: 1.6em;
+            margin-bottom: 0;
             color: #005677;
         }
     }
 
     .view-latest-news {
-        h3 {
-            font-size: 1.15em;
-            font-weight: 700;
+        .view-content {
+            & > div {
+                margin-bottom: 1em;
 
-            a {
-                &:visited {
-                    color: #005677;
+                @include tablet {
+                    margin-bottom: 0;
                 }
             }
-        }
 
-        p {
-            font-size: 1.15em $imp;
+            h3 {
+                font-size: .8889em;
+                font-weight: 700;
+                margin: 0;
+
+                a {
+                    &:visited {
+                        color: #005677;
+                    }
+                }
+            }
+
+            p {
+                font-size: 0.8889em $imp;
+            }
         }
     }
 
     .pane-taxonomy-sector {
         ul {
             li {
-                font-size: 1.3em $imp;
+                font-size: 1em $imp;
                 margin: .75em 0;
                 list-style: none;
             }
@@ -43,7 +71,7 @@
 
         .view-footer {
             p {
-                font-size: 1.1em $imp;
+                font-size: 0.8889em $imp;
             }
         }
     }
@@ -52,8 +80,25 @@
     .pane-latest-news,
     .pane-consultations {
         @include desktop {
-            padding-left: 0;
             padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    .pane-bean-most-popular {
+        margin-bottom: 0;
+
+        h2 {
+            //margin-top: 1em;
+       
+        }
+
+        .paragraphs-items-field-most-popular-link {
+            padding-left: 15px;
+
+            @include tablet {
+                padding-left: 0;
+            }
         }
     }
 
@@ -63,8 +108,8 @@
         }
 
         *[class*='col-'] {
-            padding-left: 0;
             padding-right: 0;
+            padding-left: 15px;
         }
     }
 
@@ -106,7 +151,7 @@
 
     .view-consultations {
         .views-field-title {
-            font-size: 1.15em;
+            font-size: 1em;
             font-weight: 700;
         }
     }
