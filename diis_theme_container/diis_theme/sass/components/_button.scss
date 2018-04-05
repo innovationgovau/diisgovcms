@@ -32,70 +32,96 @@
     }
   }
 }*/
- .btn-primary, .btn-info, .btn-default{
-    transition: 0.3s;
+.btn-primary,
+.btn-info,
+.btn-default {
+    transition: .3s;
     color: white;
-    background-color: $primary-blue;
     border-color: $minor-navy;
+    background-color: $primary-blue;
 
-&:hover,
-  &:focus {
-    background-color: $primary-grey-dark;
-      border-color: $minor-navy;
-  }
+    &:hover,
+    &:focus {
+        border-color: $minor-navy;
+        background-color: $primary-grey-dark;
+    }
 
- &:active {
-    color: $white;
-    background-color: $minor-navy;
-  }
+    &:active {
+        color: $white;
+        background-color: $minor-navy;
+    }
 
     &:disabled {
-    cursor: not-allowed;
-    opacity: .5;
+        cursor: not-allowed;
+        opacity: .5;
 
-    &:hover {
-      background-color: $minor-navy;
+        &:hover {
+            background-color: $minor-navy;
+        }
     }
-  }
-
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active{
+.btn-primary {
     &:hover,
-  &:focus {
-    background-color: $primary-grey-dark;
-      border-color: $minor-navy;
-      color: white;
-  }
-   &:active {
-    color: $white;
-    background-color: $minor-navy;
-  }   
+    &:focus {
+        color: white;
+        border-color: $minor-navy;
+        background-color: $primary-grey-dark;
+    }
+
+    &:active {
+        color: $white;
+        background-color: $minor-navy;
+    }
 }
 
 #edit-reset {
     &:hover,
-  &:focus {
-    background-color: $primary-grey-dark;
-      border-color: $minor-navy;
-      color: white;
-  }
-   &:active {
-    color: $white;
-    background-color: $minor-navy;
-  }
+    &:focus {
+        color: white;
+        border-color: $minor-navy;
+        background-color: $primary-grey-dark;
+    }
+
+    &:active {
+        color: $white;
+        background-color: $minor-navy;
+    }
 }
 
-.views-exposed-form .views-exposed-widget .btn {
-    margin-top: 2.9em;
-    font-size: .9em;
+.views-exposed-form {
+    .views-exposed-widget {
+        .btn {
+            font-size: .9em;
+            margin-top: 2.9em;
+        }
+    }
 }
-
-
 
 // govCMS override
 [class^='icon-'],
 [class*=' icon-'] {
-  font-size: inherit;
-  font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: inherit;
+}
+
+/*webform button and spacing - general feedback form*/
+
+#webform-client-form-13321{
+  margin-bottom:1em;
+  }
+#region-content div.form-actions {
+  margin-top:-2em;
+}
+
+/*webform button and spacing - beta banner feedback form*/
+
+#webform-client-form-13336 {
+  max-width: 1170px;
+  padding-bottom: 1em;
+  margin:auto;
+  button{
+    float:right;
+    margin-top:-2em;
+  }
 }

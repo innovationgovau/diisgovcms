@@ -1,0 +1,61 @@
+/*bottom of page navigation*/
+
+.book-navigation .btn {
+  display: none;
+}
+
+.node-corporate-publications footer {
+  display: none;
+}
+
+
+.book-navigation ul li.previous a,
+.book-navigation ul li.next a {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.book-navigation ul li a.page-up {
+  margin-bottom: 1em;
+}
+
+
+/*top or left menu */
+
+#block-book-navigation h2 {
+  margin-bottom: 0;
+  a {
+    font-size: 0.6em;
+  }
+}
+
+#block-book-navigation ul {
+  padding-left: 0.8em;
+  li ul {
+    padding-left: 0.8em;
+    li ul {
+      padding-left: 0.8em;
+    }
+  }
+}
+
+#block-book-navigation ul a{
+  font-size: 0.9em;
+}
+
+
+#block-book-navigation ul a.active-trail.active{
+	font-weight: bold;
+
+
+li a {
+  font-size: 0.9em;
+}}
+
+@include desktop {
+  /*bottom of page navigation*/
+  .book-navigation ul li.previous a,
+  .book-navigation ul li.next a {
+    width: 35%;
+  }
+}

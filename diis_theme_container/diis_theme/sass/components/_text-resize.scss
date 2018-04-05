@@ -8,48 +8,61 @@
     }
 }
 
-ul.text-resize {
-    display: inline-block;
-    float: right;
-    margin-bottom: 0;
-
-    li {
-        display: inline-block;
-
-        @extend %no-list;
-
-        &:nth-child(1) {
-            a:after {
-                font-size: 80%;
-            }
+// hide JS-dependent controls when JS is disabled
+.no-js {
+    ul {
+        &.text-resize {
+            display: none;
         }
+    }
+}
 
-        &:nth-child(2) {
-            a:after {
-                font-size: 100%;
-            }
-        }
+.js {
+    ul {
+        &.text-resize {
+            display: inline-block;
+            float: right;
+            margin-bottom: 0;
 
-        &:nth-child(3) {
-            a:after {
-                font-size: 120%;
-            }
-        }
+            li {
+                display: inline-block;
 
-        a {
-            position: relative;
-            display: block;
-            overflow: hidden;
-            width: 1.5em;
-            height: 1.5em;
-            color: transparent !important;
+                @extend %no-list;
 
-            &:after {
-                position: absolute;
-                top: 0;
-                left: 0;
-                content: 'A';
-                color: #333;
+                &:nth-child(1) {
+                    a:after {
+                        font-size: 80%;
+                    }
+                }
+
+                &:nth-child(2) {
+                    a:after {
+                        font-size: 100%;
+                    }
+                }
+
+                &:nth-child(3) {
+                    a:after {
+                        font-size: 120%;
+                    }
+                }
+
+                a {
+                    position: relative;
+                    display: block;
+                    overflow: hidden;
+                    width: 1.5em;
+                    height: 1.5em;
+                    color: transparent !important;
+
+                    &:after {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        content: 'A';
+                        color: #333;
+                    }
+                }
             }
         }
     }

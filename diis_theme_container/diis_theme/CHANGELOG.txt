@@ -1,7 +1,13 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v1.77  * 2018-04-03 | 9192b55 | VSTS 77413 - Footer menu links are bunched too close together on mobiles
- tag: 2018-04-03.0, origin/features  * 2018-04-03 | c655307 | VSTS 71181 fix incorrectly configured content pages
+ HEAD -> features, tag: v1.79  * 2018-04-04 | 153b136 | VSTS 76353 - Hide Text Resize controls when JS is disabled, and add z-index to Social Share icons to stop them sitting behind H1s
+ origin/features  * 2018-04-04 | 4d1cee4 | VSTS 72767 clickable images thumbnails for document
+   * 2018-04-04 | f87883c | No VSTS - set basic borders on tables
+   * 2018-04-04 | 8d5c1bd | VSTS fix incorrectly config content pages
+ tag: v1.78  * 2018-04-04 | e4e2a33 | VSTS 71181 - fix incorrectly config content pages
+ tag: 2018-04-04  * 2018-04-03 | 4d42389 | Updated changelog to v1.77
+ tag: v1.77  * 2018-04-03 | 9192b55 | VSTS 77413 - Footer menu links are bunched too close together on mobiles
+ tag: 2018-04-03.0  * 2018-04-03 | c655307 | VSTS 71181 fix incorrectly configured content pages
    * 2018-04-03 | 9bbbe1a | Updated 2-col template file to remove duplicate IDs
    * 2018-04-03 | 8cad098 | Updated changelog to v1.76
  tag: v1.76  * 2018-04-03 | 7e57ed9 | Added an alert for when JavaScript is disabled
@@ -196,3 +202,5 @@
  tag: v1.2  * 2018-01-16 | c28d517 | THEME: Updated typography, included Monsterrat font, removed blue heading colour for now
    * 2018-01-16 | 7bf56fa | THEME: Updated footer link styles and <hr>
  tag: v1.0  * 2018-01-15 | a44adc2 | THEME: Updated anchor link styles, added $purple colour variables
+ tag: 2018-01-15  * 2018-01-15 | cf048bd | Merge branch 'subtheme'
+   * 2018-01-15 | 538423b | THEME: Added 'Skip to Content' links. Not sure why they were missing

@@ -189,9 +189,9 @@ $menu-icon-size: 2.5em;
                     margin: 0;
 
                     &.menu {
-                        @extend %no-margin-padding;
+                        margin-top: .75em;
 
-                        margin-top: 0.75em;
+                        @extend %no-margin-padding;
 
                         // Submenu warppers (ul) spacing
                         .dropdown-menu {
@@ -270,15 +270,21 @@ $menu-icon-size: 2.5em;
     }
 }
 
-#block-menu-block-2 ul li a {
-    position: relative;
-    display: inline;
-    padding: 0;
+#block-menu-block-2 {
+    ul {
+        li {
+            a {
+                position: relative;
+                display: inline;
+                padding: 0;
 
-    &:hover,
-    &:focus {
-        border-bottom-color: $white;
-        background: none;
+                &:hover,
+                &:focus {
+                    border-bottom-color: $white;
+                    background: none;
+                }
+            }
+        }
     }
 }
 

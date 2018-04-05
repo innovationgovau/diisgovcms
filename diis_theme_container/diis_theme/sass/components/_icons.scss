@@ -4,6 +4,7 @@
     // Social share icons
     #share-this-page {
         position: absolute;
+        z-index: 999;
         right: 0;
 
         p {
@@ -65,4 +66,14 @@
             display: none;
         }
     }
+}
+
+/*Document Upload content type - align dl icon with text*/
+
+.field-name-field-document-other div div span,
+.field-name-field-document-pdf div div span {
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
 }
