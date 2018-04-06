@@ -108,6 +108,13 @@ $lightish-grey: #e1e1e1;
 // Tweaked corporate colours
 
 $off-white: darken($white, 20%);
+$teal: #1a948f;
+$burnt-gold: #6f5300; // Passes WCAG AAA level at all sizes against a white background
+
+// Components
+
+$links-body: $burnt-gold;
+$link-border-width: 2px;
 
 // Fonts
 

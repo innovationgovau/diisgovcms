@@ -3,3 +3,24 @@
 img {
     max-width: 100%;
 }
+
+/* Branding images on std page */
+
+.field-name-field-branding-banner  img{
+    padding:2em;
+}
+
+/*home page news items*/
+.pane-latest-news.col-sm-12 .node-image-upload{
+
+    padding: 1em 0;
+
+}
+
+@include desktop {
+	/*home page news items*/
+.pane-latest-news.col-sm-12 .node-image-upload{
+	margin-left: 13px;
+    padding: 1em 0;
+
+}}

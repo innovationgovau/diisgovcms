@@ -54,11 +54,22 @@
                     width: 1.5em;
                     height: 1.5em;
                     color: transparent !important;
+                    border-bottom: solid 2px transparent;
+
+                    &:hover {
+                        border-bottom: solid 2px $links-body;
+                    }
+
+                    &:active {
+                        &:after {
+                            color: $white;
+                        }
+                    }
 
                     &:after {
                         position: absolute;
                         top: 0;
-                        left: 0;
+                        left: 4px;
                         content: 'A';
                         color: #333;
                     }

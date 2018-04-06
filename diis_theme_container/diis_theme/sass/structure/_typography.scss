@@ -51,7 +51,20 @@ body {
     // End IE :D
 
     #region-content {
-        p, span, ul, ol, li, dd, dt, dl, table, td, th, address, blockquote, a {
+        p,
+        span,
+        ul,
+        ol,
+        li,
+        dd,
+        dt,
+        dl,
+        table,
+        td,
+        th,
+        address,
+        blockquote,
+        a {
             font-size: unset; // undo a generic govCMS style that prevents simple text-resizing
        
         }
@@ -87,7 +100,7 @@ h1 {
 }
 
 #main-body h1 {
-    color: #000;//override #about id copied from govCMS theme (see: 'sites/all/themes/diis_theme_container/diis_theme/templates/page.tpl.php')
+    color: #000; //override #about id copied from govCMS theme (see: 'sites/all/themes/diis_theme_container/diis_theme/templates/page.tpl.php')
 }
 
 h2 {
@@ -122,11 +135,11 @@ p {
     font-size: 1em;
     line-height: 1.44;
     margin: 0 0 8px;
-    margin: 0 0 0.4444em;
+    margin: 0 0 .4444em;
 }
 
 p:last-child {
-    margin-bottom: 0.4444em;
+    margin-bottom: .4444em;
 }
 
 li {
@@ -143,22 +156,52 @@ em {
 }
 
 a {
-    color: $primary-blue;
-    border: solid 2px transparent;
+    color: $links-body;
+
+    @extend %link-border;
+
+    border-bottom: dotted 2px $links-body;
 
     &[tabindex] {
         border: none;
     }
 
+    &:focus,
     &:hover,
-    &:focus {
+    &:active {
         text-decoration: none;
-        border-bottom: dotted 2px $primary-blue;
+    }
+
+    &:focus {
+        color: $links-body;
+        border: solid 2px rgba($links-body, 0.6);
+    }
+
+    &:hover {
+        color: $links-body;
+        border-bottom: solid 2px $links-body;
     }
 
     &:active {
         color: $white;
-        background-color: rgba($white, 0.3);
+
+        @extend %link-border;
+
+        background-color: $navy;
+    }
+}
+
+body {
+    &.front a {
+        @extend %link-border;
+
+        &:hover {
+            border-bottom-color: $links-body;
+        }
+
+        &:active {
+            border-bottom-color: transparent;
+        }
     }
 }
 
@@ -168,10 +211,9 @@ hr {
     border-top: solid 1px $off-white;
 }
 
-td, th{
-    border: black solid 1px;
-    border-spacing: 1em;
+td,
+th {
     padding: .5em;
-  
-
+    border-spacing: 1em;
+    border: black solid 1px;
 }

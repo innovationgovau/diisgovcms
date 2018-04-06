@@ -193,7 +193,46 @@ $menu-icon-size: 2.5em;
 
                         @extend %no-margin-padding;
 
-                        // Submenu warppers (ul) spacing
+                        // Menu items
+                        li {
+                            padding: .75em 0 .75em .75em;
+                            border-bottom: solid 1px $white;
+
+                            &:last-child {
+                                border: none;
+                            }
+
+                            a {
+                                display: inline;
+
+                                @extend %link-border;
+
+                                &:hover,
+                                &:focus {
+                                    border-bottom: solid 2px $white;
+                                }
+
+                                &:active {
+                                    color: $primary-blue $imp;
+                                    background-color: $white;
+                                }
+                            }
+                        }
+
+                        > li {
+                            position: relative;
+
+                            @extend %no-margin-padding;
+
+                            @extend %no-list;
+
+                            li {
+                                margin-left: $lg;
+                                border-bottom-color: rgba($white, 0.6);
+                            }
+                        }
+
+                        // Submenu wrappers (ul) spacing
                         .dropdown-menu {
                             margin-top: .75em;
 
@@ -223,38 +262,6 @@ $menu-icon-size: 2.5em;
                             }
                         }
                     }
-
-                    // Menu items
-                    li {
-                        padding: .75em 0 .75em .75em;
-                        border-bottom: solid 1px $white;
-
-                        &:last-child {
-                            border: none;
-                        }
-
-                        a {
-                            display: inline;
-
-                            &:hover,
-                            &:focus {
-                                border-bottom-color: $white;
-                            }
-                        }
-                    }
-
-                    > li {
-                        position: relative;
-
-                        @extend %no-margin-padding;
-
-                        @extend %no-list;
-
-                        li {
-                            margin-left: $lg;
-                            border-color: rgba($white, 0.5);
-                        }
-                    }
                 }
             }
         }
@@ -277,11 +284,10 @@ $menu-icon-size: 2.5em;
                 position: relative;
                 display: inline;
                 padding: 0;
+                border-color: transparent;
 
-                &:hover,
-                &:focus {
+                &:hover {
                     border-bottom-color: $white;
-                    background: none;
                 }
             }
         }

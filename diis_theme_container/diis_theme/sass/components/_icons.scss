@@ -45,10 +45,21 @@
     // Social share icons
     #share-this-page {
         position: relative;
+        z-index: 0;
 
         a {
             display: inline-block;
             clear: none;
+            color: $primary-blue;
+            border: 2px solid transparent;
+
+            &:hover {
+                border-bottom: solid 2px $burnt-gold;
+            }
+
+            &:active {
+                color: $white;
+            }
 
             span {
                 display: none;
@@ -74,6 +85,11 @@
 .field-name-field-document-pdf div div span {
     display: inline-flex;
     vertical-align: middle;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+
+    svg {
+        width: 1em;
+        margin-top: 5px;
+    }
 }

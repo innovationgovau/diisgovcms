@@ -29,31 +29,39 @@
 
 // Sector keywords appearing near the footer of Content pages
 
-.node-page {
-    .field-name-field-sector-keywords {
-        margin: 1.5em 0;
+.field-name-field-sector-keywords {
+    margin: 1.5em 0;
 
-        .field-items {
-            .field-item {
-                font-size: .8em;
-                display: inline-block;
-                margin: 0 .5em;
+    .field-items {
+        .field-item {
+            display: inline-block;
+            font-size: .8em;
+            margin: 0 .5em;
+
+            a {
                 padding: 2px .5em;
                 border: solid 1px $primary-grey-light;
                 border-radius: 4px;
 
                 &:hover,
                 &:focus {
+                    border: solid 1px transparent;
+                    text-decoration: none;
+                    color: $white;
+                }
+
+                &:hover {
                     background-color: $primary-grey-dark;
                 }
 
-                a {
-                    &:hover,
-                    &:focus {
-                        text-decoration: none;
-                        color: $white;
-                        border-bottom-color: transparent;
-                    }
+                &:focus {
+                    color: $primary-blue;
+                    border-color: $primary-blue;
+                }
+
+                &:active {
+                    background-color: $primary-blue;
+                    color: $white;
                 }
             }
         }

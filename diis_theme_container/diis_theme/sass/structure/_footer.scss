@@ -1,4 +1,5 @@
 // _footer.scss
+
 footer {
     font-size: .778rem;
     line-height: 15px;
@@ -9,15 +10,21 @@ footer {
     @extend %light-blue-top-to-dark-blue-bottom;
 
     a {
+        position: relative;
         display: inline-block;
         max-width: 100%;
         text-decoration: none;
         color: white;
+        border-bottom: solid 2px transparent;
 
-        &:hover,
-        &:focus {
+        &:hover {
             color: $white;
             border-bottom-color: $white;
+        }
+
+        &:focus {
+            color: $white;
+            border-color: rgba($white, 0.7);
         }
     }
 
@@ -32,47 +39,21 @@ footer {
         }
     }
 
-    #footer_first,
-    #footer_second,
-    #footer_third {
-        & nav {
-            li {
-                a {
-                    position: relative;
-                    display: inline-block;
-                    max-width: 100%;
-                    text-decoration: none;
-                    color: white;
-
-                    &:hover,
-                    &:focus {
-                        color: $white;
-                        border-bottom-color: $white;
-                        background: none;
-                    }
-                }
-            }
-        }
-    }
-
     #footer_first {
         ul {
             margin: 0;
 
             li {
                 display: block;
-                padding: 0.75em 0;
+                margin: 0 0;
+                padding: .75em 0;
 
                 @include desktop {
                     padding: 0;
                 }
 
 
-                margin: 0 0;
-
                 a {
-                    position: relative;
-                    display: inline-block;
                     padding: 0;
                 }
             }
@@ -91,9 +72,8 @@ footer {
         // Social media Follow icons
 
         #footer-follow-links {
-            float: left;
             position: relative;
-            top: -10px;
+            float: left;
         }
 
         > nav {
@@ -196,17 +176,19 @@ footer {
     }
 
     h2 {
+        font-size: .778rem;
+        font-weight: bold;
         margin: 0;
+        color: $white $imp;
 
         a {
-            font-size: .778rem;
-            font-weight: bold;
             color: $white;
+            border-bottom: dotted 2px white;
 
             &:hover,
             &:focus {
                 color: $white;
-                border-bottom-color: $white;
+                border-bottom-style: solid;
             }
         }
     }
@@ -237,15 +219,10 @@ footer {
     }
 
     hr {
-        // Hide on mobiles, as everything is stacked in 1 column
-        display: none;
-
-        @include tablet {
-            display: block;
-            clear: both;
-            border: none;
-            border-top: solid 1px $white;
-        }
+        display: block;
+        clear: both;
+        border: none;
+        border-top: solid 1px $white;
     }
 
     .region-bottom {

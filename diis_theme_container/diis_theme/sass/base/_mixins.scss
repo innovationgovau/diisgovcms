@@ -24,6 +24,10 @@
     @extend %no-padding;
 }
 
+%link-border {
+    border: solid $link-border-width transparent;
+}
+
 // Layout
 
 @mixin tablet {

@@ -1,4 +1,5 @@
 // _breadcrumbs.scss
+
 .block-crumbs-wrapper {
     display: none;
     margin: 1em 0;
@@ -17,5 +18,14 @@
     .breadcrumb {
         padding: 0;
         background-color: transparent;
+
+        a {
+            color: $primary-blue;
+            border-bottom: solid 2px transparent;
+
+            &:hover {
+                border-bottom: solid 2px $primary-blue;
+            }
+        }
     }
 }

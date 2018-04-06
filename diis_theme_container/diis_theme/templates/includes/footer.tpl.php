@@ -49,7 +49,7 @@
 				</nav>
 
 					<nav class="col-sm-6 col-md-3">
-						<?php $block = module_invoke('menu_block', 'block_view', '12'); ?> <p class="nolink"><?php  print render($block['subject']);?></p> <div class="wepweb"><?php print render($block['content']); ?></div>
+						<?php $block = module_invoke('menu_block', 'block_view', '12'); ?> <h2><?php  print render($block['subject']);?></h2> <div class="wepweb"><?php print render($block['content']); ?></div>
 					</nav>
 					<nav class="col-sm-6 col-md-3">
 						<div class="last"><?php $block = module_invoke('menu_block', 'block_view', '13'); ?><div class="wepweblast"><?php print render($block['content']); ?></div></div>

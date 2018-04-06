@@ -33,12 +33,19 @@
     }
 
     .view-latest-news {
+        margin-top: 1em;
+
         .view-content {
             & > div {
                 margin-bottom: 1em;
 
                 @include tablet {
                     margin-bottom: 0;
+                }
+
+
+                & > a {
+                    display: inline-block;
                 }
             }
 

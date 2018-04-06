@@ -1,7 +1,20 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v1.79  * 2018-04-04 | 153b136 | VSTS 76353 - Hide Text Resize controls when JS is disabled, and add z-index to Social Share icons to stop them sitting behind H1s
- origin/features  * 2018-04-04 | 4d1cee4 | VSTS 72767 clickable images thumbnails for document
+ HEAD -> features, tag: v1.81  * 2018-04-06 | 1bea792 | VSTS 72532 - FEATURE: Prominent link styles
+ origin/features  * 2018-04-06 | 6056f24 | VSTS preparete for beta website training
+   * 2018-04-06 | 325bcf6 | VSTS prepare for beta website testing
+   * 2018-04-06 | 0c67c69 | VSTS 78353 - prepare for beta website training
+   * 2018-04-06 | e1a7f64 | VSTS 72767 clickable images
+   * 2018-04-06 | ea4b888 | VSTS apply visual identiry solution
+ tag: 2018-04-06  * 2018-04-05 | f1cdd59 | VSTS apply visual identiry solution
+ tag: v1.80  * 2018-04-05 | 66fb70e | VSTS 76883 76884 - typography changes to meet design spec
+   * 2018-04-04 | e5ca8c3 | Merge branch origin/features into features.
+   * 2018-04-04 | 9e9b5ab | Moving Dev Desktop <DDSETTINGS> from settings.php to settings.local.php
+ tag: 2018-04-05  * 2018-04-04 | 424d81a | VSTS 77245 rate this page issue
+ tag: 2018-04-04.0  * 2018-04-04 | 023a08c | Updated changelog to v1.79
+   * 2018-04-04 | 153b136 | VSTS 76353 - Hide Text Resize controls when JS is disabled, and add z-index to Social Share icons to stop them sitting behind H1s
+ tag: v1.79  * 2018-04-04 | e2193a9 | VSTS 76353 - Fontawesome icons fo not render correctly when JavaScript is disabled
+   * 2018-04-04 | 4d1cee4 | VSTS 72767 clickable images thumbnails for document
    * 2018-04-04 | f87883c | No VSTS - set basic borders on tables
    * 2018-04-04 | 8d5c1bd | VSTS fix incorrectly config content pages
  tag: v1.78  * 2018-04-04 | e4e2a33 | VSTS 71181 - fix incorrectly config content pages

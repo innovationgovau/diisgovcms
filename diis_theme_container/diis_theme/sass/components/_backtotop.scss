@@ -1,4 +1,20 @@
-$arrow: 3px;
+// _backtotop.scss
+
+$arrow: 5px;
+
+body {
+    &.front {
+        a {
+            &.back-to-top {
+                border: solid 2px $white;
+
+                &:hover {
+                    border-color: lighten($black, 10%);
+                }
+            }
+        }
+    }
+}
 
 a {
     &.back-to-top {
@@ -10,8 +26,9 @@ a {
         width: 4em;
         height: 4em;
         text-indent: -9999px;
+        border: solid 2px $white;
         border-radius: 50%;
-        background-color: $primary-grey-light;
+        background-color: $primary-grey-dark;
 
         &:after {
             position: absolute;
@@ -33,12 +50,13 @@ a {
 
         &:hover,
         &:active {
-            background-color: $primary-grey-dark;
-        }
+            border: solid 2px lighten($black, 10%);
+            background-color: $primary-grey-light;
 
-        &:hover,
-        &:focus {
-            border-color: transparent;
+            &:after {
+                border-top-color: lighten($black, 10%);
+                border-left-color: lighten($black, 10%);
+            }
         }
     }
 }
