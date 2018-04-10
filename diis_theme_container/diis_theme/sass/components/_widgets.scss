@@ -131,7 +131,7 @@
         }
     }
 
-    .view-latest-news {
+   /* .view-latest-news {
         .view-content {
             div {
                 @include desktop-lg {
@@ -154,6 +154,11 @@
                 }
             }
         }
+    }*/
+
+    .pane-latest-news.col-sm-12 h3{
+        padding-top:1em;
+        padding-bottom:1em;
     }
 
     .view-consultations {
@@ -162,4 +167,9 @@
             font-weight: 700;
         }
     }
-} // End homepage styles
+
+
+}
+
+
+// End homepage styles

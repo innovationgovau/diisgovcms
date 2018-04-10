@@ -248,3 +248,38 @@ footer {
         }
     }
 }
+
+body {
+    &.front {
+        footer {
+            a {
+                color: white;
+                border-bottom: solid 2px transparent;
+
+                &:hover {
+                    color: $white;
+                    border-bottom-color: $white;
+                }
+
+                &:focus {
+                    color: $white;
+                    border-color: rgba($white, 0.7);
+                }
+            }
+
+            h2 {
+                a {
+                    border-bottom: dotted 2px $white;
+
+                    &:hover {
+                        border-bottom: solid 2px $white;
+                    }
+
+                    &:focus {
+                        border-bottom-style: solid;
+                    }
+                }
+            }
+        }
+    }
+}

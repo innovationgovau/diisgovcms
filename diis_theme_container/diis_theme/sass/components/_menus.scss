@@ -17,6 +17,17 @@
     }
 }
 
+/*Strategic plan floating menu*/
+
+
+
+#block-block-61 {
+    position: relative;
+     ul li{
+        list-style-type: none;
+     }
+}
+
 // Main nav - normally hidden by MeanMenu
 // @TODO: Make this appear inline like Superfish, to make the MeanMenu 'jump' on load more graceful
 
@@ -266,6 +277,7 @@ $menu-icon-size: 2.5em;
             }
         }
     }
+
 }
 
 // Top Links Menu
@@ -322,3 +334,6 @@ $menu-icon-size: 2.5em;
         }
     }
 }
+
+
+
