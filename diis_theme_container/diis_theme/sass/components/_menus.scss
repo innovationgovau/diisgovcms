@@ -19,13 +19,16 @@
 
 /*Strategic plan floating menu*/
 
-
-
 #block-block-61 {
     position: relative;
-     ul li{
-        list-style-type: none;
-     }
+
+    ul {
+        padding: 0px;
+
+        li {
+            list-style-type: none;
+        }
+    }
 }
 
 // Main nav - normally hidden by MeanMenu
@@ -40,7 +43,7 @@
 
         li {
             padding: .75em 0 .75em .75em;
-            border-bottom: solid 1px $white;
+            border-bottom: solid $link-border-width $white;
 
             &:last-child {
                 border: none;
@@ -93,7 +96,6 @@ $menu-icon-size: 2.5em;
 
 .mean-container {
     position: relative;
-    z-index: 50;
     top: 0;
     right: 0;
     left: 0;
@@ -101,7 +103,7 @@ $menu-icon-size: 2.5em;
 
     .mean-bar {
         position: absolute;
-        top: -9em;
+        top: -8em;
         width: 100%;
         margin: 0 auto;
         padding: 1em;
@@ -116,6 +118,7 @@ $menu-icon-size: 2.5em;
             display: block;
             color: $white $imp;
             border: none;
+            z-index: 999;
 
             &:hover {
                 border: none;
@@ -131,8 +134,13 @@ $menu-icon-size: 2.5em;
             &.meanmenu-reveal {
                 position: relative;
                 z-index: 9999;
-                right: 1em $imp;
                 float: right;
+
+                @include desktop {
+                    top: 1.75em;
+                }
+
+
                 width: $menu-icon-size;
                 height: $menu-icon-size;
                 color: $white $imp;
@@ -161,7 +169,16 @@ $menu-icon-size: 2.5em;
 
                 + .mean-nav {
                     padding: 0 1em;
+
+                    // Make the menu 100% wide on small screens to avoid menu items hitting the submenu toggle icons
+                    margin-left: -1em;
+                    margin-right: -1em;
                     background-color: $minor-navy;
+
+                    @include tablet {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
                 }
             }
 
@@ -185,6 +202,11 @@ $menu-icon-size: 2.5em;
                         margin: 0;
                     }
                 }
+
+                + .mean-nav {
+                    // Provide a clear break between the menu and other page elements with the same background color
+                    border-bottom: 5px solid $white;
+                }
             }
         }
 
@@ -193,6 +215,13 @@ $menu-icon-size: 2.5em;
                 position: relative;
                 clear: both;
                 margin-top: 4em;
+
+                @include desktop {
+                    margin-top: 5em;
+                }
+
+
+                z-index: 999;
 
                 // Submenus (ul)
 
@@ -207,7 +236,7 @@ $menu-icon-size: 2.5em;
                         // Menu items
                         li {
                             padding: .75em 0 .75em .75em;
-                            border-bottom: solid 1px $white;
+                            border-bottom: solid $link-border-width $white;
 
                             &:last-child {
                                 border: none;
@@ -220,7 +249,7 @@ $menu-icon-size: 2.5em;
 
                                 &:hover,
                                 &:focus {
-                                    border-bottom: solid 2px $white;
+                                    border-bottom: solid $link-border-width $white;
                                 }
 
                                 &:active {
@@ -277,7 +306,6 @@ $menu-icon-size: 2.5em;
             }
         }
     }
-
 }
 
 // Top Links Menu
@@ -334,6 +362,3 @@ $menu-icon-size: 2.5em;
         }
     }
 }
-
-
-

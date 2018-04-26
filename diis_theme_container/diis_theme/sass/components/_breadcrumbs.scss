@@ -21,10 +21,10 @@
 
         a {
             color: $primary-blue;
-            border-bottom: solid 2px transparent;
+            border-bottom: solid $link-border-width transparent;
 
             &:hover {
-                border-bottom: solid 2px $primary-blue;
+                border-bottom: solid $link-border-width $primary-blue;
             }
         }
     }

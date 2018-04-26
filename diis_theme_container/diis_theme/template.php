@@ -3,9 +3,20 @@
 
 // @TODO: Add the subtheme path as a variable
 
-
-
-
+/**
+ * Implements hook_file_view_alter().
+ */
+function diis_theme_file_view_alter($build, $type) {
+  // When viewing a file page.
+  if (arg(0) == 'file' && is_numeric(arg(1)) && !arg(2)) {
+    $file = $build['#file'];
+    // For the main file that is being loaded.
+    if ($file->fid == arg(1) && $build['#view_mode'] == 'full') {
+      // Redirect to the actual file.
+      drupal_goto(file_create_url($file->uri));
+    }
+  }
+}
 
 /******************************
  * Taken from GovCMS template.php
@@ -84,8 +95,36 @@ function diis_theme_preprocess_page(&$variables) {
     // If the content type's machine name is "my_machine_name" the file
     // name will be "page--my-machine-name.tpl.php".
     $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
-    }
+  }
+
+
+  /**
+   * DIIS theme addition:
+   * Check node Content Type
+   * see https://drupal.stackexchange.com/questions/37274/how-to-check-the-node-type-using-php
+   */
+
+  // Only show if $match is true
+  $match = false;
+
+  // Which node types (as an array)
+  /*$types = array('page', 'corporate-publications');
+
+  // Match current node type with array of types
+  if (arg(0) == 'node' && is_numeric(arg(1))) {
+    $nid = arg(1);
+    $node = node_load($nid);
+    $type = $node->type; 
+    $match |= in_array($type, $types);
+  }
+  return $match;
+*/
+  $variables['show_page_details'] = false;
+  if (isset($variables['node']) && $variables['node']->type == 'page') {
+    $variables['show_page_details'] = true;
+  }
 }
+/* @end DIIS theme addition*/
 
 
 /**

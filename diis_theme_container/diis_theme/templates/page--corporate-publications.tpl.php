@@ -1,14 +1,14 @@
 <?php include "includes/header.tpl.php"; ?>
 
 
-<section class="about" id="about">
+<section class="above-main" id="above-main">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9">
 				<div class="block-crumbs-wrapper">
 					<p><?php
-									$block = module_invoke('crumbs', 'block_view', 'breadcrumb');
-									print $block['content'];
+						$block = module_invoke('crumbs', 'block_view', 'breadcrumb');
+						print $block['content'];
 					?></p>
 				</div>
 				<?php if (!empty($title)): ?>
@@ -42,16 +42,9 @@
 			
 			
 			<!-- Tabs, messages and links area -->
-			<?php if ($messages || $tabs || $action_links): ?>
+			<?php if ($tabs || $action_links): ?>
 			<div class="container">
 				<div>
-					<!-- #messages-console -->
-					<?php if ($messages): ?>
-					<div id="messages-console" class="clearfix">
-						<?php print $messages; ?>
-					</div>
-					<?php endif; ?>
-					<!-- EOF: #messages-console -->
 					<!-- #tabs -->
 					<?php if ($tabs = render($tabs)): ?>
 					<div class="tabs">

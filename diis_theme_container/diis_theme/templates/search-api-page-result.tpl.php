@@ -77,25 +77,7 @@
 				<?php print render($page['highlighted']); ?>
 			</div>
 		</div>
-		<?php if ($messages): ?>
-		<!-- #EOF region-higlighted parent container -->
-		<div class="container">
-			<div class="col-md-12">
-				<!-- #messages-console -->
-				<?php if ($messages): ?>
-				<div id="messages-console" class="clearfix">
-					<div class="row">
-						<div class="col-md-12">
-							<?php print $messages; ?>
-						</div>
-					</div>
-				</div>
-				<?php endif; ?>
-				<!-- EOF: #messages-console -->
-			</div>
-		</div>
-		<?php endif; ?>
-		<!-- Main page content if not homepage -->
+		<!-- Main page content -->
 		<div class="container">
 			<div class="row">
 				<div class="col-md-9" id="region-content">

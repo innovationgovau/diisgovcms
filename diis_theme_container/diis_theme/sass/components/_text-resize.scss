@@ -54,10 +54,10 @@
                     width: 1.5em;
                     height: 1.5em;
                     color: transparent !important;
-                    border-bottom: solid 2px transparent;
+                    border-bottom: solid $link-border-width transparent;
 
                     &:hover {
-                        border-bottom: solid 2px $links-body;
+                        border-bottom: solid $link-border-width $links-body;
                     }
 
                     &:active {

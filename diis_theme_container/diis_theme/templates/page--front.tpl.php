@@ -9,16 +9,9 @@
 </div>
 
 <!-- Tabs, messages and links area -->
-<?php if ($messages || $tabs || $action_links): ?>
+<?php if ($tabs || $action_links): ?>
 <div class="container">
 	<div>
-		<!-- #messages-console -->
-		<?php if ($messages): ?>
-		<div id="messages-console" class="clearfix">
-			<?php print $messages; ?>
-		</div>
-		<?php endif; ?>
-		<!-- EOF: #messages-console -->
 		<!-- #tabs -->
 		<?php if ($tabs = render($tabs)): ?>
 		<div class="tabs">

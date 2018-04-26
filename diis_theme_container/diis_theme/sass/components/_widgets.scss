@@ -156,9 +156,9 @@
         }
     }*/
 
-    .pane-latest-news.col-sm-12 h3{
-        padding-top:1em;
-        padding-bottom:1em;
+    .pane-latest-news.col-sm-12 h3 {
+        padding-top: 1em;
+        padding-bottom: 1em;
     }
 
     .view-consultations {
@@ -167,9 +167,29 @@
             font-weight: 700;
         }
     }
-
-
 }
 
-
 // End homepage styles
+
+// Content ID and Last Updated fields
+
+.field-name-content-id,
+.field-name-changed-date,
+#page-details {
+    font-size: 0.8em;
+}
+
+#page-details {
+    clear: both;
+    color: $greyDark;
+
+    p {
+        &:first-of-type {
+            margin-bottom: 0;
+        }
+
+        span {
+            font-weight: bold;
+        }
+    }
+}

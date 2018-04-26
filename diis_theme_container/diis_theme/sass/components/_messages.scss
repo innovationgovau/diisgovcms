@@ -1,0 +1,19 @@
+// _messages.scss
+
+.messages-wrapper {
+    width: 100%;
+}
+
+#messages-console {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    .alert {
+        margin: 1em 0;
+        border-width: 3px;
+
+        &.alert-success {
+            border-color: #7ec740;
+        }
+    }
+}

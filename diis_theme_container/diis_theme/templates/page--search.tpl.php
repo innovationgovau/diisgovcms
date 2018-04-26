@@ -1,25 +1,25 @@
 <?php include "includes/header.tpl.php"; ?>
 
 
-<section class="about" id="about">
+<section class="above-main" id="above-main">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9">
 				<div class="block-crumbs-wrapper">
 					<p><?php
-									// Conditionally dispaly different Blocks for the breadcrumbs,
-									// depending what page we're on. Search page detection method taken from:
-									// https://drupal.stackexchange.com/questions/25/how-to-determine-if-the-current-drupal-page-is-a-search-results-page#answer-125
-									
-										if (arg(0) == 'search') {
-											// This is a Search page, load Search Block content
-											$block = module_invoke('block', 'block_view', '46');
-									
-										} else {
-											// Otherwise, load Crumbs block content for all other page types
-											$block = module_invoke('crumbs', 'block_view', 'breadcrumb');
-										}
-										print $block['content'];
+						// Conditionally dispaly different Blocks for the breadcrumbs,
+						// depending what page we're on. Search page detection method taken from:
+						// https://drupal.stackexchange.com/questions/25/how-to-determine-if-the-current-drupal-page-is-a-search-results-page#answer-125
+						
+						if (arg(0) == 'search') {
+							// This is a Search page, load Search Block content
+							$block = module_invoke('block', 'block_view', '46');
+					
+						} else {
+							// Otherwise, load Crumbs block content for all other page types
+							$block = module_invoke('crumbs', 'block_view', 'breadcrumb');
+						}
+						print $block['content'];
 					?></p>
 				</div>
 				<?php if (!empty($title)): ?>
@@ -52,16 +52,9 @@
 			
 			
 			<!-- Tabs, messages and links area -->
-			<?php if ($messages || $tabs || $action_links): ?>
+			<?php if ($tabs || $action_links): ?>
 			<div class="container">
 				<div>
-					<!-- #messages-console -->
-					<?php if ($messages): ?>
-					<div id="messages-console" class="clearfix">
-						<?php print $messages; ?>
-					</div>
-					<?php endif; ?>
-					<!-- EOF: #messages-console -->
 					<!-- #tabs -->
 					<?php if ($tabs = render($tabs)): ?>
 					<div class="search-tabs">

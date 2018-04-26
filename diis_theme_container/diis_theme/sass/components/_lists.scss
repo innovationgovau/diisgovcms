@@ -14,6 +14,8 @@
 }
 
 .hero-list {
+    padding: 1em 0;
+
     @include tablet {
         padding: 1em 0;
     }
@@ -61,7 +63,8 @@
         max-height: 15em;
     }
 
-    @media only screen and (max-width: 768px) {
+    // Target screens 1px below standard iPad resolution to trigger 2 col layoutand avoid height cropping
+    @media only screen and (max-width: 767px) {
         margin: 0 auto;
 
         .content {
@@ -72,11 +75,19 @@
             vertical-align: middle;
 
             img {
-                width: 100%;
-
                 // Make the images sit vertically centered when the aspect ration is skewed
+                position: relative;
+                top: -50%; // do not factor in the height of the nav buttons, so the image is actually offset by 50% - 90ish px
+                width: 100%;
+            }
+        }
+    }
 
-                vertical-align: middle;
+    @media only screen and (max-width: 480px) {
+        .content {
+            img {
+                // Undo the vertical alignment effect on small screens
+                position: static;
             }
         }
     }

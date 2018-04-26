@@ -23,8 +23,8 @@ a {
         right: 3em;
         bottom: 3em;
         display: none;
-        width: 4em;
-        height: 4em;
+        width: 3em;
+        height: 3em;
         text-indent: -9999px;
         border: solid 2px $white;
         border-radius: 50%;
@@ -33,11 +33,11 @@ a {
         &:after {
             position: absolute;
             z-index: 9999;
-            top: 1.5em;
+            top: 1.1em;
             right: 0;
             left: 0;
-            width: 1.5em;
-            height: 1.5em;
+            width: 1em;
+            height: 1em;
             margin: 0 auto;
             content: ' ';
             transform: rotate(45deg);

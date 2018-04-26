@@ -9,23 +9,77 @@ footer {
 
     @extend %light-blue-top-to-dark-blue-bottom;
 
+    h2 {
+        font-size: .778rem;
+        font-weight: bold;
+        margin: 2em 0 0 0;
+
+        @include tablet {
+            margin: 0.75em 0 0 0;
+        }
+
+
+        color: $white $imp;
+
+        a {
+            color: $white;
+
+            &:hover,
+            &:focus {
+                color: $white;
+                border-bottom-color: $white $imp;
+            }
+        }
+    }
+
     a {
         position: relative;
+        left: -1px; // to offset the 1px border and avoid alignment issues
+
         display: inline-block;
         max-width: 100%;
         text-decoration: none;
         color: white;
-        border-bottom: solid 2px transparent;
+        border-bottom: solid $link-border-width transparent;
 
         &:hover {
             color: $white;
-            border-bottom-color: $white;
+            border-bottom-color: $white $imp;
         }
 
         &:focus {
             color: $white;
-            border-color: rgba($white, 0.7);
+            border-color: rgba($white, 0.7) $imp;
         }
+    }
+
+    ul {
+        &.menu {
+            padding-right: 1em;
+            padding-left: 0;
+
+            li {
+                margin: .75em 0;
+                list-style-type: none;
+                list-style-image: none;
+
+                @include desktop {
+                    margin: .5em;
+                }
+
+
+                @include desktop {
+                    margin: .5em 0;
+                }
+            }
+        }
+    }
+
+    hr {
+        display: block;
+        clear: both;
+        border: none;
+        border-top: solid 1px $white;
     }
 
     #footer_second,
@@ -78,6 +132,11 @@ footer {
 
         > nav {
             &:last-child {
+                p {
+                    margin: 0;
+                    padding: .75em 0;
+                }
+
                 a {
                     position: relative;
                     display: inline-block;
@@ -126,6 +185,10 @@ footer {
                     margin: .75em auto;
                     padding-right: 1em;
                     padding-left: 3px;
+
+                    @include desktop {
+                        margin: .5 auto;
+                    }
                 }
             }
         }
@@ -137,7 +200,7 @@ footer {
 
                 @include tablet {
                     top: 0;
-                    padding-top: 30px;
+                    padding-top: 42px;
                 }
 
 
@@ -175,37 +238,6 @@ footer {
         }
     }
 
-    h2 {
-        font-size: .778rem;
-        font-weight: bold;
-        margin: 0;
-        color: $white $imp;
-
-        a {
-            color: $white;
-            border-bottom: dotted 2px white;
-
-            &:hover,
-            &:focus {
-                color: $white;
-                border-bottom-style: solid;
-            }
-        }
-    }
-
-    ul {
-        &.menu {
-            padding-right: 1em;
-            padding-left: 0;
-
-            li {
-                margin: .75em 0;
-                list-style-type: none;
-                list-style-image: none;
-            }
-        }
-    }
-
     // Apply top and bottom margins to footer sections
     div[id^='footer_'] {
         margin: 1.5em 0;
@@ -216,13 +248,6 @@ footer {
             clear: both;
             content: ' ';
         }
-    }
-
-    hr {
-        display: block;
-        clear: both;
-        border: none;
-        border-top: solid 1px $white;
     }
 
     .region-bottom {
@@ -244,41 +269,6 @@ footer {
 
             p {
                 font-size: .5556rem;
-            }
-        }
-    }
-}
-
-body {
-    &.front {
-        footer {
-            a {
-                color: white;
-                border-bottom: solid 2px transparent;
-
-                &:hover {
-                    color: $white;
-                    border-bottom-color: $white;
-                }
-
-                &:focus {
-                    color: $white;
-                    border-color: rgba($white, 0.7);
-                }
-            }
-
-            h2 {
-                a {
-                    border-bottom: dotted 2px $white;
-
-                    &:hover {
-                        border-bottom: solid 2px $white;
-                    }
-
-                    &:focus {
-                        border-bottom-style: solid;
-                    }
-                }
             }
         }
     }

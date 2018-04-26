@@ -1,30 +1,37 @@
 // _beta.scss
-
 #top {
+  p {
+    &.beta {
+      margin-bottom: 0;
+      text-align: center;
+      color: white;
+      background-color: black;
+    }
+  }
+
+  .beta {
     p {
-        &.beta {
-            font-size: xx-large;
-            margin-bottom: 0;
-            text-align: center;
-            text-transform: uppercase;
-            color: white;
-            background-color: black;
-        }
+      margin: 0;
+      text-align: center;
+      background-color: black;
+
+      a {
+        color: white;
+      }
+
+      .btn {
+        margin: 1em;
+      }
     }
+  }
+}
 
-    .beta {
-        p {
-            margin: 0;
-            text-align: center;
-            background-color: black;
-
-            a {
-                color: white;
-            }
-
-            .btn {
-                margin: 1em;
-            }
-        }
+@include desktop {
+  #top {
+    p {
+      &.beta {
+        font-size: xx-large;
+      }
     }
+  }
 }

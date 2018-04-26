@@ -12,10 +12,13 @@ form {
     height: auto;
 }
 
+#edit-keys {
+    font-size: 1.2em;
+}
 
 /*Removes tabs from search*/
-.search-tabs  ul.tabs--primary.nav.nav-tabs li{
-display: none;
+.search-tabs ul.tabs--primary.nav.nav-tabs li {
+    display: none;
 }
 
 // End Override
@@ -23,8 +26,13 @@ display: none;
 .block-search {
     position: relative;
     clear: both;
-    max-width: 95%;
+    max-width: 90%; // to keep the search icon away from the edge of the screen. Stupid Samsungs now have stupid curved edges that make tapping a button difficult.
     margin: 0 auto;
+
+    @include tablet {
+        max-width: 95%;
+    }
+
 
     @include desktop {
         z-index: 500;
@@ -126,11 +134,37 @@ display: none;
 }
 
 #region-content #edit-basic button {
-    transition: 0.3s;
-    color: black;
-    background-color: #d3d3d3;
-    border-color: black;
-    border-radius: 0px;
+    transition: .3s;
+    color: white;
+    border-color: $minor-navy;
+    background-color: $primary-blue;
+
+    &:hover {
+        color: $minor-navy;
+        background-color: $minor-blue;
+        border-color: $minor-navy;
+    }
+
+    &:focus {
+        color: white;
+        border-color: $minor-navy;
+        background-color: $primary-blue;
+    }
+
+    &:active {
+        border-color: $minor-navy;
+        color: $minor-navy;
+        background-color: $minor-teal;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: .5;
+
+        &:hover {
+            background-color: $minor-navy;
+        }
+    }
 }
 
 #region-content .glyphicon-search {
@@ -143,7 +177,7 @@ display: none;
 }
 
 #region-content .glyphicon-search:before {
-    font-family: "Montserrat", sans-serif $imp;
-    content: "Search";
+    font-family: "Roboto", sans-serif $imp;
+    content: 'Search';
     padding: 2em;
 }

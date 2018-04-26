@@ -70,7 +70,7 @@
 	<meta name="theme-color" content="#4F82A2">
 	<link rel="mask-icon" href="<?php print '/' . path_to_theme(); ?>/favicons/outline.svg" color="#4F82A2">
 	<?php print $head; ?>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i,700,700i" >
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TKM5HKB');</script>
@@ -102,7 +102,7 @@
 						<img src=<?php print("/" . drupal_get_path('theme',$GLOBALS['theme']) . "/img/crest-black-256.png"); ?> alt="Home" class="coa-img" />
 						<div>
 							<span class="coa-line-one coa-lines-2">Australian Government</span>
-					<span><?php $block = module_invoke('bean', 'block_view', 'crest---department-name'); print render($block['content']); ?></span>
+							<span><?php $block = module_invoke('bean', 'block_view', 'crest---department-name'); print render($block['content']); ?></span>
 						</div>
 						<p>Beta</p>
 						<span class="clearboth"></span>

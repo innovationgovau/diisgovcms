@@ -383,7 +383,7 @@ header {
   }
 
 
-  #about {
+  #above-main {
     background: transparent;
     h1,
     h2 {
@@ -439,9 +439,6 @@ header {
 
 // About ID
 #about {
-  background: #f5f7f9;
-  padding: 30px 0;
-  margin: 25px 0 0;
   h1,
   h2 {
     color: $secondary;
@@ -452,7 +449,7 @@ header {
   }
 }
 body.front {
-  #about {
+  #above-main {
     small {
       display: block;
       float: left;
@@ -460,10 +457,6 @@ body.front {
       margin-left: 25px;
     }
   }
-}
-.about,
-.services {
-  padding: 50px 0;
 }
 
 

@@ -26,7 +26,6 @@ html {
 }
 
 // End fix
-
 html {
     font-size: $font-natural; // Set this here to define '1rem/1em'
 
@@ -38,17 +37,8 @@ html {
 }
 
 body {
-    font-family: "Montserrat", sans-serif $imp;
+    font-family: "Roboto", sans-serif $imp;
     font-size: $font-natural;
-
-    // IE is special and cannot read Monserrat, it displays the incorrect weight
-
-    @include ie {
-        font-family: "Helvetica", sans-serif, "Times New Roman" $imp;
-    }
-
-
-    // End IE :D
 
     #region-content {
         p,
@@ -95,12 +85,21 @@ h1 {
     color: #000;
 
     &.page-header {
+        margin-top: 0.5em;
+        margin-bottom: 12px;
         padding-bottom: 0;
+        border-bottom: 0;
+
+        @include desktop {
+            margin-top: 0;
+        }
     }
 }
 
-#main-body h1 {
-    color: #000; //override #about id copied from govCMS theme (see: 'sites/all/themes/diis_theme_container/diis_theme/templates/page.tpl.php')
+#main-body {
+    h1 {
+        color: #000;
+    }
 }
 
 h2 {
@@ -157,12 +156,15 @@ em {
 
 a {
     color: $links-body;
+    border-bottom: solid 1px $links-body;
 
     @extend %link-border;
 
-    border-bottom: dotted 2px $links-body;
-
     &[tabindex] {
+        border: none;
+    }
+
+    &[name] {
         border: none;
     }
 
@@ -174,20 +176,19 @@ a {
 
     &:focus {
         color: $links-body;
-        border: solid 2px rgba($links-body, 0.6);
+        border: dotted 1px rgba($links-body, 0.6);
     }
 
     &:hover {
         color: $links-body;
-        border-bottom: solid 2px $links-body;
+        border-bottom: dotted 1px $links-body;
     }
 
     &:active {
         color: $white;
+        background-color: $navy;
 
         @extend %link-border;
-
-        background-color: $navy;
     }
 }
 

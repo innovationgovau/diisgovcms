@@ -23,16 +23,13 @@
 
 
     .coa-inline {
-        // inline styles
+        // inline crest styles
         float: none;
 
         @include mobile-sm-only {
             position: relative;
             z-index: 500;
-            left: -2em;
             zoom: 1; // IE fix :(
-
-            transform: scale(0.8);
         }
 
 
@@ -52,7 +49,8 @@
         font-weight: bold;
         position: relative;
         width: 100%;
-        min-height: 8.5em;
+        min-height: 6em; // 8.5em
+
         text-shadow: none;
 
         a {
@@ -60,15 +58,14 @@
             z-index: 500;
             top: 0;
             display: block;
-            width: 20em;
+            min-width: 16.5em;
             padding: 1em;
             border-color: transparent;
 
             @include mobile-only {
-                left: -2em;
-                width: 22em; // larger width handles Android crest-split bug
-                padding: 1em 0;
                 transform: scale(0.8);
+                width: 22em; // larger width handles Android crest-split bug
+                transform-origin: top left;
             }
 
 
@@ -85,7 +82,7 @@
 
 
             &:hover {
-                border-bottom-color: $white;
+                border-bottom-color: transparent;
             }
 
             &:active {
@@ -135,7 +132,7 @@
 
 
             + div {
-                float: left;
+                display: inline-block;
                 margin: 20px 0 0 10px; // use px here as the crest is a fixed size and spacing must be maintained for branding purposes
                 + p {
                     font-size: 2em;
@@ -162,8 +159,3 @@
         }
     }
 }
-
-
-// @TODO: Get the Browser Hack mixins importing correctly...
-// IE :(
-//@include only_ie10_above(".logos .coa-titles", (min-width: 20em));

@@ -51,17 +51,18 @@
                 }
 
                 &:hover {
-                    background-color: $primary-grey-dark;
+                    color: black;
+                    background-color: $minor-blue;
                 }
 
                 &:focus {
-                    color: $primary-blue;
-                    border-color: $primary-blue;
+                    color: black;
+                    border-color: $white;
                 }
 
                 &:active {
-                    background-color: $primary-blue;
-                    color: $white;
+                    color: black;
+                    background-color: $minor-teal;
                 }
             }
         }
