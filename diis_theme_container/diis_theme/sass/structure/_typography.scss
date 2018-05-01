@@ -1,5 +1,6 @@
 /* _typography.scss*/
 
+
 /**
  * Fix fonts that render as bold in Firefox
  *
@@ -9,56 +10,60 @@
  */
 
 html {
-    font-weight: 400;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
+
+
+
+
+
+
 
 /**
  * Firefox specific rule
  */
 
 @-moz-document url-prefix() {
-    body {
-        font-weight: lighter !important;
-    }
+  body {
+    font-weight: lighter !important;
+  }
 }
 
 // End fix
 html {
-    font-size: $font-natural; // Set this here to define '1rem/1em'
+  font-size: $font-natural; // Set this here to define '1rem/1em'
+  text-rendering: optimizeLegibility;
 
-    text-rendering: optimizeLegibility;
-
-    @include ie {
-        text-rendering: auto;
-    }
+  @include ie {
+    text-rendering: auto;
+  }
 }
 
 body {
-    font-family: "Roboto", sans-serif $imp;
-    font-size: $font-natural;
+  font-family: "Roboto", sans-serif $imp;
+  font-size: $font-natural;
 
-    #region-content {
-        p,
-        span,
-        ul,
-        ol,
-        li,
-        dd,
-        dt,
-        dl,
-        table,
-        td,
-        th,
-        address,
-        blockquote,
-        a {
-            font-size: unset; // undo a generic govCMS style that prevents simple text-resizing
-       
-        }
+  #region-content {
+    p,
+    span,
+    ul,
+    ol,
+    li,
+    dd,
+    dt,
+    dl,
+    table,
+    td,
+    th,
+    address,
+    blockquote,
+    a {
+      font-size: unset; // undo a generic govCMS style that prevents simple text-resizing
     }
+  }
 }
 
 h1,
@@ -67,8 +72,8 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 18px 0 6px 0;
-    margin: 1em 0 .33em 0;
+  margin: 18px 0 6px 0;
+  margin: 1em 0 .33em 0;
 }
 
 h2,
@@ -76,145 +81,207 @@ h3,
 h4,
 h5,
 h6 {
-    color: $primary-blue $imp;
+  color: $primary-blue $imp;
 }
 
 h1 {
-    font-size: 52px;
-    font-size: 2.889rem;
-    color: #000;
+  font-size: 52px;
+  font-size: 2.889rem;
+  color: #000;
 
-    &.page-header {
-        margin-top: 0.5em;
-        margin-bottom: 12px;
-        padding-bottom: 0;
-        border-bottom: 0;
+  &.page-header {
+    margin-top: .5em;
+    margin-bottom: 12px;
+    padding-bottom: 0;
+    border-bottom: 0;
 
-        @include desktop {
-            margin-top: 0;
-        }
+    @include desktop {
+      margin-top: 0;
     }
+  }
 }
 
 #main-body {
-    h1 {
-        color: #000;
-    }
+  h1 {
+    color: #000;
+  }
 }
 
 h2 {
-    font-size: 40px;
-    font-size: 2.222rem;
+  font-size: 40px;
+  font-size: 2.222rem;
 }
 
 h3 {
-    font-size: 31px;
-    font-size: 1.722rem;
+  font-size: 31px;
+  font-size: 1.722rem;
 }
 
 h4 {
-    font-size: 25px;
-    font-size: 1.389rem;
+  font-size: 25px;
+  font-size: 1.389rem;
 }
 
 h5 {
-    font-size: 22px;
-    font-size: 1.222em;
-    font-weight: 600;
+  font-size: 22px;
+  font-size: 1.222em;
+  font-weight: 600;
 }
 
 h6 {
-    font-size: 22px;
-    font-size: 1.222em;
-    font-style: italic;
+  font-size: 22px;
+  font-size: 1.222em;
+  font-style: italic;
 }
 
 p {
-    font-size: $font-natural;
-    font-size: 1em;
-    line-height: 1.44;
-    margin: 0 0 8px;
-    margin: 0 0 .4444em;
+  font-size: $font-natural;
+  font-size: 1em;
+  line-height: 1.44;
+  margin: 0 0 8px;
+  margin: 0 0 .4444em;
 }
 
 p:last-child {
-    margin-bottom: .4444em;
+  margin-bottom: .4444em;
 }
 
 li {
-    margin: 8px 0;
-    margin: .6em 0;
+  margin: 8px 0;
+  margin: .6em 0;
 }
 
 strong {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 em {
-    font-style: italic;
+  font-style: italic;
 }
 
 a {
+  color: $links-body;
+  border-bottom: solid 1px $links-body;
+
+  @extend %link-border;
+
+  @include mobile-only {
+    word-wrap: break-word;
+    word-break: break-word;
+    -ms-word-break: break-all;
+    overflow-wrap: break-word;
+  }
+
+
+  &[tabindex] {
+    border: none;
+  }
+
+  &[name] {
+    border: none;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
+  &:focus {
     color: $links-body;
-    border-bottom: solid 1px $links-body;
+    border: dotted 1px rgba($links-body, 0.6);
+  }
+
+  &:hover {
+    color: $links-body;
+    border-bottom: dotted 1px $links-body;
+  }
+
+  &:active {
+    color: $white;
+    background-color: $navy;
 
     @extend %link-border;
-
-    &[tabindex] {
-        border: none;
-    }
-
-    &[name] {
-        border: none;
-    }
-
-    &:focus,
-    &:hover,
-    &:active {
-        text-decoration: none;
-    }
-
-    &:focus {
-        color: $links-body;
-        border: dotted 1px rgba($links-body, 0.6);
-    }
-
-    &:hover {
-        color: $links-body;
-        border-bottom: dotted 1px $links-body;
-    }
-
-    &:active {
-        color: $white;
-        background-color: $navy;
-
-        @extend %link-border;
-    }
+  }
 }
 
 body {
-    &.front a {
-        @extend %link-border;
+  &.front a {
+    @extend %link-border;
 
-        &:hover {
-            border-bottom-color: $links-body;
-        }
-
-        &:active {
-            border-bottom-color: transparent;
-        }
+    &:hover {
+      border-bottom-color: $links-body;
     }
+
+    &:active {
+      border-bottom-color: transparent;
+    }
+  }
 }
 
 hr {
-    clear: both;
-    border: none;
-    border-top: solid 1px $off-white;
+  clear: both;
+  border: none;
+  border-top: solid 1px $off-white;
 }
 
 td,
 th {
-    padding: .5em;
-    border-spacing: 1em;
-    border: black solid 1px;
+  padding: .5em;
+  border-spacing: 1em;
+  border: black solid 1px;
+}
+
+th {
+  color: $white;
+  background-color: $primary-blue;
+}
+
+iframe,
+object {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+
+
+
+
+
+
+/*Grants listing table - special table */
+
+#block-system-main>.grantslisting>div.view-content>div {
+  font-size: .7em;
+  overflow-x: initial;
+  .glyphicon-chevron-down:before {
+    content: "\e114";
+    font-family: 'glyphicons halflings';
+  }
+  .glyphicon-chevron-up:before {
+    content: "\e113";
+    font-family: 'glyphicons halflings';
+  }
+}
+
+
+th.views-field.views-field-field-grant-end-date.active,
+th.views-field.views-field-field-grant-commencement-date.active {
+  background-color: $primary-blue;
+  a {
+    color: white;
+    border-bottom: 1px solid white;
+  }
+}
+
+
+
+th.views-field.views-field-field-grant-commencement-date,
+th.views-field.views-field-field-grant-end-date {
+  background-color: $primary-blue;
+  a {
+    color: white;
+    border-bottom: 1px solid white;
+  }
 }

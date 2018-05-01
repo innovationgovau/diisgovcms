@@ -85,11 +85,11 @@
 	</noscript>
 	<!-- End No JavaScript alert -->
 	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKM5HKB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKM5HKB" title="Google Tag Manager" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 	<div id="skip-links">
 		<a class="element-invisible element-focusable" href="#main-content-anchor">Skip to Content</a>
-		<a class="element-invisible element-focusable" href="#footer_first">Skip to Main Navigation</a>
+		<a class="element-invisible element-focusable" href="#main-navigation">Skip to Main Navigation</a>
 		<a class="element-invisible element-focusable" href="#search-block-form">Skip to Search field</a>
 	</div>
 	<div id="print-crest" class="logos">
@@ -99,11 +99,10 @@
 					<a href="/">
 						<img src=<?php print("/" . drupal_get_path('theme',$GLOBALS['theme']) . "/img/crest-black-256.png"); ?> alt="Home" class="coa-img" />
 						<div>
-							<span class="coa-line-one coa-lines-2">Australian Government</span>
-							<span><?php $block = module_invoke('bean', 'block_view', 'crest---department-name'); print render($block['content']); ?></span>
+							<div class="coa-line-one coa-lines-2">Australian Government</div>
+							<div><?php $block = module_invoke('bean', 'block_view', 'crest---department-name'); print render($block['content']); ?></div>
 						</div>
 						<p>Beta</p>
-						<span class="clearboth"></span>
 					</a>
 				</div>
 			</div>
@@ -112,8 +111,6 @@
 	<div id="main-body">
 		<?php print $page_top; ?>
 		<?php print $page; ?>
-		<div id="is_tablet"></div>
-		<div id="is_mobile"></div>
 	</div>
 </body>
 </html>

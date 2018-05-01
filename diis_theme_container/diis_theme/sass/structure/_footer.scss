@@ -13,13 +13,12 @@ footer {
         font-size: .778rem;
         font-weight: bold;
         margin: 2em 0 0 0;
+        color: $white $imp;
 
         @include tablet {
-            margin: 0.75em 0 0 0;
+            margin: .75em 0 0 0;
         }
 
-
-        color: $white $imp;
 
         a {
             color: $white;
@@ -27,7 +26,14 @@ footer {
             &:hover,
             &:focus {
                 color: $white;
-                border-bottom-color: $white $imp;
+            }
+
+            &:hover {
+                border-bottom: solid $link-border-width $white $imp;
+            }
+
+            &:focus {
+                border-bottom: dotted $link-border-width $white $imp;
             }
         }
     }
@@ -44,12 +50,12 @@ footer {
 
         &:hover {
             color: $white;
-            border-bottom-color: $white $imp;
+            border-bottom: solid $link-border-width $white $imp;
         }
 
         &:focus {
             color: $white;
-            border-color: rgba($white, 0.7) $imp;
+            border: dotted $link-border-width rgba($white, 0.7) $imp;
         }
     }
 
@@ -99,6 +105,7 @@ footer {
 
             li {
                 display: block;
+                font-weight: bold;
                 margin: 0 0;
                 padding: .75em 0;
 
@@ -134,7 +141,7 @@ footer {
             &:last-child {
                 p {
                     margin: 0;
-                    padding: .75em 0;
+                    padding: 0 0 .75em 0;
                 }
 
                 a {
@@ -160,10 +167,24 @@ footer {
 
     #footer_third {
         nav {
-            .last {
-                li {
-                    display: block;
-                    margin-top: 1em;
+            li {
+                display: block;
+            }
+
+            &.last {
+                ul {
+                    position: relative;
+
+                    @include tablet {
+                        top: 0;
+                        padding-top: 26px;
+                    }
+
+
+                    li {
+                        margin: .5em auto;
+                        padding-right: 1em;
+                    }
                 }
             }
         }
@@ -174,42 +195,6 @@ footer {
                 font-weight: bold;
                 margin-bottom: auto;
                 color: $white;
-            }
-        }
-
-        .wepweb {
-            ul {
-                li {
-                    position: relative;
-                    display: block;
-                    margin: .75em auto;
-                    padding-right: 1em;
-                    padding-left: 3px;
-
-                    @include desktop {
-                        margin: .5 auto;
-                    }
-                }
-            }
-        }
-
-        .wepweblast {
-            ul {
-                position: relative;
-                top: -14px;
-
-                @include tablet {
-                    top: 0;
-                    padding-top: 42px;
-                }
-
-
-                li {
-                    display: block;
-                    margin: .75em auto;
-                    padding-right: 1em;
-                    padding-left: 3px;
-                }
             }
         }
     }
@@ -269,6 +254,33 @@ footer {
 
             p {
                 font-size: .5556rem;
+            }
+        }
+    }
+}
+
+//footer site menu should only fire when JS is enabled
+.js {
+    footer {
+        #region-footer-lower {
+            // Sitemap Navigation link in footer
+            & > h2 {
+                margin-top: 0;
+                display: block;
+                text-align: center;
+                clear: both;
+
+                @include tablet {
+                    display: none;
+                }
+            }
+
+            #footer-nav-wrapper {
+                display: none;
+
+                @include tablet {
+                    display: block;
+                }
             }
         }
     }

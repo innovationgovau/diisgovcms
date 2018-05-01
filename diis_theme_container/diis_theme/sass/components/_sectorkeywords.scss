@@ -20,7 +20,7 @@
         .btn {
             display: inline-block;
 
-            @inlude desktop {
+            @include desktop {
                 margin-top: 2.8em;
             }
         }

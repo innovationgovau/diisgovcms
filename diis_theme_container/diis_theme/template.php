@@ -200,10 +200,6 @@ function diis_theme_menu_link__main_menu($variables) {
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . "</li>\n";
 }
 
-function diis_theme_menu_tree__menu_footer_sub_menu($variables) {
-  return '<ul class="list-inline small-links">' . $variables['tree'] . '</ul>';
-}
-
 
 function diis_theme_form_alter(&$form, &$form_state, $form_id) {
   if (!empty($form['actions']) && $form['actions']['submit']) {
@@ -788,4 +784,51 @@ function diis_theme_panels_default_style_render_region($vars) {
   $output = '';
   $output .= implode('', $vars['panes']);
   return $output;
+}
+
+/**
+ * Implements hook_query_TAG_alter() .
+ *
+ * Exclude some content-types from the search index
+ */
+function diis_theme_query_node_access_alter(QueryAlterableInterface $query) {
+  global $user;
+ 
+//  if ($user->uid == 1) {
+//    return;
+//  }
+ 
+  $search = FALSE;
+  $node = FALSE;
+ 
+  foreach ($query->getTables() as $alias => $table) {
+    if ($table['table'] == 'search_index') {
+      $search = $alias;
+    }
+    elseif ($table['table'] == 'node') {
+      $node = $alias;
+    }
+  }
+ 
+  if ($node && $search) {
+    $excluded_content_types = array(
+      'consultations',
+      'minisite',
+      'grants_listing',
+      'image_upload',
+      'webform',
+      'admin',
+      'blog_article',
+      'event',
+      'footer_teaser',
+      'publication',
+      'slide',
+    );
+ 
+    if (!empty($excluded_content_types)) {
+      $query->condition($node . '.type', array($excluded_content_types), 'NOT IN');
+    }
+ 
+//dpq($query);
+  }
 }

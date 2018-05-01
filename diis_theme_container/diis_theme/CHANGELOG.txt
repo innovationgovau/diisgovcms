@@ -1,16 +1,44 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v2.3  * 2018-04-26 | cf100ca | VSTS 79513 - PRE-PUBLC BETA FIXES
+ HEAD -> features, tag: v2.12  * 2018-05-01 | 3a084d3 | VSTS 79513 - PRE PUBLIC BETA FIXES
+ origin/features  * 2018-05-01 | 54233fc | FIX: Corrected GTM iframes to use the 'title' attribute for accessibilty
+   * 2018-05-01 | acd42c0 | Added descriptive text inside <noscript><iframe> Google Tag Manager markup
+   * 2018-05-01 | 1eaf8c1 | Updated changelog to v2.11
+ tag: v2.11  * 2018-05-01 | 8182c68 | VSTS 79513 - PRE PUBLIC BETA FIXES
+ tag: 2018-05-01  * 2018-04-30 | b274990 | Merge branch 'features' of svn-5468.devcloud.hosting.acquia.com:betaindustry into features
+   * 2018-04-30 | 367370d | VSTS 80429 - removing specific content types from being indexed for search
+ tag: v2.10  * 2018-04-30 | 96425da | VSTS 80326 - DEV: Technical bits and bobs (Sprint 17)
+   * 2018-04-30 | 758b004 | VSTS 80326 - DEV: Technical bits and bobs (Sprint 17)
+   * 2018-04-30 | 46befae | Updated changelog to v2.9
+ tag: v2.9  * 2018-04-30 | 8e86e6f | Fixed JS that was double-wrapping homepage Hero Tiles
+   * 2018-04-30 | cd291f5 | JavaScript cleanup, removed ToolTip function, revamped Feedback form script to no longer hide the Submit button, but still disable it
+   * 2018-04-30 | 536f066 | Updated changelog to 2.9
+ tag: 2.9  * 2018-04-30 | b6cac71 | VSTS 80326 - DEV: Technical bits and bobs (Sprint 17)
+   * 2018-04-30 | 13f1d40 | Updated changelog to v2.8
+ tag: v2.8  * 2018-04-30 | 46d6c3c | VSTS 80326 - DEV: Technical bits and bobs (Sprint 17)
+ tag: 2018-04-30  * 2018-04-29 | cc78f7c | FIX: Added basic table styling, made <iframe> and <object> tags 100% wide, allowed links to break if too long for screen
+   * 2018-04-29 | de4a32c | Updated changelog to v2.7
+ tag: v2.7  * 2018-04-29 | 1683aa7 | VSTS 79513 - PRE PUBLIC BETA FIXES
+   * 2018-04-27 | 7668825 | Updated changelog to v2.6
+ tag: v2.6  * 2018-04-27 | 0ba7c1e | VSTS 80619 - Scrolling tables on mobiles
+ tag: 2018-04-27.1, tag: 2018-04-27.0  * 2018-04-27 | c1009f4 | Updated changelog to v2.5
+ tag: v2.5  * 2018-04-27 | 7215ae0 | Updated govCMS profile 2.18 > 2.19
+ tag: 2018-04-27  * 2018-04-27 | 428f25c | FIX: Replaced duplicate id 'region-content' with 'region-sidebar-second' in Display Suite templates
+   * 2018-04-27 | 8c4059e | Updated changelog to v2.4
+ tag: v2.4  * 2018-04-27 | f5a2f9c | VSTS 79513 - PRE PUBLIC BETA FIXES
+ origin/80189-link-styling, 80189-link-styling  * 2018-04-26 | 37aebae | VSTS 80189 - fixed footer link styles that were showing a dotted uderline rather than solid
+   * 2018-04-26 | 49acc9a | Updated changelog to v2.3
+ tag: v2.3  * 2018-04-26 | cf100ca | VSTS 79513 - PRE-PUBLC BETA FIXES
    * 2018-04-26 | dd2adef | FIX: Cleaned up scripts file, consolidated Back To Top functions
- origin/features  * 2018-04-26 | b9b85a4 | Updated changelog to v2.2
+   * 2018-04-26 | b9b85a4 | Updated changelog to v2.2
  tag: v2.2  * 2018-04-26 | 446dc99 | VSTS 80152 - DESIGN: Change link styling
  tag: 2018-04-26.0, tag: 2018-04-26  * 2018-04-26 | 101ab95 | Updated changelog to v2.1
  tag: v2.1  * 2018-04-26 | d062ce4 | FIX: Re-added missing Drupal Core files
    * 2018-04-26 | 1d6708a | Updated changelog to v2.0
  tag: v2.0  * 2018-04-26 | 780e60a | Updated to govCMS 2.18, including Drupal Core 7.59
- origin/android-crest-test-20180426, origin/79591-shrink-header, android-crest-test-20180426, 79591-shrink-header  * 2018-04-26 | 10fa87d | Removed testing content
+ origin/test-android-crest-20180426, origin/79591-shrink-header, test-android-crest-20180426, 79591-shrink-header  * 2018-04-26 | 10fa87d | Removed testing content
    * 2018-04-26 | 70e785c | Added red border around crest for clear edges
- origin/origin, origin  * 2018-04-26 | fa4fb3b | Updated Crest's mobile-only width to 22em
+   * 2018-04-26 | fa4fb3b | Updated Crest's mobile-only width to 22em
    * 2018-04-26 | a528d0c | Updated changelog to v1.100
  tag: v1.100  * 2018-04-26 | f1e483a | VSTS 79589 - FEATURE: Design retweak - header for mobile
    * 2018-04-26 | 1ba7dfc | Made Back to Top link 1/4 smaller following font family switch
@@ -44,10 +72,10 @@
    * 2018-04-17 | 0214a48 | VSTS 78724 sprint 16 bits and bobs
  tag: 2018-04-17.0, tag: 2018-04-17, tag: 2018-04-16, tag: 2018-04-13  * 2018-04-12 | eac7426 | VSTS 78724 sprint 16 bits and bobs
  tag: v1.84, tag: 2018-04-12.0, tag: 2018-04-12, tag: 2018-04-11.1, tag: 2018-04-11.0  * 2018-04-11 | 28fa062 | no VSTS fixing something that was overwritten on home page
- tag: 2018-04-11, origin/VSTS-78724, VSTS-78724  * 2018-04-10 | 4b0e4b8 | solving merge conflict on CSS file
+ tag: 2018-04-11, origin/VSTS-78724, origin/78724-bits-and-bobs-sprint-16, 78724-bits-and-bobs-sprint-16  * 2018-04-10 | 4b0e4b8 | solving merge conflict on CSS file
    * 2018-04-10 | 5434994 | updating compiled files
  tag: v1.83  * 2018-04-10 | c91e4c7 | VSTS 79137 - Remove social media share icons from search result page
- tag: 2018-04-10.0, origin/ll, ll  * 2018-04-10 | 0178fae | VSTS 76720 MVP2 font issues
+ tag: 2018-04-10.0, origin/ll, origin/76720-font-issues, 76720-font-issues  * 2018-04-10 | 0178fae | VSTS 76720 MVP2 font issues
    * 2018-04-10 | 8056765 | VSTS 71606 feature: html publications
    * 2018-04-10 | 042bd69 | VSTS n/a undoing
    * 2018-04-10 | da55b48 | VSTS n/a testing
@@ -92,7 +120,7 @@
  tag: 2018-04-03  * 2018-03-29 | 4b4d6fb | Updated changelog to v1.72
    * 2018-03-29 | 09865e2 | VSTS 75660 - MVP#2 - iPhone X with safari 11 issues
  tag: v1.72  * 2018-03-29 | bd3e78d | VSTS 75660 - MVP#2 - iPhone X wiht safari 11 issues
- origin/gitignore, gitignore  * 2018-03-29 | 6b7e960 | Stopped tracking modules
+ origin/dev-gitignore, dev-gitignore  * 2018-03-29 | 6b7e960 | Stopped tracking modules
  tag: v1.71, tag: 2018-03-29.1, tag: 2018-03-29.0, origin/govcms-update-2.17, govcms-update-2.17  * 2018-03-29 | be0c556 | SECURITY: Update govCMS profile from 2.16 > 2.17, including Drupal Core 7.57 > 7.58 - addresses multiple critical vulnerabilities - https://www.drupal.org/sa-core-2018-002
  tag: 2018-03-29  * 2018-03-28 | ecd2498 | Updated changelog
  tag: v1.70  * 2018-03-28 | a2b5a87 | VSTS 73721 - publishers can update admin nodes
@@ -122,7 +150,7 @@
    * 2018-03-23 | 731e2ba | Updated changelog to v1.57
  tag: v1.57  * 2018-03-23 | b03b9a5 | VSTS 76045 - style feedback form
    * 2018-03-23 | 967ee6d | Updated changelog to v1.56
- tag: v1.56, origin/hotfixes, hotfixes  * 2018-03-23 | 37c1b09 | FIX: Tabbing out of Feedback form text field would close the entire form
+ tag: v1.56, origin/dev-hotfixes, dev-hotfixes  * 2018-03-23 | 37c1b09 | FIX: Tabbing out of Feedback form text field would close the entire form
  tag: v1.55  * 2018-03-23 | e70b444 | VSTS 75992 - Platform dev - Rate this page
    * 2018-03-23 | d3b4f09 | Updated changelog to v1.54
  tag: v1.54  * 2018-03-23 | 79f092b | VSTS 75992 - Platform dev - Rate this page
@@ -151,7 +179,7 @@
  tag: v1.47  * 2018-03-16 | 2677833 | FIX: Updated changelog export path to be relative to site root
  tag: v1.46  * 2018-03-16 | ac050fa | FIX: Sublime Text editor JSBeautifier plugin incorrectly replaced '$(this)' with '$(form)'... yeah
    * 2018-03-16 | d4dff85 | Updated changelog to v1.45
- tag: v1.45, origin/changelog-script, changelog-script  * 2018-03-16 | c46fa0d | Updated exported file path destination location
+ tag: v1.45, origin/dev-changelog-script, dev-changelog-script  * 2018-03-16 | c46fa0d | Updated exported file path destination location
  tag: 2018-03-20  * 2018-03-16 | 0ccab0d | Updated changelog
    * 2018-03-16 | a2de4ab | Merge branch 'master' of svn-5468.devcloud.hosting.acquia.com:betaindustry
  tag: v1.44  * 2018-03-16 | bde759f | VSTS 75992 - Rate this Page widget
@@ -272,3 +300,6 @@
  tag: v1.1  * 2018-01-16 | b8919b9 | test file
  tag: v1.2  * 2018-01-16 | c28d517 | THEME: Updated typography, included Monsterrat font, removed blue heading colour for now
    * 2018-01-16 | 7bf56fa | THEME: Updated footer link styles and <hr>
+ tag: v1.0  * 2018-01-15 | a44adc2 | THEME: Updated anchor link styles, added $purple colour variables
+ tag: 2018-01-15  * 2018-01-15 | cf048bd | Merge branch 'subtheme'
+   * 2018-01-15 | 538423b | THEME: Added 'Skip to Content' links. Not sure why they were missing

@@ -64,6 +64,12 @@
             p {
                 font-size: 0.8889em $imp;
             }
+
+            .field-name-field-image {
+                img {
+                    width: 100%;
+                }
+            }
         }
     }
 

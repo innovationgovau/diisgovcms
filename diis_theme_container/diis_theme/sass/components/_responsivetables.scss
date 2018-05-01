@@ -1,0 +1,33 @@
+// _responsivetables.scss
+
+.mobile-table-text {
+    width: 95%;
+    padding: 0 2%;
+    margin: 1em auto;
+    border: 1px solid #FF6C6C;
+    background: pink;
+}
+
+.mobile-table-wrapper {
+    max-width: 99%;
+    height: auto;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mobile-table-scroll {
+    box-shadow: inset 23px -1px 20px -23px rgba(0, 0, 0, 0.95), inset -23px -1px 20px -23px rgba(0, 0, 0, 0.95);
+}
+
+.mobile-table-scroll-left {
+    box-shadow: inset 23px -1px 20px -23px rgba(0, 0, 0, 0.95);
+}
+
+.mobile-table-scroll-right {
+    box-shadow: inset -23px -1px 20px -23px rgba(0, 0, 0, 0.95);
+}
+
+table {
+    width: 99.75% $imp;
+}
