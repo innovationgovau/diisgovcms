@@ -1,19 +1,29 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v2.12  * 2018-05-01 | 3a084d3 | VSTS 79513 - PRE PUBLIC BETA FIXES
- origin/features  * 2018-05-01 | 54233fc | FIX: Corrected GTM iframes to use the 'title' attribute for accessibilty
+ HEAD -> features, tag: v2.19  * 2018-05-02 | 291d7e2 | VSTS 74224 - MVP#2 FUll system test
+ tag: 2018-05-02, origin/features, origin/75396-ie-tabbing, origin  * 2018-05-01 | 323ffcf | Updated changelog to v2.18
+ tag: v2.18  * 2018-05-01 | 37c911d | VSTS 76353 - Fontawesome icons do not render corectly when JavaScript is disabled
+ tag: v2.17, tag: 2018-05-01.0  * 2018-05-01 | 1ab3618 | VSTS 79760  - hide page URL on screen media
+ tag: v2.16  * 2018-05-01 | 17dfb14 | VSTS 79760  - hide page URL on screen media
+ tag: v2.15  * 2018-05-01 | e0da9bc | VSTS 79760  - reapplying print stylesheet changes
+   * 2018-05-01 | 5c979e0 | Updated changelog to v2.14
+ tag: v2.14  * 2018-05-01 | 1e307bc | VSTS 79513 - PRE PUBLIC BETA FIXES
+   * 2018-05-01 | d3db376 | VSTS 80226 feature AIP
+   * 2018-05-01 | 0cb6234 | Merge branch 'features' of svn-5468.devcloud.hosting.acquia.com:betaindustry into features
+ tag: v2.13  * 2018-05-01 | 4dd9aa8 | VSTS 80226 feature AIP
+ tag: v2.12  * 2018-05-01 | 3a084d3 | VSTS 79513 - PRE PUBLIC BETA FIXES
+   * 2018-05-01 | 54233fc | FIX: Corrected GTM iframes to use the 'title' attribute for accessibilty
    * 2018-05-01 | acd42c0 | Added descriptive text inside <noscript><iframe> Google Tag Manager markup
    * 2018-05-01 | 1eaf8c1 | Updated changelog to v2.11
  tag: v2.11  * 2018-05-01 | 8182c68 | VSTS 79513 - PRE PUBLIC BETA FIXES
  tag: 2018-05-01  * 2018-04-30 | b274990 | Merge branch 'features' of svn-5468.devcloud.hosting.acquia.com:betaindustry into features
-   * 2018-04-30 | 367370d | VSTS 80429 - removing specific content types from being indexed for search
- tag: v2.10  * 2018-04-30 | 96425da | VSTS 80326 - DEV: Technical bits and bobs (Sprint 17)
+ tag: v2.10  * 2018-04-30 | 367370d | VSTS 80429 - removing specific content types from being indexed for search
    * 2018-04-30 | 758b004 | VSTS 80326 - DEV: Technical bits and bobs (Sprint 17)
    * 2018-04-30 | 46befae | Updated changelog to v2.9
  tag: v2.9  * 2018-04-30 | 8e86e6f | Fixed JS that was double-wrapping homepage Hero Tiles
    * 2018-04-30 | cd291f5 | JavaScript cleanup, removed ToolTip function, revamped Feedback form script to no longer hide the Submit button, but still disable it
    * 2018-04-30 | 536f066 | Updated changelog to 2.9
- tag: 2.9  * 2018-04-30 | b6cac71 | VSTS 80326 - DEV: Technical bits and bobs (Sprint 17)
+   * 2018-04-30 | b6cac71 | VSTS 80326 - DEV: Technical bits and bobs (Sprint 17)
    * 2018-04-30 | 13f1d40 | Updated changelog to v2.8
  tag: v2.8  * 2018-04-30 | 46d6c3c | VSTS 80326 - DEV: Technical bits and bobs (Sprint 17)
  tag: 2018-04-30  * 2018-04-29 | cc78f7c | FIX: Added basic table styling, made <iframe> and <object> tags 100% wide, allowed links to break if too long for screen
@@ -174,7 +184,6 @@
    * 2018-03-19 | 228d4b9 | VSTS 70332 - fix breadcrumb display on sector pages
    * 2018-03-19 | 91e7664 | VSTS 70332 - fix breadcrumb display on sector pages
  tag: v1.48, tag: 2018-03-21  * 2018-03-16 | 4e51d7a | VSTS 75992 - Rate This Page widget
- tag: 1.48  * 2018-03-16 | 2ee6575 | Merge branch '76017-feedback-form' into features
    * 2018-03-16 | f7a7e13 | Updated changelog to 1.47
  tag: v1.47  * 2018-03-16 | 2677833 | FIX: Updated changelog export path to be relative to site root
  tag: v1.46  * 2018-03-16 | ac050fa | FIX: Sublime Text editor JSBeautifier plugin incorrectly replaced '$(this)' with '$(form)'... yeah
@@ -253,7 +262,7 @@
    * 2018-02-20 | d60b163 | Updated subtheme description
  tag: v1.27, origin/73566-add-bootstrap, 73566-add-bootstrap  * 2018-02-19 | 8faa2f5 | Removed govCMS theme and updated DIIS subtheme to use Bootstrap theme as parent theme
    * 2018-02-19 | 47f3abd | VSTS 73566 - Added Bootstrap 7.x-3.19
- tag: v1.26, tag: v1, tag: v, tag: 2018-02-19  * 2018-02-09 | 3aea44b | THEME: cleaned up Back to Top link, annoying unset style
+ tag: v1.26, tag: v1, tag: 2018-02-19  * 2018-02-09 | 3aea44b | THEME: cleaned up Back to Top link, annoying unset style
  tag: 2018-02-09.0  * 2018-02-09 | e04a898 | Merge branch 'features' into subtheme
  tag: v1.25, origin/72437-text-resize, 72437-text-resize  * 2018-02-09 | 266cea4 | Updated to target #block-system-main, to allow more consistent targeting of all page types including search results
  tag: 2018-02-09  * 2018-02-09 | ff07193 | THEME: Cleaned up MeanMenu close icon
@@ -278,7 +287,7 @@
  tag: v1.10  * 2018-01-22 | 4c6c5dd | THEME: Updated print styles an text-resize widget
  tag: v1.11, tag: 2018-01-19  * 2018-01-19 | 7e34198 | VSTS 69372: Fixed Skiplinks so users can jump to Nav, Search or Content on Content and Home pages
    * 2018-01-19 | 6282d48 | THEME: fix for Firefox and IE bolding certain fonts
- tag: 1.10  * 2018-01-18 | 99baf70 | VSTS 70344: Update main nav to be concealed only via JavaScript
+   * 2018-01-18 | 99baf70 | VSTS 70344: Update main nav to be concealed only via JavaScript
  tag: v1.9  * 2018-01-18 | d4d9b81 | VSTS 70267: UPDATE: Added correct header/footer bg gradient colours, updated link hover/focus styles, corrected footer spacing, styled Follow Social Media links
  tag: v1.8  * 2018-01-18 | ffceb02 | VSTS 70267: Updated footer with Nic's styles
    * 2018-01-18 | b6458d0 | THEME: Added Nic's updated homepage styles

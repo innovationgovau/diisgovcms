@@ -125,6 +125,11 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$navy', endColorstr='$primary-blue-light', GradientType=0 );
 }
 
+%disable {
+    background: $disabled-bg;
+    color: $disabled-text;
+}
+
 %divider {
     min-height: 1px;
     margin: 1.25em 0;

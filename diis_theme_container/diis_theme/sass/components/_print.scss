@@ -1,15 +1,70 @@
 // _print.scss
+@page {
+      margin: 0 1.2cm 1cm;
+}
 
-// @TODO: Explicitly hide screen-only elements
+h2, h3, h4, h5, h6 {
+   page-break-after: avoid;
+}
 
+img {
+   max-width: 100% !important;
+}
+
+ul, img {
+   page-break-inside: avoid;
+}
+
+html {
+    font-size: 15px;
+    body #region-content {
+        p, ul li {
+        font-size: 1.1rem;
+        }
+    }
+}
+
+#toolbar,
 header,
 footer,
 .tabs,
 #block-block-26,
-#block-block-41 {
+#block-block-41,
+#above-main .block-crumbs-wrapper,
+#above-main .bean-admin-template-elements,
+.field-name-field-sector-keywords,
+#block-webform-client-block-13321
+{
     display: none;
 }
 
 #region-content {
     display: block;
+}
+
+#print-crest.logos .coa-titles a {
+    padding: 0 18px 0;
+}
+
+.coa-titles-inline {
+    max-height: 60px;
+}
+
+.field-name-changed-date {
+    margin-top: 1em;
+}
+
+#print-beta {
+    font-size: 1.6em;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+  @include ie {
+    font-family: "Helvetica", sans-serif, "Times New Roman";
+  } // End IE :D
+}
+
+.page-url {
+    display: inline;
+    position: relative;
+    bottom: -2em;
 }

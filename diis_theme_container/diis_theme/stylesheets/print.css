@@ -21,6 +21,12 @@ a, a:active, body.front a, .mean-container .mean-bar nav.mean-nav ul.menu li a {
         @content;
     }
 }*/
+.no-js:not(.js) a[href^='javascript'],
+.no-js:not(.js) a[onclick] {
+  background: #e2e0e0;
+  color: #4e4e4e;
+}
+
 /******************
  * Builder classes
  *****************/
@@ -198,6 +204,24 @@ em {
   font-style: italic;
 }
 
+.no-js:not(.js) a[href^='javascript'],
+.no-js:not(.js) a[onclick] {
+  border-bottom: none !important;
+  cursor: not-allowed;
+}
+
+.no-js:not(.js) a[href^='javascript']:hover, .no-js:not(.js) a[href^='javascript']:active, .no-js:not(.js) a[href^='javascript']:focus,
+.no-js:not(.js) a[onclick]:hover,
+.no-js:not(.js) a[onclick]:active,
+.no-js:not(.js) a[onclick]:focus {
+  border-bottom: none !important;
+}
+
+.no-js:not(.js).js a[href^='javascript'],
+.no-js:not(.js).js a[onclick] {
+  background-color: unset;
+}
+
 a {
   color: #005677;
   border-bottom: solid 1px #005677;
@@ -212,8 +236,9 @@ a {
   }
 }
 
-a[tabindex] {
-  border: none;
+a[tabindex='-1']:focus, a[tabindex='-1']:active {
+  border: none !important;
+  visibility: hidden;
 }
 
 a[name] {
@@ -271,16 +296,113 @@ object {
   max-width: 100%;
 }
 
+/*Grants listing table - special table */
+#block-system-main > .grantslisting > div.view-content > div {
+  font-size: .7em;
+  overflow-x: initial;
+}
+
+#block-system-main > .grantslisting > div.view-content > div .glyphicon-chevron-down:before {
+  content: "\e114";
+  font-family: 'glyphicons halflings';
+}
+
+#block-system-main > .grantslisting > div.view-content > div .glyphicon-chevron-up:before {
+  content: "\e113";
+  font-family: 'glyphicons halflings';
+}
+
+th.views-field.views-field-field-grant-end-date.active,
+th.views-field.views-field-field-grant-commencement-date.active {
+  background-color: #005677;
+}
+
+th.views-field.views-field-field-grant-end-date.active a,
+th.views-field.views-field-field-grant-commencement-date.active a {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+th.views-field.views-field-field-grant-commencement-date,
+th.views-field.views-field-field-grant-end-date {
+  background-color: #005677;
+}
+
+th.views-field.views-field-field-grant-commencement-date a,
+th.views-field.views-field-field-grant-end-date a {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+@page {
+  margin: 0 1.2cm 1cm;
+}
+
+h2, h3, h4, h5, h6 {
+  page-break-after: avoid;
+}
+
+img {
+  max-width: 100% !important;
+}
+
+ul, img {
+  page-break-inside: avoid;
+}
+
+html {
+  font-size: 15px;
+}
+
+html body #region-content p, html body #region-content ul li {
+  font-size: 1.1rem;
+}
+
+#toolbar,
 header,
 footer,
 .tabs,
 #block-block-26,
-#block-block-41 {
+#block-block-41,
+#above-main .block-crumbs-wrapper,
+#above-main .bean-admin-template-elements,
+.field-name-field-sector-keywords,
+#block-webform-client-block-13321 {
   display: none;
 }
 
 #region-content {
   display: block;
+}
+
+#print-crest.logos .coa-titles a {
+  padding: 0 18px 0;
+}
+
+.coa-titles-inline {
+  max-height: 60px;
+}
+
+.field-name-changed-date {
+  margin-top: 1em;
+}
+
+#print-beta {
+  font-size: 1.6em;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #print-beta {
+    font-family: "Helvetica", sans-serif, "Times New Roman";
+  }
+}
+
+.page-url {
+  display: inline;
+  position: relative;
+  bottom: -2em;
 }
 
 .block-crumbs-wrapper {

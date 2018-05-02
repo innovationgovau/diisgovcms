@@ -10,7 +10,7 @@
 		</div>
 		<div class="row">
 			<div id="region-footer-lower">
-				<a id="main-navigation"></a>
+				<a id="main-navigation" id="element-invisible" tabindex="-1"></a>
 				<h2><a href="#" id="footer-nav-link" title="Show or hide the website's main menu"><span>Show</span> main menu</a></h2>
 				<div id="footer-nav-wrapper">
 					<div id="footer_first" role="navigation">

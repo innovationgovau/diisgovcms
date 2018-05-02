@@ -104,8 +104,8 @@ footer {
             margin: 0;
 
             li {
-                display: block;
                 font-weight: bold;
+                display: block;
                 margin: 0 0;
                 padding: .75em 0;
 
@@ -242,6 +242,18 @@ footer {
     }
 
     .region-footer-lower {
+        & > h2 {
+            @include tablet {
+                display: none;
+            }
+        }
+
+        #footer-nav-warpper {
+            @include tablet {
+                display: block;
+            }
+        }
+
         #block-block-21,
         #block-block-11 {
             padding: 0 15px;
@@ -259,16 +271,44 @@ footer {
     }
 }
 
+// menu should only fire when JS is enabled
+.no-js {
+    footer {
+        #footer_first {
+            nav {
+                &:last-child {
+                    a {
+                        width: auto;
+                        height: auto;
+                        margin: 0.75em 0;
+                    }
+                }
+            }
+        }
+
+        #region-footer-lower {
+            // Sitemap Navigation link in footer
+            & > h2 {
+                display: none;
+            }
+        }
+
+        #footer-nav-wrapper {
+            display: block;
+        }
+    }
+}
+
 //footer site menu should only fire when JS is enabled
 .js {
     footer {
         #region-footer-lower {
             // Sitemap Navigation link in footer
             & > h2 {
-                margin-top: 0;
                 display: block;
-                text-align: center;
                 clear: both;
+                margin-top: 0;
+                text-align: center;
 
                 @include tablet {
                     display: none;
@@ -284,4 +324,9 @@ footer {
             }
         }
     }
+}
+
+/* Hide page URL on screen media */
+.page-url {
+    display: none;
 }

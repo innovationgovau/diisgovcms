@@ -675,6 +675,7 @@ function diis_theme_js_alter(&$javascript) {
 // Alter the default Search Block form input field
 
 function diis_theme_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+    $form['#attributes'] = array('tabindex' => array('-1')); // Add a negative tabindex so IE can tab to the form using skip links
     $form['search_block_form']['#size'] = 40;  // define size of the textfield
     $form['actions']['submit']['#attributes'] = array('class' => array('button'));
     $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');

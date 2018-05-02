@@ -6,11 +6,19 @@
     display: block;
     padding: .75em;
     text-align: center;
-    background: #f5f502;
+    background: $pale-yellow;
 
     p {
         margin: 0;
         padding: 0;
+
+        &:first-of-type {
+            margin-bottom: 0.75em;
+        }
+    }
+
+    a {
+        border-bottom: solid 1px $primary-blue $imp;
     }
 }
 

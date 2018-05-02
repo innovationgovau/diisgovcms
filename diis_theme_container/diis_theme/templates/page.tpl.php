@@ -41,7 +41,7 @@
 	<!-- #page -->
 	<div id="page" class="clearfix">
 		<!-- #main-content -->
-		<a id="main-content-anchor" tabindex="-1"></a>
+		<a id="main-content-anchor" class="element-invisible" tabindex="-1"></a>
 		<div id="main-content" data-js="responsive-video">
 			<div class="container">
 				<div class="row">
