@@ -147,14 +147,12 @@ footer {
                 a {
                     position: relative;
                     display: inline-block;
-                    width: 2em;
-                    height: 2em;
                     margin-right: 1em;
 
                     > svg {
                         display: block;
                         width: auto;
-                        height: 100%;
+                        height: auto;
 
                         path {
                             fill: $white;
@@ -280,7 +278,17 @@ footer {
                     a {
                         width: auto;
                         height: auto;
-                        margin: 0.75em 0;
+                        margin: 1em 1em 0 0;
+
+                        @include desktop {
+                            margin: 0.75em 1em 0 0;
+                        }
+
+
+                        &:first-of-type {
+                            margin-top: 0.75em; // Add spacing between no-js text link and heading above
+                       
+                        }
                     }
                 }
             }
@@ -299,9 +307,26 @@ footer {
     }
 }
 
-//footer site menu should only fire when JS is enabled
 .js {
     footer {
+        // Social Follow links
+        #footer_first {
+            nav {
+                &:last-child {
+                    a {
+                        width: 2em;
+                        height: 2em;
+
+                        &:first-of-type {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Footer site menu should only fire when JS is enabled
+
         #region-footer-lower {
             // Sitemap Navigation link in footer
             & > h2 {

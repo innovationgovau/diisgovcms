@@ -3605,15 +3605,13 @@ footer #footer_first > nav:last-child p {
 footer #footer_first > nav:last-child a {
   position: relative;
   display: inline-block;
-  width: 2em;
-  height: 2em;
   margin-right: 1em;
 }
 
 footer #footer_first > nav:last-child a > svg {
   display: block;
   width: auto;
-  height: 100%;
+  height: auto;
 }
 
 footer #footer_first > nav:last-child a > svg path {
@@ -3715,7 +3713,17 @@ footer .region-footer-lower #block-block-11 p {
 .no-js footer #footer_first nav:last-child a {
   width: auto;
   height: auto;
-  margin: 0.75em 0;
+  margin: 1em 1em 0 0;
+}
+
+@media (min-width: 992px) {
+  .no-js footer #footer_first nav:last-child a {
+    margin: 0.75em 1em 0 0;
+  }
+}
+
+.no-js footer #footer_first nav:last-child a:first-of-type {
+  margin-top: 0.75em;
 }
 
 .no-js footer #region-footer-lower > h2 {
@@ -3724,6 +3732,15 @@ footer .region-footer-lower #block-block-11 p {
 
 .no-js footer #footer-nav-wrapper {
   display: block;
+}
+
+.js footer #footer_first nav:last-child a {
+  width: 2em;
+  height: 2em;
+}
+
+.js footer #footer_first nav:last-child a:first-of-type {
+  margin-top: 0;
 }
 
 .js footer #region-footer-lower > h2 {

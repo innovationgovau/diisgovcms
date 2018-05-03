@@ -1185,14 +1185,6 @@ form .btn {
   background: rgba(255, 255, 255, 0.3);
 }
 
-.block-search form .input-group input::-webkit-input-placeholder {
-  color: #FFFFFF;
-}
-
-.block-search form .input-group input:-ms-input-placeholder {
-  color: #FFFFFF;
-}
-
 .block-search form .input-group input::placeholder {
   color: #FFFFFF;
 }
@@ -1291,3 +1283,5 @@ form .btn {
   content: 'Search';
   padding: 2em;
 }
+
+/*# sourceMappingURL=maps/print.css.map */
