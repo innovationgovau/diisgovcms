@@ -441,7 +441,7 @@
 			];
 			
 			$.each(fileTypes, function(i) {
-				$('#main-content a[href$=".' + fileTypes[i] + '"]').before('<i class="far fa-arrow-alt-circle-down"></i>&nbsp;');
+				$('#main-content a[href$=".' + fileTypes[i] + '"]').before('<i class="far fa-arrow-alt-circle-down icon-min-sz"></i>&nbsp;');
 			});
 		} // End Attach
 	}; // End substituteFileIcon

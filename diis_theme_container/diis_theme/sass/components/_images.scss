@@ -4,17 +4,31 @@ img {
     max-width: 100%;
 }
 
-/* Branding images on std page */
+/* file download icon size fix for IE */
+.icon-min-sz {
+    min-width: 17px;
+}
 
+/* Branding images on std page */
 .field-name-field-branding-banner  img{
     padding:2em;
 }
 
+@media screen and (max-width: #{$screen-tablet - 1px}) {
+    .field-name-field-branding-banner {
+        display: none;
+    }
+}
+
+@media screen and (min-width: $screen-tablet) and (max-width: $screen-desktop) {
+    .field-name-field-branding-side {
+        display: none;
+    }
+}
+
 /*home page news items*/
 .pane-latest-news.col-sm-12 .node-image-upload{
-
     padding: 1em 0;
-
 }
 
 /*@include desktop {
