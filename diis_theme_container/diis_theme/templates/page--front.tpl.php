@@ -34,7 +34,7 @@
 <div class="container">
 	<div class="row">
 		<?php if ($page['content']): ?>
-		<a id="main-content-anchor" class="element-invisible" tabindex="-1"></a>
+		<a id="main-content-anchor" class="element-invisible" tabindex="-1">Main content area</a>
 		<?php print render($page['content']); ?>
 		<?php endif; ?>
 	</div>

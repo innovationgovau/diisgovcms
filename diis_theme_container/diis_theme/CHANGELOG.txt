@@ -1,6 +1,27 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v2.21, origin/features  * 2018-05-04 | 8a370ee | UPDATE GovCMS profile from 2.19 to 2.20
+ HEAD -> features, tag: v2.31  * 2018-05-09 | 200c5eb | VSTS 81390 - Address outstanding accessibility compliance issues to meet WCAG 2.0 AA compliance
+   * 2018-05-09 | daef653 | Updated webform IDs for form functions
+ origin/features  * 2018-05-09 | de0cc0d | Updated changelog to v2.30
+ tag: v2.30  * 2018-05-09 | 7531f88 | VSTS 81334 - LAUNCH PLAN
+   * 2018-05-09 | eb5eb27 | VSTS 81390 - Address outstanding accessibility compliance issues to meet WCAG 2.0 AA compliance
+   * 2018-05-08 | 2925c21 | Updated changelog to v2.29
+ tag: v2.29  * 2018-05-08 | df034e5 | VSTS 81390 - Address outstanding accessibility compliance issues to meet WCAG 2.0 AA compliance
+   * 2018-05-08 | 7a850c5 | Updated changelog to v2.28
+ tag: v2.28  * 2018-05-08 | dc81597 | VSTS 81390 - Address outstanding accessibility compliance issues to meet WCAG 2.0 AA compliance
+   * 2018-05-08 | 95b5e9b | Removed unnecesary TODO statements from scripts file
+   * 2018-05-08 | a656238 | Updated changelog to v2.27
+ tag: v2.27  * 2018-05-08 | 6ec3400 | VSTS 81334 - LAUNCH PLAN
+ tag: 2018-05-08.0  * 2018-05-08 | 5cff654 | VSTS 81334 - LAUNCH PLAN
+   * 2018-05-08 | 63d08f5 | Updated changelog to v2.26
+ tag: v2.26  * 2018-05-08 | 0c8350b | VSTS 81334 - LAUNCH PLAN
+   * 2018-05-08 | 6536df5 | Updated changelog to v2.25
+ tag: v2.25  * 2018-05-08 | 2210274 | VSTS 81334 - LAUNCH PLAN
+ tag: v2.24, tag: 2018-05-08, tag: 2018-05-07.0  * 2018-05-07 | fd74acb | VSTS 81140 - remove AIP from search
+ tag: v2.23, tag: 2018-05-07  * 2018-05-04 | 9f84ffc | VSTS 81212 fix download icon size issue with IE
+ tag: v2.22  * 2018-05-04 | 388793f | VSTS VSTS 79159 - hide brand exemption images at specific sizes in the 1 column layouts so banner region only is seen at 768-992 pixels wide and right-column size is only seen below 768px wide.
+ tag: 2018-05-04.0  * 2018-05-04 | 8971e53 | updated changelog to version 2.21
+ tag: v2.21  * 2018-05-04 | 8a370ee | UPDATE GovCMS profile from 2.19 to 2.20
  tag: branch, tag: 2018-05-04  * 2018-05-03 | f6175ef | Updated changelog to v2.20
  tag: v2.20  * 2018-05-03 | caa5f6a | VSTS 74224 - MVP#2 Full system test
    * 2018-05-03 | f6e2d83 | Fixed up spacing for Social Follow links in footer for JS and No-JS versions
@@ -44,7 +65,7 @@
  tag: 2018-04-27  * 2018-04-27 | 428f25c | FIX: Replaced duplicate id 'region-content' with 'region-sidebar-second' in Display Suite templates
    * 2018-04-27 | 8c4059e | Updated changelog to v2.4
  tag: v2.4  * 2018-04-27 | f5a2f9c | VSTS 79513 - PRE PUBLIC BETA FIXES
- origin/80189-link-styling  * 2018-04-26 | 37aebae | VSTS 80189 - fixed footer link styles that were showing a dotted uderline rather than solid
+ origin/80189-link-styling, 80189-link-styling  * 2018-04-26 | 37aebae | VSTS 80189 - fixed footer link styles that were showing a dotted uderline rather than solid
    * 2018-04-26 | 49acc9a | Updated changelog to v2.3
  tag: v2.3  * 2018-04-26 | cf100ca | VSTS 79513 - PRE-PUBLC BETA FIXES
    * 2018-04-26 | dd2adef | FIX: Cleaned up scripts file, consolidated Back To Top functions
@@ -54,7 +75,7 @@
  tag: v2.1  * 2018-04-26 | d062ce4 | FIX: Re-added missing Drupal Core files
    * 2018-04-26 | 1d6708a | Updated changelog to v2.0
  tag: v2.0  * 2018-04-26 | 780e60a | Updated to govCMS 2.18, including Drupal Core 7.59
- origin/test-android-crest-20180426, origin/79591-shrink-header  * 2018-04-26 | 10fa87d | Removed testing content
+ origin/test-android-crest-20180426, origin/79591-shrink-header, test-android-crest-20180426, 79591-shrink-header  * 2018-04-26 | 10fa87d | Removed testing content
    * 2018-04-26 | 70e785c | Added red border around crest for clear edges
    * 2018-04-26 | fa4fb3b | Updated Crest's mobile-only width to 22em
    * 2018-04-26 | a528d0c | Updated changelog to v1.100
@@ -70,7 +91,7 @@
    * 2018-04-24 | 9c0a613 | Updated changelog to v1.96
  tag: v1.96  * 2018-04-24 | 3895d91 | VSTS 80152 - DESIGN: Change link styling
    * 2018-04-23 | 188ef7e | Filepath - added to top of template.php
- filepath  * 2018-04-23 | bdb6b2e | Updated changelog to v1.95
+   * 2018-04-23 | bdb6b2e | Updated changelog to v1.95
  tag: v1.95  * 2018-04-23 | 1a17484 | VSTS 80152 Change link styling
    * 2018-04-23 | 771de12 | VSTS 79603 resolve content page and elements
    * 2018-04-23 | bb0361c | VSTS 79513 pre public beta fixes
@@ -90,10 +111,10 @@
    * 2018-04-17 | 0214a48 | VSTS 78724 sprint 16 bits and bobs
  tag: 2018-04-17.0, tag: 2018-04-17, tag: 2018-04-16, tag: 2018-04-13  * 2018-04-12 | eac7426 | VSTS 78724 sprint 16 bits and bobs
  tag: v1.84, tag: 2018-04-12.0, tag: 2018-04-12, tag: 2018-04-11.1, tag: 2018-04-11.0  * 2018-04-11 | 28fa062 | no VSTS fixing something that was overwritten on home page
- tag: 2018-04-11, origin/VSTS-78724, origin/78724-bits-and-bobs-sprint-16  * 2018-04-10 | 4b0e4b8 | solving merge conflict on CSS file
+ tag: 2018-04-11, origin/VSTS-78724, origin/78724-bits-and-bobs-sprint-16, 78724-bits-and-bobs-sprint-16  * 2018-04-10 | 4b0e4b8 | solving merge conflict on CSS file
    * 2018-04-10 | 5434994 | updating compiled files
  tag: v1.83  * 2018-04-10 | c91e4c7 | VSTS 79137 - Remove social media share icons from search result page
- tag: 2018-04-10.0, origin/ll, origin/76720-font-issues  * 2018-04-10 | 0178fae | VSTS 76720 MVP2 font issues
+ tag: 2018-04-10.0, origin/ll, origin/76720-font-issues, 76720-font-issues  * 2018-04-10 | 0178fae | VSTS 76720 MVP2 font issues
    * 2018-04-10 | 8056765 | VSTS 71606 feature: html publications
    * 2018-04-10 | 042bd69 | VSTS n/a undoing
    * 2018-04-10 | da55b48 | VSTS n/a testing
@@ -132,27 +153,27 @@
  tag: v1.75  * 2018-04-03 | da4912a | VSTS 75436 - MVP#2 - Mainpage - Most popular section - extra space is displayed below the heading
    * 2018-04-03 | 7f6cf43 | VSTS 72543 - display sector tage results pages
    * 2018-04-03 | 7b118a5 | VSTS display sector tag results pages
- origin/75639-popular-links  * 2018-04-03 | 1529742 | Updated changelog
+ origin/75639-popular-links, 75639-popular-links  * 2018-04-03 | 1529742 | Updated changelog
  tag: v1.74  * 2018-04-03 | a016214 | Minor JS updates to feedback tab
  tag: v1.73  * 2018-04-03 | 4b8017c | VSTS 72767 - feature clickable images thumbnail
  tag: 2018-04-03  * 2018-03-29 | 4b4d6fb | Updated changelog to v1.72
    * 2018-03-29 | 09865e2 | VSTS 75660 - MVP#2 - iPhone X with safari 11 issues
  tag: v1.72  * 2018-03-29 | bd3e78d | VSTS 75660 - MVP#2 - iPhone X wiht safari 11 issues
- origin/gitignore, origin/dev-gitignore  * 2018-03-29 | 6b7e960 | Stopped tracking modules
- tag: v1.71, tag: 2018-03-29.1, tag: 2018-03-29.0, origin/govcms-update-2.17  * 2018-03-29 | be0c556 | SECURITY: Update govCMS profile from 2.16 > 2.17, including Drupal Core 7.57 > 7.58 - addresses multiple critical vulnerabilities - https://www.drupal.org/sa-core-2018-002
+ origin/dev-gitignore, dev-gitignore  * 2018-03-29 | 6b7e960 | Stopped tracking modules
+ tag: v1.71, tag: 2018-03-29.1, tag: 2018-03-29.0, origin/govcms-update-2.17, govcms-update-2.17  * 2018-03-29 | be0c556 | SECURITY: Update govCMS profile from 2.16 > 2.17, including Drupal Core 7.57 > 7.58 - addresses multiple critical vulnerabilities - https://www.drupal.org/sa-core-2018-002
  tag: 2018-03-29  * 2018-03-28 | ecd2498 | Updated changelog
  tag: v1.70  * 2018-03-28 | a2b5a87 | VSTS 73721 - publishers can update admin nodes
    * 2018-03-28 | f149675 | Updated changelog to v1.69
  tag: v1.69  * 2018-03-28 | 9f96e31 | VSTS 75660 - MVP#2 - iPhone X with Safari 11 issues
  tag: v1.68  * 2018-03-28 | 8f5ffe4 | Recompiled SASS after pull/merge.
    * 2018-03-28 | 2a31059 | Merge branch 'features' of svn-5468.devcloud.hosting.acquia.com:betaindustry into features
- tag: v1.67, origin/76883-update-body-text-size  * 2018-03-27 | 9bf585d | VSTS-76883 update to base font size, plus compensating REM sizing for front page headings, list items and text. Header and footer typography fixes relating to base font size and/or matching design. Spacing adjustments on front page headings for "Most popular", "Latest updates from the department" and "Consultations". Added horizontal border above "Most popular".
- tag: 2018-03-28, origin/77644-beta-charlimit  * 2018-03-27 | f1a8cf2 | Updated changelog to v1.67
+ tag: v1.67, origin/76883-update-body-text-size, 76883-update-body-text-size  * 2018-03-27 | 9bf585d | VSTS-76883 update to base font size, plus compensating REM sizing for front page headings, list items and text. Header and footer typography fixes relating to base font size and/or matching design. Spacing adjustments on front page headings for "Most popular", "Latest updates from the department" and "Consultations". Added horizontal border above "Most popular".
+ tag: 2018-03-28  * 2018-03-27 | f1a8cf2 | Updated changelog to v1.67
    * 2018-03-27 | 4d0acb9 | VSTS 72491 - DEV: Fix crest display issues
- tag: v1.66, tag: 2018-03-27.0, origin/76881-crest-overlap  * 2018-03-27 | f3ce310 | VSTS 72916 - apply  visual identity colusion for brand exemptions
+ tag: v1.66, tag: 2018-03-27.0, origin/76881-crest-overlap, 76881-crest-overlap  * 2018-03-27 | f3ce310 | VSTS 72916 - apply  visual identity colusion for brand exemptions
    * 2018-03-27 | 542ec6b | Updated changelog to v1.65
  tag: v1.65  * 2018-03-27 | bfc081a | VSTS 72543 - FEATURE: Display of sector tag results pages
- origin/dev  * 2018-03-27 | 62e5079 | DEV: Moved SASS source files into separate directory
+ origin/dev, dev  * 2018-03-27 | 62e5079 | DEV: Moved SASS source files into separate directory
  tag: 2018-03-27  * 2018-03-26 | fc4b453 | Updated changelog to v1.64
  tag: v1.64  * 2018-03-26 | 3c6baa4 | VSTS 75549 - MVP#2 - Extra space displayed between heading and content on IA level 2 pages
    * 2018-03-26 | 6aa2e62 | Updated changeog to v1.63
@@ -168,11 +189,11 @@
    * 2018-03-23 | 731e2ba | Updated changelog to v1.57
  tag: v1.57  * 2018-03-23 | b03b9a5 | VSTS 76045 - style feedback form
    * 2018-03-23 | 967ee6d | Updated changelog to v1.56
- tag: v1.56, origin/hotfixes, origin/dev-hotfixes  * 2018-03-23 | 37c1b09 | FIX: Tabbing out of Feedback form text field would close the entire form
+ tag: v1.56, origin/dev-hotfixes, dev-hotfixes  * 2018-03-23 | 37c1b09 | FIX: Tabbing out of Feedback form text field would close the entire form
  tag: v1.55  * 2018-03-23 | e70b444 | VSTS 75992 - Platform dev - Rate this page
    * 2018-03-23 | d3b4f09 | Updated changelog to v1.54
  tag: v1.54  * 2018-03-23 | 79f092b | VSTS 75992 - Platform dev - Rate this page
- tag: 2018-03-23, subtheme  * 2018-03-22 | 5ea681c | Updated changelog to v1.53
+ tag: 2018-03-23  * 2018-03-22 | 5ea681c | Updated changelog to v1.53
  tag: v1.53  * 2018-03-22 | a6eab1c | VSTS 75535 - MVP#2 - Social Share icons and Resize icon issues
    * 2018-03-22 | e90d891 | Merged 'origin/features'
    * 2018-03-22 | ac6a3c5 | Merge branch 'dev' into features
@@ -186,7 +207,7 @@
    * 2018-03-21 | 8bb684f | Updated changelog to v1.49
  tag: v1.49  * 2018-03-21 | cb3707b | VSTS 76797 - Font, spacing, image, design issues
    * 2018-03-21 | 7b9bd73 | VSTS 76797 - MVP #2 - Font, spacing, image, design issues
- tag: 2018-03-21.0, origin/test-bootstrap-breakpoints  * 2018-03-21 | 5f6f965 | FIX: Updated changelog to v1.48, rather than 1.48 - replaced incorrect tag
+ tag: 2018-03-21.0, origin/test-bootstrap-breakpoints, test-bootstrap-breakpoints  * 2018-03-21 | 5f6f965 | FIX: Updated changelog to v1.48, rather than 1.48 - replaced incorrect tag
    * 2018-03-21 | 6a637ec | Updated changelog to v1.48
  tag: 2018-03-19  * 2018-03-19 | 7ad01bc | VSTS 74224 MVP2 full system test
    * 2018-03-19 | 228d4b9 | VSTS 70332 - fix breadcrumb display on sector pages
@@ -196,7 +217,7 @@
  tag: v1.47  * 2018-03-16 | 2677833 | FIX: Updated changelog export path to be relative to site root
  tag: v1.46  * 2018-03-16 | ac050fa | FIX: Sublime Text editor JSBeautifier plugin incorrectly replaced '$(this)' with '$(form)'... yeah
    * 2018-03-16 | d4dff85 | Updated changelog to v1.45
- tag: v1.45, origin/dev-changelog-script, origin/changelog-script  * 2018-03-16 | c46fa0d | Updated exported file path destination location
+ tag: v1.45, origin/dev-changelog-script, dev-changelog-script  * 2018-03-16 | c46fa0d | Updated exported file path destination location
  tag: 2018-03-20  * 2018-03-16 | 0ccab0d | Updated changelog
    * 2018-03-16 | a2de4ab | Merge branch 'master' of svn-5468.devcloud.hosting.acquia.com:betaindustry
  tag: v1.44  * 2018-03-16 | bde759f | VSTS 75992 - Rate this Page widget

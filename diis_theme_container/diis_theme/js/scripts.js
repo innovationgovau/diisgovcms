@@ -154,6 +154,7 @@
 								}
 
 								//TODO: $path may need to change based on environment...
+								// IDEA: Dynamically detect the script path, use that.  
 								var $path = '/sites/default/files/',
 									w = window.open($path + "view-table.htm");
 							});
@@ -267,7 +268,6 @@
 
 
 	// Meanmenu
-	// @TODO: Add body class when menu is open or closed for better CSS targeting
 	Drupal.behaviors.meanMenu = {
 		attach: function(context, settings) {
 			$('.region-header #block-menu-menu-about-us').meanmenu({
@@ -300,7 +300,6 @@
 				$link.on('click touch', function(e) {
 					e.preventDefault();
 					$link.toggleClass('hero-list-open');
-					// @TODO: This lags and jumps badly only when opening...
 					$target.slideToggle(250).toggleClass('hero-list-target-open');
 				});
 			});
@@ -310,7 +309,6 @@
 
 
 	// Expand-Contract widget
-	// TODO: Get spacebar working to toggle the buttons: http://fyvr.net/a11y/spacebar-action.html
 	Drupal.behaviors.expandContractWidget = {
 		attach: function(context, settings) {
 			$('.expand-link').each(function() {
