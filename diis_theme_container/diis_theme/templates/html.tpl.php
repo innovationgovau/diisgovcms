@@ -66,18 +66,14 @@
 	<meta name="theme-color" content="#4F82A2">
 	<link rel="mask-icon" href="<?php print '/' . path_to_theme(); ?>/favicons/outline.svg" color="#4F82A2">
 	<?php print $head; ?>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TKM5HKB');</script>
 	<!-- End Google Tag Manager -->
 	<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
-	<?php # Detect Search page, exclude social media sharing resources
-	if (!arg(0) == 'search'): ?>
 	<!-- Social media Share icons -->
-	<script>window.twttr=function(t,e,n){var i,o=t.getElementsByTagName(e)[0],r=window.twttr||{};return t.getElementById(n)?r:((i=t.createElement(e)).id=n,i.src="https://platform.twitter.com/widgets.js",o.parentNode.insertBefore(i,o),r._e=[],r.ready=function(t){r._e.push(t)},r)}(document,"script","twitter-wjs");var l=window.location,t=document.title;function linkedIn(){window.location="https://www.linkedin.com/shareArticle?mini=true&url="+l}function emailPage(){window.location="mailto:?subject="+t+"&body="+l}</script>
-	<?php # END search page detection
-	  endif;?>
+	<script>window.twttr=function(t,e,n){var i,o=t.getElementsByTagName(e)[0],r=window.twttr||{};return t.getElementById(n)?r:((i=t.createElement(e)).id=n,i.src="https://platform.twitter.com/widgets.js",o.parentNode.insertBefore(i,o),r._e=[],r.ready=function(t){r._e.push(t)},r)}(document,"script","twitter-wjs");var l=window.location,t=document.title;function linkedIn(){window.location="https://www.linkedin.com/shareArticle?mini=true&url="+l};function emailPage(){window.location="mailto:?subject="+t+"&body="+l};</script>
 	<?php print $styles; ?>
 	<?php print $scripts; ?>
 </head>
@@ -96,9 +92,9 @@
 		<a class="element-invisible element-focusable" href="#main-navigation">Skip to Main Navigation</a>
 		<a class="element-invisible element-focusable" href="#search-block-form">Skip to Search field</a>
 	</div>
-	<div id="print-crest" class="logos">
-		<div class="coa-inline">
-			<div class="coa-titles-inline">
+	<div id="print-crest" class="logos container">
+		<div class="coa-inline row">
+			<div class="coa-titles-inline col-xs-5">
 				<div class="coa-titles">
 					<a href="/">
 						<img src=<?php print("/" . drupal_get_path('theme',$GLOBALS['theme']) . "/img/crest-black-256.png"); ?> alt="Home" class="coa-img" />
@@ -110,6 +106,9 @@
 					</a>
 				</div>
 			</div>
+            <div class="col-xs-7">
+                <p id="print-beta">This is a beta website</p>
+            </div>
 		</div>
 	</div>
 	<div id="main-body">
@@ -126,8 +125,7 @@
 	    // Add path info, if any
 	    if (!empty($_SERVER['PATH_INFO'])) $pg_url .= $_SERVER['PATH_INFO'];
 	    // Add query string, if any (some servers include a ?, some don't)
-	    if (!empty($_SERVER['QUERY_STRING'])) $pg_url .= '?'.ltrim($_SERVER['REQUEST_URI'],'?');
-	?>
+	    if (!empty($_SERVER['QUERY_STRING'])) $pg_url .= '?'.ltrim($_SERVER['REQUEST_URI'],'?');?>
     <pre class="page-url">Page: <?php print $pg_url;?></pre>
 </body>
 </html>

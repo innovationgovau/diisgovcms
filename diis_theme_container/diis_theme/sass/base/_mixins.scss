@@ -72,6 +72,12 @@
     }
 }
 
+@mixin desktop-up {
+    @media (min-width: #{$screen-desktop}) {
+        @content;
+    }
+}
+
 @mixin print {
     @media print {
         @content;

@@ -7,28 +7,28 @@
 #edit-submit-taxonomy-term {
   transition: .3s;
 
-  border-color: $minor-navy;
+  border-color: solid 1px $minor-navy;
   background-color: $primary-blue;
   color: white;
 
   &:hover {
-    border-color: $minor-navy;
+    border-color: solid 1px $minor-navy;
     background-color: $minor-blue;
-
     color: black;
   }
 
   &:focus {
-    border-color: $minor-navy;
-       background-color: $primary-blue;
-    color: black;
+    border-color: solid 1px $minor-navy;
+    background-color: $primary-blue;
+    color: white;
+    box-shadow: 0px 0px 10px 3px rgba(81, 203, 238, 1);
   }
 
   &:active {
-    border-color: $minor-navy;
-
+    border-color: solid 1px $minor-navy;
     background-color: $minor-teal;
     color: black;
+    box-shadow: 0px 0px 0px 0px rgba(81, 203, 238, 1);
   }
 
   &:disabled {
@@ -59,6 +59,8 @@
 }
 
 
+
+
 /*webform button and spacing - general feedback form*/
 
 #webform-client-form-13321 {
@@ -71,13 +73,18 @@
 
 #webform-client-form-13321 .form-actions button {
   &:active {
-     border-color: $minor-navy;
+    border-color: solid 1px $minor-navy;
     background-color: $minor-teal;
     color: black;
+    box-shadow: 0px 0px 0px 0px rgba(81, 203, 238, 1);
   }
-   &:hover {
-    color: black;}
+  &:hover {
+    border-color: solid 1px $minor-navy;
+    color: black;
+  }
 }
+
+
 
 
 /*webform button and spacing - beta banner feedback form*/
@@ -95,8 +102,9 @@
 
 #webform-client-form-13336 .form-actions button {
   &:active {
- border-color: $minor-navy;
+    border-color: solid 1px $minor-navy;
     background-color: $minor-teal;
     color: black;
+    box-shadow: 0px 0px 0px 0px rgba(81, 203, 238, 1);
   }
 }

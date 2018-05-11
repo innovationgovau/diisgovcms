@@ -1,11 +1,27 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v2.31  * 2018-05-09 | 200c5eb | VSTS 81390 - Address outstanding accessibility compliance issues to meet WCAG 2.0 AA compliance
+ HEAD -> features, tag: v2.38  * 2018-05-11 | bf1df3e | VSTS 74422 - MVP#2 mobile responsive test for entire website
+ tag: 2018-05-11.0, origin/features  * 2018-05-11 | dfa89e3 | Updated changelog to v2.37
+ tag: v2.37  * 2018-05-11 | 455b131 | VSTS 74422 - MVP#2 Mobile responsive test for entire website
+   * 2018-05-11 | 4f8c7fc | Updated changelog to v2.36
+ tag: v2.36  * 2018-05-11 | 659846d | VSTS 81334 - LAUNCH PLAN
+   * 2018-05-11 | fc65db5 | Updated changelog 2.35
+ tag: v2.35  * 2018-05-11 | 0614b9f | VSTS 79603 resolve content page and elements
+ tag: 2018-05-11  * 2018-05-10 | 3d7feb3 | Merge branch '81741-duplicate-system-messages' into features
+   * 2018-05-10 | f6f85f7 | Updated changelog to v2.34
+ tag: v2.34  * 2018-05-10 | 753324a | VSTS 75599 - FEATURE: Develop acceptance threshold for print stylesheet
+   * 2018-05-10 | 924b25a | updated changelog
+ tag: v2.33  * 2018-05-10 | 1786b09 | VSTS 80139 mobile - coal in india
+   * 2018-05-10 | eceff76 | Updated changelog to v2.33
+   * 2018-05-10 | ae17308 | VSTS 70485 - DEV: Add share icons to content pages
+ tag: v2.32, tag: 2018-05-10.0, tag: 2018-05-10  * 2018-05-09 | 491e3bc | VSTS 81410 add rem text size definition to home h2s
+ tag: 2018-05-09.0  * 2018-05-09 | 1847f8e | Updated changelog to v2.31
+ tag: v2.31  * 2018-05-09 | 200c5eb | VSTS 81390 - Address outstanding accessibility compliance issues to meet WCAG 2.0 AA compliance
    * 2018-05-09 | daef653 | Updated webform IDs for form functions
- origin/features  * 2018-05-09 | de0cc0d | Updated changelog to v2.30
+   * 2018-05-09 | de0cc0d | Updated changelog to v2.30
  tag: v2.30  * 2018-05-09 | 7531f88 | VSTS 81334 - LAUNCH PLAN
    * 2018-05-09 | eb5eb27 | VSTS 81390 - Address outstanding accessibility compliance issues to meet WCAG 2.0 AA compliance
-   * 2018-05-08 | 2925c21 | Updated changelog to v2.29
+ tag: 2018-05-09  * 2018-05-08 | 2925c21 | Updated changelog to v2.29
  tag: v2.29  * 2018-05-08 | df034e5 | VSTS 81390 - Address outstanding accessibility compliance issues to meet WCAG 2.0 AA compliance
    * 2018-05-08 | 7a850c5 | Updated changelog to v2.28
  tag: v2.28  * 2018-05-08 | dc81597 | VSTS 81390 - Address outstanding accessibility compliance issues to meet WCAG 2.0 AA compliance
@@ -75,7 +91,7 @@
  tag: v2.1  * 2018-04-26 | d062ce4 | FIX: Re-added missing Drupal Core files
    * 2018-04-26 | 1d6708a | Updated changelog to v2.0
  tag: v2.0  * 2018-04-26 | 780e60a | Updated to govCMS 2.18, including Drupal Core 7.59
- origin/test-android-crest-20180426, origin/79591-shrink-header, test-android-crest-20180426, 79591-shrink-header  * 2018-04-26 | 10fa87d | Removed testing content
+ origin/test-android-crest-20180426, origin/79591-shrink-header, test-android-crest-20180426  * 2018-04-26 | 10fa87d | Removed testing content
    * 2018-04-26 | 70e785c | Added red border around crest for clear edges
    * 2018-04-26 | fa4fb3b | Updated Crest's mobile-only width to 22em
    * 2018-04-26 | a528d0c | Updated changelog to v1.100
@@ -111,10 +127,10 @@
    * 2018-04-17 | 0214a48 | VSTS 78724 sprint 16 bits and bobs
  tag: 2018-04-17.0, tag: 2018-04-17, tag: 2018-04-16, tag: 2018-04-13  * 2018-04-12 | eac7426 | VSTS 78724 sprint 16 bits and bobs
  tag: v1.84, tag: 2018-04-12.0, tag: 2018-04-12, tag: 2018-04-11.1, tag: 2018-04-11.0  * 2018-04-11 | 28fa062 | no VSTS fixing something that was overwritten on home page
- tag: 2018-04-11, origin/VSTS-78724, origin/78724-bits-and-bobs-sprint-16, 78724-bits-and-bobs-sprint-16  * 2018-04-10 | 4b0e4b8 | solving merge conflict on CSS file
+ tag: 2018-04-11, origin/VSTS-78724, origin/78724-bits-and-bobs-sprint-16  * 2018-04-10 | 4b0e4b8 | solving merge conflict on CSS file
    * 2018-04-10 | 5434994 | updating compiled files
  tag: v1.83  * 2018-04-10 | c91e4c7 | VSTS 79137 - Remove social media share icons from search result page
- tag: 2018-04-10.0, origin/ll, origin/76720-font-issues, 76720-font-issues  * 2018-04-10 | 0178fae | VSTS 76720 MVP2 font issues
+ tag: 2018-04-10.0, origin/ll, origin/76720-font-issues  * 2018-04-10 | 0178fae | VSTS 76720 MVP2 font issues
    * 2018-04-10 | 8056765 | VSTS 71606 feature: html publications
    * 2018-04-10 | 042bd69 | VSTS n/a undoing
    * 2018-04-10 | da55b48 | VSTS n/a testing
@@ -153,7 +169,7 @@
  tag: v1.75  * 2018-04-03 | da4912a | VSTS 75436 - MVP#2 - Mainpage - Most popular section - extra space is displayed below the heading
    * 2018-04-03 | 7f6cf43 | VSTS 72543 - display sector tage results pages
    * 2018-04-03 | 7b118a5 | VSTS display sector tag results pages
- origin/75639-popular-links, 75639-popular-links  * 2018-04-03 | 1529742 | Updated changelog
+ origin/75639-popular-links  * 2018-04-03 | 1529742 | Updated changelog
  tag: v1.74  * 2018-04-03 | a016214 | Minor JS updates to feedback tab
  tag: v1.73  * 2018-04-03 | 4b8017c | VSTS 72767 - feature clickable images thumbnail
  tag: 2018-04-03  * 2018-03-29 | 4b4d6fb | Updated changelog to v1.72
@@ -167,10 +183,10 @@
  tag: v1.69  * 2018-03-28 | 9f96e31 | VSTS 75660 - MVP#2 - iPhone X with Safari 11 issues
  tag: v1.68  * 2018-03-28 | 8f5ffe4 | Recompiled SASS after pull/merge.
    * 2018-03-28 | 2a31059 | Merge branch 'features' of svn-5468.devcloud.hosting.acquia.com:betaindustry into features
- tag: v1.67, origin/76883-update-body-text-size, 76883-update-body-text-size  * 2018-03-27 | 9bf585d | VSTS-76883 update to base font size, plus compensating REM sizing for front page headings, list items and text. Header and footer typography fixes relating to base font size and/or matching design. Spacing adjustments on front page headings for "Most popular", "Latest updates from the department" and "Consultations". Added horizontal border above "Most popular".
+ tag: v1.67, origin/76883-update-body-text-size  * 2018-03-27 | 9bf585d | VSTS-76883 update to base font size, plus compensating REM sizing for front page headings, list items and text. Header and footer typography fixes relating to base font size and/or matching design. Spacing adjustments on front page headings for "Most popular", "Latest updates from the department" and "Consultations". Added horizontal border above "Most popular".
  tag: 2018-03-28  * 2018-03-27 | f1a8cf2 | Updated changelog to v1.67
    * 2018-03-27 | 4d0acb9 | VSTS 72491 - DEV: Fix crest display issues
- tag: v1.66, tag: 2018-03-27.0, origin/76881-crest-overlap, 76881-crest-overlap  * 2018-03-27 | f3ce310 | VSTS 72916 - apply  visual identity colusion for brand exemptions
+ tag: v1.66, tag: 2018-03-27.0, origin/76881-crest-overlap  * 2018-03-27 | f3ce310 | VSTS 72916 - apply  visual identity colusion for brand exemptions
    * 2018-03-27 | 542ec6b | Updated changelog to v1.65
  tag: v1.65  * 2018-03-27 | bfc081a | VSTS 72543 - FEATURE: Display of sector tag results pages
  origin/dev, dev  * 2018-03-27 | 62e5079 | DEV: Moved SASS source files into separate directory
@@ -338,6 +354,3 @@
  tag: v1.1  * 2018-01-16 | b8919b9 | test file
  tag: v1.2  * 2018-01-16 | c28d517 | THEME: Updated typography, included Monsterrat font, removed blue heading colour for now
    * 2018-01-16 | 7bf56fa | THEME: Updated footer link styles and <hr>
- tag: v1.0  * 2018-01-15 | a44adc2 | THEME: Updated anchor link styles, added $purple colour variables
- tag: 2018-01-15  * 2018-01-15 | cf048bd | Merge branch 'subtheme'
-   * 2018-01-15 | 538423b | THEME: Added 'Skip to Content' links. Not sure why they were missing

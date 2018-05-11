@@ -1,25 +1,26 @@
 // _print.scss
 @page {
-      margin: 0 1.2cm 1cm;
+    margin: 1.5cm;
 }
 
 h2, h3, h4, h5, h6 {
-   page-break-after: avoid;
+    page-break-after: avoid;
 }
 
 img {
-   max-width: 100% !important;
+    max-width: 100% !important;
 }
 
 ul, img {
-   page-break-inside: avoid;
+    page-break-inside: avoid;
 }
 
 html {
     font-size: 15px;
+
     body #region-content {
         p, ul li {
-        font-size: 1.1rem;
+            font-size: 1.1rem;
         }
     }
 }
@@ -28,13 +29,13 @@ html {
 header,
 footer,
 .tabs,
+#block-block-6,
 #block-block-26,
 #block-block-41,
 #above-main .block-crumbs-wrapper,
 #above-main .bean-admin-template-elements,
 .field-name-field-sector-keywords,
-#block-webform-client-block-13321
-{
+#block-webform-client-block-13321 {
     display: none;
 }
 
@@ -58,9 +59,10 @@ footer,
     font-size: 1.6em;
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
-  @include ie {
-    font-family: "Helvetica", sans-serif, "Times New Roman";
-  } // End IE :D
+
+    @include ie {
+        font-family: "Helvetica", sans-serif, "Times New Roman";
+    } // End IE :D
 }
 
 .page-url {

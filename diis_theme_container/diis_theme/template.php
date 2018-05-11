@@ -3,21 +3,6 @@
 
 // @TODO: Add the subtheme path as a variable
 
-/**
- * Implements hook_file_view_alter().
- */
-function diis_theme_file_view_alter($build, $type) {
-  // When viewing a file page.
-  if (arg(0) == 'file' && is_numeric(arg(1)) && !arg(2)) {
-    $file = $build['#file'];
-    // For the main file that is being loaded.
-    if ($file->fid == arg(1) && $build['#view_mode'] == 'full') {
-      // Redirect to the actual file.
-      drupal_goto(file_create_url($file->uri));
-    }
-  }
-}
-
 /******************************
  * Taken from GovCMS template.php
  ******************************/
@@ -209,14 +194,15 @@ function diis_theme_form_alter(&$form, &$form_state, $form_id) {
         'btn-primary'
       )
     );
-    if (isset($form_id) && ($form_id == 'webform_client_form_126' || $form_id == 'webform_client_form_131')) {
+
+    // Add a privacy warning to the 'Beta feedback' form and the 'Was this page helpul' form
+    if (isset($form_id) && ($form_id == 'webform-client-form-13336' || $form_id == 'webform-client-form-13321')) {
       $form['actions']['submit']['#suffix'] = '<br ><small>Please do not include any unnecessary personal, financial, or sensitive information.  Information will only be used for purposes for which you provide it. Please see our <a href="/privacy">Privacy Policy</a> for further information.</small>';
     }
 
     if (isset($form_id) && $form_id == 'webform_client_form_466') {
       $form['actions']['submit']['#value'] = 'Start my site';
     }
-
   }
 
   //URLS:
@@ -824,6 +810,7 @@ function diis_theme_query_node_access_alter(QueryAlterableInterface $query) {
       'footer_teaser',
       'publication',
       'slide',
+      'aip',
     );
  
     if (!empty($excluded_content_types)) {
@@ -831,5 +818,20 @@ function diis_theme_query_node_access_alter(QueryAlterableInterface $query) {
     }
  
 //dpq($query);
+  }
+}
+
+/**
+ * Implements hook_file_view_alter().
+ */
+function diis_theme_file_view_alter($build, $type) {
+  // When viewing a file page.
+  if (arg(0) == 'file' && is_numeric(arg(1)) && !arg(2)) {
+    $file = $build['#file'];
+    // For the main file that is being loaded.
+    if ($file->fid == arg(1) && $build['#view_mode'] == 'full') {
+      // Redirect to the actual file.
+      drupal_goto(file_create_url($file->uri));
+    }
   }
 }

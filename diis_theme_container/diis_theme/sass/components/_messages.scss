@@ -17,3 +17,17 @@
         }
     }
 }
+
+/* Hide messages between header and breadcrumbs on mobile */
+@media (max-width: #{$screen-desktop - 1px}) {
+.messages-wrapper-under-header {
+        display: none;
+    }
+}
+
+/* Hide messages above header on desktop */
+.messages-wrapper-top {
+    @include desktop-up {
+        display: none;
+    }
+}
