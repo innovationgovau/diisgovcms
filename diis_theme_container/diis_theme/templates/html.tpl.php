@@ -115,17 +115,5 @@
 		<?php print $page_top; ?>
 		<?php print $page; ?>
 	</div>
-    <?php
-	    // Get HTTP/HTTPS
-	    $pg_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
-	    // Get domain portion
-	    $pg_url .= '://'.$_SERVER['HTTP_HOST'];
-	    // Get path
-	    $pg_url .= $_SERVER['REQUEST_URI'];
-	    // Add path info, if any
-	    if (!empty($_SERVER['PATH_INFO'])) $pg_url .= $_SERVER['PATH_INFO'];
-	    // Add query string, if any (some servers include a ?, some don't)
-	    if (!empty($_SERVER['QUERY_STRING'])) $pg_url .= '?'.ltrim($_SERVER['REQUEST_URI'],'?');?>
-    <pre class="page-url">Page: <?php print $pg_url;?></pre>
 </body>
 </html>
