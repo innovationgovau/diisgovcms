@@ -547,6 +547,35 @@
 		}
 	}
 
+
+
+	// Link the Share This Page functionality up
+
+	Drupal.behaviors.bindSocialLinks = {
+		attach: function(context, settings) {
+
+		    $('#share-facebook').on('click touch', function(e) {
+		    	e.preventDefault();
+		    	window.open('https://www.facebook.com/sharer/sharer.php?u=' + window.location.href);
+		    });
+
+		    $('#share-linkedin').on('click touch', function(e) {
+  				e.preventDefault();
+				linkedIn();
+		    });
+
+		    $('#share-print').on('click touch', function(e) {
+  				e.preventDefault();
+		    	window.print();
+		    });
+
+		    $('#share-email').on('click touch', function(e) {
+  				e.preventDefault();
+		    	emailPage();
+		    });
+		}
+	}
+
 	// Anything that doesn't need a Drupal Behaviour and needs to runs on doc load goes in here VVVV
 	/* $(function() {
 	
