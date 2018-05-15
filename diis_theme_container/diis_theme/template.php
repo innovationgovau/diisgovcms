@@ -3,6 +3,21 @@
 
 // @TODO: Add the subtheme path as a variable
 
+/**
+ * Clear any previously set element_info() static cache.
+ *
+ * If element_info() was invoked before the theme was fully initialized, this
+ * can cause the theme's alter hook to not be invoked.
+ *
+ * @see https://www.drupal.org/node/2351731
+ */
+drupal_static_reset('element_info');
+/**
+ * Include hook_preprocess_*() hooks.
+ */
+include_once './' . drupal_get_path('theme', 'diis_theme') . '/includes/preprocess.inc';
+
+
 /******************************
  * Taken from GovCMS template.php
  ******************************/
