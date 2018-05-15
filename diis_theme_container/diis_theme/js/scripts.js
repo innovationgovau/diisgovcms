@@ -555,23 +555,23 @@
 		attach: function(context, settings) {
 
 		    $('#share-facebook').on('click touch', function(e) {
-		    	e.preventDefault();
 		    	window.open('https://www.facebook.com/sharer/sharer.php?u=' + window.location.href);
+		    	e.preventDefault();
 		    });
 
 		    $('#share-linkedin').on('click touch', function(e) {
-  				e.preventDefault();
 				linkedIn();
+  				e.preventDefault();
 		    });
 
 		    $('#share-print').on('click touch', function(e) {
-  				e.preventDefault();
 		    	window.print();
+  				e.preventDefault();
 		    });
 
 		    $('#share-email').on('click touch', function(e) {
-  				e.preventDefault();
 		    	emailPage();
+  				e.preventDefault();
 		    });
 		}
 	}
