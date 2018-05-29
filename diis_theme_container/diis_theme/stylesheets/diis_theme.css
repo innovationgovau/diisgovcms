@@ -3172,6 +3172,9 @@ a.back-to-top {
     position: relative;
     margin-right: 5px; }
 
+#webform-client-form-13336 .control-label, #webform-client-form-13321 .control-label {
+  font-size: initial; }
+
 #mc_embed_signup li {
   list-style: none;
   list-style-type: none; }
