@@ -8,7 +8,7 @@
 @import "vendor/govcms/admin";
 @import "vendor/govcms/animate";
 @import "vendor/govcms/base";
-@import "vendor/govcms/browserhacks";
+
 @import "vendor/govcms/cards";
 @import "vendor/govcms/coas";
 @import "vendor/govcms/content";
@@ -23,7 +23,7 @@
 // Base
 
 @import "base/variables";
-@import "base/browser-hacks";
+
 @import "base/mixins";
 @import "base/builders";
 

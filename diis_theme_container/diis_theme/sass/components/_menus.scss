@@ -31,6 +31,12 @@
     }
 }
 
+/*BGA footer menu case transfer*/
+
+#footer_third > nav:nth-child(3) > div > ul > li.first.leaf.menu-mlid-25906 {
+    text-transform: lowercase;
+}
+
 // Main nav - normally hidden by MeanMenu
 // @TODO: Make this appear inline like Superfish, to make the MeanMenu 'jump' on load more graceful
 
