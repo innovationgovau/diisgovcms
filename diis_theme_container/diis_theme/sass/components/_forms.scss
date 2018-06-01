@@ -1,7 +1,10 @@
 // _forms.scss
 
-// Feedback form
+.form-control {
+    border-color: #888888;
+}
 
+// Feedback form
 #webform-client-form-13321 {
     margin-top: 1em;
 
@@ -29,43 +32,51 @@
                     font-weight: bold;
                 }
             }
-        }
-
-        // Radio checkboxes
+        } // Radio checkboxes
         input[id^='edit-submitted-rating-'] {
             position: relative;
             margin-right: 5px;
         }
     }
+
+    .help-block{
+      font-size: 0.9em;
+      color:#333;
+    }
 }
 
 //beta feedback font weight
-#webform-client-form-13336 .control-label, #webform-client-form-13321 .control-label{
-  font-size: initial;
+#webform-client-form-13336 .control-label,
+#webform-client-form-13321 .control-label {
+    font-size: initial;
 }
 
-
 //NISA mailchimpform
-#mc_embed_signup{
-    li{
+#mc_embed_signup {
+    li {
         list-style: none;
         list-style-type: none;
     }
-    ul{
-        padding:0px;
+
+    ul {
+        padding: 0;
     }
-    .mc-field-group{
-        margin-left:1em;
+
+    .mc-field-group {
+        margin-left: 1em;
     }
-    .cbgroup1{
-        display: inline;
-    }
-    label{
+
+    .cbgroup1 {
         display: inline;
     }
 
+    label {
+        display: inline;
+    }
 }
-//Any webform options list boxes
+
+ //Any webform options list boxes
+   .node-webform{
   .checkbox,
   .radio {
     margin-bottom: 0px;
@@ -109,3 +120,5 @@
       width: 50%;
     }
   }
+
+}

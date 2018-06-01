@@ -1,41 +1,50 @@
 // _beta.scss
 #top {
-  p {
-    &.beta {
-      margin-bottom: 0;
-      text-align: center;
-      color: white;
-      background-color: black;
-    }
-  }
-
-  .beta {
     p {
-      margin: 0;
-      text-align: center;
-      background-color: black;
-
-      a {
-        color: white;
-      }
-
-      .btn {
-        margin: 1em;
-      }
+        &.beta {
+            margin-bottom: 0;
+            text-align: center;
+            color: white;
+            background-color: black;
+        }
     }
-  }
-   .feedbackmsg {
-    margin-bottom: 0;
-    text-align: center;
-  }
+
+    .beta {
+        p {
+            margin: 0;
+            text-align: center;
+            background-color: black;
+
+            a {
+                color: white;
+            }
+
+            .btn {
+                margin: 1em;
+
+                &.btn-success {
+                    background-color: #3A833A;
+                }
+
+                &.btn-warning {
+                    background-color: #A7660C;
+                }
+            }
+        }
+    }
+
+    .feedbackmsg {
+        margin-bottom: 0;
+        text-align: center;
+    }
 }
 
 @include desktop {
-  #top {
-    p {
-      &.beta {
-        font-size: xx-large;
-      }
+    #top {
+        p {
+            &.beta {
+                font-size: xx-large;
+            }
+        }
     }
-  }
 }

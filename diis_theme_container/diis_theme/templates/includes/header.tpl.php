@@ -11,7 +11,7 @@
 <header id="top">
   <div id="region-top">
     <?php print render($page['top']); ?>
-    <div id="cs-content"><p class="feedbackmsg">This feedback is limited to a number of responses per day and is anonymous. Please <a href="/about-us/contact-us">Contact us</a> if you would like a response.</p><?php $block = module_invoke('webform', 'block_view', 'client-block-13336'); print render($block['content']); ?></div>
+    <div id="cs-content"><p class="feedbackmsg">This feedback is anonymous. Please <a href="/about-us/contact-us">Contact us</a> if you would like a response.</p><?php $block = module_invoke('webform', 'block_view', 'client-block-13336'); print render($block['content']); ?></div>
   </div>
   <div id="main-page-top" class="full-width">
     <div class="container">

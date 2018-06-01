@@ -5,36 +5,48 @@
     #share-this-page {
         position: absolute;
         z-index: 999;
+        top: 1em;
         right: 0;
 
         p {
             margin: 0;
         }
 
-        a {
-            display: block;
-            width: auto;
+        ul {
+            padding-left: 0;
+
+            li {
+                display: block;
+
+                a {
+                    display: block;
+                    width: auto;
+                }
+            }
         }
     }
 
     // Footer links
     #footer-follow-links {
-        a {
-            position: relative;
-            display: block $imp;
-            display: inline-block;
-            clear: both;
-            width: 2.5em;
-            height: 2em;
-            margin-right: 1em;
+        ul {
+            padding-left: 0;
 
-            > svg {
-                display: block;
-                width: auto;
-                height: 100%;
+            a {
+                position: relative;
+                display: inline-block;
+                clear: both;
+                width: 2.5em;
+                height: 2em;
+                margin-right: 1em;
 
-                path {
-                    fill: $white;
+                > svg {
+                    display: block;
+                    width: auto;
+                    height: 100%;
+
+                    path {
+                        fill: $white;
+                    }
                 }
             }
         }
@@ -47,34 +59,46 @@
         position: relative;
         z-index: 0;
 
-        a {
-            display: inline-block;
-            clear: none;
-            color: $primary-blue;
-            border: 2px solid transparent;
+        ul {
+            li {
+                display: inline-block;
 
-            &:hover {
-                border-bottom: solid 2px $links-body;
-            }
+                a {
+                    display: inline-block;
+                    clear: none;
+                    color: $primary-blue;
+                    border: 2px solid transparent;
 
-            &:active {
-                color: $white;
-            }
+                    &:hover {
+                        border-bottom: solid 2px $links-body;
+                    }
 
-            span {
-                display: none;
+                    &:active {
+                        color: $white;
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
             }
         }
     }
 
     // Footer links
     #footer-follow-links {
-        a {
-            display: inline-block $imp;
-        }
+        ul {
+            li {
+                display: inline-block;
 
-        span {
-            display: none;
+                a {
+                    display: inline-block $imp;
+                }
+
+                span {
+                    display: none;
+                }
+            }
         }
     }
 }

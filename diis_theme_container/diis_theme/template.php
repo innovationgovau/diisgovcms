@@ -17,7 +17,6 @@ drupal_static_reset('element_info');
  */
 include_once './' . drupal_get_path('theme', 'diis_theme') . '/includes/preprocess.inc';
 
-
 /******************************
  * Taken from GovCMS template.php
  ******************************/

@@ -19,6 +19,7 @@
 			
 			// Bind the scroll event to it
 			var amountScrolled = 300;
+
 			$(window).on('scroll', function() {
 				if ($(window).scrollTop() > amountScrolled) {
 					$('a.back-to-top').fadeIn('slow');
@@ -71,7 +72,7 @@
 							// Add text above wide tables
 							var $textAbove = $([
 									"<div class='mobile-table-text'>",
-									"<p><strong>Large table warning</strong></p>",
+										"<p><strong>Large table warning</strong></p>",
 										"<ul>",
 											"<li>This table is large, and may need to be scrolled sideways to view all its content.</li>",
 											"<li>You can also <a href='javascript:void(0);'>open this table in a new window</a>.</li>",
@@ -153,10 +154,15 @@
 								    }
 								}
 
-								//TODO: $path may need to change based on environment...
-								// IDEA: Dynamically detect the script path, use that.  
-								var $path = '/sites/default/files/',
-									w = window.open($path + "view-table.htm");
+								// Detect site's theme path by nicking it from something that loads with entity reference
+								// and appears on all pages, like the Crest
+								var $themePath = $('#main-page-top .coa-titles > a > img').attr('src').split('/');
+
+								// Drop the theme assets from the end of the src to get the actual theme path
+								$themePath.splice(-2);
+								var $newThemePath = $themePath.join('/');
+
+								var w = window.open($newThemePath + "/view-table.htm");
 							});
 
 						// Add the warning text above the original table once it's assessed everything else
@@ -275,7 +281,9 @@
 				meanScreenWidth: '9999',
 				meanMenuOpen: '<span></span><span></span><span></span><span>MENU</span>', // hamburger menu + the word 'Menu'
 				meanMenuClose: '<span></span><span></span><span>CLOSE</span>',
-				meanMenuCloseSize: 'inherit'
+				meanMenuCloseSize: 'inherit',
+				meanExpandPosition: 'before',
+				meanSpeed: 200
 			});
 		}
 	};// End meanMenu
@@ -521,19 +529,19 @@
 			$footerLink.on('click touch', function(e) {
 				
 				e.stopPropagation();
-				$footerWrap.slideToggle(250);
+
+				// Show or hide the footer, noting that .slideToggle() triggers a 
+				// bug on devices; scrolling up when over the exposed footer 
+				// menu snaps it shut randomly. 
+				$footerWrap.toggle();
 
 				// Toggle the text value of the link to reflect the action
 				$footerLinkText.text() == $footerLinkTextHide ? $footerLinkText.text($footerLinkTextShow) : $footerLinkText.text($footerLinkTextHide);
-				
+
 				if (!$('HTML').hasClass('lt-ie9')) {
 					e.preventDefault();
 				};
-			});
-			// Auto-reveal the footer if resized from mobile and the menu happens to be hidden
-			$(window).bind('resize', function() {
-				$footerWrap.removeAttr('style');
-			});
+			}); // End footerLink touch
 		}
 	}; // End toggleFooterOnMobiles
 

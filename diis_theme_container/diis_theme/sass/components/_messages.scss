@@ -14,13 +14,19 @@
 
         &.alert-success {
             border-color: #7ec740;
+
+            & > a {
+                color: #3c763d;
+                opacity: 1;
+                border-bottom: none;
+            }
         }
     }
 }
 
 /* Hide messages between header and breadcrumbs on mobile */
 @media (max-width: #{$screen-desktop - 1px}) {
-.messages-wrapper-under-header {
+    .messages-wrapper-under-header {
         display: none;
     }
 }

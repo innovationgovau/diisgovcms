@@ -72,6 +72,11 @@
             }
 
 
+            @include mobile-sm-only {
+                width: 18em;
+            }
+
+
             @include tablet {
                 left: 0;
                 transform: none;

@@ -6,7 +6,10 @@
 
     @include desktop {
         display: block;
+        font-size:0.9em;
     }
+
+
 
 
     & li + li:before {

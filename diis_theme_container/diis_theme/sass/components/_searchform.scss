@@ -71,13 +71,19 @@ form {
 
             input {
                 padding: .75em;
-                color: $white;
-                border: none;
+                color: $black;
+                border: solid 1px transparent;
+                border-bottom: solid 1px #7ea5ad;
                 border-radius: 0;
-                background: rgba($white, 0.3);
+                background-color: white;
+                font-weight: 400;
 
                 &::placeholder {
-                    color: $white;
+                    color: $black;
+                }
+
+                &:focus {
+                    border: solid 1px #7ea5ad;
                 }
 
                 &[type='text'] {
