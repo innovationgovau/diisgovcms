@@ -48,6 +48,9 @@
 <!--[if IE 9]>         <html class="no-js lt-ie10" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"> <!--<![endif]-->
 <head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TKM5HKB');</script>
+	<!-- End Google Tag Manager -->
 	<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
 	<link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
 	<title><?php print $head_title; ?></title>
@@ -72,23 +75,20 @@
 	<?php print $head; ?>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TKM5HKB');</script>
-	<!-- End Google Tag Manager -->
 	<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 	<?php print $styles; ?>
 	<?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?> homepage" <?php print $attributes;?>>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKM5HKB" title="Google Tag Manager" height="0" width="0" style="display:none;visibility:hidden">Google Tag Manager content</iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 	<!-- No JavaScript alert -->
 	<noscript id="no-js-alert">
 		<p>You appear to have JavaScript disabled in your browser, and some parts of this website won't work without it!</p>
 		<p><strong>For the best experience, please enable JavaScript</strong>. To navigate the website, see the <a href="#main-navigation">navigation links at the bottom of the page</a>.</p>
 	</noscript>
 	<!-- End No JavaScript alert -->
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKM5HKB" title="Google Tag Manager" height="0" width="0" style="display:none;visibility:hidden">Google Tag Manager content</iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
 	<div id="skip-links">
 		<a class="element-invisible element-focusable" href="#mission-statement">Skip to Content</a>
 		<a class="element-invisible element-focusable" href="#main-navigation">Skip to Main Navigation</a>
