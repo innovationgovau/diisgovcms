@@ -271,6 +271,15 @@
 		}
 	}; // End caseStudySlide
 
+		//privacy slide
+	Drupal.behaviors.privacyStatement = {
+		attach: function(context, settings) {
+			$("#privacy").click(function() {
+				$("#privacy-content").slideToggle("fast");
+			});
+		}
+	}; // 
+
 
 
 	// Meanmenu
