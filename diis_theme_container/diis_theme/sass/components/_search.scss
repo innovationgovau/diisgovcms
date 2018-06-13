@@ -1,0 +1,74 @@
+// _search.scss
+
+#region-sidebar-first {
+    .block {
+        h2 {
+            &.block-title {
+                font-size: 1em;
+            }
+        }
+
+        ul {
+            margin: 0 0 0 1em;
+            padding: 0;
+
+            li {
+                font-size: .9em;
+            }
+        }
+    }
+
+    #facet-filter-wrapper {
+        margin-top: 1em;
+    }
+}
+
+// Faceted search
+
+#region-sidebar-first {
+    @include mobile-sm-only {
+        .well {
+            padding: .5em;
+        }
+
+        #filter-toggle {
+            display: block;
+        }
+    }
+}
+
+// Mention both 'advanced' and 'faceted' as machine names vary between environments
+.view-faceted-search,
+.view-advanced-search {
+    form {
+        .views-exposed-widgets {
+            .btn {
+                margin-top: 1.8em;
+            }
+
+            .views-exposed-widget {
+                @include mobile-only {
+                    &:first-of-type {
+                        float: none;
+                    }
+
+                    .btn {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            #edit-search-api-views-fulltext-wrapper {
+                label {
+                    margin-top: 0;
+                }
+
+                #edit-search-api-views-fulltext {
+                    @include mobile-only {
+                        padding: .75em;
+                    }
+                }
+            }
+        }
+    }
+}

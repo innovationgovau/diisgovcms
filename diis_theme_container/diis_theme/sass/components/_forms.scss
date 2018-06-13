@@ -1,7 +1,7 @@
 // _forms.scss
 
 .form-control {
-    border-color: #888888;
+    border-color: #888;
 }
 
 // Feedback form
@@ -39,9 +39,9 @@
         }
     }
 
-    .help-block{
-      font-size: 0.9em;
-      color:#333;
+    .help-block {
+        font-size: .9em;
+        color: #333;
     }
 }
 
@@ -75,52 +75,53 @@
     }
 }
 
- //Any webform options list boxes
-   .node-webform{
-  .checkbox,
-  .radio {
-    margin-bottom: 0px;
-    margin-top: 0px;
-    display: inline-block;
-    width: 100%;
-  }
-
-  form .checkbox input[type=checkbox],
-  form .checkbox-inline input[type=checkbox],
-  form .radio input[type=radio],
-  form .radio-inline input[type=radio] {
-    margin-left: -20px;
-    position: absolute;
-  }
-
-  .control-label {
-    font-size: small;
-    margin-top: 0px;
-  }
-
-
-
-  .form-actions .form-submit {
-    float: right;
-    margin-top: 2em;
-    &:active {
-      border-color: solid 1px $minor-navy;
-      background-color: $minor-teal;
-      color: black;
-      box-shadow: 0px 0px 0px 0px rgba(81, 203, 238, 1);
+//Any webform options list boxes
+.node-webform {
+    @include tablet {
+        .checkbox,
+        .radio {
+            display: inline-block;
+            width: 50%;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
     }
-  }
 
-  @include tablet {
+
     .checkbox,
     .radio {
-      margin-bottom: 0px;
-      margin-top: 0px;
-      display: inline-block;
-      width: 50%;
+        display: inline-block;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
     }
-  }
 
+    form .checkbox input[type=checkbox],
+    form .checkbox-inline input[type=checkbox],
+    form .radio input[type=radio],
+    form .radio-inline input[type=radio] {
+        position: absolute;
+        margin-left: -20px;
+    }
+
+    .control-label {
+        font-size: small;
+        margin-top: 0;
+    }
+
+    .form-actions {
+        .form-submit {
+            float: right;
+            margin-top: 2em;
+
+            &:active {
+                color: black;
+                border-color: solid 1px $minor-navy;
+                background-color: $minor-teal;
+                box-shadow: 0 0 0 0 rgba(81, 203, 238, 1);
+            }
+        }
+    }
 }
 
 

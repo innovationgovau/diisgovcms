@@ -140,7 +140,8 @@ function diis_theme_preprocess_views_exposed_form(&$vars, $hook) {
 
   if (strrpos($vars['form']['#id'], 'views-exposed-form', -strlen($vars['form']['#id'])) !== FALSE) {
     $vars['form']['submit']['#attributes']['class'] = array('btn btn-info');
-    $vars['form']['submit']['#value'] = "Filter";
+    $vars['form']['submit']['#value'] = "Search";
+    $vars['form']['submit']['#attributes']['class'] = array('btn btn-info');
     $vars['form']['reset']['#attributes']['class'] = array('btn btn-info');
     unset($vars['form']['submit']['#printed']);
     unset($vars['form']['reset']['#printed']);
@@ -148,9 +149,6 @@ function diis_theme_preprocess_views_exposed_form(&$vars, $hook) {
     $vars['reset_button'] = drupal_render($vars['form']['reset']);
   }
 }
-
-
-
 
 function diis_theme_html_tag($vars) {
   if ($vars['element']['#tag'] == 'script') {
@@ -677,11 +675,21 @@ function diis_theme_js_alter(&$javascript) {
 function diis_theme_form_search_block_form_alter(&$form, &$form_state, $form_id) {
     $form['#attributes'] = array('tabindex' => array('-1')); // Add a negative tabindex so IE can tab to the form using skip links
     $form['search_block_form']['#size'] = 40;  // define size of the textfield
-    $form['actions']['submit']['#attributes'] = array('class' => array('button'));
-    $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
     $form['search_block_form']['#attributes']['placeholder'] = t('Search industry.gov.au');
-  
-} 
+    
+    // Redirect the search submission to the Faceted Search page: https://gist.github.com/postrational/5768796
+    $form['#submit'][] = 'form_search_block_form_submit_handler';
+}
+
+function form_search_block_form_submit_handler(&$form, &$form_state) {
+    // use $_GET[] to decode any characters in the string, like '?'
+    // http://php.net/manual/en/function.urldecode.php#101401
+    $newSearchURL = $_GET['/search/advanced/?search_api_views_fulltext='];
+
+    // Redirect the form destination and append the search terms on the end
+    $form_state['redirect'] = $newSearchURL . $form_state['values']['search_block_form'];
+}
+
 
 
 // Remove 'type' attributes from <scripts> tags

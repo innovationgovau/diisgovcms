@@ -2,15 +2,14 @@
 
 #print-crest {
     display: none;
+    visibility: hidden;
+
+    // Show print baner image
 
     @include print {
         display: block;
-
-        a {
-            &:after {
-                display: none;
-            }
-        }
+        visibility: visible;
+        margin-bottom: 24pt;
     }
 }
 
@@ -30,6 +29,7 @@
             position: relative;
             z-index: 500;
             zoom: 1; // IE fix :(
+                width:70%;
         }
 
 

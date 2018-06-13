@@ -33,6 +33,8 @@
         </div>
         <div class="col-md-6" id="region-header">
           <?php print render($page['header']); ?>
+            <?php $block = module_invoke('menu_block', 'block_view', '14'); ?>
+            <div class="collapsible-menu"><input type="checkbox" id="menu"><label for="menu"></label><div class="menu-content"><?php print render($block['content']);?></div></div>
         </div>
       </div>
       <div class="row">

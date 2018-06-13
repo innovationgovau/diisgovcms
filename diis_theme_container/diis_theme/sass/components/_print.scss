@@ -1,6 +1,6 @@
 // _print.scss
 @page {
-    margin: 1.5cm;
+    margin: 1.235cm;
 }
 
 h2, h3, h4, h5, h6 {
@@ -35,7 +35,8 @@ footer,
 #above-main .block-crumbs-wrapper,
 #above-main .bean-admin-template-elements,
 .field-name-field-sector-keywords,
-#block-webform-client-block-13321 {
+#block-webform-client-block-13321,
+#no-js-alert {
     display: none;
 }
 
@@ -43,30 +44,32 @@ footer,
     display: block;
 }
 
-#print-crest.logos .coa-titles a {
-    padding: 0 18px 0;
-}
-
-.coa-titles-inline {
-    max-height: 60px;
-}
-
 .field-name-changed-date {
     margin-top: 1em;
-}
-
-#print-beta {
-    font-size: 1.6em;
-    font-weight: 600;
-    font-family: "Montserrat", sans-serif;
-
-    @include ie {
-        font-family: "Helvetica", sans-serif, "Times New Roman";
-    } // End IE :D
 }
 
 .page-url {
     display: inline;
     position: relative;
     bottom: -2em;
+}
+
+.front {
+    .view-header {
+        .file-image {
+            display: none;
+        }
+    }
+
+    .hero-list-target {
+        display: block $imp;
+    }
+
+    .node-image-upload {
+        .field-type-image {
+            img {
+                display: none $imp;
+            }
+        }
+    }
 }

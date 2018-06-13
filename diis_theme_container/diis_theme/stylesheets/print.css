@@ -121,6 +121,10 @@ body #region-content ul li ul li ul li {
   font-size: 1em;
 }
 
+body #region-content ol li {
+  font-size: 0.9rem;
+}
+
 /*h1,
 h2,
 h3,
@@ -330,7 +334,6 @@ th {
 
 iframe,
 object {
-  width: 100%;
   max-width: 100%;
 }
 
@@ -389,18 +392,21 @@ th.views-field.views-field-field-grant-commencement-date.active a {
 /* table-based org chart */
 #org-chart {
   /* divs */
-  /* tables */
-}
-
-#org-chart .boxed {
   border: #333 1px solid;
   padding: 1em;
   margin: 1em 0;
+  /* tables */
 }
 
 #org-chart .minister {
   background-color: #eee;
   min-height: 120px;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  #org-chart .minister {
+    min-height: 140px;
+  }
 }
 
 #org-chart .secretary {
@@ -435,7 +441,7 @@ th.views-field.views-field-field-grant-commencement-date.active a {
 }
 
 @page {
-  margin: 1.5cm;
+  margin: 1.235cm;
 }
 
 h2, h3, h4, h5, h6 {
@@ -468,7 +474,8 @@ footer,
 #above-main .block-crumbs-wrapper,
 #above-main .bean-admin-template-elements,
 .field-name-field-sector-keywords,
-#block-webform-client-block-13321 {
+#block-webform-client-block-13321,
+#no-js-alert {
   display: none;
 }
 
@@ -476,34 +483,26 @@ footer,
   display: block;
 }
 
-#print-crest.logos .coa-titles a {
-  padding: 0 18px 0;
-}
-
-.coa-titles-inline {
-  max-height: 60px;
-}
-
 .field-name-changed-date {
   margin-top: 1em;
-}
-
-#print-beta {
-  font-size: 1.6em;
-  font-weight: 600;
-  font-family: "Montserrat", sans-serif;
-}
-
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  #print-beta {
-    font-family: "Helvetica", sans-serif, "Times New Roman";
-  }
 }
 
 .page-url {
   display: inline;
   position: relative;
   bottom: -2em;
+}
+
+.front .view-header .file-image {
+  display: none;
+}
+
+.front .hero-list-target {
+  display: block !important;
+}
+
+.front .node-image-upload .field-type-image img {
+  display: none !important;
 }
 
 .block-crumbs-wrapper {
@@ -698,14 +697,14 @@ footer,
 
 #print-crest {
   display: none;
+  visibility: hidden;
 }
 
 @media print {
   #print-crest {
     display: block;
-  }
-  #print-crest a:after {
-    display: none;
+    visibility: visible;
+    margin-bottom: 24pt;
   }
 }
 
@@ -879,7 +878,7 @@ footer,
 }
 
 .form-control {
-  border-color: #888888;
+  border-color: #888;
 }
 
 #webform-client-form-13321 {
@@ -914,7 +913,7 @@ footer,
 }
 
 #webform-client-form-13321 .help-block {
-  font-size: 0.9em;
+  font-size: .9em;
   color: #333;
 }
 
@@ -944,25 +943,35 @@ footer,
   display: inline;
 }
 
+@media (min-width: 768px) {
+  .node-webform .checkbox,
+  .node-webform .radio {
+    display: inline-block;
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
 .node-webform .checkbox,
 .node-webform .radio {
-  margin-bottom: 0px;
-  margin-top: 0px;
   display: inline-block;
   width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .node-webform form .checkbox input[type=checkbox],
 .node-webform form .checkbox-inline input[type=checkbox],
 .node-webform form .radio input[type=radio],
 .node-webform form .radio-inline input[type=radio] {
-  margin-left: -20px;
   position: absolute;
+  margin-left: -20px;
 }
 
 .node-webform .control-label {
   font-size: small;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .node-webform .form-actions .form-submit {
@@ -971,20 +980,10 @@ footer,
 }
 
 .node-webform .form-actions .form-submit:active {
+  color: black;
   border-color: solid 1px #00283e;
   background-color: #61c6c6;
-  color: black;
-  box-shadow: 0px 0px 0px 0px #51cbee;
-}
-
-@media (min-width: 768px) {
-  .node-webform .checkbox,
-  .node-webform .radio {
-    margin-bottom: 0px;
-    margin-top: 0px;
-    display: inline-block;
-    width: 50%;
-  }
+  box-shadow: 0 0 0 0 #51cbee;
 }
 
 img {
