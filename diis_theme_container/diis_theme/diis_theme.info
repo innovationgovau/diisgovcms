@@ -14,7 +14,6 @@ base theme = bootstrap
 
 stylesheets[all][] 		= stylesheets/diis_theme.css
 stylesheets[all][]		= styesheets/vendor/meanmenu.min.css
-stylesheets[all][] 		= stylesheets/ie.css
 stylesheets[print][]	= stylesheets/print.css
 
 

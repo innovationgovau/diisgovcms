@@ -690,6 +690,73 @@ function form_search_block_form_submit_handler(&$form, &$form_state) {
     $form_state['redirect'] = $newSearchURL . $form_state['values']['search_block_form'];
 }
 
+// Add aria-label attribute to search form button
+function diis_theme_bootstrap_search_form_wrapper(array $variables) {
+  $output = '<div class="input-group">';
+  $output .= $variables['element']['#children'];
+  $output .= '<span class="input-group-btn">';
+  $output .= '<button aria-label="Search" type="submit" class="btn btn-primary">' . _bootstrap_icon('search', t('Search')) . '</button>';
+  $output .= '</span>';
+  $output .= '</div>';
+  return $output;
+}
+
+// Make Bootstrap messages accessible
+function diis_theme_status_messages(array $variables) {
+  $display = $variables['display'];
+  $output = '';
+
+  $status_heading = array(
+    'status' => t('Status message'),
+    'error' => t('Error message'),
+    'warning' => t('Warning message'),
+    'info' => t('Informative message'),
+  );
+
+  // Map Drupal message types to their corresponding Bootstrap classes.
+  // @see http://twitter.github.com/bootstrap/components.html#alerts
+  $status_class = array(
+    'status' => 'success',
+    'error' => 'danger',
+    'warning' => 'warning',
+    // Not supported, but in theory a module could send any type of message.
+    // @see drupal_set_message()
+    // @see theme_status_messages()
+    'info' => 'info',
+  );
+
+  // Retrieve messages.
+  $message_list = drupal_get_messages($display);
+
+  // Allow the disabled_messages module to filter the messages, if enabled.
+  if (module_exists('disable_messages') && variable_get('disable_messages_enable', '1')) {
+    $message_list = disable_messages_apply_filters($message_list);
+  }
+
+  foreach ($message_list as $type => $messages) {
+    $class = (isset($status_class[$type])) ? ' alert-' . $status_class[$type] : '';
+    $output .= "<div class=\"alert alert-block alert-dismissible$class messages $type\">\n";
+    $output .= "  <a aria-label=\"Close " . strtolower(filter_xss_admin($status_heading[$type])) . "\" role=\"button\" class=\"close\" data-dismiss=\"alert\" href=\"#\">&times;</a>\n";
+
+    if (!empty($status_heading[$type])) {
+      $output .= '<h4 class="element-invisible">' . filter_xss_admin($status_heading[$type]) . "</h4>\n";
+    }
+
+    if (count($messages) > 1) {
+      $output .= " <ul>\n";
+      foreach ($messages as $message) {
+        $output .= '  <li>' . filter_xss_admin($message) . "</li>\n";
+      }
+      $output .= " </ul>\n";
+    }
+    else {
+      $output .= filter_xss_admin(reset($messages));
+    }
+
+    $output .= "</div>\n";
+  }
+  return $output;
+}
 
 
 // Remove 'type' attributes from <scripts> tags

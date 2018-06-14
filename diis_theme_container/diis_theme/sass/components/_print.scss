@@ -1,74 +1,197 @@
 // _print.scss
-@page {
-    margin: 1.235cm;
-}
+@include print {
+    @include col-x-loop;
 
-h2, h3, h4, h5, h6 {
-    page-break-after: avoid;
-}
-
-img {
-    max-width: 100% !important;
-}
-
-ul, img {
-    page-break-inside: avoid;
-}
-
-html {
-    font-size: 15px;
-
-    body #region-content {
-        p, ul li {
-            font-size: 1.1rem;
-        }
+    @page {
+        margin: 1.5cm;
     }
-}
 
-#toolbar,
-header,
-footer,
-.tabs,
-#block-block-6,
-#block-block-26,
-#block-block-41,
-#above-main .block-crumbs-wrapper,
-#above-main .bean-admin-template-elements,
-.field-name-field-sector-keywords,
-#block-webform-client-block-13321,
-#no-js-alert {
-    display: none;
-}
+    .container {
+        max-width: 100% $imp;
+    }
 
-#region-content {
-    display: block;
-}
+    // -------- Try to enforce where content can break onto a new page, mixed browser support --------
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    caption,
+    figure {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
 
-.field-name-changed-date {
-    margin-top: 1em;
-}
-
-.page-url {
-    display: inline;
-    position: relative;
-    bottom: -2em;
-}
-
-.front {
-    .view-header {
-        .file-image {
-            display: none;
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        & + * {
+            // This sometimes gets ignored, stupid cross-brower support
+            page-break-before: avoid;
+            break-before: avoid;
         }
     }
 
-    .hero-list-target {
-        display: block $imp;
+    div,
+    span,
+    p,
+    ul,
+    dl,
+    ol,
+    table,
+    figure,
+    address,
+    blockquote,
+    hr,
+    iframe,
+    form,
+    label,
+    input {
+        + h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            page-break-before: auto;
+            break-before: auto;
+        }
     }
 
-    .node-image-upload {
-        .field-type-image {
-            img {
-                display: none $imp;
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+
+    // try to prevent visible URLs from breaking to new pages
+    a[href] {
+        page-break-inside: avoid;
+
+        &:after {
+            page-break-inside: avoid;
+        }
+    }
+
+    // ------- End Page break section --------
+
+    html {
+        font-size: 15px;
+
+        body {
+            #region-content {
+                p,
+                ul li {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+
+    table {
+        max-width: 100% $imp;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tfoot {
+        display: table-header-group;
+    }
+
+    // Alert users when the table is too wide.
+
+    // NOTE: This is assessed on the width of the browser when the webpage has loaded,
+    // not necessarily the print version. A table may fit in the webpage, but not on paper.
+    .mobile-table-wrapper {
+        position: relative;
+        margin-bottom: 0;
+        border-right: dashed 2px black;
+
+        &:before {
+            position: relative;
+            display: block;
+            width: auto;
+            padding: 1em;
+            content: 'The table below is too wide to fit on this page, please check the online version of this page to view the whole table.';
+            border: solid 1px black;
+        }
+    }
+
+    #toolbar,
+    header,
+    footer,
+    .tabs,
+    .tags,
+    #messages-console,
+    .mobile-table-text,
+    #block-block-6,
+    #block-block-26,
+    #block-block-41,
+    #above-main .block-crumbs-wrapper,
+    #above-main .bean-admin-template-elements,
+    .field-name-field-sector-keywords,
+    #block-webform-client-block-13321,
+    #no-js-alert {
+        display: none $imp;
+    }
+
+    #region-content {
+        display: block;
+    }
+
+    .field-name-changed-date {
+        margin-top: 1em;
+    }
+
+    .page-url {
+        position: relative;
+        bottom: -2em;
+        display: inline;
+    }
+
+    // auto-generate Flexbox classes to quickly reset widths
+
+    @include col-x-loop;
+
+    .front {
+        .view-header {
+            .file-image {
+                display: none;
+            }
+        }
+
+        .hero-list {
+            h2 {
+                a {
+                    margin: 0;
+                    padding: 0;
+                    text-align: left;
+
+                    &:before,
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+
+            .view-footer {
+                margin: 0;
+            }
+        }
+
+        .hero-list-target {
+            display: block $imp;
+        }
+
+        .node-image-upload {
+            padding: 0 $imp;
+
+            .field-type-image {
+                img {
+                    display: none $imp;
+                }
             }
         }
     }

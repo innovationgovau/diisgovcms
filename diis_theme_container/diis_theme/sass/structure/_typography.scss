@@ -67,22 +67,12 @@ body {
                 }
             }
         }
-        
+
         ol li {
             font-size: 0.9rem;
         }
     }
 }
-
-/*h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 18px 0 6px 0;
-    margin: 1em 0 .33em 0;
-}*/
 
 h2,
 h3,
@@ -367,9 +357,9 @@ th {
 /* table-based org chart */
 #org-chart {
     /* divs */
-        border: #333 1px solid;
-        padding: 1em;
-        margin: 1em 0;
+    border: #333 1px solid;
+    padding: 1em;
+    margin: 1em 0;
 
     .minister {
         background-color: #eee;

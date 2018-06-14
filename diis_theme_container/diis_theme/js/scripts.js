@@ -622,11 +622,21 @@
         }
     }
 
+    // SVG FontAwesome icons load without focusable="false" applied, leading to false tabs in IE
+    // This adds the attribute when the user focuses on the parent anchor
+    
+    Drupal.behaviors.nonFocusableSVGs = {
+        attach: function(context, settings) {
+            $('#share-this-page a, #footer-follow-links a').on('focus',function() {
+                $(this).children('svg').attr('focusable', 'false');
+            });
+        }
+    }
 
-    //Main menu
+    /* ------- Main menu ------- */
 
     //This allows the space bar to open/close the main menu
-    Drupal.behaviors.mainmenuallexpandtop = {
+    Drupal.behaviors.mainMenuAllExpandTop = {
         attach: function(context, settings) {
 
             $('input[type="checkbox"]').on('keyup', function(event) {
@@ -638,19 +648,19 @@
         }
     };
 
-    // Header menu toggle*******************//
-    //Don't remove the next two blocks, it makes sure the menu looks correct when expanded.
+    // Header menu toggle
+    // Don't remove the next two blocks, it makes sure the menu looks correct when expanded.
 
     // Add ID to first menu first level ul
-    Drupal.behaviors.mainmenuallexpand = {
+    Drupal.behaviors.mainMenuAllExpand = {
         attach: function(context, settings) {
             $('#region-header .menu-name-menu-about-us.parent-mlid-0.menu-level-1 ul').attr('id', 'menus');
         }
     } // End 
 
 
-    //Toggle menu open/close
-    Drupal.behaviors.menuflip = {
+    // Toggle menu open/close
+    Drupal.behaviors.menuFlip = {
         attach: function(context, settings) {
             $("#menuflip").click(function() {
                 $("#menus").toggle();
@@ -666,10 +676,10 @@
 
     //The next two blocks turn the + on parent items into javascript:void(0); instead of a nothing link.
 
-    
+    // @TODO: Consolidate this a bit, possibly use CSS attr selectors?
 
     // Main menu first level parent items + URL turns into to javascript:void(0); ACSF only
-    Drupal.behaviors.makeahrefacsf = {
+    Drupal.behaviors.makeAhrefACSF = {
         attach: function(context, settings) {
             $('#region-header .menu-mlid-103691 a, #region-header .menu-mlid-103696 a, #region-header .menu-mlid-103701 a, #region-header .menu-mlid-103706 a, #region-header .menu-mlid-103711 a, #region-header .menu-mlid-103716 a, #region-header .menu-mlid-103751 a').attr('href', 'javascript:void(0);');
         }
@@ -683,10 +693,10 @@
     } // End 
 
 
-	//Data and publications******************//
+	//Data and publications
 
     // Add ID to the + button for funding and incentives
-    Drupal.behaviors.datatoggle = {
+    Drupal.behaviors.dataToggle = {
         attach: function(context, settings) {
             $('#region-header .menu-mlid-24536 a, #region-header .menu-mlid-103691 a').attr('id', 'dataplus');
         }
@@ -694,7 +704,7 @@
 
 
     // Add ID to the UL under + button for funding and incentives
-    Drupal.behaviors.datamenu = {
+    Drupal.behaviors.dataMenu = {
         attach: function(context, settings) {
             $('#region-header .menu-mlid-10651 ul').attr('id', 'datamenu');
         }
@@ -702,7 +712,7 @@
 
 
     //Toggle menu open/close
-    Drupal.behaviors.dataaction = {
+    Drupal.behaviors.dataAction = {
         attach: function(context, settings) {
             $("#fundingplus").click(function() {
                 $("#fundingmenu").toggle();
@@ -716,15 +726,13 @@
     }; // End
 
 
-    //Funding and incentives ******************//
+
+    // Funding and incentives
 
     // Main menu - change funding and incentives + URL to #
 
-
-
-
     // Add ID to the + button for funding and incentives
-    Drupal.behaviors.fundingtoggle = {
+    Drupal.behaviors.fundingToggle = {
         attach: function(context, settings) {
             $('#region-header .menu-mlid-24541 a, #region-header .menu-mlid-103696 a').attr('id', 'fundingplus');
         }
@@ -732,7 +740,7 @@
 
 
     // Add ID to the UL under + button for funding and incentives
-    Drupal.behaviors.fundingmenu = {
+    Drupal.behaviors.fundingMenu = {
         attach: function(context, settings) {
             $('#region-header .menu-mlid-10651 ul').attr('id', 'fundingmenu');
         }
@@ -740,7 +748,7 @@
 
 
     //Toggle menu open/close
-    Drupal.behaviors.fundingaction = {
+    Drupal.behaviors.fundingAction = {
         attach: function(context, settings) {
             $("#fundingplus").click(function() {
                 $("#fundingmenu").toggle();
@@ -753,10 +761,10 @@
         }
     }; // End
 
-    //Strategies for the future ******************//
+    // Strategies for the future
 
     // Add ID to the + button for strategies and incentives
-    Drupal.behaviors.strategiestoggle = {
+    Drupal.behaviors.strategiesToggle = {
         attach: function(context, settings) {
             $('#region-header .menu-mlid-24546 > a, #region-header .menu-mlid-103701> a').attr('id', 'strategiesplus');
         }
@@ -764,7 +772,7 @@
 
 
     // Add ID to the UL under + button for strategies and incentives
-    Drupal.behaviors.strategiesmenu = {
+    Drupal.behaviors.strategiesMenu = {
         attach: function(context, settings) {
             $('#region-header .menu-mlid-10656 ul').attr('id', 'strategiesmenu');
         }
@@ -772,7 +780,7 @@
 
 
     //Toggle menu open/close
-    Drupal.behaviors.strategiesaction = {
+    Drupal.behaviors.strategiesAction = {
         attach: function(context, settings) {
             $("#strategiesplus").click(function() {
                 $("#strategiesmenu").toggle();
@@ -787,11 +795,10 @@
 
 
 
-    //Regulations and standards ******************//
-
+     // Regulations and standards
 
     // Add ID to the + button for reg 
-    Drupal.behaviors.regtoggle = {
+    Drupal.behaviors.regToggle = {
         attach: function(context, settings) {
             $('#region-header .menu-mlid-24551 a, #region-header .menu-mlid-103706 a').attr('id', 'regplus');
         }
@@ -799,7 +806,7 @@
 
 
     // Add ID to the UL under + button for reg 
-    Drupal.behaviors.regmenu = {
+    Drupal.behaviors.regMenu = {
         attach: function(context, settings) {
             $('#region-header .menu-mlid-10661 ul').attr('id', 'regmenu');
         }
@@ -807,7 +814,7 @@
 
 
     //Toggle menu open/close
-    Drupal.behaviors.regaction = {
+    Drupal.behaviors.regAction = {
         attach: function(context, settings) {
             $("#regplus").click(function() {
                 $("#regmenu").toggle();
@@ -820,11 +827,11 @@
         }
     }; // End
 
-    //Community activities ******************//
+    // Community activities
 
 
     // Add ID to the + button for com 
-    Drupal.behaviors.comtoggle = {
+    Drupal.behaviors.comToggle = {
         attach: function(context, settings) {
             $('#region-header .menu-mlid-24556 a, #region-header .menu-mlid-103711 a').attr('id', 'complus');
         }
@@ -832,15 +839,15 @@
 
 
     // Add ID to the UL under + button for com 
-    Drupal.behaviors.commenu = {
+    Drupal.behaviors.comMenu = {
         attach: function(context, settings) {
             $('#region-header .menu-mlid-10666 ul').attr('id', 'commenu');
         }
     } // End New main menu header
 
 
-    //Toggle menu open/close
-    Drupal.behaviors.comaction = {
+    // Toggle menu open/close
+    Drupal.behaviors.comAction = {
         attach: function(context, settings) {
             $("#complus").click(function() {
                 $("#commenu").toggle();
@@ -853,11 +860,11 @@
         }
     }; // End
 
-    //Government to government ******************//
 
+    // Government to government
 
     // Add ID to the + button for gov 
-    Drupal.behaviors.govtoggle = {
+    Drupal.behaviors.govToggle = {
         attach: function(context, settings) {
             $('#region-header .menu-mlid-24561 a, #region-header .menu-mlid-103716 a').attr('id', 'govplus');
         }
@@ -872,7 +879,7 @@
     } // End New main menu header
 
 
-    //Toggle menu open/close
+    // Toggle menu open/close
     Drupal.behaviors.govaction = {
         attach: function(context, settings) {
             $("#govplus").click(function() {
@@ -887,11 +894,11 @@
     }; // End
 
 
-    //About us ******************//
 
+    // About us
 
     // Add ID to the + button for about 
-    Drupal.behaviors.abouttoggle = {
+    Drupal.behaviors.aboutToggle = {
         attach: function(context, settings) {
             $('#region-header .menu-mlid-24566 a, #region-header .menu-mlid-103751 a').attr('id', 'aboutplus');
         }
@@ -899,7 +906,7 @@
 
 
     // Add ID to the UL under + button for about
-    Drupal.behaviors.aboutmenu = {
+    Drupal.behaviors.aboutMenu = {
         attach: function(context, settings) {
             $('#region-header .menu-mlid-10811 ul').attr('id', 'aboutmenu');
         }
@@ -907,7 +914,7 @@
 
 
     //Toggle menu open/close
-    Drupal.behaviors.aboutaction = {
+    Drupal.behaviors.aboutAction = {
         attach: function(context, settings) {
             $("#aboutplus").click(function() {
                 $("#aboutmenu").toggle();
@@ -919,6 +926,8 @@
             });
         }
     }; // End
+
+    /* ------- END Main menu ------- */
 
 
     // Anything that doesn't need a Drupal Behaviour and needs to runs on doc load goes in here VVVV

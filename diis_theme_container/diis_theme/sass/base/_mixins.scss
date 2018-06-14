@@ -84,6 +84,21 @@
     }
 }
 
+@mixin col-x-loop {
+    $breakpoint-names: sm md lg xl;
+    $columns: 12;
+
+    @each $breakpoint in $breakpoint-names {
+        .col-#{$breakpoint} {
+            @for $i from 1 through $columns {
+                &-#{$i} {
+                    width: 100% $imp;
+                }
+            }
+        }
+    }
+}
+
 // IE :(
 
 // IE 10+

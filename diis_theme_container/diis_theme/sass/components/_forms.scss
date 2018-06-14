@@ -1,5 +1,4 @@
 // _forms.scss
-
 .form-control {
     border-color: #888;
 }
@@ -21,13 +20,16 @@
             color: white;
         }
     }
+    .radio input[type=radio] {
+        margin-left: 0px;
+    }
 
     .webform-component-radios {
         // Question label
         &.form-group {
             margin-bottom: 0;
 
-            > label {
+            >label {
                 &.control-label {
                     font-weight: bold;
                 }
@@ -44,6 +46,27 @@
         color: #333;
     }
 }
+
+#webform-client-form-43433 .form-select, #webform-client-form-43321 .form-select {
+    @include desktop {
+        width: 9em;
+    }
+    
+}
+
+#webform-client-form-43433 #edit-submitted-accept-privacy-statement-below, #webform-client-form-43321 #edit-submitted-accept-privacy-statement-below {
+    @include desktop {
+        float: left;
+    }
+}
+
+#webform-client-form-43433 .email, #webform-client-form-43321 .email {
+    @include desktop {
+       width:25em;
+    }
+}
+
+
 
 //beta feedback font weight
 #webform-client-form-13336 .control-label,
@@ -76,38 +99,30 @@
 }
 
 //Any webform options list boxes
-.node-webform {
-    @include tablet {
-        .checkbox,
-        .radio {
-            display: inline-block;
-            width: 50%;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-    }
+.node-webform,
+.block-webform {
 
 
-    .checkbox,
-    .radio {
-        display: inline-block;
-        width: 100%;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+
 
     form .checkbox input[type=checkbox],
     form .checkbox-inline input[type=checkbox],
     form .radio input[type=radio],
     form .radio-inline input[type=radio] {
-        position: absolute;
         margin-left: -20px;
     }
 
     .control-label {
-        font-size: small;
+        font-size: inherit;
         margin-top: 0;
     }
+
+    form label {
+    margin-top: 1em;
+    color: black;
+    font-weight: 400;
+    width: 100%;
+}
 
     .form-actions {
         .form-submit {
@@ -122,10 +137,55 @@
             }
         }
     }
+
+    @include tablet {
+        .checkbox,
+        .radio {
+            display: inline-block;
+            width: 50%;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    /*@include desktop {
+        .checkbox,
+        .radio {
+            display: inline-block;
+            width: 31%;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }*/
 }
 
 
 //mailchimp privacy form
-#privacy-content{
+#privacy-content {
     display: none;
+}
+
+//all mailchimp
+
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+
+}
+
+#mc_embed_signup .mc-field-group {
+    margin-left: 0em;
+}
+
+form .optional, form .required {
+    color: #777;
+    float: none;
+}
+
+#mc_embed_signup .mc-field-group {
+    clear: left;
+    position: relative;
+    width: 100%;
+    padding-bottom: 0; 
+    min-height: 50px;
 }
