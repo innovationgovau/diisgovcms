@@ -78,12 +78,18 @@
 			<!-- Main page content if not homepage -->
 			<div class="container">
 				<div class="row">
-					<div class="col-md-3" id="region-sidebar-first">
-						<?php print render($page['sidebar_first']); ?>
-					</div>
-					<div class="col-md-9" id="region-content">
-						<?php print render($page['content']); ?>
-					</div>
+					<?php if (!empty($page['sidebar_first'])): ?>
+						<div class="col-md-3" id="region-sidebar-first">
+							<?php print render($page['sidebar_first']); ?>
+						</div>
+						<div class="col-md-9" id="region-content">
+							<?php print render($page['content']); ?>
+						</div>
+					<?php else: ?>
+						<div class="col-md-12" id="region-content">
+							<?php print render($page['content']); ?>
+						</div>
+					<?php endif; ?>
 					
 				</div>
 				<!-- EOF:#main-content -->

@@ -3,8 +3,9 @@
 header {
     #main-page-top {
         #region-header {
-      padding-bottom: 1.5em;
-    }
+            padding-bottom: 1.5em;
+        }
+
         @include desktop {
             padding-top: 2em;
         }
@@ -21,7 +22,7 @@ header {
             }
 
 
-            p {
+            h1, p {
                 font-size: 1.6em;
                 font-weight: 300;
                 max-width: 100%;

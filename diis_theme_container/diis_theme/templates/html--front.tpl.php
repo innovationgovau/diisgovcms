@@ -77,7 +77,6 @@
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 	<?php print $styles; ?>
-	<?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?> homepage" <?php print $attributes;?>>
 	<!-- Google Tag Manager (noscript) -->
@@ -97,5 +96,6 @@
 	<div id="print-crest"><img src="<?php print '/' . path_to_theme(); ?>/img/print-banner.png" alt="Department of Industry, Innovation and Science crest"></div>
 	<?php print $page_top; ?>
 	<?php print $page; ?>
+	<?php print $scripts; ?>
 </body>
 </html>

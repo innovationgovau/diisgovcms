@@ -101,6 +101,10 @@
                 }
             }
 
+            &:focus {
+                outline: 3px solid $focus-blue;
+            }
+
             &:after {
                 position: relative;
                 clear: both;

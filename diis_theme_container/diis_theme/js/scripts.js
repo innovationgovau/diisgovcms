@@ -635,294 +635,68 @@
 
     /* ------- Main menu ------- */
 
-    //This allows the space bar to open/close the main menu
-    Drupal.behaviors.mainMenuAllExpandTop = {
+    // Main menu toggle
+
+    Drupal.behaviors.mainMenu = {
         attach: function(context, settings) {
 
-            $('input[type="checkbox"]').on('keyup', function(event) {
-                if (event.which === 13) {
+            // Get the main menu link
+            var $menuLink = $('#menu'),
+                $menuLinkLabel = $menuLink.next('label');
+            
+            // Allow the Enter key to trigger the checkbox and toggle the 'aria-expanded' value
+            $menuLink.on('keyup', function(e) {
+                if (e.which == 13) {
+                    // As the checkbox can only have one of 2 values, tell it to be the reverse
+                    // of whatever it currently is.
                     this.checked = !this.checked;
+                    $('#menu:checked').length != 0 ? $menuLink.attr('aria-expanded', 'true') : $menuLink.attr('aria-expanded', 'false');
+                    // If it's the spacebar, stop if before it triggers the checkbox. This is to 
+                    // provide consistent navigation controls to users. 
+                } else if (e.which == 32) {
+                    return false;
                 }
             });
 
-        }
-    };
-
-    // Header menu toggle
-    // Don't remove the next two blocks, it makes sure the menu looks correct when expanded.
-
-    // Add ID to first menu first level ul
-    Drupal.behaviors.mainMenuAllExpand = {
-        attach: function(context, settings) {
-            $('#region-header .menu-name-menu-about-us.parent-mlid-0.menu-level-1 ul').attr('id', 'menus');
-        }
-    } // End 
-
-
-    // Toggle menu open/close
-    Drupal.behaviors.menuFlip = {
-        attach: function(context, settings) {
-            $("#menuflip").click(function() {
-                $("#menus").toggle();
-                if ($(this).text() == '+') {
-                    $(this).text('-');
-                } else {
-                    $(this).text('+');
-                }
+            // Allow toggling the menu checkbox's 'aria-expanded' values when the label is clicked
+            // NOTE: the order of the if statement is reversed from the keyup function above, as the
+            // click action is evaluated BEFORE the checkbox changes state
+            $menuLinkLabel.on('click touch', function() {
+                $('#menu:checked').length != 0 ? $menuLink.attr('aria-expanded', 'false') : $menuLink.attr('aria-expanded', 'true');
             });
-        }
-    }; // End
 
+            // Add ID to the menu
+            $('#region-header .menu-name-menu-about-us > ul').attr('id', 'menus');
+            
+            // Get all the expand links
+            var $expandLinks = $('#menus > li.leaf.active > a');
+                
+            $menuLink.attr('role', 'button')
+                    .attr('aria-expanded', 'false')
+                    .attr('aria-label', 'Main menu');
 
-    //The next two blocks turn the + on parent items into javascript:void(0); instead of a nothing link.
+            // For each expand-collapse link, do stuff
+            $expandLinks.each(function() {
 
-    // @TODO: Consolidate this a bit, possibly use CSS attr selectors?
+                var $this = $(this),
+                    $parentMenuLinkText = $this.parent().next('li.expanded').children('a').text(),
+                    $targetMenu = $this.parent().next('li.expanded').children('ul.menu');
 
-    // Main menu first level parent items + URL turns into to javascript:void(0); ACSF only
-    Drupal.behaviors.makeAhrefACSF = {
-        attach: function(context, settings) {
-            $('#region-header .menu-mlid-103691 a, #region-header .menu-mlid-103696 a, #region-header .menu-mlid-103701 a, #region-header .menu-mlid-103706 a, #region-header .menu-mlid-103711 a, #region-header .menu-mlid-103716 a, #region-header .menu-mlid-103751 a').attr('href', 'javascript:void(0);');
-        }
-    } // End 
+                // Turn expand/contract links href into javascript:void(0) and add aria attributes
+                $this.attr('href', 'javascript:void(0);')
+                    .attr('role', 'button')
+                    .attr('aria-expanded', 'false')
+                    .attr('aria-label', $parentMenuLinkText + ' menu');
+                
+                // Hide the submenus
+                $targetMenu.hide();
 
-      // Main menu first level parent items + URL turns into to javascript:void(0); Sandbox only
-    Drupal.behaviors.makeahrefsandbox = {
-        attach: function(context, settings) {
-            $('#region-header .menu-mlid-24536 a, #region-header .menu-mlid-24541 a, #region-header .menu-mlid-24546 a, #region-header .menu-mlid-24551 a, #region-header .menu-mlid-24556 a, #region-header .menu-mlid-24561 a, #region-header .menu-mlid-24566 a').attr('href', 'javascript:void(0);');
-        }
-    } // End 
-
-
-	//Data and publications
-
-    // Add ID to the + button for funding and incentives
-    Drupal.behaviors.dataToggle = {
-        attach: function(context, settings) {
-            $('#region-header .menu-mlid-24536 a, #region-header .menu-mlid-103691 a').attr('id', 'dataplus');
-        }
-    } // End New main menu header
-
-
-    // Add ID to the UL under + button for funding and incentives
-    Drupal.behaviors.dataMenu = {
-        attach: function(context, settings) {
-            $('#region-header .menu-mlid-10651 ul').attr('id', 'datamenu');
-        }
-    } // End New main menu header
-
-
-    //Toggle menu open/close
-    Drupal.behaviors.dataAction = {
-        attach: function(context, settings) {
-            $("#fundingplus").click(function() {
-                $("#fundingmenu").toggle();
-                if ($(this).text() == '+') {
-                    $(this).text('-');
-                } else {
-                    $(this).text('+');
-                }
-            });
-        }
-    }; // End
-
-
-
-    // Funding and incentives
-
-    // Main menu - change funding and incentives + URL to #
-
-    // Add ID to the + button for funding and incentives
-    Drupal.behaviors.fundingToggle = {
-        attach: function(context, settings) {
-            $('#region-header .menu-mlid-24541 a, #region-header .menu-mlid-103696 a').attr('id', 'fundingplus');
-        }
-    } // End New main menu header
-
-
-    // Add ID to the UL under + button for funding and incentives
-    Drupal.behaviors.fundingMenu = {
-        attach: function(context, settings) {
-            $('#region-header .menu-mlid-10651 ul').attr('id', 'fundingmenu');
-        }
-    } // End New main menu header
-
-
-    //Toggle menu open/close
-    Drupal.behaviors.fundingAction = {
-        attach: function(context, settings) {
-            $("#fundingplus").click(function() {
-                $("#fundingmenu").toggle();
-                if ($(this).text() == '+') {
-                    $(this).text('-');
-                } else {
-                    $(this).text('+');
-                }
-            });
-        }
-    }; // End
-
-    // Strategies for the future
-
-    // Add ID to the + button for strategies and incentives
-    Drupal.behaviors.strategiesToggle = {
-        attach: function(context, settings) {
-            $('#region-header .menu-mlid-24546 > a, #region-header .menu-mlid-103701> a').attr('id', 'strategiesplus');
-        }
-    } // End New main menu header
-
-
-    // Add ID to the UL under + button for strategies and incentives
-    Drupal.behaviors.strategiesMenu = {
-        attach: function(context, settings) {
-            $('#region-header .menu-mlid-10656 ul').attr('id', 'strategiesmenu');
-        }
-    } // End New main menu header
-
-
-    //Toggle menu open/close
-    Drupal.behaviors.strategiesAction = {
-        attach: function(context, settings) {
-            $("#strategiesplus").click(function() {
-                $("#strategiesmenu").toggle();
-                if ($(this).text() == '+') {
-                    $(this).text('-');
-                } else {
-                    $(this).text('+');
-                }
-            });
-        }
-    }; // End
-
-
-
-     // Regulations and standards
-
-    // Add ID to the + button for reg 
-    Drupal.behaviors.regToggle = {
-        attach: function(context, settings) {
-            $('#region-header .menu-mlid-24551 a, #region-header .menu-mlid-103706 a').attr('id', 'regplus');
-        }
-    } // End New main menu header
-
-
-    // Add ID to the UL under + button for reg 
-    Drupal.behaviors.regMenu = {
-        attach: function(context, settings) {
-            $('#region-header .menu-mlid-10661 ul').attr('id', 'regmenu');
-        }
-    } // End New main menu header
-
-
-    //Toggle menu open/close
-    Drupal.behaviors.regAction = {
-        attach: function(context, settings) {
-            $("#regplus").click(function() {
-                $("#regmenu").toggle();
-                if ($(this).text() == '+') {
-                    $(this).text('-');
-                } else {
-                    $(this).text('+');
-                }
-            });
-        }
-    }; // End
-
-    // Community activities
-
-
-    // Add ID to the + button for com 
-    Drupal.behaviors.comToggle = {
-        attach: function(context, settings) {
-            $('#region-header .menu-mlid-24556 a, #region-header .menu-mlid-103711 a').attr('id', 'complus');
-        }
-    } // End New main menu header
-
-
-    // Add ID to the UL under + button for com 
-    Drupal.behaviors.comMenu = {
-        attach: function(context, settings) {
-            $('#region-header .menu-mlid-10666 ul').attr('id', 'commenu');
-        }
-    } // End New main menu header
-
-
-    // Toggle menu open/close
-    Drupal.behaviors.comAction = {
-        attach: function(context, settings) {
-            $("#complus").click(function() {
-                $("#commenu").toggle();
-                if ($(this).text() == '+') {
-                    $(this).text('-');
-                } else {
-                    $(this).text('+');
-                }
-            });
-        }
-    }; // End
-
-
-    // Government to government
-
-    // Add ID to the + button for gov 
-    Drupal.behaviors.govToggle = {
-        attach: function(context, settings) {
-            $('#region-header .menu-mlid-24561 a, #region-header .menu-mlid-103716 a').attr('id', 'govplus');
-        }
-    } // End New main menu header
-
-
-    // Add ID to the UL under + button for gov
-    Drupal.behaviors.govmenu = {
-        attach: function(context, settings) {
-            $('#region-header .menu-mlid-10796 ul').attr('id', 'govmenu');
-        }
-    } // End New main menu header
-
-
-    // Toggle menu open/close
-    Drupal.behaviors.govaction = {
-        attach: function(context, settings) {
-            $("#govplus").click(function() {
-                $("#govmenu").toggle();
-                if ($(this).text() == '+') {
-                    $(this).text('-');
-                } else {
-                    $(this).text('+');
-                }
-            });
-        }
-    }; // End
-
-
-
-    // About us
-
-    // Add ID to the + button for about 
-    Drupal.behaviors.aboutToggle = {
-        attach: function(context, settings) {
-            $('#region-header .menu-mlid-24566 a, #region-header .menu-mlid-103751 a').attr('id', 'aboutplus');
-        }
-    } // End New main menu header
-
-
-    // Add ID to the UL under + button for about
-    Drupal.behaviors.aboutMenu = {
-        attach: function(context, settings) {
-            $('#region-header .menu-mlid-10811 ul').attr('id', 'aboutmenu');
-        }
-    } // End New main menu header
-
-
-    //Toggle menu open/close
-    Drupal.behaviors.aboutAction = {
-        attach: function(context, settings) {
-            $("#aboutplus").click(function() {
-                $("#aboutmenu").toggle();
-                if ($(this).text() == '+') {
-                    $(this).text('-');
-                } else {
-                    $(this).text('+');
-                }
+                // When clicked/touched, show/hide the target menu, toggle the +/- icon and the aria-expanded attr
+                $this.on('click touch', function() {
+                    $this.parent().next('li.expanded').children('ul.menu').toggle();
+                    $this.text() == '+' ? $this.text('-') : $this.text('+');
+                    $this.attr('aria-expanded') == 'false' ? $this.attr('aria-expanded', 'true') : $this.attr('aria-expanded', 'false');
+                });
             });
         }
     }; // End

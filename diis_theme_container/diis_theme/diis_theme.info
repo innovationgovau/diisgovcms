@@ -13,13 +13,11 @@ base theme = bootstrap
 ; Additional stylesheets
 
 stylesheets[all][] 		= stylesheets/diis_theme.css
-stylesheets[all][]		= styesheets/vendor/meanmenu.min.css
 stylesheets[print][]	= stylesheets/print.css
 
 
 ; Additional JavaScript
 
-scripts[]				= js/vendor/jquery.meanmenu.min.js
 scripts[] 				= js/scripts.js
 
 

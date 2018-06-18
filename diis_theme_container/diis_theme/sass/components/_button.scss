@@ -5,106 +5,101 @@
 .btn-default,
 #edit-reset,
 #edit-submit-taxonomy-term {
-  transition: .3s;
-
-  border-color: solid 1px $minor-navy;
-  background-color: $primary-blue;
-  color: white;
-
-  &:hover {
-    border-color: solid 1px $minor-navy;
-    background-color: $minor-blue;
-    color: black;
-  }
-
-  &:focus {
+    transition: .3s;
+    color: white;
     border-color: solid 1px $minor-navy;
     background-color: $primary-blue;
-    color: white;
-    box-shadow: 0px 0px 10px 3px rgba(81, 203, 238, 1);
-  }
-
-  &:active {
-    border-color: solid 1px $minor-navy;
-    background-color: $minor-teal;
-    color: black;
-    box-shadow: 0px 0px 0px 0px rgba(81, 203, 238, 1);
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-    opacity: .5;
 
     &:hover {
-      background-color: $minor-navy;
-      color: black;
+        color: black;
+        border-color: solid 1px $minor-navy;
+        background-color: $minor-blue;
     }
-  }
+
+    &:focus {
+        color: white;
+        border-color: solid 1px $minor-navy;
+        outline: 3px solid $focus-blue;
+        outline-offset: -1px;
+        background-color: $primary-blue;
+    }
+
+    &:active {
+        color: black;
+        border-color: solid 1px $minor-navy;
+        background-color: $minor-teal;
+        box-shadow: 0 0 0 0 rgba(81, 203, 238, 1);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: .5;
+
+        &:hover {
+            color: black;
+            background-color: $minor-navy;
+        }
+    }
 }
 
 .views-exposed-form {
-  .views-exposed-widget {
-    .btn {
-      font-size: .9em;
-      margin-top: 2.9em;
+    .views-exposed-widget {
+        .btn {
+            font-size: .9em;
+            margin-top: 2.9em;
+        }
     }
-  }
 }
 
 // govCMS override
 [class^='icon-'],
 [class*=' icon-'] {
-  font-family: 'Roboto', sans-serif;
-  font-size: inherit;
+    font-family: 'Roboto', sans-serif;
+    font-size: inherit;
 }
-
-
-
 
 /*webform button and spacing - general feedback form*/
 
 #webform-client-form-13321 {
-  margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 #region-content div.form-actions {
-  margin-top: -2em;
+    margin-top: -2em;
 }
 
 #webform-client-form-13321 .form-actions button {
-  &:active {
-    border-color: solid 1px $minor-navy;
-    background-color: $minor-teal;
-    color: black;
-    box-shadow: 0px 0px 0px 0px rgba(81, 203, 238, 1);
-  }
-  &:hover {
-    border-color: solid 1px $minor-navy;
-    color: black;
-  }
+    &:active {
+        color: black;
+        border-color: solid 1px $minor-navy;
+        background-color: $minor-teal;
+        box-shadow: 0 0 0 0 rgba(81, 203, 238, 1);
+    }
+
+    &:hover {
+        color: black;
+        border-color: solid 1px $minor-navy;
+    }
 }
-
-
-
 
 /*webform button and spacing - beta banner feedback form*/
 
 #webform-client-form-13336 {
-  max-width: 1170px;
-  padding-bottom: 1em;
-  margin: auto;
+    max-width: 1170px;
+    margin: auto;
+    padding-bottom: 1em;
 
-  button {
-    float: right;
-    margin-top: -2em;
-  }
+    button {
+        float: right;
+        margin-top: -2em;
+    }
 }
 
 #webform-client-form-13336 .form-actions button {
-  &:active {
-    border-color: solid 1px $minor-navy;
-    background-color: $minor-teal;
-    color: black;
-    box-shadow: 0px 0px 0px 0px rgba(81, 203, 238, 1);
-  }
+    &:active {
+        color: black;
+        border-color: solid 1px $minor-navy;
+        background-color: $minor-teal;
+        box-shadow: 0 0 0 0 rgba(81, 203, 238, 1);
+    }
 }

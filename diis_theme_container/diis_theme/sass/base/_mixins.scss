@@ -84,6 +84,8 @@
     }
 }
 
+// auto-generate Flexbox classes to quickly reset widths
+
 @mixin col-x-loop {
     $breakpoint-names: sm md lg xl;
     $columns: 12;
@@ -99,14 +101,6 @@
     }
 }
 
-// IE :(
-
-// IE 10+
-/*@mixin ie {
-    _:-ms-lang(x), .ie10up {
-        @content;
-    }
-}*/
 @mixin ie {
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
         @content;

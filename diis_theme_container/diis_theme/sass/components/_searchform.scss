@@ -37,8 +37,8 @@ form {
     @include desktop {
         z-index: 500;
         margin-top: 3em;
-    margin-right: 8em;
-        width:70%;
+        margin-right: 8em;
+        width: 70%;
     }
 
 
@@ -76,7 +76,7 @@ form {
                 border: solid 1px transparent;
                 border-bottom: solid 1px #7ea5ad;
                 border-radius: 0;
-                background-color: white;
+                background-color: $white;
                 font-weight: 400;
 
                 &::placeholder {
@@ -84,7 +84,7 @@ form {
                 }
 
                 &:focus {
-                    border: solid 1px #7ea5ad;
+                    outline: 3px solid $focus-blue;
                 }
 
                 &[type='text'] {
@@ -111,6 +111,12 @@ form {
                     border: solid 4px white;
                     border-radius: 50%;
                     background-color: transparent;
+
+                    &:focus {
+                        outline: 3px solid $focus-blue;
+                        outline-offset: 4px;
+                        box-shadow: none;
+                    }
 
                     .icon.glyphicon {
                         display: none;
@@ -184,10 +190,3 @@ form {
 #region-content #edit-basic .input-group-btn {
     padding-left: 1em;
 }
-
-/*
-#region-content .glyphicon-search:before {
-    font-family: "Roboto", sans-serif $imp;
-    content: 'Search';
-    padding: 2em;
-}*/
