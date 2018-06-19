@@ -1,5 +1,4 @@
 // _footer.scss
-
 footer {
     font-size: .778rem;
     line-height: 15px;
@@ -41,7 +40,6 @@ footer {
     a {
         position: relative;
         left: -1px; // to offset the 1px border and avoid alignment issues
-
         display: inline-block;
         max-width: 100%;
         text-decoration: none;
@@ -128,16 +126,17 @@ footer {
                     }
                 }
             }
-        }
-
-        // Social media Follow icons
-
+        } // Social media Follow icons
         #footer-follow-links {
             position: relative;
             float: left;
+            ul {
+                padding-left: 0px;
+                padding-top: 2px;
+            }
         }
 
-        > nav {
+        >nav {
             &:last-child {
                 p {
                     margin: 0;
@@ -149,7 +148,7 @@ footer {
                     display: inline-block;
                     margin-right: 1em;
 
-                    > svg {
+                    >svg {
                         display: block;
                         width: auto;
                         height: auto;
@@ -219,9 +218,7 @@ footer {
         p {
             text-align: center;
         }
-    }
-
-    // Apply top and bottom margins to footer sections
+    } // Apply top and bottom margins to footer sections
     div[id^='footer_'] {
         margin: 1.5em 0;
 
@@ -240,7 +237,7 @@ footer {
     }
 
     .region-footer-lower {
-        & > h2 {
+        &>h2 {
             @include tablet {
                 display: none;
             }
@@ -288,7 +285,6 @@ footer {
 
                         &:first-of-type {
                             margin-top: 0.75em; // Add spacing between no-js text link and heading above
-                       
                         }
                     }
                 }
@@ -297,7 +293,7 @@ footer {
 
         #region-footer-lower {
             // Sitemap Navigation link in footer
-            & > h2 {
+            &>h2 {
                 display: none;
             }
         }
@@ -316,7 +312,7 @@ footer {
                 &:last-child {
                     a {
                         width: 2em;
-                        height: 2em;
+                        /*height: 2em;*/
 
                         &:first-of-type {
                             margin-top: 0;
@@ -324,13 +320,10 @@ footer {
                     }
                 }
             }
-        }
-
-        // Footer site menu should only fire when JS is enabled
-
+        } // Footer site menu should only fire when JS is enabled
         #region-footer-lower {
             // Sitemap Navigation link in footer
-            & > h2 {
+            &>h2 {
                 display: block;
                 clear: both;
                 margin-top: 0;
@@ -352,7 +345,9 @@ footer {
     }
 }
 
+
 /* Hide page URL on screen media */
+
 .page-url {
     display: none;
 }

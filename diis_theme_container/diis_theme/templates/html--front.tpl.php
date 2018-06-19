@@ -74,7 +74,6 @@
 	<link rel="mask-icon" href="<?php print '/' . path_to_theme(); ?>/favicons/outline.svg" color="#4F82A2">
 	<?php print $head; ?>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 	<?php print $styles; ?>
 </head>

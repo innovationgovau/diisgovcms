@@ -17,10 +17,10 @@ drupal_static_reset('element_info');
  */
 include_once './' . drupal_get_path('theme', 'diis_theme') . '/includes/preprocess.inc';
 
+
 /******************************
  * Taken from GovCMS template.php
  ******************************/
-
 
 /**
  * Page alter.
@@ -368,7 +368,34 @@ function diis_theme_preprocess_image(&$variables) {
 // Stop Drupal's meddling CSS loading
 function diis_theme_css_alter(&$css) {
   unset($css[drupal_get_path('module', 'system') . '/system.theme.css']);
+
+  // Override the Bootstrap CSS version with a minified one.
+
+  $node_admin_paths = array(
+    'node/*/edit',
+    'node/add',
+    'node/add/*',
+  );
+  
+  $replace_bootstrap_css = TRUE;
+
+  if (path_is_admin(current_path())) {
+    $replace_bootstrap_css = FALSE;
+  }
+  else {
+    foreach ($node_admin_paths as $node_admin_path) {
+      if (drupal_match_path(current_path(), $node_admin_path)) {
+        $replace_bootstrap_css = FALSE;
+      }
+    }
+  }
+
+  // Swap out Bootstrap CSS to use a minified version.
+  if ($replace_bootstrap_css) {
+    $css['//cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.css']['data'] = '//cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css';
+  }
 }
+
 
 /*
  * Helper function to construct settings array to be passed to Drupal.settings
@@ -644,13 +671,15 @@ function time_elapsed_string($ptime) {
 
 // Override the default jQuery version with an up-to-date one.
 
-function diis_theme_js_alter(&$javascript) {                                                       
+function diis_theme_js_alter(&$javascript) {
   $node_admin_paths = array(
     'node/*/edit',
     'node/add',
     'node/add/*',
   );
+  
   $replace_jquery = TRUE;
+
   if (path_is_admin(current_path())) {
     $replace_jquery = FALSE;
   }
@@ -661,13 +690,22 @@ function diis_theme_js_alter(&$javascript) {
       }
     }
   }
-  // Swap out jQuery to use an updated version of the library.
   if ($replace_jquery) {
+    
+    // Swap out jQuery to use an updated version of the library.
     $javascript['misc/jquery.js']['data'] = '//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js';
+  
+    /* Switch Bootstrap to use a minified version of their JS file:
+     * https://drupal-bootstrap.org/api/bootstrap/docs%21subtheme%21settings.md/group/subtheme_settings/7#advanced
+     * Normally this is done by specifying the override in <subtheme>.info, but it didn't work...
+     */
+    $javascript['//cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.js']['data'] = '//cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js';
+    
+    // Exclude jQuery from being minified when JS aggregation is enabled
     $javascript['misc/jquery.js']['preprocess'] = false;
-    drupal_add_js('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js', 'external');
   }
 }
+
 
 
 // Alter the default Search Block form input field
@@ -774,9 +812,9 @@ function diis_theme_process_html_tag(&$vars) {
 }
 
 
-//Bootstrap overrides for menu/nav
+// Bootstrap overrides for menu/nav
 
-//bootstrap/templates/menu
+// bootstrap/templates/menu
 
 
 function diis_theme_menu_tree(array &$variables) {
@@ -799,7 +837,7 @@ function diis_theme_menu_tree__book_toc__sub_menu(array &$variables) {
 }
 
 
-//templates/bootstrap/bootstrap-dropdown.vars.php
+// templates/bootstrap/bootstrap-dropdown.vars.php
 
 function diis_theme_preprocess_bootstrap_dropdown(array &$variables) {
   $element = &$variables['element'];
