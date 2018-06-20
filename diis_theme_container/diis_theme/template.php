@@ -733,7 +733,7 @@ function diis_theme_bootstrap_search_form_wrapper(array $variables) {
   $output = '<div class="input-group">';
   $output .= $variables['element']['#children'];
   $output .= '<span class="input-group-btn">';
-  $output .= '<button aria-label="Search" type="submit" class="btn btn-primary">' . _bootstrap_icon('search', t('Search')) . '</button>';
+  $output .= '<button aria-label="Search" type="submit" class="btn btn-primary">' . '<span class="sr-only">' . t('Search') . '</span>' . '</button>';
   $output .= '</span>';
   $output .= '</div>';
   return $output;

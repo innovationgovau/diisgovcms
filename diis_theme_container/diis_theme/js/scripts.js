@@ -644,6 +644,14 @@
             var $menuLink = $('#menu'),
                 $menuLinkLabel = $menuLink.next('label');
 
+            // If open, hide the menu when the page loads.
+            // When the User goes 'Back' using the browser navigation buttons,
+            // most browsers will retain the values of form fields as a convenience.
+            // This leaves the menu open, as it uses a form field as the toggle control.
+            if ($menuLink.prop('checked', true)) {
+                $menuLink.prop('checked', false);
+            }
+
             // Add some aria accessibility attributes
             $menuLink.attr('role', 'button')
                     .attr('aria-expanded', 'false')
