@@ -284,6 +284,24 @@ a:active {
   background-color: #022C41;
 }
 
+<<<<<<< Updated upstream
+=======
+header a[href]:not([href^='/']):not([href^='/node/']):not([href*='/industry.gov.au']):not([href*='www.industry.gov.au']):not([href*='beta.industry.gov.au']):not([href*='betaindustry']):not([href^='#']):not([href^='javascript']) {
+  padding-right: 1.2em !important;
+  background: url("../img/ext-white.png") right -2px top 4px no-repeat;
+}
+
+main a[href]:not([href^='/']):not([href^='/node/']):not([href*='/industry.gov.au']):not([href*='www.industry.gov.au']):not([href*='beta.industry.gov.au']):not([href*='betaindustry']):not([href^='#']):not([href^='javascript']) {
+  padding-right: 1em !important;
+  background: url("../img/ext.png") right -2px top 2px no-repeat;
+}
+
+footer nav:not([id='footer-follow-links']) a[href]:not([href^='/']):not([href^='/node/']):not([href*='/industry.gov.au']):not([href*='www.industry.gov.au']):not([href*='beta.industry.gov.au']):not([href*='betaindustry']):not([href^='#']):not([href^='javascript']) {
+  padding-right: 1.2em !important;
+  background: url("../img/ext-white.png") right -3px top 0px no-repeat;
+}
+
+>>>>>>> Stashed changes
 body.front a:hover {
   border-bottom-color: #005677;
 }
@@ -1324,22 +1342,19 @@ th.views-field.views-field-field-grant-commencement-date.active a {
 }
 
 @media (min-width: 992px) {
-  #webform-client-form-43433 .form-select,
-  #webform-client-form-43321 .form-select {
+  #webform-client-form-43221 .form-select {
     width: 9em;
   }
 }
 
 @media (min-width: 992px) {
-  #webform-client-form-43433 #edit-submitted-accept-privacy-statement-below,
-  #webform-client-form-43321 #edit-submitted-accept-privacy-statement-below {
+  #webform-client-form-43221 #edit-submitted-accept-privacy-statement-below {
     float: left;
   }
 }
 
 @media (min-width: 992px) {
-  #webform-client-form-43433 .email,
-  #webform-client-form-43321 .email {
+  #webform-client-form-43221 .email {
     width: 25em;
   }
 }
@@ -1448,6 +1463,11 @@ form .required {
   padding-bottom: 0;
 }
 
+#user-login #edit-actions {
+  float: right;
+  margin-top: 1em;
+}
+
 img {
   max-width: 100%;
 }
@@ -1504,7 +1524,7 @@ img {
 }
 
 #block-block-61 ul {
-  padding: 0px;
+  padding: 0;
 }
 
 #block-block-61 ul li {
@@ -1557,11 +1577,10 @@ img {
   color: #FFFFFF !important;
 }
 
-/*remove first when data and publications has items*/
 .no-js .menu-mlid-10646 a,
 .no-js .menu-mlid-13246 a,
 .no-js .menu-mlid-13251 a {
-  margin-left: 0em;
+  margin-left: 0;
 }
 
 .no-js #region-header .menu-mlid-24536 > a,
@@ -1570,10 +1589,7 @@ img {
 .no-js #region-header .menu-mlid-24551 > a,
 .no-js #region-header .menu-mlid-24556 > a,
 .no-js #region-header .menu-mlid-24561 > a,
-.no-js #region-header .menu-mlid-24566 > a {
-  display: none;
-}
-
+.no-js #region-header .menu-mlid-24566 > a,
 .no-js #region-header .menu-mlid-103691 > a,
 .no-js #region-header .menu-mlid-103696 > a,
 .no-js #region-header .menu-mlid-103701 > a,
@@ -1584,78 +1600,55 @@ img {
   display: none;
 }
 
-/*white line between menu items*/
-#menus > li.expanded.menu-mlid-10646,
-#menus > li.expanded.menu-mlid-10651,
-#menus > li.expanded.menu-mlid-10656,
-#menus > li.expanded.menu-mlid-10661,
-#menus > li.expanded.menu-mlid-10666,
-#menus > li.expanded.menu-mlid-10796,
-#menus > li.leaf.menu-mlid-13246,
-#menus > li.expanded.menu-mlid-10811 {
-  border-bottom: 1px solid white;
+#menus > li.leaf.menu-mlid-13246 {
   margin-right: 2em;
   padding-bottom: .5em;
+  border-bottom: 1px solid white;
+}
+
+#menus > li.expanded.menu-mlid-10646, #menus > li.expanded.menu-mlid-10651, #menus > li.expanded.menu-mlid-10656, #menus > li.expanded.menu-mlid-10661, #menus > li.expanded.menu-mlid-10666, #menus > li.expanded.menu-mlid-10796, #menus > li.expanded.menu-mlid-10811 {
+  margin-right: 2em;
+  padding-bottom: .5em;
+  border-bottom: 1px solid white;
+}
+
+#region-header > div.menu-block-wrapper.menu-block-14 #menuflip {
+  font-weight: bold;
+  float: right;
+  margin-top: -6em;
+  padding: 4px;
+  text-transform: uppercase;
+  color: white;
+}
+
+#region-header > div.menu-block-wrapper.menu-block-14 #menuflip.mainmenutoggle.toc-filter-processed {
+  display: none;
 }
 
 #region-header > div.menu-block-wrapper.menu-block-14.menu-name-menu-about-us.parent-mlid-0.menu-level-1 {
   position: absolute;
+  z-index: 9999;
   top: 0;
   right: 0;
   left: 0;
   clear: both;
-  z-index: 9999;
 }
 
 #region-header > div.menu-block-wrapper.menu-block-14.menu-name-menu-about-us.parent-mlid-0.menu-level-1 > ul {
+  display: none;
   width: 100%;
-  display: none;
-  background-color: #00283e;
-  border: none;
-  padding: 1em;
   margin-top: 3em;
+  padding: 1em;
+  border: none;
+  background-color: #00283e;
 }
 
-#region-header #menuflip {
-  color: white;
+#menus > li.leaf.menu-mlid-24541 > a, #menus > li.leaf.menu-mlid-24546 > a, #menus > li.leaf.menu-mlid-24551 > a, #menus > li.leaf.menu-mlid-24556 > a, #menus > li.leaf.menu-mlid-24561 > a, #menus > li.leaf.menu-mlid-24566 > a, #menus > li.leaf.menu-mlid-103696 > a, #menus > li.leaf.menu-mlid-103701 > a, #menus > li.leaf.menu-mlid-103706 > a, #menus > li.leaf.menu-mlid-103711 > a, #menus > li.leaf.menu-mlid-103716 > a, #menus > li.leaf.menu-mlid-103751 > a {
   font-weight: bold;
-  text-transform: uppercase;
-  float: right;
-  margin-top: -6em;
-  padding: 4px;
-}
-
-#region-header .menu-block-14 a#menuflip.mainmenutoggle.toc-filter-processed {
-  display: none;
-}
-
-/*the + and - butons*/
-/* this is data and publications  #menus>li.leaf.menu-mlid-24536>a, */
-#menus > li.leaf.menu-mlid-24541 > a,
-#menus > li.leaf.menu-mlid-24546 > a,
-#menus > li.leaf.menu-mlid-24551 > a,
-#menus > li.leaf.menu-mlid-24556 > a,
-#menus > li.leaf.menu-mlid-24561 > a,
-#menus > li.leaf.menu-mlid-24566 > a {
-  float: left;
-  font-weight: bold;
-  padding-right: 1em;
   display: block;
-  width: 2em;
-}
-
-/* this is data and publications  #menus>li.leaf.menu-mlid-103691>a,*/
-#menus > li.leaf.menu-mlid-103696 > a,
-#menus > li.leaf.menu-mlid-103701 > a,
-#menus > li.leaf.menu-mlid-103706 > a,
-#menus > li.leaf.menu-mlid-103711 > a,
-#menus > li.leaf.menu-mlid-103716 > a,
-#menus > li.leaf.menu-mlid-103751 > a {
   float: left;
-  font-weight: bold;
-  padding-right: 1em;
-  display: block;
   width: 2em;
+  padding-right: 1em;
 }
 
 .menu-block-14 ul li a {
@@ -1668,7 +1661,6 @@ img {
   border: solid 1px transparent;
 }
 
-/* no menu items #datamenu */
 #fundingmenu,
 #strategiesmenu,
 #regmenu,
@@ -1678,23 +1670,22 @@ img {
   display: none;
 }
 
-/*remove first when data and publications has sub menu items*/
-.js .menu-mlid-10646 a,
-.js .menu-mlid-13246 a,
-.js .menu-mlid-13251 a {
-  margin-left: 2em;
-}
-
 .no-js #region-header ul li ul {
-  margin: 0px;
+  margin: 0;
 }
 
 .no-js #region-header ul li ul li {
   margin-left: 5%;
 }
 
+.js .menu-mlid-10646 a,
+.js .menu-mlid-13246 a,
+.js .menu-mlid-13251 a {
+  margin-left: 2em;
+}
+
 .js #region-header ul li ul {
-  margin: 0px;
+  margin: 0;
 }
 
 .js #region-header ul li ul li {
@@ -1709,7 +1700,7 @@ img {
     margin-top: -2.2em;
   }
   #region-header > div.menu-block-wrapper.menu-block-14.menu-name-menu-about-us.parent-mlid-0.menu-level-1 > ul {
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 
@@ -1720,8 +1711,8 @@ img {
 }
 
 .collapsible-menu ul {
-  list-style-type: none;
   padding: 0;
+  list-style-type: none;
 }
 
 .collapsible-menu a {
@@ -1729,51 +1720,66 @@ img {
 }
 
 .collapsible-menu label {
+  font-size: 1.2em;
+  font-weight: 200;
   display: block;
-  cursor: pointer;
-  color: white;
   float: right;
   margin-top: -6em;
-  text-transform: uppercase;
-  font-size: 1.2em;
-  /*padding: 5px;*/
   margin-right: 1em;
+  /*padding: 5px;*/
+  padding: 0 .25em;
+  cursor: pointer;
   text-align: center;
-  font-weight: 200;
+  text-transform: uppercase;
+  color: white;
+}
+
+@media (min-width: 992px) {
+  .collapsible-menu label {
+    font-size: 1.7em;
+    margin-top: -1.4em;
+    margin-right: 0;
+  }
 }
 
 .collapsible-menu label::before {
-  content: "\2630  Menu";
+  content: '\2630  Menu';
   color: white;
 }
 
 .collapsible-menu input#menu {
   display: inline-block;
-  margin-left: -999999px;
-  margin-top: -1.8em;
-  max-height: 1px;
   max-width: 1px;
+  max-height: 1px;
+  margin-top: -1.8em;
+  margin-left: -999999px;
 }
 
 .collapsible-menu .menu-content {
-  max-height: 0;
+  font-size: .9em;
   overflow: hidden;
-  background-color: #00283e;
   width: 94%;
+  max-height: 0;
   margin-top: -4em;
   padding-left: 1em;
-  border-bottom: .5em solid white;
-  font-size: 0.9em;
+  background-color: #00283e;
 }
 
-/* Toggle Effect */
+@media (min-width: 992px) {
+  .collapsible-menu .menu-content {
+    font-size: 1em;
+    overflow: hidden;
+    width: 100%;
+    margin-top: -1em;
+  }
+}
+
 .collapsible-menu input[type=checkbox]:focus + label {
-  box-shadow: 0px 0px 0px 3px cadetblue;
-  /*border: 1px solid white;*/
+  outline: solid 3px #5294FE;
 }
 
 .collapsible-menu input:checked ~ label::before {
-  content: "X  Close";
+  content: 'X  Close';
   color: white;
 }
 
@@ -1781,28 +1787,13 @@ img {
   max-height: 100%;
 }
 
-.collapsible-menu input#menu + label + div.menu-content {
-  display: none;
-}
-
-.collapsible-menu input#menu:checked + label + div.menu-content {
+.collapsible-menu input:checked#menu:checked + label + div.menu-content {
   display: block;
+  border-bottom: 0.5em solid #FFFFFF;
 }
 
-@media (min-width: 992px) {
-  .collapsible-menu label {
-    margin-top: -1.4em;
-    margin-right: 0em;
-    font-size: 1.7em;
-  }
-  .collapsible-menu .menu-content {
-    max-height: 0;
-    overflow: hidden;
-    background-color: #00283e;
-    width: 100%;
-    margin-top: -1em;
-    font-size: 1em;
-  }
+.no-js #menu:not(:checked) + label + .menu-content {
+  display: none;
 }
 
 form .btn {

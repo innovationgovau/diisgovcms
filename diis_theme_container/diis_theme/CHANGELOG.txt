@@ -1,7 +1,10 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v2.93, origin/features  * 2018-06-19 | dfe53ce | VSTS 85431 - DEV: Technical bits and bobs (Sprint 21)
- origin/85650-duplicate-bootstrap  * 2018-06-19 | 5ffe188 | VSTS 81447 feature local news
+ HEAD -> features, tag: v2.94  * 2018-06-20 | 584ab0a | VSTS 84081 - DEV: Address accessibility issues identified by Vision Australia
+ origin/features  * 2018-06-20 | 55a6890 | Cleanup of sass files, tweak to update main nav outline colour and padding
+ tag: 2018-06-20  * 2018-06-19 | 051736c | Updated changelog to v2.93
+ tag: v2.93  * 2018-06-19 | dfe53ce | VSTS 85431 - DEV: Technical bits and bobs (Sprint 21)
+   * 2018-06-19 | 5ffe188 | VSTS 81447 feature local news
  tag: v2.92  * 2018-06-19 | ec94947 | vSTS81447 - feature: local news
  tag: v2.91  * 2018-06-19 | 61b095a | VSTS 71612 feature RSS
  tag: 2018-06-19  * 2018-06-19 | b2176b7 | updated changelog
@@ -509,3 +512,6 @@
  tag: v1.1  * 2018-01-16 | b8919b9 | test file
  tag: v1.2  * 2018-01-16 | c28d517 | THEME: Updated typography, included Monsterrat font, removed blue heading colour for now
    * 2018-01-16 | 7bf56fa | THEME: Updated footer link styles and <hr>
+ tag: v1.0  * 2018-01-15 | a44adc2 | THEME: Updated anchor link styles, added $purple colour variables
+ tag: 2018-01-15  * 2018-01-15 | cf048bd | Merge branch 'subtheme'
+   * 2018-01-15 | 538423b | THEME: Added 'Skip to Content' links. Not sure why they were missing

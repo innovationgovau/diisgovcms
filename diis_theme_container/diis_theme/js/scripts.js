@@ -643,6 +643,11 @@
             // Get the main menu link
             var $menuLink = $('#menu'),
                 $menuLinkLabel = $menuLink.next('label');
+
+            // Add some aria accessibility attributes
+            $menuLink.attr('role', 'button')
+                    .attr('aria-expanded', 'false')
+                    .attr('aria-label', 'Main menu');
             
             // Allow the Enter key to trigger the checkbox and toggle the 'aria-expanded' value
             $menuLink.on('keyup', function(e) {
@@ -668,19 +673,22 @@
             // Add ID to the menu
             $('#region-header .menu-name-menu-about-us > ul').attr('id', 'menus');
             
-            // Get all the expand links
-            var $expandLinks = $('#menus > li.leaf.active > a');
-                
-            $menuLink.attr('role', 'button')
-                    .attr('aria-expanded', 'false')
-                    .attr('aria-label', 'Main menu');
+            // Get ALL the expand links
+            // NOTE: the .active menu class does not reliably appear between pages, 
+            // so we can't use it as a selector here. 
+            var $expandLinks = $('#menus > li.leaf > a');
 
             // For each expand-collapse link, do stuff
             $expandLinks.each(function() {
 
                 var $this = $(this),
-                    $parentMenuLinkText = $this.parent().next('li.expanded').children('a').text(),
-                    $targetMenu = $this.parent().next('li.expanded').children('ul.menu');
+                    $targetMenu = $this.parent().next('li.expanded').children('ul.menu'),
+                    $parentMenuLinkText = $this.parent().next('li.expanded').children('a').text();
+
+                // If not submenu exists, stop right there.
+                if (!$targetMenu.length) {
+                    return
+                }
 
                 // Turn expand/contract links href into javascript:void(0) and add aria attributes
                 $this.attr('href', 'javascript:void(0);')
@@ -691,9 +699,10 @@
                 // Hide the submenus
                 $targetMenu.hide();
 
-                // When clicked/touched, show/hide the target menu, toggle the +/- icon and the aria-expanded attr
+                // When clicked/touched, show/hide the target menu, toggle the +/- icon and 
+                // the aria-expanded attributes
                 $this.on('click touch', function() {
-                    $this.parent().next('li.expanded').children('ul.menu').toggle();
+                    $targetMenu.toggle();
                     $this.text() == '+' ? $this.text('-') : $this.text('+');
                     $this.attr('aria-expanded') == 'false' ? $this.attr('aria-expanded', 'true') : $this.attr('aria-expanded', 'false');
                 });
