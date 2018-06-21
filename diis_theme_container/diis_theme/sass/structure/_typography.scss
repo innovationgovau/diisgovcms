@@ -257,6 +257,77 @@ a {
     }
 }
 
+header {
+    a[href] {
+        &:not([href^='/']) {
+            &:not([href^='/node/']) {
+                &:not([href*='/industry.gov.au']) {
+                    &:not([href*='www.industry.gov.au']) {
+                        &:not([href*='beta.industry.gov.au']) {
+                            &:not([href*='betaindustry']) {
+                                &:not([href^='#']) {
+                                    &:not([href^='javascript']) {
+                                        padding-right: 1.2em $imp;
+                                        background: url("../img/ext-white.png") right -2px top 4px no-repeat;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    a[href] {
+        &:not([href^='/']) {
+            &:not([href^='/node/']) {
+                &:not([href*='/industry.gov.au']) {
+                    &:not([href*='www.industry.gov.au']) {
+                        &:not([href*='beta.industry.gov.au']) {
+                            &:not([href*='betaindustry']) {
+                                &:not([href^='#']) {
+                                    &:not([href^='javascript']) {
+                                        padding-right: 1em $imp;
+                                        background: url("../img/ext.png") right -2px top 2px no-repeat;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    nav:not([id='footer-follow-links']) {
+        a[href] {
+            &:not([href^='/']) {
+                &:not([href^='/node/']) {
+                    &:not([href*='/industry.gov.au']) {
+                        &:not([href*='www.industry.gov.au']) {
+                            &:not([href*='beta.industry.gov.au']) {
+                                &:not([href*='betaindustry']) {
+                                    &:not([href^='#']) {
+                                        &:not([href^='javascript']) {
+                                            padding-right: 1.2em $imp;
+                                            background: url("../img/ext-white.png") right -3px top 0 no-repeat;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 body {
     &.front a {
         @extend %link-border;

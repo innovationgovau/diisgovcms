@@ -1,7 +1,14 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v2.94  * 2018-06-20 | 584ab0a | VSTS 84081 - DEV: Address accessibility issues identified by Vision Australia
- origin/features  * 2018-06-20 | 55a6890 | Cleanup of sass files, tweak to update main nav outline colour and padding
+ HEAD -> features, tag: v2.98  * 2018-06-21 | c84a2b9 | VSTS 84081 - DEV: Address accessibility issues identified by Vision Australia
+ tag: v2.97, origin/features  * 2018-06-21 | b22fc7c | VSTS 71612 feature rss
+   * 2018-06-21 | 6dcbc65 | Updated changelog to v2.96
+ tag: v2.96  * 2018-06-21 | c9b51ed | VSTS 84081 - DEV: Address accessibility issues identified by Vision Australia
+ tag: 2018-06-21  * 2018-06-20 | 49005dd | VSTS 84081 - DEV: Address accessibility issues identified by Vision Australia
+ tag: v2.95  * 2018-06-20 | 7ea68bd | VSTS 83598 - header search icon accessibility
+   * 2018-06-20 | 3ed0eba | Updated changelog to v2.94
+ tag: v2.94  * 2018-06-20 | 584ab0a | VSTS 84081 - DEV: Address accessibility issues identified by Vision Australia
+   * 2018-06-20 | 55a6890 | Cleanup of sass files, tweak to update main nav outline colour and padding
  tag: 2018-06-20  * 2018-06-19 | 051736c | Updated changelog to v2.93
  tag: v2.93  * 2018-06-19 | dfe53ce | VSTS 85431 - DEV: Technical bits and bobs (Sprint 21)
    * 2018-06-19 | 5ffe188 | VSTS 81447 feature local news
