@@ -1,4 +1,4 @@
-/* Changelog for DIIS theme */
+/* Changelog for DIIS theme */ 
         
  HEAD -> features, tag: v2.98  * 2018-06-21 | c84a2b9 | VSTS 84081 - DEV: Address accessibility issues identified by Vision Australia
  tag: v2.97, origin/features  * 2018-06-21 | b22fc7c | VSTS 71612 feature rss
