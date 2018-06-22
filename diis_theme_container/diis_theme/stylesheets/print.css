@@ -735,16 +735,16 @@ th.views-field.views-field-field-grant-commencement-date.active a {
   h6,
   caption,
   figure {
-    page-break-after: avoid;
-    break-after: avoid;
+    -webkit-column-break-after: avoid;
+            break-after: avoid;
   }
   h2 + *,
   h3 + *,
   h4 + *,
   h5 + *,
   h6 + * {
-    page-break-before: avoid;
-    break-before: avoid;
+    -webkit-column-break-before: avoid;
+            break-before: avoid;
   }
   div + h2,
   div h3,
@@ -821,8 +821,8 @@ th.views-field.views-field-field-grant-commencement-date.active a {
   input h4,
   input h5,
   input h6 {
-    page-break-before: auto;
-    break-before: auto;
+    -webkit-column-break-before: auto;
+            break-before: auto;
   }
   img {
     max-width: 100% !important;
@@ -1873,6 +1873,14 @@ form .btn {
   font-weight: 400;
 }
 
+.block-search form .input-group input::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.block-search form .input-group input:-ms-input-placeholder {
+  color: #000000;
+}
+
 .block-search form .input-group input::placeholder {
   color: #000000;
 }
@@ -1975,5 +1983,3 @@ form .btn {
 #region-content #edit-basic .input-group-btn {
   padding-left: 1em;
 }
-
-/*# sourceMappingURL=maps/print.css.map */

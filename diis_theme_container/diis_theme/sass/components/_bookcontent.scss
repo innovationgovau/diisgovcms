@@ -1,61 +1,71 @@
-/*bottom of page navigation*/
+// _bookcontent.scss
 
-.book-navigation .btn {
-  display: none;
+// Top or left menu
+
+#block-book-navigation {
+    h2 {
+        margin-bottom: 0;
+    }
+
+    ul {
+        padding-left: .8em;
+
+        li {
+            font-size: 0.95em $imp;
+
+            ul {
+                padding-left: .8em;
+            }
+        }
+
+        a {
+            &.active-trail.active {
+                font-weight: bold;
+            }
+        }
+    }
 }
 
 .node-corporate-publications footer {
-  display: none;
+    display: none;
 }
 
-
-.book-navigation ul li.previous a,
-.book-navigation ul li.next a {
-  width: 100%;
-  margin-bottom: 1em;
-}
-
-.book-navigation ul li a.page-up {
-  margin-bottom: 1em;
-}
-
-
-/*top or left menu */
-
-#block-book-navigation h2 {
-  margin-bottom: 0;
-  a {
-    font-size: 0.6em;
-  }
-}
-
-#block-book-navigation ul {
-  padding-left: 0.8em;
-  li ul {
-    padding-left: 0.8em;
-    li ul {
-      padding-left: 0.8em;
+.book-navigation {
+    .btn {
+        display: none;
     }
-  }
-}
 
-#block-book-navigation ul a{
-  font-size: 0.9em;
-}
+    .page-links {
+        a {
+            display: inline-block;
+            width: 29%;
+            margin: 1em 1.5%;
+            text-align: center;
 
+            @include mobile-sm-only {
+                display: block;
+                width: auto;
+            }
+        }
+    }
 
-#block-book-navigation ul a.active-trail.active{
-	font-weight: bold;
+    ul {
+        li {
+            &.previous a,
+            &.next a {
+                width: 100%;
+                margin-bottom: 1em;
 
+                @include desktop {
+                    width: 35%;
+                }
+            }
 
-li a {
-  font-size: 0.9em;
-}}
-
-@include desktop {
-  /*bottom of page navigation*/
-  .book-navigation ul li.previous a,
-  .book-navigation ul li.next a {
-    width: 35%;
-  }
+            a {
+                &.page-up {
+                    margin-bottom: 1em;
+                }
+            }
+        }
+    }
 }
