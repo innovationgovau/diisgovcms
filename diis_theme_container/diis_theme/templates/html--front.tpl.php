@@ -56,18 +56,13 @@
 	<title><?php print $head_title; ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta property="og:title" content="<?php print $head_title; ?>">
 	<meta property="og:locale" content="en_AU">
-	<meta property="og:type" content="website">
-	<meta property="og:description" content="Content management and website hosting for government.">
-	<meta property="og:url" content="https://www.govcms.gov.au/">
-	<meta property="og:site_name" content="govCMS">
 	<meta property="og:image" content="<?php print '/' . path_to_theme(); ?>/img/og-image.png">
 	<meta property="og:image:secure_url" content="<?php print '/' . path_to_theme(); ?>/img/og-image.png">
 	<link rel="apple-touch-icon" href="<?php print '/' . path_to_theme(); ?>/favicons/apple-touch-icon.png">
 	<link rel="shortcut icon" href="<?php print '/' . path_to_theme(); ?>/favicons/favicon.ico">
-	<meta name="apple-mobile-web-app-title" content="govCMS">
-	<meta name="application-name" content="govCMS">
+	<meta name="apple-mobile-web-app-title" content="DIIS">
+	<meta name="application-name" content="DIIS">
 	<meta name="msapplication-TileColor" content="#FFFFFF">
 	<meta name="msapplication-TileImage" content="<?php print '/' . path_to_theme(); ?>/favicons/mstile-150x150.png">
 	<meta name="theme-color" content="#4F82A2">
