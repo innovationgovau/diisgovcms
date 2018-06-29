@@ -86,6 +86,12 @@
             @include desktop {
                 position: relative;
                 width: auto;
+
+                // IE fix, randomly loads crest small, then it jumps larger...
+                transition-delay: 0s;
+                transition-duration: 0s;
+
+                // End IE fix :D
             }
 
 

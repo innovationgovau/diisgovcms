@@ -83,7 +83,6 @@
 						<?php print render($page['content']); ?>
 						<?php # conditionally add the node ID and Last updated date depending on the Content Type
 						if ($show_page_details): ?>
-							<hr>
 							<div id="page-details">
 								<p><span>Last updated:</span> <?php print format_date($node->changed, $type='custom', $format='j F Y'); ?></p>
 								<p><span>Content ID:</span> <?php print($node->nid); ?></p>

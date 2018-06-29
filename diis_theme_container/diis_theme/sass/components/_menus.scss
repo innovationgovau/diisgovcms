@@ -284,16 +284,28 @@
 }
 
 @include desktop {
-    #region-header > div.menu-block-wrapper.menu-block-14.menu-name-menu-about-us.parent-mlid-0.menu-level-1 {
-        margin-top: 7em;
+    #region-header {
+        & > div {
+            &.menu-block-wrapper {
+                &.menu-block-14 {
+                    &.menu-name-menu-about-us {
+                        &.parent-mlid-0 {
+                            &.menu-level-1 {
+                                margin-top: 7em;
+
+                                & > ul {
+                                    margin-top: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     #region-header #menuflip {
         margin-top: -2.2em;
-    }
-
-    #region-header > div.menu-block-wrapper.menu-block-14.menu-name-menu-about-us.parent-mlid-0.menu-level-1 > ul {
-        margin-top: 0;
     }
 }
 
@@ -302,7 +314,15 @@
 .collapsible-menu {
     position: absolute;
     z-index: 1000;
-    width: 97%;
+    right: 0;
+    left: 0;
+    width: 90%;
+    margin: 0 auto;
+
+    @include tablet {
+        width: 97%;
+    }
+
 
     ul {
         padding: 0;
@@ -314,30 +334,36 @@
     }
 
     label {
-        font-size: 1.2em;
+        font-size: 2em;
         font-weight: 200;
         display: block;
         float: right;
-        margin-top: -6em;
-        margin-right: 1em;
-
-        /*padding: 5px;*/
+        margin-top: -3.5em;
         padding: 0 .25em;
         cursor: pointer;
         text-align: center;
         text-transform: uppercase;
         color: white;
 
+        @include tablet {
+            font-size: 1.2em;
+            margin-top: -6em;
+        }
+
+
         @include desktop {
             font-size: 1.7em;
             margin-top: -1.4em;
-            margin-right: 0;
         }
 
 
         &::before {
-            content: '\2630  Menu';
+            content: '\2630';
             color: white;
+
+            @include tablet {
+                content: '\2630  Menu';
+            }
         }
     }
 
@@ -352,11 +378,15 @@
     .menu-content {
         font-size: .9em;
         overflow: hidden;
-        width: 94%;
         max-height: 0;
-        margin-top: -4em;
+        margin-top: -5em;
         padding-left: 1em;
         background-color: $minor-navy;
+
+        @include desktop {
+            width: 94%;
+        }
+
 
         @include desktop {
             font-size: 1em;
@@ -375,8 +405,14 @@
 
     input:checked {
         & ~ label::before {
-            content: 'X  Close';
+            font-weight: bold;
+            content: 'X';
             color: white;
+
+            @include tablet {
+                font-weight: normal;
+                content: 'X  Close';
+            }
         }
 
         & ~ .menu-content {

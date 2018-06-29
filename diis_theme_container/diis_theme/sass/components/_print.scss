@@ -95,6 +95,19 @@
         max-width: 100% $imp;
     }
 
+    .print-table {
+        border-right: dashed 3px black;
+
+        &::before {
+            content: 'The table below is wider than this page, and some content might be cut off. Be sure to check the website for up-to-date information';
+            position: relative;
+            display: block;
+            width: 100%;
+            border: solid 1px black;
+            padding: 1em;
+        }
+    }
+
     thead {
         display: table-header-group;
     }

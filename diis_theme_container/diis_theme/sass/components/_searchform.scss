@@ -36,9 +36,10 @@ form {
 
     @include desktop {
         z-index: 500;
-        margin-top: 3em;
-        margin-right: 8em;
+        left: -1em;
         width: 70%;
+        margin-top: 3em;
+        margin-right: 8.75em;
     }
 
 
@@ -71,13 +72,13 @@ form {
 
 
             input {
+                font-weight: 400;
                 padding: .75em;
                 color: $black;
                 border: solid 1px transparent;
                 border-bottom: solid 1px #7ea5ad;
                 border-radius: 0;
                 background-color: $white;
-                font-weight: 400;
 
                 &::placeholder {
                     color: $black;
@@ -155,8 +156,8 @@ form {
 
     &:hover {
         color: $minor-navy;
-        background-color: $minor-blue;
         border-color: $minor-navy;
+        background-color: $minor-blue;
     }
 
     &:focus {
@@ -166,8 +167,8 @@ form {
     }
 
     &:active {
-        border-color: $minor-navy;
         color: $minor-navy;
+        border-color: $minor-navy;
         background-color: $minor-teal;
     }
 
@@ -184,7 +185,7 @@ form {
 // in-page search forms, such as on the search page
 #region-content .glyphicon-search {
     margin: .5em;
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 #region-content #edit-basic .input-group-btn {

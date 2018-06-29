@@ -721,6 +721,52 @@
     /* ------- END Main menu ------- */
 
 
+    Drupal.behaviors.printDetection = {
+        attach: function(context, settings) {
+
+            // Test if the given table is wider than the screen. Used to add warning above large tables.
+            // Using .width() instead of innerWidth(), in order to grab width only with no padding. The '-1' is due to width:auto randomly triggering the script.
+            function tableWiderThanScreen($el) {
+                return ($el.outerWidth(true) - 1) > $('.region-content').width();
+            }
+
+            // Do stuff when the User tells the browser to print the page
+            var beforePrint = function() {
+
+                // Insert the print-only elements prior to calculating overflows
+                $('body').before('<style class="print-assists">' +
+                                    '#region-content a[href]:after {content: " (" attr(href) ")";' +
+                                 '</style>');
+                
+                // Remove any existing wrappers, as some browsers fire this event twice:
+                // https://www.tjvantoll.com/2012/06/15/detecting-print-requests-with-javascript/#update-july-16th-2012-1
+                $('.print-table').unwrap();
+
+                // Remove responsive table wrappers, if any
+                $('.mobile-table-wrapper').unwrap()
+                $('.mobile-table-text').remove();
+
+                $('#region-content table').each(function() {
+                    // this returns 100% for all tables due to CSS
+                    if (tableWiderThanScreen($(this)) && !$(this).parent().hasClass('print-table')) {
+                        $(this).wrap('<div class="print-table"></div>');
+                    }
+                });
+            };
+
+            // Do stuff after the browser is finished printing the page
+            var afterPrint = function() {
+                // remove print assists
+                $('.print-assists').remove();
+                $('.print-table > table').unwrap();
+            };
+
+            window.onbeforeprint = beforePrint;
+            window.onafterprint = afterPrint;
+        }
+    } // End printDetection
+
+
     // Anything that doesn't need a Drupal Behaviour and needs to runs on doc load goes in here VVVV
     /* $(function() {
 	
