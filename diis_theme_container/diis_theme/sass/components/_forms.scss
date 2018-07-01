@@ -174,12 +174,28 @@ form .required {
     width: 100%;
 }
 
-#mc_embed_signup .mc-field-group input,
+#mc_embed_signup .mc-field-group input{
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    text-indent: 2px;
+     
+
+    &:focus {
+          outline: 3px solid #5294FE;
+    }
+
+    &:active {
+           outline: 3px solid #5294FE;
+    }
+
+
+}
 #mc_embed_signup .mc-field-group select {
     display: block;
     width: 100%;
     padding: 8px 0;
-    text-indent: 2%;
+    text-indent: -1px;
      
 
     &:focus {
