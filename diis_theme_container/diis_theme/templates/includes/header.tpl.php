@@ -34,7 +34,10 @@
         <div class="col-md-6" id="region-header">
           <?php print render($page['header']); ?>
           <div id="block-search-form">
-            <?php $block = module_invoke('views', 'block_view', '-exp-advanced_search-page'); print render($block['content']); ?>
+            <?php // Include 2 editions of the same block, as naming between DEV and PROD is inconsistent in places 
+            $block = module_invoke('views', 'block_view', '-exp-advanced_search-page'); print render($block['content']); 
+            $block = module_invoke('views', 'block_view', '-exp-faceted_search-page'); print render($block['content']);
+            ?>
           </div>
           <?php $block = module_invoke('menu_block', 'block_view', '14'); ?>
           <div class="collapsible-menu">

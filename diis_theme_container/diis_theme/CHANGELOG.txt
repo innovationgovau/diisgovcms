@@ -1,7 +1,9 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v3.15  * 2018-07-05 | 10a98f8 | VSTS 86598 - Search returns 404 errors
- tag: 2018-07-04, origin/features  * 2018-07-03 | e5823d1 | Updated changelog to v3.14
+ HEAD -> features, tag: v3.16  * 2018-07-05 | c60e359 | VSTS 86594 - Added duplicate Search form block due to inconsistent machine names between DEV and PROD
+ origin/features  * 2018-07-05 | 6aa1ef1 | Updated changelog to v3.15
+ tag: v3.15  * 2018-07-05 | 10a98f8 | VSTS 86598 - Search returns 404 errors
+ tag: 2018-07-04  * 2018-07-03 | e5823d1 | Updated changelog to v3.14
  tag: v3.14  * 2018-07-03 | 1dfb65f | VSTS 86847 - DEV: Technical bits and bobs (Sprint 22)
  tag: v3.13, tag: 2018-07-03  * 2018-07-02 | 440657b | no VSTS fixing hamburger menu lines in ff
    * 2018-07-02 | 065dfea | Updated changelog to v3.12
