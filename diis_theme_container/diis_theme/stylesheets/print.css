@@ -1473,20 +1473,32 @@ form .required {
   width: 100%;
 }
 
-#mc_embed_signup .mc-field-group input,
+#mc_embed_signup .mc-field-group input {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  text-indent: 2px;
+}
+
+#mc_embed_signup .mc-field-group input:focus {
+  outline: 3px solid #5294FE;
+}
+
+#mc_embed_signup .mc-field-group input:active {
+  outline: 3px solid #5294FE;
+}
+
 #mc_embed_signup .mc-field-group select {
   display: block;
   width: 100%;
   padding: 8px 0;
-  text-indent: 2%;
+  text-indent: -1px;
 }
 
-#mc_embed_signup .mc-field-group input:focus,
 #mc_embed_signup .mc-field-group select:focus {
   outline: 3px solid #5294FE;
 }
 
-#mc_embed_signup .mc-field-group input:active,
 #mc_embed_signup .mc-field-group select:active {
   outline: 3px solid #5294FE;
 }
@@ -1653,6 +1665,10 @@ img {
   max-width: 100%;
 }
 
+.region-content img {
+  height: auto !important;
+}
+
 /* file download icon size fix for IE */
 .icon-min-sz {
   min-width: 17px;
@@ -1663,13 +1679,13 @@ img {
   padding: 2em;
 }
 
-@media screen and (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .field-name-field-branding-banner {
     display: none;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .field-name-field-branding-side {
     display: none;
   }
@@ -1680,13 +1696,6 @@ img {
   padding: 1em 0;
 }
 
-/*@include desktop {
-	/*home page news items
-.pane-latest-news.col-sm-12 .node-image-upload{
-	margin-left: 13px;
-    padding: 1em 0;
-
-}}*/
 #skip-links a {
   visibility: none;
   width: 100%;
@@ -2013,10 +2022,6 @@ form .btn {
   margin-top: 0;
 }
 
-.form-control {
-  height: auto;
-}
-
 #edit-keys {
   font-size: 1.2em;
 }
@@ -2068,89 +2073,8 @@ form .btn {
   display: none;
 }
 
-.block-search form .input-group {
-  display: block;
-  margin: .5em auto;
-}
-
-@media (min-width: 992px) {
-  .block-search form .input-group {
-    float: none;
-    width: auto;
-  }
-}
-
-.block-search form .input-group input {
-  font-weight: 400;
-  padding: .75em;
-  color: #000000;
-  border: solid 1px transparent;
-  border-bottom: solid 1px #7ea5ad;
-  border-radius: 0;
-  background-color: #FFFFFF;
-}
-
-.block-search form .input-group input::-webkit-input-placeholder {
-  color: #000000;
-}
-
-.block-search form .input-group input:-ms-input-placeholder {
-  color: #000000;
-}
-
-.block-search form .input-group input::placeholder {
-  color: #000000;
-}
-
-.block-search form .input-group input:focus {
-  outline: 3px solid #5294FE;
-}
-
-.block-search form .input-group input[type='text'] {
-  width: calc(100% - 3em);
-}
-
-.block-search form .input-group .input-group-btn {
-  position: absolute;
-  top: .5em;
-  right: 20px;
-}
-
-.block-search form .input-group .input-group-btn .btn-primary {
-  font-size: 0;
-  position: relative;
-  z-index: 10;
-  top: 5px;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-  color: white;
-  border: solid 4px white;
-  border-radius: 50%;
-  background-color: transparent;
-}
-
-.block-search form .input-group .input-group-btn .btn-primary:focus {
-  outline: 3px solid #5294FE;
-  outline-offset: 4px;
-  box-shadow: none;
-}
-
-.block-search form .input-group .input-group-btn .btn-primary .icon.glyphicon {
-  display: none;
-}
-
-.block-search form .input-group .input-group-btn:after {
-  position: absolute;
-  z-index: 9;
-  right: -24px;
-  bottom: -9px;
-  width: 13px;
-  height: 4px;
-  content: '';
-  transform: rotate(45deg);
-  transform-origin: bottom right;
-  background: #FFFFFF;
+.block-search form .form-control {
+  height: auto;
 }
 
 /* TODO: This content needs to be rendered out by the search page/form template
@@ -2158,6 +2082,15 @@ form .btn {
     content: "Enter your keywords:";
     font-weight: bold;
 }*/
+#region-content .glyphicon-search {
+  margin: .5em;
+  border-radius: 0;
+}
+
+#region-content #edit-basic .input-group-btn {
+  padding-left: 1em;
+}
+
 #region-content #edit-basic button {
   transition: .3s;
   color: white;
@@ -2192,11 +2125,117 @@ form .btn {
   background-color: #00283e;
 }
 
-#region-content .glyphicon-search {
-  margin: .5em;
-  border-radius: 0;
+#block-search-form {
+  margin-top: 0.75em;
 }
 
-#region-content #edit-basic .input-group-btn {
-  padding-left: 1em;
+@media (min-width: 992px) {
+  #block-search-form {
+    margin-top: 4em;
+  }
+}
+
+#block-search-form #edit-search-api-views-fulltext-wrapper > label,
+#block-search-form .views-exposed-widget.views-reset-button {
+  display: none;
+}
+
+#block-search-form .views-exposed-widgets {
+  margin-bottom: 0;
+}
+
+#block-search-form .views-widget-filter-search_api_views_fulltext {
+  display: inline-block;
+  float: none !important;
+  width: 85%;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  #block-search-form .views-widget-filter-search_api_views_fulltext {
+    float: left;
+    width: 60%;
+  }
+}
+
+#block-search-form #edit-search-api-views-fulltext-wrapper .form-control {
+  font-weight: 400;
+  width: 100%;
+  padding: .75em;
+  color: #000;
+  height: 3em;
+  border: solid 1px transparent;
+  border-bottom: solid 1px #7ea5ad;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+#block-search-form #edit-search-api-views-fulltext-wrapper .form-control:focus {
+  outline: 3px solid #5294FE;
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+#block-search-form .views-submit-button {
+  position: relative;
+  float: right;
+  padding: 0;
+  width: 15%;
+  text-align: center;
+  margin-right: 0;
+}
+
+@media (min-width: 992px) {
+  #block-search-form .views-submit-button {
+    margin-right: 8em;
+    width: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  #block-search-form .views-submit-button {
+    margin-right: 10em;
+  }
+}
+
+#block-search-form .views-submit-button .btn-primary {
+  font-size: 0;
+  position: relative;
+  z-index: 10;
+  top: 3px;
+  width: 26px;
+  height: 26px;
+  padding: 0 !important;
+  cursor: pointer;
+  color: white;
+  border: solid 4px white;
+  border-radius: 50%;
+  background-color: transparent;
+  transition-delay: 0;
+  transition-duration: 0 !important;
+  transition-property: none;
+}
+
+#block-search-form .views-submit-button .btn-primary:focus {
+  outline: 3px solid #5294FE;
+  outline-offset: 4px;
+  box-shadow: none;
+}
+
+#block-search-form .views-submit-button .btn-primary .icon.glyphicon {
+  display: none;
+}
+
+#block-search-form .views-submit-button:after {
+  position: absolute;
+  z-index: 9;
+  right: 50%;
+  left: 50%;
+  bottom: -9px;
+  width: 13px;
+  height: 4px;
+  content: '';
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+  background: #fff;
 }

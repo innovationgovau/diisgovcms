@@ -33,10 +33,17 @@
         </div>
         <div class="col-md-6" id="region-header">
           <?php print render($page['header']); ?>
-            <?php $block = module_invoke('menu_block', 'block_view', '14'); ?>
-            <div class="collapsible-menu">
-              <a id="main-navigation" class="element-invisible" tabindex="-1">Main navigation</a>
-              <input type="checkbox" id="menu"><label for="menu"></label><div class="menu-content"><?php print render($block['content']);?></div></div>
+          <div id="block-search-form">
+            <?php $block = module_invoke('views', 'block_view', '-exp-advanced_search-page'); print render($block['content']); ?>
+          </div>
+          <?php $block = module_invoke('menu_block', 'block_view', '14'); ?>
+          <div class="collapsible-menu">
+            <a id="main-navigation" class="element-invisible" tabindex="-1">Main navigation</a>
+            <input type="checkbox" id="menu"><label for="menu"></label>
+            <div class="menu-content">
+                <?php print render($block['content']);?>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row">

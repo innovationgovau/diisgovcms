@@ -1,15 +1,9 @@
 // _searchform.scss
-
 // Override some Bootstrap stuff
-
 form {
     .btn {
         margin-top: 0;
     }
-}
-
-.form-control {
-    height: auto;
 }
 
 #edit-keys {
@@ -17,12 +11,19 @@ form {
 }
 
 /*Removes tabs from search*/
-.search-tabs ul.tabs--primary.nav.nav-tabs li {
-    display: none;
+.search-tabs {
+    ul {
+        &.tabs--primary {
+            &.nav.nav-tabs {
+                li {
+                    display: none;
+                }
+            }
+        }
+    }
 }
 
 // End Override
-
 .block-search {
     position: relative;
     clear: both;
@@ -60,84 +61,8 @@ form {
             display: none;
         }
 
-        .input-group {
-            //float: left;
-            display: block;
-            margin: .5em auto;
-
-            @include desktop {
-                float: none;
-                width: auto;
-            }
-
-
-            input {
-                font-weight: 400;
-                padding: .75em;
-                color: $black;
-                border: solid 1px transparent;
-                border-bottom: solid 1px #7ea5ad;
-                border-radius: 0;
-                background-color: $white;
-
-                &::placeholder {
-                    color: $black;
-                }
-
-                &:focus {
-                    outline: 3px solid $focus-blue;
-                }
-
-                &[type='text'] {
-                    width: calc(100% - 3em);
-                }
-            }
-
-            .input-group-btn {
-                position: absolute;
-                top: .5em;
-                right: 20px;
-
-                // Search form submit button/icon. Uses CSS3 and HTML wrappers to create icon
-                // Magnifying glass lens/search button
-                .btn-primary {
-                    font-size: 0;
-                    position: relative;
-                    z-index: 10;
-                    top: 5px;
-                    width: 25px;
-                    height: 25px;
-                    cursor: pointer;
-                    color: white;
-                    border: solid 4px white;
-                    border-radius: 50%;
-                    background-color: transparent;
-
-                    &:focus {
-                        outline: 3px solid $focus-blue;
-                        outline-offset: 4px;
-                        box-shadow: none;
-                    }
-
-                    .icon.glyphicon {
-                        display: none;
-                    }
-                }
-
-                // Magnifying glass handle
-                &:after {
-                    position: absolute;
-                    z-index: 9;
-                    right: -24px;
-                    bottom: -9px;
-                    width: 13px;
-                    height: 4px;
-                    content: '';
-                    transform: rotate(45deg);
-                    transform-origin: bottom right;
-                    background: $white;
-                }
-            }
+        .form-control {
+            height: auto;
         }
     }
 }
@@ -148,46 +73,174 @@ form {
     font-weight: bold;
 }*/
 
-#region-content #edit-basic button {
-    transition: .3s;
-    color: white;
-    border-color: $minor-navy;
-    background-color: $primary-blue;
+#region-content {
+    // in-page search forms, such as on the search page
 
-    &:hover {
-        color: $minor-navy;
-        border-color: $minor-navy;
-        background-color: $minor-blue;
+    .glyphicon-search {
+        margin: .5em;
+        border-radius: 0;
     }
 
-    &:focus {
-        color: white;
-        border-color: $minor-navy;
-        background-color: $primary-blue;
-    }
+    #edit-basic {
+        .input-group-btn {
+            padding-left: 1em;
+        }
 
-    &:active {
-        color: $minor-navy;
-        border-color: $minor-navy;
-        background-color: $minor-teal;
-    }
+        button {
+            transition: .3s;
+            color: white;
+            border-color: $minor-navy;
+            background-color: $primary-blue;
 
-    &:disabled {
-        cursor: not-allowed;
-        opacity: .5;
+            &:hover {
+                color: $minor-navy;
+                border-color: $minor-navy;
+                background-color: $minor-blue;
+            }
 
-        &:hover {
-            background-color: $minor-navy;
+            &:focus {
+                color: white;
+                border-color: $minor-navy;
+                background-color: $primary-blue;
+            }
+
+            &:active {
+                color: $minor-navy;
+                border-color: $minor-navy;
+                background-color: $minor-teal;
+            }
+
+            &:disabled {
+                cursor: not-allowed;
+                opacity: .5;
+
+                &:hover {
+                    background-color: $minor-navy;
+                }
+            }
         }
     }
 }
 
-// in-page search forms, such as on the search page
-#region-content .glyphicon-search {
-    margin: .5em;
-    border-radius: 0;
-}
+//New FS box in header styling
 
-#region-content #edit-basic .input-group-btn {
-    padding-left: 1em;
+// Removing title and reset button
+#block-search-form {
+    margin-top: 0.75em;
+
+    @include desktop {
+        margin-top: 4em;
+    }
+
+
+    #edit-search-api-views-fulltext-wrapper > label,
+    .views-exposed-widget.views-reset-button {
+        display: none;
+    }
+
+    // Removing bottom margin
+    .views-exposed-widgets {
+        margin-bottom: 0;
+    }
+
+    // Full screen on mobile, smaller on desktop
+    .views-widget-filter-search_api_views_fulltext {
+        display: inline-block;
+        float: none !important;
+        width: 85%;
+        padding: 0;
+
+        @include desktop {
+            float: left;
+            width: 60%;
+        }
+    }
+
+    // Main text input field
+    #edit-search-api-views-fulltext-wrapper {
+        .form-control {
+            font-weight: 400;
+            width: 100%;
+            padding: .75em;
+            color: #000;
+            height: 3em;
+            border: solid 1px transparent;
+            border-bottom: solid 1px #7ea5ad;
+            border-radius: 0;
+            background-color: #fff;
+
+            &:focus {
+                outline: 3px solid $focus-blue;
+                outline-offset: 2px;
+                box-shadow: none;
+            }
+        }
+    }
+
+    // Change submit button into a magnifying glass
+
+    .views-submit-button {
+        position: relative;
+        float: right;
+        padding: 0;
+        width: 15%;
+        text-align: center;
+        margin-right: 0;
+
+        @include desktop {
+            margin-right: 8em;
+            width: auto;
+        }
+
+
+        @include desktop-lg {
+            margin-right: 10em;
+        }
+
+
+        .btn-primary {
+            font-size: 0;
+            position: relative;
+            z-index: 10;
+            top: 3px;
+            width: 26px;
+            height: 26px;
+            padding: 0 $imp;
+            cursor: pointer;
+            color: white;
+            border: solid 4px white;
+            border-radius: 50%;
+            background-color: transparent;
+
+            // Override the animation effects
+            transition-delay: 0;
+            transition-duration: 0 $imp;
+            transition-property: none;
+
+            &:focus {
+                outline: 3px solid $focus-blue;
+                outline-offset: 4px;
+                box-shadow: none;
+            }
+
+            .icon.glyphicon {
+                display: none;
+            }
+        }
+
+        // Magnifying glass handle
+        &:after {
+            position: absolute;
+            z-index: 9;
+            right: 50%;
+            left: 50%;
+            bottom: -9px;
+            width: 13px;
+            height: 4px;
+            content: '';
+            transform: rotate(45deg);
+            transform-origin: bottom right;
+            background: #fff;
+        }
+    }
 }

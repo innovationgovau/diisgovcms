@@ -130,7 +130,14 @@ function diis_theme_preprocess_page(&$variables) {
  * Preprocess variables for block.tpl.php
  */
 function diis_theme_preprocess_block(&$variables) {
-  $variables['classes_array'][] = 'clearfix';
+	$variables['classes_array'][] = 'clearfix';
+
+	//Replace the Search page's in-page form ID, as it duplicates the header search form.
+	if ($variables['block_html_id'] == 'block-views-exp-advanced-search-page') {
+		
+		$target = $variables['content'];
+		$variables['content'] = str_replace('views-exposed-form-advanced-search-page', 'views-exposed-form-advanced-search-page-inner', $target);
+	}
 }
 
 /**
@@ -198,7 +205,10 @@ function diis_theme_menu_link__main_menu($variables) {
 }
 
 
+
+
 function diis_theme_form_alter(&$form, &$form_state, $form_id) {
+
   if (!empty($form['actions']) && $form['actions']['submit']) {
     $form['actions']['submit']['#attributes'] = array(
       'class' => array(
@@ -216,6 +226,7 @@ function diis_theme_form_alter(&$form, &$form_state, $form_id) {
       $form['actions']['submit']['#value'] = 'Start my site';
     }
   }
+
 
   //URLS:
   // Email Confirmed (): /easybake-email-confirmed
@@ -266,6 +277,43 @@ function diis_theme_form_alter(&$form, &$form_state, $form_id) {
     $form['submitted']['#tree'] = FALSE;
     $form['#action'] = variable_get('ezbake_baker_url') . '/order/submit?redirect=true';
   }
+}
+
+
+/**
+ * Alter the exposed form in Views to rebuild the header Search form
+ */
+function diis_theme_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
+
+	// Target the Header search form specifically
+	// @TODO: This targeting isn't working, can't dpm($form) either to inspect returned arrays
+	//if ($form['#attributes']['id'] == 'views-exposed-form-advanced-search-page') {
+	
+		// Main <form> element
+		// Add a negative tabindex to the form itself so IE can tab to the form using skip links
+		$form['#attributes'] = array(
+			'tabindex' => array('-1')
+		);
+
+		// Text input field
+		$form['search_api_views_fulltext'] = array(
+			'#type' => 'textfield',
+			'#size' => 40,
+			'#maxlength' => 128,
+			'#attributes' => array(	
+				'placeholder' => t('Search industry.gov.au'),
+				'size' => 40,
+				'title' => t('Enter the terms you wish to search for'),
+				'name' => 'search_api_views_fulltext'
+			)
+		);
+
+		// Submit button
+		// Don't define a new type or name (see above), as it breaks the search functionality
+		$form['submit']['#attributes'] = array(
+			'aria-label' => 'Search'
+		);
+	//}
 }
 
 
@@ -704,28 +752,6 @@ function diis_theme_js_alter(&$javascript) {
     // Exclude jQuery from being minified when JS aggregation is enabled
     $javascript['misc/jquery.js']['preprocess'] = false;
   }
-}
-
-
-
-// Alter the default Search Block form input field
-
-function diis_theme_form_search_block_form_alter(&$form, &$form_state, $form_id) {
-    $form['#attributes'] = array('tabindex' => array('-1')); // Add a negative tabindex so IE can tab to the form using skip links
-    $form['search_block_form']['#size'] = 40;  // define size of the textfield
-    $form['search_block_form']['#attributes']['placeholder'] = t('Search industry.gov.au');
-    
-    // Redirect the search submission to the Faceted Search page: https://gist.github.com/postrational/5768796
-    $form['#submit'][] = 'form_search_block_form_submit_handler';
-}
-
-function form_search_block_form_submit_handler(&$form, &$form_state) {
-    // use $_GET[] to decode any characters in the string, like '?'
-    // http://php.net/manual/en/function.urldecode.php#101401
-    $newSearchURL = $_GET['/search/advanced/?search_api_views_fulltext='];
-
-    // Redirect the form destination and append the search terms on the end
-    $form_state['redirect'] = $newSearchURL . $form_state['values']['search_block_form'];
 }
 
 // Add aria-label attribute to search form button

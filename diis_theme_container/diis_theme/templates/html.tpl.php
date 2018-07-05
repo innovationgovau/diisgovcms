@@ -87,7 +87,7 @@
 	<div id="skip-links">
 		<a class="element-invisible element-focusable" href="#main-content-anchor">Skip to Content</a>
 		<a class="element-invisible element-focusable" href="#main-navigation">Skip to Main Navigation</a>
-		<a class="element-invisible element-focusable" href="#search-block-form">Skip to Search field</a>
+		<a class="element-invisible element-focusable" href="#views-exposed-form-advanced-search-page">Skip to Search field</a>
 	</div>
 	<div id="print-crest"><img src="<?php print '/' . path_to_theme(); ?>/img/print-banner.png" alt="Department of Industry, Innovation and Science crest"></div>
 	<div id="main-body">

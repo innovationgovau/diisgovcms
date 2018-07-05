@@ -1,6 +1,19 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v3.09, origin/features  * 2018-06-29 | 8d6eb72 | VSTS 85431 - DEV: Technical bits and bobs (Sprint 21)
+ HEAD -> features, tag: v3.15  * 2018-07-05 | 10a98f8 | VSTS 86598 - Search returns 404 errors
+ tag: 2018-07-04, origin/features  * 2018-07-03 | e5823d1 | Updated changelog to v3.14
+ tag: v3.14  * 2018-07-03 | 1dfb65f | VSTS 86847 - DEV: Technical bits and bobs (Sprint 22)
+ tag: v3.13, tag: 2018-07-03  * 2018-07-02 | 440657b | no VSTS fixing hamburger menu lines in ff
+   * 2018-07-02 | 065dfea | Updated changelog to v3.12
+ tag: v3.12  * 2018-07-02 | ae19b37 | VSTS 86847 - DEV: Technical bits and bobs (Sprint 22)
+ tag: 2018-07-02  * 2018-07-01 | 548d9e5 | I can't do anything right
+   * 2018-07-01 | dd089f0 | no VSTS fixed title for std page news items and hopefully got news page img smaller
+   * 2018-07-01 | c5ca5f4 | no VSTS made news images smaller on news landing page
+ tag: v3.11  * 2018-07-01 | 21c1ec4 | no VSTS made news images smaller on news landing page
+   * 2018-07-01 | 28d0940 | no VSTS added clear:both to .tags
+ tag: v3.10  * 2018-07-01 | 4761e9e | no VSTS email fom venkat 270618
+   * 2018-06-29 | c11bc6e | Updated changelog to v3.09
+ tag: v3.09  * 2018-06-29 | 8d6eb72 | VSTS 85431 - DEV: Technical bits and bobs (Sprint 21)
  tag: 2018-06-29, tag: 2018-06-28  * 2018-06-27 | e38b0da | FIX: CSS syntax error in previous commit
    * 2018-06-27 | 0713d72 | Updated changelog to v3.08
  tag: v3.08  * 2018-06-27 | 7cce6a4 | VSTS 85909 - Menu is on top of Crest on iPhone 5S
@@ -536,6 +549,3 @@
  tag: v1.1  * 2018-01-16 | b8919b9 | test file
  tag: v1.2  * 2018-01-16 | c28d517 | THEME: Updated typography, included Monsterrat font, removed blue heading colour for now
    * 2018-01-16 | 7bf56fa | THEME: Updated footer link styles and <hr>
- tag: v1.0  * 2018-01-15 | a44adc2 | THEME: Updated anchor link styles, added $purple colour variables
- tag: 2018-01-15  * 2018-01-15 | cf048bd | Merge branch 'subtheme'
-   * 2018-01-15 | 538423b | THEME: Added 'Skip to Content' links. Not sure why they were missing
