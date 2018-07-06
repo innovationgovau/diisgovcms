@@ -1,7 +1,9 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v3.17  * 2018-07-05 | 020b8c4 | VSTS 86594 - Updated skiplink IDs due to inconsistent machine names between DEV and PROD
- origin/features  * 2018-07-05 | 780967a | Updated changelog to v3.16
+ HEAD -> features, tag: v3.19  * 2018-07-06 | 53dc2c0 | VSTS 86624 - Pre-launch preparation for new website launch
+ tag: 2018-07-06, origin/features  * 2018-07-05 | eb30bff | Updated changelog to 3.17
+ tag: v3.17  * 2018-07-05 | 020b8c4 | VSTS 86594 - Updated skiplink IDs due to inconsistent machine names between DEV and PROD
+   * 2018-07-05 | 780967a | Updated changelog to v3.16
  tag: v3.16  * 2018-07-05 | c60e359 | VSTS 86594 - Added duplicate Search form block due to inconsistent machine names between DEV and PROD
    * 2018-07-05 | 6aa1ef1 | Updated changelog to v3.15
  tag: v3.15  * 2018-07-05 | 10a98f8 | VSTS 86598 - Search returns 404 errors
@@ -553,3 +555,6 @@
  tag: v1.1  * 2018-01-16 | b8919b9 | test file
  tag: v1.2  * 2018-01-16 | c28d517 | THEME: Updated typography, included Monsterrat font, removed blue heading colour for now
    * 2018-01-16 | 7bf56fa | THEME: Updated footer link styles and <hr>
+ tag: v1.0  * 2018-01-15 | a44adc2 | THEME: Updated anchor link styles, added $purple colour variables
+ tag: 2018-01-15  * 2018-01-15 | cf048bd | Merge branch 'subtheme'
+   * 2018-01-15 | 538423b | THEME: Added 'Skip to Content' links. Not sure why they were missing
