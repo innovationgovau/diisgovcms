@@ -42,6 +42,12 @@
     }
 }
 
+/* fixing password reset button placement */
+.page-user-reset #region-content .form-actions,
+.page-user-password #region-content .form-actions {
+    margin-top: 2em;
+}
+
 .views-exposed-form {
     .views-exposed-widget {
         .btn {

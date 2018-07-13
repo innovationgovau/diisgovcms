@@ -799,6 +799,11 @@ th.views-field.views-field-field-grant-commencement-date {
       color: black;
       background-color: #00283e; }
 
+/* fixing password reset button placement */
+.page-user-reset #region-content .form-actions,
+.page-user-password #region-content .form-actions {
+  margin-top: 2em; }
+
 .views-exposed-form .views-exposed-widget .btn {
   font-size: .9em;
   margin-top: 2.9em; }
