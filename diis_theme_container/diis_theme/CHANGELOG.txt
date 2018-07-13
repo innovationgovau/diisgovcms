@@ -1,7 +1,14 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v3.19  * 2018-07-06 | 53dc2c0 | VSTS 86624 - Pre-launch preparation for new website launch
- tag: 2018-07-06, origin/features  * 2018-07-05 | eb30bff | Updated changelog to 3.17
+ HEAD -> features, tag: v3.24, origin/features  * 2018-07-13 | e4a193d | VSTS 86847 - DEV: Technical bits and bobs (Sprint 22)
+ tag: v3.23  * 2018-07-11 | d4f0547 | VSTS 85188 - brand exempt side image padding
+ tag: v3.22  * 2018-07-11 | f3da5e8 | VSTS 85188 - brand exempt images
+ tag: 2018-07-10  * 2018-07-10 | 536d9f3 | Updated changelog to v3.21
+ tag: v3.21  * 2018-07-10 | 0f73453 | VSTS 86847 - DEV: Technical bits and bobs (Sprint 22)
+ tag: v3.20  * 2018-07-10 | 8c81049 | VSTS 86847 - DEV: Technical bits and bobs (Sprint 22)
+ tag: launch  * 2018-07-06 | 9ae8c3e | Updated changelog to v3.19
+ tag: v3.19  * 2018-07-06 | 53dc2c0 | VSTS 86624 - Pre-launch preparation for new website launch
+ tag: 2018-07-06  * 2018-07-05 | eb30bff | Updated changelog to 3.17
  tag: v3.17  * 2018-07-05 | 020b8c4 | VSTS 86594 - Updated skiplink IDs due to inconsistent machine names between DEV and PROD
    * 2018-07-05 | 780967a | Updated changelog to v3.16
  tag: v3.16  * 2018-07-05 | c60e359 | VSTS 86594 - Added duplicate Search form block due to inconsistent machine names between DEV and PROD
@@ -254,7 +261,7 @@
  tag: v2.15  * 2018-05-01 | e0da9bc | VSTS 79760  - reapplying print stylesheet changes
    * 2018-05-01 | 5c979e0 | Updated changelog to v2.14
  tag: v2.14  * 2018-05-01 | 1e307bc | VSTS 79513 - PRE PUBLIC BETA FIXES
- tag: 2.14  * 2018-05-01 | d3db376 | VSTS 80226 feature AIP
+   * 2018-05-01 | d3db376 | VSTS 80226 feature AIP
    * 2018-05-01 | 0cb6234 | Merge branch 'features' of svn-5468.devcloud.hosting.acquia.com:betaindustry into features
  tag: v2.13  * 2018-05-01 | 4dd9aa8 | VSTS 80226 feature AIP
  tag: v2.12  * 2018-05-01 | 3a084d3 | VSTS 79513 - PRE PUBLIC BETA FIXES

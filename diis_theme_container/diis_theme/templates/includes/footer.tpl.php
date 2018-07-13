@@ -12,7 +12,7 @@
 			<div id="region-footer-lower">
 				<a id="footer-navigation" class="element-invisible" tabindex="-1">Main navigation, at the bottom of the page</a>
 				<h2><a href="#" id="footer-nav-link" title="Show or hide the website's main menu"><span>Show</span> main menu</a></h2>
-				<div id="footer-nav-wrapper">
+				<div <?php // DO NOT CHANGE THE ID 'footer-nav-wrapper', IT IS USED BY GOOGLE TAG MANAGER. ALTERING IT WILL BREAK THE TAGS ?> id="footer-nav-wrapper">
 					<div id="footer_first" role="navigation">
 						<nav class="col-sm-6 col-md-3">
 							<?php $block = module_invoke('menu_block', 'block_view', '9'); ?> <?php print render($block['content']); ?>
@@ -23,7 +23,7 @@
 						<nav class="col-sm-6 col-md-3">
 							<?php $block = module_invoke('menu_block', 'block_view', '11'); ?> <?php print render($block['content']); ?>
 						</nav>
-						<nav class="col-md-3" id="footer-follow-links"><?php $block = module_invoke('bean', 'block_view', 'follow-us---footer'); print render($block['content']); ?>
+						<nav class="col-md-3" <?php // DO NOT CHANGE THE ID 'footer-follow-links', IT IS USED BY GOOGLE TAG MANAGER. ALTERING IT WILL BREAK THE TAGS ?> id="footer-follow-links"><?php $block = module_invoke('bean', 'block_view', 'follow-us---footer'); print render($block['content']); ?>
 						</nav>
 					</div>
 					<hr>

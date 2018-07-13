@@ -20,11 +20,22 @@ img {
 /* Branding images on std page */
 .field-name-field-branding-banner {
     img {
-        padding: 2em;
+        padding: 2em 0;
     }
-
-    @include tablet-only {
+    
+    @media (max-width: #{$screen-tablet - 1}) {
         display: none;
+    }
+}
+
+.field-name-field-branding-side {
+    img {
+        float: right!important; /* same as Bootstrap .pull-right */
+        padding: 2em 0;
+     
+        @include mobile-only {
+            float: left!important; /* same as Bootstrap .pull-left */
+        }
     }
 }
 

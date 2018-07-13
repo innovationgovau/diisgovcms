@@ -113,3 +113,10 @@
         margin-top: 5px;
     }
 }
+
+// Target file download links, works with substituteFileIcon() in scripts.js
+#region-content {
+    .linkwrap {
+        display: inline-block;
+    }
+}
