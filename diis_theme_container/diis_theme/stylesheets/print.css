@@ -677,10 +677,9 @@ th.views-field.views-field-field-grant-commencement-date {
   .field-name-changed-date {
     margin-top: 1em; }
 
-  .page-url {
-    position: relative;
-    bottom: -2em;
-    display: inline; }
+  .pagination
+  a[href]:after {
+    content: ""; }
 
   .front .view-header .file-image {
     display: none; }

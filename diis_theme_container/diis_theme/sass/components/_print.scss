@@ -160,11 +160,10 @@
     .field-name-changed-date {
         margin-top: 1em;
     }
-
-    .page-url {
-        position: relative;
-        bottom: -2em;
-        display: inline;
+    
+    .pagination
+        a[href]:after {
+        content: "";
     }
 
     .front {
