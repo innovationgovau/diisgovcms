@@ -3446,6 +3446,10 @@ img {
 @media (min-width: 768px) and (max-width: 992px) {
   .field-name-field-branding-side {
     display: none; } }
+/* Case study images */
+.node-type-case-studies .img-responsive {
+  margin-bottom: 1em; }
+
 /*home page news items*/
 .pane-latest-news.col-sm-12 .node-image-upload {
   padding: 1em 0; }
