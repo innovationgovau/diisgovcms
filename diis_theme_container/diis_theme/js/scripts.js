@@ -770,6 +770,27 @@
     } // End printDetection
 
 
+    // Detect images with no native Alt text, and dynamically retrieve
+    // it from another field. This applies to images inserted via
+    // Drupal image styles and revealed with Display Suite. Who knows.
+    Drupal.behaviors.imageAltText = {
+        attach: function(context, settings) {
+
+            // NOTE: this alt text is a custom field that uses Display Suite. 
+            // If the field is not rendered to the page when an image is 
+            // displayed, this won't work for that image.
+            var alt = $('.ext-alt-text');
+
+            $.each(alt, function() {
+                var img = $(this).next('img');
+
+                img.attr('alt', $(this).text());
+                $(this).remove();
+            });
+        }
+    } // End imageAltText
+
+
     // Anything that doesn't need a Drupal Behaviour and needs to runs on doc load goes in here VVVV
     /* $(function() {
 	
