@@ -218,22 +218,6 @@
 
 //Landing page news items
 .view-display-id-landing_page_news {
-    h3 {
-        font-size: .8889em;
-        font-weight: 700;
-        margin: 0;
-        padding-top: 1em;
-        padding-bottom: 1em;
-    }
-
-    a {
-        border: solid 1px transparent;
-
-        &:hover {
-            border-bottom-color: #005677;
-        }
-    }
-
     p {
         font-size: 0.8889em !important;
     }
