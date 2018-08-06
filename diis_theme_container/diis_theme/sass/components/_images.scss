@@ -108,7 +108,7 @@ img {
         margin: 1em 0;
     }
 
-    @include tablet {
+    @include mobile-sm {
         figure {
             &.img-wrapper {
                 float: right;

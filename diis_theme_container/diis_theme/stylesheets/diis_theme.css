@@ -4812,7 +4812,7 @@ img {
   margin: 1em 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .node-news-article figure.img-wrapper {
     float: right;
     max-width: 445px;
