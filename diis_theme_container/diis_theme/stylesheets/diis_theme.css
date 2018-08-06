@@ -4807,10 +4807,6 @@ img {
   }
 }
 
-#region-content .view-latest-news .view-header {
-  text-align: left;
-}
-
 /* News Article page */
 .node-news-article .field-name-field-news-date {
   margin: 1em 0;
@@ -6001,10 +5997,6 @@ form .btn {
 .front .view-consultations .views-field-title {
   font-size: 1em;
   font-weight: 700;
-}
-
-#region-content .view-latest-news .view-header {
-  text-align: center;
 }
 
 #region-content .view-latest-news .view-content .field-type-image img {

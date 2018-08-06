@@ -98,10 +98,6 @@ img {
                 }
             }
         }
-
-        .view-header {
-            text-align: left;
-        }
     }
 }
 
@@ -113,15 +109,19 @@ img {
     }
 
     @include tablet {
-        figure.img-wrapper {
-            float: right;
-            max-width: $newsFullWidth;
-            margin: 0 0 1.5em 1.5em;
+        figure {
+            &.img-wrapper {
+                float: right;
+                max-width: $newsFullWidth;
+                margin: 0 0 1.5em 1.5em;
+            }
         }
     }
 
 
-    figure figcaption {
-        font-size: 0.8em;
+    figure {
+        figcaption {
+            font-size: 0.8em;
+        }
     }
 }

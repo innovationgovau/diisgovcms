@@ -1769,10 +1769,6 @@ img {
   }
 }
 
-#region-content .view-latest-news .view-header {
-  text-align: auto;
-}
-
 /* News Article page */
 .node-news-article .field-name-field-news-date {
   margin: 1em 0;
