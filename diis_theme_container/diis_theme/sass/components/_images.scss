@@ -82,7 +82,7 @@ img {
             .views-field-field-news-image {
                 float: none;
 
-                @include tablet {
+                @include mobile-sm {
                     float: left;
                     margin-left: 0;
                 }
@@ -91,7 +91,7 @@ img {
                 img {
                     width: 100%;
 
-                    @include tablet {
+                    @include mobile-sm {
                         width: auto;
                         margin: 0 1em 1em 0;
                     }
@@ -108,7 +108,7 @@ img {
         margin: 1em 0;
     }
 
-    @include mobile-sm {
+    @include tablet {
         figure {
             &.img-wrapper {
                 float: right;
