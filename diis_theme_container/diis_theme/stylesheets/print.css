@@ -1751,7 +1751,7 @@ img {
   float: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   #region-content .view-latest-news .views-row .views-field-field-news-image {
     float: left;
     margin-left: 0;
@@ -1762,7 +1762,7 @@ img {
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   #region-content .view-latest-news .views-row .views-field-field-news-image img {
     width: auto;
     margin: 0 1em 1em 0;
