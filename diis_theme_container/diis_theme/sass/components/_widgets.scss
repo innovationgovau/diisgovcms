@@ -21,13 +21,14 @@
 }
 
 // Homepage panel separator
-.front {
-    .pane-latest-news,
-    .pane-consultations,
-    .pane-bean-most-popular {
-        @extend %divider;
-    }
+.pane-latest-news,
+.pane-consultations,
+.pane-bean-most-popular {
+    @extend %divider;
+}
 
+// Homepage panel styles
+.front {
     h2 {
         &.pane-title {
             font-size: 1.389em;
@@ -36,125 +37,122 @@
             color: #005677;
         }
     }
-}
 
-// Latest News
-.view-latest-news {
-    margin-top: 1em;
+    .view-latest-news {
+        margin-top: 1em;
 
-    .view-content {
-        & > div {
-            margin-bottom: 1em;
+        .view-content {
+            & > div {
+                margin-bottom: 1em;
 
-            @include tablet {
-                margin-bottom: 0;
+                @include tablet {
+                    margin-bottom: 0;
+                }
+
+
+                & > a {
+                    display: inline-block;
+                }
             }
 
+            h3 {
+                font-size: .8889em;
+                font-weight: 700;
+                margin: 0;
 
-            & > a {
-                display: inline-block;
+                a {
+                    &:visited {
+                        color: #005677;
+                    }
+                }
             }
-        }
 
-        h3 {
-            font-size: .8889em;
-            font-weight: 700;
-            margin: 0;
+            p {
+                font-size: 0.8889em $imp;
+            }
 
-            a {
-                &:visited {
-                    color: #005677;
+            .field-name-field-image {
+                img {
+                    width: 100%;
                 }
             }
         }
+    }
 
-        p {
-            font-size: 0.8889em $imp;
+    .pane-taxonomy-sector {
+        ul {
+            li {
+                font-size: 1em $imp;
+                margin: .75em 0;
+                list-style: none;
+            }
         }
 
-        .field-name-field-image {
-            img {
-                width: 100%;
+        .view-footer {
+            p {
+                font-size: 0.8889em $imp;
             }
         }
     }
-}
 
-.pane-taxonomy-sector {
-    ul {
-        li {
-            font-size: 1em $imp;
-            margin: .75em 0;
-            list-style: none;
-        }
-    }
-
-    .view-footer {
-        p {
-            font-size: 0.8889em $imp;
-        }
-    }
-}
-
-.pane-bean-most-popular,
-.pane-latest-news,
-.pane-consultations {
-    @include desktop {
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
-
-.pane-bean-most-popular {
-    margin-bottom: 0;
-
-    h2 {
-        //margin-top: 1em;
-   
-    }
-
-    .paragraphs-items-field-most-popular-link {
-        padding-left: 15px;
-
-        @include tablet {
+    .pane-bean-most-popular,
+    .pane-latest-news,
+    .pane-consultations {
+        @include desktop {
+            padding-right: 0;
             padding-left: 0;
         }
     }
-}
 
-.pane-latest-news {
-    .view-content {
-        &.col-sm-12 {
-            h3 {
-                padding-top: 1em;
-                padding-bottom: 1em;
+    .pane-bean-most-popular {
+        margin-bottom: 0;
+
+        h2 {
+            //margin-top: 1em;
+       
+        }
+
+        .paragraphs-items-field-most-popular-link {
+            padding-left: 15px;
+
+            @include tablet {
+                padding-left: 0;
             }
         }
+    }
 
-        &:after {
-            position: relative;
-            display: block;
-            clear: both;
-            content: ' ';
+    .pane-consultations {
+        .views-row {
+            padding: 1.25em;
+        }
+
+        *[class*='col-'] {
+            padding-right: 0;
+            padding-left: 15px;
         }
     }
-}
 
-.pane-consultations {
-    .views-row {
-        padding: 1.25em;
+    .pane-latest-news {
+        .view-content {
+            &:after {
+                position: relative;
+                display: block;
+                clear: both;
+                content: ' ';
+            }
+        }
     }
 
-    *[class*='col-'] {
-        padding-right: 0;
-        padding-left: 15px;
+    .pane-latest-news.col-sm-12 h3 {
+        padding-top: 1em;
+        padding-bottom: 1em;
     }
-}
 
-.view-consultations {
-    .views-field-title {
-        font-size: 1em;
-        font-weight: 700;
+    .view-consultations {
+        .views-field-title {
+            font-size: 1em;
+            font-weight: 700;
+        }
     }
 }
 
