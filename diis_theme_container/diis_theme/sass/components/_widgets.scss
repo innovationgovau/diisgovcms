@@ -42,7 +42,7 @@
         margin-top: 1em;
 
         .view-content {
-            &>div {
+            & > div {
                 margin-bottom: 1em;
 
                 @include tablet {
@@ -50,7 +50,7 @@
                 }
 
 
-                &>a {
+                & > a {
                     display: inline-block;
                 }
             }
@@ -109,6 +109,7 @@
 
         h2 {
             //margin-top: 1em;
+       
         }
 
         .paragraphs-items-field-most-popular-link {
@@ -142,7 +143,6 @@
         }
     }
 
-
     .pane-latest-news.col-sm-12 h3 {
         padding-top: 1em;
         padding-bottom: 1em;
@@ -158,46 +158,59 @@
 
 // End homepage styles
 
-
-
-
-
 //News items on landing pages: You may also be interested in
-#region-content .view-latest-news {
-   
+#region-content {
+    .view-latest-news {
+        .view-header {
+            text-align: center;
+        }
 
-    .view-header {
-        text-align: center;
-    }
-    .view-content .field-type-image img {
-        width: 100%;
-        height: auto;
+        .view-content {
+            .field-type-image {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        h3 {
+            font-size: .8889em;
+            font-weight: 700;
+            margin: 0;
+        }
     }
 }
 
-.field-name-title.field-type-ds.field-label-hidden p a {
-    font-weight: bold;
-    border-bottom: none;
+.field-name-title {
+    &.field-type-ds {
+        &.field-label-hidden {
+            p {
+                a {
+                    font-weight: bold;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
 }
-
 
 @include desktop {
-#region-content .view-latest-news {
-   
+    #region-content {
+        .view-latest-news {
+            .view-header {
+                text-align: left;
+            }
 
-    .view-header {
-        text-align: left;
-    }
-    .view-content .field-type-image img {
-        width: auto;
-        height: auto;
+            .view-content {
+                .field-type-image img {
+                    width: auto;
+                    height: auto;
+                }
+            }
+        }
     }
 }
-
-
-
-}
-
 
 
 //Landing page news items
@@ -211,8 +224,8 @@
     }
 
     a {
-
         border: solid 1px transparent;
+
         &:hover {
             border-bottom-color: #005677;
         }
@@ -222,8 +235,6 @@
         font-size: 0.8889em !important;
     }
 }
-
-
 
 // Content ID and Last Updated fields
 .field-name-content-id,

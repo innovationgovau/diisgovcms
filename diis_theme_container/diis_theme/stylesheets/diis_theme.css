@@ -6012,6 +6012,12 @@ form .btn {
   height: auto;
 }
 
+#region-content .view-latest-news h3 {
+  font-size: .8889em;
+  font-weight: 700;
+  margin: 0;
+}
+
 .field-name-title.field-type-ds.field-label-hidden p a {
   font-weight: bold;
   border-bottom: none;
