@@ -21,14 +21,13 @@
 }
 
 // Homepage panel separator
-.pane-latest-news,
-.pane-consultations,
-.pane-bean-most-popular {
-    @extend %divider;
-}
-
-// Homepage panel styles
 .front {
+    .pane-latest-news,
+    .pane-consultations,
+    .pane-bean-most-popular {
+        @extend %divider;
+    }
+
     h2 {
         &.pane-title {
             font-size: 1.389em;
@@ -37,122 +36,125 @@
             color: #005677;
         }
     }
+}
 
-    .view-latest-news {
-        margin-top: 1em;
+// Latest News
+.view-latest-news {
+    margin-top: 1em;
 
-        .view-content {
-            & > div {
-                margin-bottom: 1em;
+    .view-content {
+        & > div {
+            margin-bottom: 1em;
 
-                @include tablet {
-                    margin-bottom: 0;
-                }
-
-
-                & > a {
-                    display: inline-block;
-                }
+            @include tablet {
+                margin-bottom: 0;
             }
 
-            h3 {
-                font-size: .8889em;
-                font-weight: 700;
-                margin: 0;
 
-                a {
-                    &:visited {
-                        color: #005677;
-                    }
+            & > a {
+                display: inline-block;
+            }
+        }
+
+        h3 {
+            font-size: .8889em;
+            font-weight: 700;
+            margin: 0;
+
+            a {
+                &:visited {
+                    color: #005677;
                 }
             }
+        }
 
-            p {
-                font-size: 0.8889em $imp;
-            }
+        p {
+            font-size: 0.8889em $imp;
+        }
 
-            .field-name-field-image {
-                img {
-                    width: 100%;
-                }
+        .field-name-field-image {
+            img {
+                width: 100%;
             }
         }
     }
+}
 
-    .pane-taxonomy-sector {
-        ul {
-            li {
-                font-size: 1em $imp;
-                margin: .75em 0;
-                list-style: none;
-            }
-        }
-
-        .view-footer {
-            p {
-                font-size: 0.8889em $imp;
-            }
+.pane-taxonomy-sector {
+    ul {
+        li {
+            font-size: 1em $imp;
+            margin: .75em 0;
+            list-style: none;
         }
     }
 
-    .pane-bean-most-popular,
-    .pane-latest-news,
-    .pane-consultations {
-        @include desktop {
-            padding-right: 0;
+    .view-footer {
+        p {
+            font-size: 0.8889em $imp;
+        }
+    }
+}
+
+.pane-bean-most-popular,
+.pane-latest-news,
+.pane-consultations {
+    @include desktop {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.pane-bean-most-popular {
+    margin-bottom: 0;
+
+    h2 {
+        //margin-top: 1em;
+   
+    }
+
+    .paragraphs-items-field-most-popular-link {
+        padding-left: 15px;
+
+        @include tablet {
             padding-left: 0;
         }
     }
+}
 
-    .pane-bean-most-popular {
-        margin-bottom: 0;
-
-        h2 {
-            //margin-top: 1em;
-       
-        }
-
-        .paragraphs-items-field-most-popular-link {
-            padding-left: 15px;
-
-            @include tablet {
-                padding-left: 0;
+.pane-latest-news {
+    .view-content {
+        &.col-sm-12 {
+            h3 {
+                padding-top: 1em;
+                padding-bottom: 1em;
             }
         }
-    }
 
-    .pane-consultations {
-        .views-row {
-            padding: 1.25em;
-        }
-
-        *[class*='col-'] {
-            padding-right: 0;
-            padding-left: 15px;
+        &:after {
+            position: relative;
+            display: block;
+            clear: both;
+            content: ' ';
         }
     }
+}
 
-    .pane-latest-news {
-        .view-content {
-            &:after {
-                position: relative;
-                display: block;
-                clear: both;
-                content: ' ';
-            }
-        }
+.pane-consultations {
+    .views-row {
+        padding: 1.25em;
     }
 
-    .pane-latest-news.col-sm-12 h3 {
-        padding-top: 1em;
-        padding-bottom: 1em;
+    *[class*='col-'] {
+        padding-right: 0;
+        padding-left: 15px;
     }
+}
 
-    .view-consultations {
-        .views-field-title {
-            font-size: 1em;
-            font-weight: 700;
-        }
+.view-consultations {
+    .views-field-title {
+        font-size: 1em;
+        font-weight: 700;
     }
 }
 
