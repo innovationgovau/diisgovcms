@@ -6011,6 +6011,10 @@ form .btn {
   padding: 1em 0;
 }
 
+#region-content .view-latest-news h3 a {
+  border-bottom: none;
+}
+
 .field-name-title.field-type-ds.field-label-hidden p a {
   font-weight: bold;
   border-bottom: none;

@@ -175,6 +175,10 @@
             font-weight: 700;
             margin: 0;
             padding: 1em 0;
+
+            a {
+                border-bottom: none;
+            }
         }
     }
 }
