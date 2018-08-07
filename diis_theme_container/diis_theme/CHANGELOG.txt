@@ -1,6 +1,17 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v3.24, origin/features  * 2018-07-13 | e4a193d | VSTS 86847 - DEV: Technical bits and bobs (Sprint 22)
+ HEAD -> features, tag: v3.33  * 2018-08-07 | 3b17656 | VSTS 89950 - Alt text for images is not working across the site
+ origin/features  * 2018-08-03 | c1ad09f | Included script to handle missing alt text on some images
+ tag: v3.32  * 2018-08-02 | bffb64d | VSTS 88019 - sortable table header link styling
+ tag: v3.31  * 2018-07-27 | abb6cf9 | VSTS 88086 - image bottom margin
+ tag: v3.30  * 2018-07-26 | c0bfe64 | VSTS 88519 - image caption margin
+ tag: v3.29  * 2018-07-24 | 0a5860b | VSTS 88086 - case-studies column width
+ tag: v3.28  * 2018-07-23 | dcf2152 | VSTS 87217 - fixing form select width
+ tag: v3.27  * 2018-07-16 | c5b3298 | VSTS 86016 - fixed font sizing on ordered lists for print
+ tag: v3.26  * 2018-07-16 | 91724cd | VSTS 86004 - print styles search results
+ tag: v3.25  * 2018-07-13 | b6dd5c6 | VSTS 86847 - button positioning, rebased and recompiled
+   * 2018-07-13 | 682afd4 | Updated changelog to v3.24
+ tag: v3.24  * 2018-07-13 | e4a193d | VSTS 86847 - DEV: Technical bits and bobs (Sprint 22)
  tag: v3.23  * 2018-07-11 | d4f0547 | VSTS 85188 - brand exempt side image padding
  tag: v3.22  * 2018-07-11 | f3da5e8 | VSTS 85188 - brand exempt images
  tag: 2018-07-10  * 2018-07-10 | 536d9f3 | Updated changelog to v3.21
