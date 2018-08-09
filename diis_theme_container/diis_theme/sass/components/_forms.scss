@@ -30,7 +30,7 @@
         &.form-group {
             margin-bottom: 0;
 
-            >label {
+            > label {
                 &.control-label {
                     font-weight: bold;
                 }
@@ -58,6 +58,7 @@
         width: 9em;
     }
 }
+
 //State of Space Report: Feedback form - acsf 3906 only
 #webform-client-form-43221 #edit-submitted-accept-privacy-statement-below {
     @include desktop {
@@ -77,8 +78,6 @@
 #webform-client-form-13321 .control-label {
     font-size: initial;
 }
-
-
 
 // Any webform options list boxes
 .node-webform,
@@ -134,7 +133,7 @@
 }
 
 // all mailchimp - remove link in mailchimp form to their css file
-#mc_embed_signup_scroll>div.indicates-required {
+#mc_embed_signup_scroll > div.indicates-required {
     float: right;
     margin-bottom: -2em;
 }
@@ -174,98 +173,88 @@ form .required {
     width: 100%;
 }
 
-#mc_embed_signup .mc-field-group input{
+#mc_embed_signup .mc-field-group input {
     display: block;
     width: 100%;
     padding: 8px 0;
     text-indent: 2px;
-     
 
     &:focus {
-          outline: 3px solid #5294FE;
+        outline: 3px solid #5294FE;
     }
 
     &:active {
-           outline: 3px solid #5294FE;
+        outline: 3px solid #5294FE;
     }
-
-
 }
+
 #mc_embed_signup .mc-field-group select {
     display: block;
     width: 100%;
     padding: 8px 0;
     text-indent: -1px;
-     
 
     &:focus {
-          outline: 3px solid #5294FE;
+        outline: 3px solid #5294FE;
     }
 
     &:active {
-           outline: 3px solid #5294FE;
+        outline: 3px solid #5294FE;
     }
-
-
 }
 
 #mc_embed_signup .mc-field-group.input-group input {
     display: inline;
+
     /*width: auto;*/
     float: left;
     border: none;
     width: 3%;
-        
-         
+
     &:focus {
-          outline: 3px solid #5294FE;
+        outline: 3px solid #5294FE;
     }
 
     &:active {
-           outline: 3px solid #5294FE;
+        outline: 3px solid #5294FE;
     }
 }
 
 ul li #mc_embed_signup .mc-field-group input,
 ul li #mc_embed_signup .mc-field-group select {
     display: inline;
+
     /*width: auto;*/
     float: left;
     border: none;
     width: 3%;
-     
 
     &:focus {
-          outline: 3px solid #5294FE;
+        outline: 3px solid #5294FE;
     }
 
     &:active {
-           outline: 3px solid #5294FE;
+        outline: 3px solid #5294FE;
     }
 }
 
- #mc_embed_signup_scroll_nisa .mc-field-group input,
- #mc_embed_signup_scroll_nisa select {
+#mc_embed_signup_scroll_nisa .mc-field-group input,
+#mc_embed_signup_scroll_nisa select {
     display: inline;
+
     /*width: auto;*/
     float: left;
     border: none;
     width: 3%;
-     
 
     &:focus {
-          outline: 3px solid #5294FE;
+        outline: 3px solid #5294FE;
     }
 
     &:active {
-           outline: 3px solid #5294FE;
+        outline: 3px solid #5294FE;
     }
 }
-
-
-
-
-
 
 /*makes ul li font size same as other font on form*/
 
@@ -281,12 +270,11 @@ ul li #mc_embed_signup .mc-field-group select {
     label {
         font-size: 14px;
     }
+
     .row {
         padding-left: 15px;
     }
 }
-
-
 
 /*removes large gap between fields*/
 
@@ -299,17 +287,15 @@ ul li #mc_embed_signup .mc-field-group select {
 }
 
 #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
-      display: none !important;
+    display: none !important;
 }
 
-
-
 #mc_embed_signup input.mce_inline_error {
-    outline:2px solid red;
+    outline: 2px solid red;
 }
 
 #mc-embedded-subscribe,
-#mc_embed_signup_scroll ul>li:nth-child(3) #mc_embed_signup .button {
+#mc_embed_signup_scroll ul > li:nth-child(3) #mc_embed_signup .button {
     clear: both;
     float: right;
     border: 0 none;
@@ -331,6 +317,7 @@ ul li #mc_embed_signup .mc-field-group select {
     color: white;
     border-color: solid 1px $minor-navy;
     background-color: $primary-blue;
+
     &:hover {
         color: black;
         border-color: solid 1px $minor-navy;
@@ -366,8 +353,6 @@ ul li #mc_embed_signup .mc-field-group select {
 #mc-embedded-subscribe-form {
     padding-bottom: 2em;
 }
-
-
 
 //Login form
 #user-login #edit-actions {

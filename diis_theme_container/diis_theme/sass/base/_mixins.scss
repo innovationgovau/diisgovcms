@@ -30,12 +30,6 @@
 
 // Layout
 
-@mixin mobile-sm {
-    @media (min-width: #{$screen-mobile}) {
-        @content;
-    }
-}
-
 @mixin tablet {
     @media (min-width: #{$screen-tablet}) {
         @content;
