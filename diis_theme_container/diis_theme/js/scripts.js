@@ -558,6 +558,11 @@
                 window.open('https://www.facebook.com/sharer/sharer.php?u=' + window.location.href);
                 e.preventDefault();
             });
+            
+            $('#share-twitter').on('click touch', function(e) {
+                window.open('https://www.twitter.com/intent/tweet?url=' + window.location.href.split('#')[0] + '&text=' + document.title.replace("|", "-"));
+                e.preventDefault();
+            });
 
             $('#share-linkedin').on('click touch', function(e) {
                 linkedIn();
