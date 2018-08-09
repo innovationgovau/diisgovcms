@@ -22,7 +22,7 @@ img {
     img {
         padding: 2em 0;
     }
-    
+
     @media (max-width: #{$screen-tablet - 1}) {
         display: none;
     }
@@ -30,11 +30,11 @@ img {
 
 .field-name-field-branding-side {
     img {
-        float: right!important; /* same as Bootstrap .pull-right */
+        float: right !important; /* same as Bootstrap .pull-right */
         padding: 2em 0;
-     
+
         @include mobile-only {
-            float: left!important; /* same as Bootstrap .pull-left */
+            float: left !important; /* same as Bootstrap .pull-left */
         }
     }
 }
@@ -45,14 +45,10 @@ img {
     }
 }
 
+
 /* image captions */
 .field-name-field-image-caption {
     margin: -.5em 0 1em;
-}
-
-/* content images */
-#main-content .img-responsive {
-    margin-bottom: 1em;
 }
 
 /*home page news items*/

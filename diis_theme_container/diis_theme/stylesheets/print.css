@@ -1752,11 +1752,6 @@ img {
   margin: -.5em 0 1em;
 }
 
-/* content images */
-#main-content .img-responsive {
-  margin-bottom: 1em;
-}
-
 /*home page news items*/
 .pane-latest-news.col-sm-12 .node-image-upload {
   padding: 1em 0;
