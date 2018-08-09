@@ -129,15 +129,36 @@ footer {
         } // Social media Follow icons
         #footer-follow-links {
             position: relative;
-            float: left;
+
+            @include tablet {
+                clear: both;
+            }
+
+
+            @include desktop {
+                float: right;
+                clear: none;
+            }
+
+
+            .field-item {
+                & > strong {
+                    display: none;
+
+                    @include tablet {
+                        display: inline;
+                    }
+                }
+            }
+
             ul {
                 padding-left: 0px;
                 padding-top: 2px;
             }
         }
 
-        >nav {
-            &:last-child {
+        > nav {
+            &:first-child {
                 p {
                     margin: 0;
                     padding: 0 0 .75em 0;
@@ -148,7 +169,7 @@ footer {
                     display: inline-block;
                     margin-right: 1em;
 
-                    >svg {
+                    > svg {
                         display: block;
                         width: auto;
                         height: auto;
@@ -205,7 +226,7 @@ footer {
 
     .container {
         nav {
-            @media (min-width: 768px) {
+            @include tablet {
                 padding-right: 0;
                 padding-left: 0;
             }
@@ -237,7 +258,7 @@ footer {
     }
 
     .region-footer-lower {
-        &>h2 {
+        & > h2 {
             @include tablet {
                 display: none;
             }
@@ -272,7 +293,7 @@ footer {
     footer {
         #footer_first {
             nav {
-                &:last-child {
+                &:first-child {
                     a {
                         width: auto;
                         height: auto;
@@ -285,6 +306,7 @@ footer {
 
                         &:first-of-type {
                             margin-top: 0.75em; // Add spacing between no-js text link and heading above
+                       
                         }
                     }
                 }
@@ -293,7 +315,7 @@ footer {
 
         #region-footer-lower {
             // Sitemap Navigation link in footer
-            &>h2 {
+            & > h2 {
                 display: none;
             }
         }
@@ -309,7 +331,7 @@ footer {
         // Social Follow links
         #footer_first {
             nav {
-                &:last-child {
+                &:first-child {
                     a {
                         width: 2em;
                         height: 2em;
@@ -323,7 +345,7 @@ footer {
         } // Footer site menu should only fire when JS is enabled
         #region-footer-lower {
             // Sitemap Navigation link in footer
-            &>h2 {
+            & > h2 {
                 display: block;
                 clear: both;
                 margin-top: 0;
@@ -344,7 +366,6 @@ footer {
         }
     }
 }
-
 
 /* Hide page URL on screen media */
 

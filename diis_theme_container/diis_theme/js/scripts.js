@@ -795,6 +795,14 @@
             });
         }
     } // End imageAltText
+    
+    Drupal.behaviors.wrapIframe = {
+        attach: function(context, settings) {
+            var $source = $("main iframe").attr("src");
+            $("main iframe").wrap("<div class='iframe-wrapper' data-iframe-src=''></div>");
+            $("div.iframe-wrapper").attr("data-iframe-src", $source);
+        } // End Attach
+    }; // End wrapIframe
 
 
     // Anything that doesn't need a Drupal Behaviour and needs to runs on doc load goes in here VVVV
