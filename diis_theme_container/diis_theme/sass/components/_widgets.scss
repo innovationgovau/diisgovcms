@@ -181,14 +181,22 @@
 
 //News items on landing pages
 #region-content {
-    .view-content {
-        .field-type-image {
-            img {
-                width: 100%;
-                height: auto;
+    .view-latest-news {
+        .view-content {
+            .views-row {
+                & > *:not('img') {
+                    margin-left: 150px;
+                }
+            }
 
-                @include desktop {
-                    width: auto;
+            .field-type-image {
+                img {
+                    width: 100%;
+                    height: auto;
+
+                    @include desktop {
+                        width: auto;
+                    }
                 }
             }
         }

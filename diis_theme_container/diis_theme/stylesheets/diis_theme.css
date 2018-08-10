@@ -5981,13 +5981,17 @@ form .btn {
   font-weight: 700;
 }
 
-#region-content .view-content .field-type-image img {
+#region-content .view-latest-news .view-content .views-row > *:not('img') {
+  margin-left: 150px;
+}
+
+#region-content .view-latest-news .view-content .field-type-image img {
   width: 100%;
   height: auto;
 }
 
 @media (min-width: 992px) {
-  #region-content .view-content .field-type-image img {
+  #region-content .view-latest-news .view-content .field-type-image img {
     width: auto;
   }
 }
