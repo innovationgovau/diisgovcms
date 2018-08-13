@@ -1,4 +1,7 @@
 // _buttons.scss
+
+$buttonTextSize: 0.9em;
+
 .form-submit,
 .btn-primary,
 .btn-info,
@@ -51,7 +54,7 @@
 .views-exposed-form {
     .views-exposed-widget {
         .btn {
-            font-size: .9em;
+            font-size: $buttonTextSize;
             margin-top: 2.9em;
         }
     }
@@ -64,48 +67,54 @@
     font-size: inherit;
 }
 
-/*webform button and spacing - general feedback form*/
-
-#webform-client-form-13321 {
-    margin-bottom: 1em;
-}
-
 #region-content div.form-actions {
     margin-top: -2em;
 }
 
-#webform-client-form-13321 .form-actions button {
-    &:active {
-        color: black;
-        border-color: solid 1px $minor-navy;
-        background-color: $minor-teal;
-        box-shadow: 0 0 0 0 rgba(81, 203, 238, 1);
-    }
+/*webform button and spacing - general feedback form*/
 
-    &:hover {
-        color: black;
-        border-color: solid 1px $minor-navy;
+#webform-client-form-13321 {
+    margin-bottom: 1em;
+
+    .form-actions {
+        button {
+            font-size: $buttonTextSize;
+
+            &:active {
+                color: black;
+                border-color: solid 1px $minor-navy;
+                background-color: $minor-teal;
+                box-shadow: 0 0 0 0 rgba(81, 203, 238, 1);
+            }
+
+            &:hover {
+                color: black;
+                border-color: solid 1px $minor-navy;
+            }
+        }
     }
 }
 
 /*webform button and spacing - beta banner feedback form*/
 
 #webform-client-form-13336 {
-    max-width: 1170px;
-    margin: auto;
-    padding-bottom: 1em;
+    .form-actions {
+        button {
+            max-width: 1170px;
+            margin: auto;
+            padding-bottom: 1em;
 
-    button {
-        float: right;
-        margin-top: -2em;
-    }
-}
+            button {
+                float: right;
+                margin-top: -2em;
+            }
 
-#webform-client-form-13336 .form-actions button {
-    &:active {
-        color: black;
-        border-color: solid 1px $minor-navy;
-        background-color: $minor-teal;
-        box-shadow: 0 0 0 0 rgba(81, 203, 238, 1);
+            &:active {
+                color: black;
+                border-color: solid 1px $minor-navy;
+                background-color: $minor-teal;
+                box-shadow: 0 0 0 0 rgba(81, 203, 238, 1);
+            }
+        }
     }
 }

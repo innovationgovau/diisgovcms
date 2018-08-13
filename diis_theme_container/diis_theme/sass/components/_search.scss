@@ -66,6 +66,11 @@
 
     #edit-search-api-views-fulltext {
         font-size: .9em;
-        padding: 1em;
+        padding: 1.1em;
     }
+}
+
+/* hide last updated label and date for publications */
+.search-results .views-field-changed.Publication-page {
+    display: none;
 }

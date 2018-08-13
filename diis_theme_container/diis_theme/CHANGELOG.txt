@@ -1,7 +1,10 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v3.39  * 2018-08-13 | 9b0a74f | VSTS 89795 - CSS bits and bobs
- tag: v3.38, origin/features  * 2018-08-09 | f762d8a | VSTS 88089 - twitter sharing
+ HEAD -> features, tag: v3.40  * 2018-08-13 | 7f512da | VSTS 89795 - CSS bits and bobs
+ origin/features  * 2018-08-13 | d6ec4ad | VSTS 88091 - Google+ sharing script
+ origin/89797-search-height  * 2018-08-13 | e963283 | Updated changelog to v3.39
+ tag: v3.39  * 2018-08-13 | 9b0a74f | VSTS 89795 - CSS bits and bobs
+ tag: v3.38  * 2018-08-09 | f762d8a | VSTS 88089 - twitter sharing
  tag: 2018-08-09  * 2018-08-09 | 7d89487 | Updated changelog to v3.37
  tag: v3.37  * 2018-08-09 | 7d771d8 | VSTS 89795 - CSS bits and bobs
    * 2018-08-08 | ca4caad | Updated changelog to v3.36

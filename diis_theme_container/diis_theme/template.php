@@ -988,3 +988,17 @@ function diis_theme_file_view_alter($build, $type) {
     }
   }
 }
+
+
+/**
+ * Implements theme_form_required_marker(). This changes * to (this field is required)
+ */
+function diis_theme_form_required_marker($variables) {
+  // This is also used in the installer, pre-database setup.
+  $t_function = get_t();
+  $attributes = array(
+    'class' => 'form-required',
+    'title' => $t_function('This field is required.'),
+  );
+ return '<span' . drupal_attributes($attributes) . '>(' . $t_function('this field is required') . ')</span><span class="sr-only">Required field</span>';
+}

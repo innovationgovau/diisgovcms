@@ -3,6 +3,10 @@
     border-color: #888;
 }
 
+form .form-required {
+    color: black;
+}
+
 // Feedback form
 #webform-client-form-13321 {
     margin-top: 1em;
@@ -30,7 +34,7 @@
         &.form-group {
             margin-bottom: 0;
 
-            > label {
+            >label {
                 &.control-label {
                     font-weight: bold;
                 }
@@ -53,7 +57,11 @@
 }
 
 //multiple webforms - oce feedback form
-#webform-client-form-43221 .form-select, #webform-client-form-43386 .form-select, #webform-client-form-43391 .form-select, #webform-client-form-43396 .form-select, #webform-client-form-43456 .form-select {
+#webform-client-form-43221 .form-select,
+#webform-client-form-43386 .form-select,
+#webform-client-form-43391 .form-select,
+#webform-client-form-43396 .form-select,
+#webform-client-form-43456 .form-select {
     @include desktop {
         width: 9em;
     }
@@ -133,7 +141,7 @@
 }
 
 // all mailchimp - remove link in mailchimp form to their css file
-#mc_embed_signup_scroll > div.indicates-required {
+#mc_embed_signup_scroll>div.indicates-required {
     float: right;
     margin-bottom: -2em;
 }
@@ -145,6 +153,7 @@
 
 #mc_embed_signup .mc-field-group {
     margin-left: 0;
+    font-size: 18px;
 }
 
 form .optional,
@@ -155,6 +164,7 @@ form .required {
 
 #mc_embed_signup .mc-field-group {
     position: relative;
+    font-size: 18px;
     clear: left;
     width: 100%;
     min-height: 50px;
@@ -163,14 +173,23 @@ form .required {
 
 #mc_embed_signup .mc-field-group label {
     display: block;
+    font-size: 18px;
     margin-bottom: 3px;
 }
 
 #mc_embed_signup_scroll form label {
     margin-top: 1em;
-    color: #3b7498;
+    color: $black;
     font-weight: 400;
     width: 100%;
+}
+
+#mc_embed_signup_scroll label {
+    margin-top: 1em;
+    color: $black;
+    font-weight: 400;
+    width: 100%;
+    font-size: 18px;
 }
 
 #mc_embed_signup .mc-field-group input {
@@ -178,6 +197,7 @@ form .required {
     width: 100%;
     padding: 8px 0;
     text-indent: 2px;
+    font-size: 18px;
 
     &:focus {
         outline: 3px solid #5294FE;
@@ -193,6 +213,7 @@ form .required {
     width: 100%;
     padding: 8px 0;
     text-indent: -1px;
+    font-size: 18px;
 
     &:focus {
         outline: 3px solid #5294FE;
@@ -205,7 +226,7 @@ form .required {
 
 #mc_embed_signup .mc-field-group.input-group input {
     display: inline;
-
+    font-size: 18px;
     /*width: auto;*/
     float: left;
     border: none;
@@ -223,7 +244,7 @@ form .required {
 ul li #mc_embed_signup .mc-field-group input,
 ul li #mc_embed_signup .mc-field-group select {
     display: inline;
-
+    font-size: 18px;
     /*width: auto;*/
     float: left;
     border: none;
@@ -256,9 +277,11 @@ ul li #mc_embed_signup .mc-field-group select {
     }
 }
 
+
 /*makes ul li font size same as other font on form*/
 
-#mc_embed_signup_scroll, #mc_embed_signup_scroll_nisa {
+#mc_embed_signup_scroll,
+#mc_embed_signup_scroll_nisa {
     ul {
         padding-left: 0;
 
@@ -268,7 +291,7 @@ ul li #mc_embed_signup .mc-field-group select {
     }
 
     label {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .row {
@@ -276,10 +299,12 @@ ul li #mc_embed_signup .mc-field-group select {
     }
 }
 
+
 /*removes large gap between fields*/
 
 #mc_embed_signup .mc-field-group {
     clear: left;
+    font-size: 18px;
     position: relative;
     width: 96%;
     padding-bottom: 0%;
@@ -295,7 +320,7 @@ ul li #mc_embed_signup .mc-field-group select {
 }
 
 #mc-embedded-subscribe,
-#mc_embed_signup_scroll ul > li:nth-child(3) #mc_embed_signup .button {
+#mc_embed_signup_scroll ul>li:nth-child(3) #mc_embed_signup .button {
     clear: both;
     float: right;
     border: 0 none;
