@@ -559,6 +559,11 @@
                 e.preventDefault();
             });
             
+            $('#share-google').on('click touch', function(e) {
+                window.open('https://plus.google.com/share?url=' + window.location.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+                e.preventDefault();
+            });
+            
             $('#share-twitter').on('click touch', function(e) {
                 window.open('https://www.twitter.com/intent/tweet?url=' + window.location.href.split('#')[0] + '&text=' + document.title.replace("|", "-"));
                 e.preventDefault();

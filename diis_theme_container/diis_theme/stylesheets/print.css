@@ -744,16 +744,16 @@ th.active a, th.active a:active, th.active a:focus, th.active a:hover {
   h6,
   caption,
   figure {
-    page-break-after: avoid;
-    break-after: avoid;
+    -webkit-column-break-after: avoid;
+            break-after: avoid;
   }
   h2 + *,
   h3 + *,
   h4 + *,
   h5 + *,
   h6 + * {
-    page-break-before: avoid;
-    break-before: avoid;
+    -webkit-column-break-before: avoid;
+            break-before: avoid;
   }
   div + h2,
   div h3,
@@ -830,8 +830,8 @@ th.active a, th.active a:active, th.active a:focus, th.active a:hover {
   input h4,
   input h5,
   input h6 {
-    page-break-before: auto;
-    break-before: auto;
+    -webkit-column-break-before: auto;
+            break-before: auto;
   }
   img {
     max-width: 100% !important;
@@ -2305,5 +2305,3 @@ form .btn {
   transform-origin: bottom right;
   background: #fff;
 }
-
-/*# sourceMappingURL=maps/print.css.map */
