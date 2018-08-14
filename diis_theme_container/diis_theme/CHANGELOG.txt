@@ -1,7 +1,12 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v3.40  * 2018-08-13 | 7f512da | VSTS 89795 - CSS bits and bobs
- origin/features  * 2018-08-13 | d6ec4ad | VSTS 88091 - Google+ sharing script
+ HEAD -> features, tag: v3.44  * 2018-08-13 | c38c8ea | Updated profile from govCMS 7.x-2.20 to 7.x-2.21
+ tag: v3.43, origin/features  * 2018-08-13 | 64daea7 | VSTS 86874 - hide last updated label and date in search results for publications content type
+ tag: v3.42  * 2018-08-13 | f4bc9d0 | VSTS 90343 add this field is required
+ tag: v3.41  * 2018-08-13 | 1ff7674 | 90343 add this field is required
+ tag: 2018-08-13  * 2018-08-13 | cfabfa6 | Updated changelog to v3.40
+ tag: v3.40  * 2018-08-13 | 7f512da | VSTS 89795 - CSS bits and bobs
+   * 2018-08-13 | d6ec4ad | VSTS 88091 - Google+ sharing script
  origin/89797-search-height  * 2018-08-13 | e963283 | Updated changelog to v3.39
  tag: v3.39  * 2018-08-13 | 9b0a74f | VSTS 89795 - CSS bits and bobs
  tag: v3.38  * 2018-08-09 | f762d8a | VSTS 88089 - twitter sharing
@@ -284,7 +289,7 @@
  tag: v2.15  * 2018-05-01 | e0da9bc | VSTS 79760  - reapplying print stylesheet changes
    * 2018-05-01 | 5c979e0 | Updated changelog to v2.14
  tag: v2.14  * 2018-05-01 | 1e307bc | VSTS 79513 - PRE PUBLIC BETA FIXES
-   * 2018-05-01 | d3db376 | VSTS 80226 feature AIP
+ tag: 2.14  * 2018-05-01 | d3db376 | VSTS 80226 feature AIP
    * 2018-05-01 | 0cb6234 | Merge branch 'features' of svn-5468.devcloud.hosting.acquia.com:betaindustry into features
  tag: v2.13  * 2018-05-01 | 4dd9aa8 | VSTS 80226 feature AIP
  tag: v2.12  * 2018-05-01 | 3a084d3 | VSTS 79513 - PRE PUBLIC BETA FIXES
@@ -585,6 +590,3 @@
  tag: v1.1  * 2018-01-16 | b8919b9 | test file
  tag: v1.2  * 2018-01-16 | c28d517 | THEME: Updated typography, included Monsterrat font, removed blue heading colour for now
    * 2018-01-16 | 7bf56fa | THEME: Updated footer link styles and <hr>
- tag: v1.0  * 2018-01-15 | a44adc2 | THEME: Updated anchor link styles, added $purple colour variables
- tag: 2018-01-15  * 2018-01-15 | cf048bd | Merge branch 'subtheme'
-   * 2018-01-15 | 538423b | THEME: Added 'Skip to Content' links. Not sure why they were missing

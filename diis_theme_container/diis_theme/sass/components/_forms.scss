@@ -1,6 +1,10 @@
 // _forms.scss
 .form-control {
-    border-color: #888;
+    border-color: #777;
+    display: block;
+    font-size: 18px;
+    height: 37px;
+    border-radius: 0px;
 }
 
 form .form-required {
@@ -195,7 +199,7 @@ form .required {
 #mc_embed_signup .mc-field-group input {
     display: block;
     width: 100%;
-    padding: 8px 0;
+    padding: 6px 12px;
     text-indent: 2px;
     font-size: 18px;
 
@@ -211,8 +215,9 @@ form .required {
 #mc_embed_signup .mc-field-group select {
     display: block;
     width: 100%;
-    padding: 8px 0;
+    padding: 6px 12px;
     text-indent: -1px;
+    background: white;
     font-size: 18px;
 
     &:focus {
