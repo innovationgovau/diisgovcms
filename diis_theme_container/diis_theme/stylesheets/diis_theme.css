@@ -3251,6 +3251,9 @@ a.back-to-top {
   padding-bottom: 1em; }
 
 .form-control {
+  border-color: #888; }
+
+.webform-client-form .form-control {
   border-color: #777;
   display: block;
   font-size: 18px;
@@ -3451,7 +3454,9 @@ ul li #mc_embed_signup .mc-field-group select {
   /*width: auto;*/
   float: left;
   border: none;
-  width: 3%; }
+  width: 0.8em;
+  height: 0.8em;
+  margin-right: .5em; }
   #mc_embed_signup_scroll_nisa .mc-field-group input:focus,
   #mc_embed_signup_scroll_nisa select:focus {
     outline: 3px solid #5294FE; }
@@ -3469,11 +3474,18 @@ ul li #mc_embed_signup .mc-field-group select {
 
 #mc_embed_signup_scroll label,
 #mc_embed_signup_scroll_nisa label {
-  font-size: 18px; }
+  font-size: 18px;
+  color: black; }
 
 #mc_embed_signup_scroll .row,
 #mc_embed_signup_scroll_nisa .row {
   padding-left: 15px; }
+
+#mc_embed_signup_scroll .form-control,
+#mc_embed_signup_scroll_nisa .form-control {
+  font-size: 18px;
+  height: 37px;
+  border-radius: 0; }
 
 /*removes large gap between fields*/
 #mc_embed_signup .mc-field-group {

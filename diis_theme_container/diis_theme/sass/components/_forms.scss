@@ -1,5 +1,9 @@
 // _forms.scss
 .form-control {
+    border-color: #888;
+}
+
+.webform-client-form .form-control {
     border-color: #777;
     display: block;
     font-size: 18px;
@@ -271,7 +275,9 @@ ul li #mc_embed_signup .mc-field-group select {
     /*width: auto;*/
     float: left;
     border: none;
-    width: 3%;
+    width: 0.8em;
+    height: 0.8em;
+    margin-right: .5em;
 
     &:focus {
         outline: 3px solid #5294FE;
@@ -281,6 +287,7 @@ ul li #mc_embed_signup .mc-field-group select {
         outline: 3px solid #5294FE;
     }
 }
+
 
 
 /*makes ul li font size same as other font on form*/
@@ -297,12 +304,19 @@ ul li #mc_embed_signup .mc-field-group select {
 
     label {
         font-size: 18px;
+        color: black;
     }
 
     .row {
         padding-left: 15px;
     }
+    .form-control {
+        font-size: 18px;
+        height: 37px;
+        border-radius: 0;
+    }
 }
+
 
 
 /*removes large gap between fields*/
