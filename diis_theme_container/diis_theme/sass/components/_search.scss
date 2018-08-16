@@ -36,7 +36,8 @@
 }
 
 // Tweak the Faceted/Advanced Search controls in mobile view
-#views-exposed-form-advanced-search-page-inner {
+#views-exposed-form-advanced-search-page-inner,
+#views-exposed-form-faceted-search-page-inner {
     @include mobile-only {
         .views-exposed-widgets {
             .btn {
@@ -71,6 +72,10 @@
 }
 
 /* hide last updated label and date for publications */
-.search-results .views-field-changed.Publication-page {
-    display: none;
+.search-results {
+    .views-field-changed {
+        &.Publication-page {
+            display: none;
+        }
+    }
 }
