@@ -297,7 +297,8 @@
                     e.preventDefault();
                     $link.toggleClass('hero-list-open');
                     $target.slideToggle(250).toggleClass('hero-list-target-open');
-                });
+                    $link.hasClass('hero-list-open') ? $link.attr('aria-label', 'Close menu').attr('aria-expanded', 'true') : $link.attr('aria-label', 'Open menu').attr('aria-expanded', 'false');
+                }); 
             });
         }
     }; // End homepageSliders

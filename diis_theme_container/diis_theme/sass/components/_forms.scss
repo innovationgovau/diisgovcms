@@ -1,6 +1,7 @@
 // _forms.scss
 .form-control {
     border-color: #888;
+    color: $greyDark;
 }
 
 .webform-client-form .form-control {
@@ -60,7 +61,7 @@ form .form-required {
 
     .help-block {
         font-size: .9em;
-        color: #333;
+        color: $greyDark;
     }
 }
 
@@ -171,7 +172,7 @@ form .form-required {
 form .optional,
 form .required {
     float: none;
-    color: #777;
+    color: $greyDark;
 }
 
 #mc_embed_signup .mc-field-group {
@@ -400,6 +401,35 @@ ul li #mc_embed_signup .mc-field-group select {
 
 #mc-embedded-subscribe-form {
     padding-bottom: 2em;
+}
+
+/* Override Bootstrap CDN placeholder text color */
+.form-control {
+    &::placeholder {
+        color: $greyDark;
+    }
+
+    /* Chrome/Opera/Safari */
+    &::-webkit-input-placeholder { 
+        color: $greyDark;
+    }
+
+    /* Firefox 19+ */
+    &::-moz-placeholder {
+        color: $greyDark;
+        opacity: 1;
+    }
+
+    /* Firefox 18- */
+    &:-moz-placeholder { 
+        color: $greyDark;
+        opacity: 1;
+    }
+
+    /* IE 10+ */
+    &:-ms-input-placeholder {
+        color: $greyDark;
+    }
 }
 
 //Login form

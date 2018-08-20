@@ -1,7 +1,11 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v3.49  * 2018-08-16 | 189427e | VSTS 89795 - CSS bits and bobs
- tag: v3.48, origin/features  * 2018-08-15 | d50f4ec | VSTS 90343 add 'this field is required'
+ HEAD -> features, tag: v3.51  * 2018-08-17 | 20f2fcd | VSTS 90403 - Vision Australia accessibility audit v2
+ origin/features  * 2018-08-17 | 15443dd | Updated changelog to v3.50
+ tag: v3.50  * 2018-08-17 | f65960a | VSTS 90403 - Vision Australia accessibility audit v2
+   * 2018-08-16 | 333cda0 | Updated changelog to v3.49
+ tag: v3.49  * 2018-08-16 | 189427e | VSTS 89795 - CSS bits and bobs
+ tag: v3.48  * 2018-08-15 | d50f4ec | VSTS 90343 add 'this field is required'
  tag: v3.47  * 2018-08-15 | b83fd08 | VSTS 90343 add 'this field is required'
  tag: v3.46  * 2018-08-15 | bd5f4bc | VSTS 90343 add 'this field is required'
  tag: v3.45  * 2018-08-15 | 4ce9cd4 | VSTS 90343 add 'this field is required'
