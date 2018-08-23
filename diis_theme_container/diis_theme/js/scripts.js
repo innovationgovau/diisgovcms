@@ -781,31 +781,17 @@
     } // End printDetection
 
 
-    // Detect images with no native Alt text, and add the attribute then 
-    // dynamically retrieve it from another field. This applies to images
-    // inserted via Drupal image styles and revealed with Display Suite.
+    // Add an empty 'Alt' text attribute to images rendered with no Alt text
     Drupal.behaviors.imageAltText = {
         attach: function(context, settings) {
 
-            // NOTE: .ext-alt-text is a custom field that uses Display Suite. 
-            // If the field is not rendered to the page when an image is 
-            // displayed, this snippet won't work for that image.
-            var extAltText = $('.ext-alt-text'),
-                imgNoAltText = $('img:not(img[alt])');
-               
-            // If any image has no 'alt' attribute at all (not including empty),
-            // add one for accessibility
-           $.each(imgNoAltText, function() {
+            // Target any image tag on the page without an Alt attribute
+            $.each($('img:not(img[alt])'), function() {
                 $(this).attr('alt', '');
-            });
-            
-            // 
-            $.each(extAltText, function() {
-                $(this).next('img').attr('alt', $(this).text());
-                $(this).remove();
             });
         }
     } // End imageAltText
+
     
     Drupal.behaviors.wrapIframe = {
         attach: function(context, settings) {

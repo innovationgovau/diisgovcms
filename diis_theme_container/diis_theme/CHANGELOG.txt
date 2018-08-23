@@ -1,7 +1,10 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v3.51  * 2018-08-17 | 20f2fcd | VSTS 90403 - Vision Australia accessibility audit v2
- origin/features  * 2018-08-17 | 15443dd | Updated changelog to v3.50
+ HEAD -> features, tag: v3.53  * 2018-08-23 | 511fc08 | VSTS 90403 - Vision Australia accessibility audit v2
+ tag: v3.52, tag: 2018-08-21, origin/features  * 2018-08-20 | c35df8d | VSTS 90409 - improved contrast for form control and form placeholder text
+ tag: 2018-08-17  * 2018-08-17 | c948c8a | Updated changelog to v3.51
+ tag: v3.51  * 2018-08-17 | 20f2fcd | VSTS 90403 - Vision Australia accessibility audit v2
+   * 2018-08-17 | 15443dd | Updated changelog to v3.50
  tag: v3.50  * 2018-08-17 | f65960a | VSTS 90403 - Vision Australia accessibility audit v2
    * 2018-08-16 | 333cda0 | Updated changelog to v3.49
  tag: v3.49  * 2018-08-16 | 189427e | VSTS 89795 - CSS bits and bobs
