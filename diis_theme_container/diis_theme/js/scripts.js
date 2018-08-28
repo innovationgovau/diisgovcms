@@ -85,11 +85,13 @@
 
                                 // Grab the assets from the HTML source
                                 // NOTE: The $closeLink allows the user to resume tabbing from the 'open in new window' link once the new window is closed
-                                // NOTE: Hardcoded styles are optional, but omitted by default as all styles should be properly added to the CSS. This also avoids the mountains of CSS the AddThis plugin includes...
+                                // NOTE: Hardcoded styles are optional, but omitted by default as all styles should be properly added to the CSS
                                 var $closeLink = '<p><a href="javascript:window.open(' + "''" + ",'_self'" + ').close();">Close this window</a></p>',
                                     $newStylesheets = $('link[rel=stylesheet]').clone(),
                                     $newStyles = $('style').clone(),
+                                    //$pageScripts = $('script:not(script[src*="contextual"]):not(script[src*="analytics"]):not(script[src*="admin"]):not(script[src*="toolbar"])').clone(),
                                     $pageScripts = $('script:not(script[src*="contextual"]):not(script[src*="analytics"]):not(script[src*="admin"]):not(script[src*="toolbar"])').clone(),
+                                    $favicons = $('link[href*=favicon][rel*=icon]'),
 
                                     // Select everything inside the .export-view wrapper except the mobile wrapper and warning text
                                     $tableAssets = $table.parents('.export-view').children().not('.mobile-table-text, .mobile-table-wrapper').clone(),
@@ -114,33 +116,28 @@
 
                                 popupContent = "";
 
-                                $newStylesheets.each(function() {
-                                    popupContent += this.outerHTML;
-                                });
+                                function addContent(e) {
+                                    e.each(function() {
+                                        popupContent += this.outerHTML;
+                                    });
+                                }
 
-                                $newStyles.each(function() {
-                                    popupContent += this.outerHTML;
-                                });
+                                addContent($favicons)
+                                addContent($newStylesheets);
+                                addContent($newStyles);
 
                                 popupContent += $closeLink;
 
                                 // Add all JS scripts on the page to retain functionality on complex tables, i.e. sorting, filtering etc.
-                                $tableAssets.each(function() {
-                                    popupContent += this.outerHTML;
-                                });
-
-                                $stickyHeader.each(function() {
-                                    popupContent += this.outerHTML;
-                                });
+                                addContent($tableAssets);
+                                addContent($stickyHeader);
 
                                 popupContent += $newTable[0].outerHTML;
 
                                 // Place all scripts after content, if not loaded within an iFrame, to avoid issues with HTML loading after the scripts
 
                                 if (!inIframe()) {
-                                    $pageScripts.each(function() {
-                                        popupContent += this.outerHTML;
-                                    });
+                                    addContent($pageScripts);
                                 }
 
                                 // This iFrame detection snippet fires when clicking the 'open this table' link

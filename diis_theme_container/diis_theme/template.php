@@ -137,7 +137,13 @@ function diis_theme_preprocess_block(&$variables) {
 		
 		$target = $variables['content'];
 		$variables['content'] = str_replace('views-exposed-form-advanced-search-page', 'views-exposed-form-advanced-search-page-inner', $target);
-	}
+
+	} else if ($variables['block_html_id'] == 'block-views-exp-faceted-search-page') {
+
+    $target = $variables['content'];
+    $variables['content'] = str_replace('views-exposed-form-faceted-search-page', 'views-exposed-form-faceted-search-page-inner', $target);
+
+  }
 }
 
 /**

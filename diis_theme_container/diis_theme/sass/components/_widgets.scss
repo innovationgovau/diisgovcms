@@ -247,6 +247,12 @@
   border-top: none !important;
 }
 
+//News landing page intro text - align left at all times
+
+.newslandingpage .view-latest-news .view-header {
+  text-align: left !important;
+}
+
 // Content ID and Last Updated fields
 .field-name-content-id,
 .field-name-changed-date,
