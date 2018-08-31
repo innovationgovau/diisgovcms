@@ -1,6 +1,8 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v3.58, origin/features  * 2018-08-29 | ade7244 | VSTS 88019 news section
+ HEAD -> features, tag: v3.59  * 2018-08-30 | bf4e1ac | VSTS 90625 - Closing the mobile footer menu then hides it on tablets and desktops on resize
+ tag: 2018-08-28, origin/features  * 2018-08-29 | f9da3f4 | updated changelog v3.58
+ tag: v3.58  * 2018-08-29 | ade7244 | VSTS 88019 news section
    * 2018-08-28 | 9b80e64 | Updated changelog to v3.57
  tag: v3.57  * 2018-08-28 | 881f8c8 | VSTS 81207 - Search button appearing on Search results page contains small text and is taller than the Search field
    * 2018-08-28 | aa72970 | Updated changelog to v3.56
@@ -153,7 +155,7 @@
  tag: v2.69  * 2018-06-12 | 1a14640 | 83986 try drupal standard menu
  tag: v2.68  * 2018-06-12 | f9bd8db | Merging new menu into features
  tag: menu-feature-0.1, tag: 83986-menu-feature-0.1  * 2018-06-12 | 320e291 | initial copy of style, no js yet
- tag: uat-menu-0.31, origin/uat-menu, uat-menu  * 2018-06-12 | 178748a | made menu text larger, made search shorter, changed slidetoggle to toggle for faaster child menu expanding
+ tag: uat-menu-0.31, origin/uat-menu  * 2018-06-12 | 178748a | made menu text larger, made search shorter, changed slidetoggle to toggle for faaster child menu expanding
    * 2018-06-12 | c4448f1 | Updated chagelog to v2.67
  tag: v2.67  * 2018-06-12 | 763077c | VSTS 75599 - FEATURE: Print stylesheet
  tag: uat-menu-0.30  * 2018-06-12 | f7c96fa | updated main menu to have white text specifically, removed border, put all label data in css instead of header tpl
@@ -196,12 +198,12 @@
  tag: uat-menu-0.2  * 2018-06-05 | 8dfd8f8 | removed js from main file, added new js file for menus only. added menu to header tpl, restyled.
  tag: uat-menu-0.1  * 2018-06-04 | 9f5f5ab | Basic Jquery expand/collapse working at /menu button/ and rest of stuff
    * 2018-06-04 | 97f80ab | started basic drupal plain menu styling. js not working
- uat-menu-3  * 2018-06-03 | 1b6ecb0 | Added underline to menu items on hover, readded meanmenu script in info file
- uat-menu-2  * 2018-06-03 | 64e59a9 | rm meanmenu styles, added basic SF styles
+   * 2018-06-03 | 1b6ecb0 | Added underline to menu items on hover, readded meanmenu script in info file
+   * 2018-06-03 | 64e59a9 | rm meanmenu styles, added basic SF styles
    * 2018-06-03 | b8fa0fa | initial commit
  tag: 2018-06-05, tag: 2018-06-04  * 2018-06-01 | 7de9dc5 | Updated Changelog to v2.62
    * 2018-06-01 | d0c014d | VSTS 81390 - DEV: Address outstanding accessibility issues to meet WCAG 2.0 AA compliance
-   * 2018-06-01 | 6cd9cbb | VSTS 83411 user research
+ test-icon-revert  * 2018-06-01 | 6cd9cbb | VSTS 83411 user research
    * 2018-06-01 | ec477ab | vSTS 83411 user research feedback form
  tag: v2.61  * 2018-06-01 | befbfb5 | VSTS 82869 and 83411
    * 2018-06-01 | e71accc | VSTS 83411 user research beta website feedback
@@ -348,7 +350,7 @@
  tag: v2.1  * 2018-04-26 | d062ce4 | FIX: Re-added missing Drupal Core files
    * 2018-04-26 | 1d6708a | Updated changelog to v2.0
  tag: v2.0  * 2018-04-26 | 780e60a | Updated to govCMS 2.18, including Drupal Core 7.59
- origin/test-android-crest-20180426, origin/79591-shrink-header  * 2018-04-26 | 10fa87d | Removed testing content
+ origin/79591-shrink-header  * 2018-04-26 | 10fa87d | Removed testing content
    * 2018-04-26 | 70e785c | Added red border around crest for clear edges
    * 2018-04-26 | fa4fb3b | Updated Crest's mobile-only width to 22em
    * 2018-04-26 | a528d0c | Updated changelog to v1.100
@@ -364,7 +366,7 @@
    * 2018-04-24 | 9c0a613 | Updated changelog to v1.96
  tag: v1.96  * 2018-04-24 | 3895d91 | VSTS 80152 - DESIGN: Change link styling
    * 2018-04-23 | 188ef7e | Filepath - added to top of template.php
- filepath  * 2018-04-23 | bdb6b2e | Updated changelog to v1.95
+   * 2018-04-23 | bdb6b2e | Updated changelog to v1.95
  tag: v1.95  * 2018-04-23 | 1a17484 | VSTS 80152 Change link styling
    * 2018-04-23 | 771de12 | VSTS 79603 resolve content page and elements
    * 2018-04-23 | bb0361c | VSTS 79513 pre public beta fixes
@@ -432,7 +434,7 @@
  tag: 2018-04-03  * 2018-03-29 | 4b4d6fb | Updated changelog to v1.72
    * 2018-03-29 | 09865e2 | VSTS 75660 - MVP#2 - iPhone X with safari 11 issues
  tag: v1.72  * 2018-03-29 | bd3e78d | VSTS 75660 - MVP#2 - iPhone X wiht safari 11 issues
- origin/gitignore, origin/dev-gitignore  * 2018-03-29 | 6b7e960 | Stopped tracking modules
+ origin/dev-gitignore  * 2018-03-29 | 6b7e960 | Stopped tracking modules
  tag: v1.71, tag: 2018-03-29.1, tag: 2018-03-29.0, origin/govcms-update-2.17  * 2018-03-29 | be0c556 | SECURITY: Update govCMS profile from 2.16 > 2.17, including Drupal Core 7.57 > 7.58 - addresses multiple critical vulnerabilities - https://www.drupal.org/sa-core-2018-002
  tag: 2018-03-29  * 2018-03-28 | ecd2498 | Updated changelog
  tag: v1.70  * 2018-03-28 | a2b5a87 | VSTS 73721 - publishers can update admin nodes
@@ -462,7 +464,7 @@
    * 2018-03-23 | 731e2ba | Updated changelog to v1.57
  tag: v1.57  * 2018-03-23 | b03b9a5 | VSTS 76045 - style feedback form
    * 2018-03-23 | 967ee6d | Updated changelog to v1.56
- tag: v1.56, origin/hotfixes, origin/dev-hotfixes  * 2018-03-23 | 37c1b09 | FIX: Tabbing out of Feedback form text field would close the entire form
+ tag: v1.56, origin/dev-hotfixes, dev-hotfixes  * 2018-03-23 | 37c1b09 | FIX: Tabbing out of Feedback form text field would close the entire form
  tag: v1.55  * 2018-03-23 | e70b444 | VSTS 75992 - Platform dev - Rate this page
    * 2018-03-23 | d3b4f09 | Updated changelog to v1.54
  tag: v1.54  * 2018-03-23 | 79f092b | VSTS 75992 - Platform dev - Rate this page
@@ -480,7 +482,7 @@
    * 2018-03-21 | 8bb684f | Updated changelog to v1.49
  tag: v1.49  * 2018-03-21 | cb3707b | VSTS 76797 - Font, spacing, image, design issues
    * 2018-03-21 | 7b9bd73 | VSTS 76797 - MVP #2 - Font, spacing, image, design issues
- tag: 2018-03-21.0, origin/test-bootstrap-breakpoints  * 2018-03-21 | 5f6f965 | FIX: Updated changelog to v1.48, rather than 1.48 - replaced incorrect tag
+ tag: 2018-03-21.0  * 2018-03-21 | 5f6f965 | FIX: Updated changelog to v1.48, rather than 1.48 - replaced incorrect tag
    * 2018-03-21 | 6a637ec | Updated changelog to v1.48
  tag: 2018-03-19  * 2018-03-19 | 7ad01bc | VSTS 74224 MVP2 full system test
    * 2018-03-19 | 228d4b9 | VSTS 70332 - fix breadcrumb display on sector pages
@@ -490,7 +492,7 @@
  tag: v1.47  * 2018-03-16 | 2677833 | FIX: Updated changelog export path to be relative to site root
  tag: v1.46  * 2018-03-16 | ac050fa | FIX: Sublime Text editor JSBeautifier plugin incorrectly replaced '$(this)' with '$(form)'... yeah
    * 2018-03-16 | d4dff85 | Updated changelog to v1.45
- tag: v1.45, origin/dev-changelog-script, origin/changelog-script  * 2018-03-16 | c46fa0d | Updated exported file path destination location
+ tag: v1.45, origin/dev-changelog-script  * 2018-03-16 | c46fa0d | Updated exported file path destination location
  tag: 2018-03-20  * 2018-03-16 | 0ccab0d | Updated changelog
    * 2018-03-16 | a2de4ab | Merge branch 'master' of svn-5468.devcloud.hosting.acquia.com:betaindustry
  tag: v1.44  * 2018-03-16 | bde759f | VSTS 75992 - Rate this Page widget
@@ -614,5 +616,3 @@
  tag: v1.0  * 2018-01-15 | a44adc2 | THEME: Updated anchor link styles, added $purple colour variables
  tag: 2018-01-15  * 2018-01-15 | cf048bd | Merge branch 'subtheme'
    * 2018-01-15 | 538423b | THEME: Added 'Skip to Content' links. Not sure why they were missing
- tag: 2018-01-14.0  * 2018-01-15 | 11ce143 | THEME: Updated breadcrumbs, hero-list chevron icons and testing styles
-   * 2018-01-15 | 1978339 | THEME: Added function to rewrite <script> tag output, to reomve type attribute

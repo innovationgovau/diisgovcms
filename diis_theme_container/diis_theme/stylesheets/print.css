@@ -280,11 +280,11 @@ th.active a, th.active a:active, th.active a:focus, th.active a:hover {
 
 /* table-based org chart */
 #org-chart {
-  margin: 1em 0;
-  padding: 1em;
-  /* divs */
-  border: #333 1px solid;
   /* tables */ }
+  #org-chart .boxed {
+    margin: 1em 0;
+    padding: 1em;
+    border: #333 1px solid; }
   #org-chart .minister {
     min-height: 120px;
     background-color: #eee; }
@@ -524,16 +524,16 @@ th.active a, th.active a:active, th.active a:focus, th.active a:hover {
   h6,
   caption,
   figure {
-    -webkit-column-break-after: avoid;
-            break-after: avoid; }
+    page-break-after: avoid;
+    break-after: avoid; }
 
   h2 + *,
   h3 + *,
   h4 + *,
   h5 + *,
   h6 + * {
-    -webkit-column-break-before: avoid;
-            break-before: avoid; }
+    page-break-before: avoid;
+    break-before: avoid; }
 
   div + h2,
   div h3,
@@ -610,8 +610,8 @@ th.active a, th.active a:active, th.active a:focus, th.active a:hover {
   input h4,
   input h5,
   input h6 {
-    -webkit-column-break-before: auto;
-            break-before: auto; }
+    page-break-before: auto;
+    break-before: auto; }
 
   img {
     max-width: 100% !important;
@@ -1300,10 +1300,6 @@ ul li #mc_embed_signup .mc-field-group select {
   /* Firefox 19+ */
   /* Firefox 18- */
   /* IE 10+ */ }
-  .form-control::-webkit-input-placeholder {
-    color: #333; }
-  .form-control:-ms-input-placeholder {
-    color: #333; }
   .form-control::placeholder {
     color: #333; }
   .form-control::-webkit-input-placeholder {
@@ -3012,3 +3008,5 @@ form .btn {
   .ml-xl-auto,
   .mx-xl-auto {
     margin-left: auto !important; } }
+
+/*# sourceMappingURL=print.css.map */

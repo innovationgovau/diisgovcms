@@ -275,7 +275,7 @@
     }; // End privacyStatement
 
 
-    Drupal.behaviors.homepageSliders = {
+    Drupal.behaviors.heroTilesSubmenuAnimation = {
         attach: function(context, settings) {
             $('.hero-list h2 a').each(function() {
 
@@ -513,7 +513,7 @@
             var $footerLink = $('.js #footer-nav-link'),
                 $footerLinkText = $footerLink.children('span'),
                 $footerLinkTextShow = $footerLinkText.text(); // Detect the initial value dynamically, so it's only controlled via the template
-            $footerLinkTextHide = 'Hide',
+                $footerLinkTextHide = 'Hide',
                 $footerWrap = $('#footer-nav-wrapper');
 
             $footerLink.on('click touch', function(e) {

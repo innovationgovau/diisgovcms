@@ -439,12 +439,11 @@ th {
 
 /* table-based org chart */
 #org-chart {
-    margin: 1em 0;
-    padding: 1em;
-
-    /* divs */
-
-    border: #333 1px solid;
+    .boxed {
+        margin: 1em 0;
+        padding: 1em;
+        border: #333 1px solid;
+    }
 
     .minister {
         min-height: 120px;
