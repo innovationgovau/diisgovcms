@@ -1,7 +1,23 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v3.59  * 2018-08-30 | bf4e1ac | VSTS 90625 - Closing the mobile footer menu then hides it on tablets and desktops on resize
- tag: 2018-08-28, origin/features  * 2018-08-29 | f9da3f4 | updated changelog v3.58
+ HEAD -> features, tag: 3.68  * 2018-09-07 | ab190e6 | VSTS 93505 - Search terms in IE don't show up when typing into search field
+ origin/features  * 2018-09-07 | 07ceff7 | Version 3.67
+ tag: v3.67  * 2018-09-07 | 7a094c4 | Revert "VSTS 92458 - HOTJAR: Purchase and implement"
+   * 2018-09-07 | 9513f77 | Revert "Updated changelog to v3.66"
+   * 2018-09-07 | 0eb72a8 | Updated changelog to v3.66
+ tag: v3.66  * 2018-09-07 | 666cafa | VSTS 92458 - HOTJAR: Purchase and implement
+ tag: v3.65, tag: 2018-09-06  * 2018-09-07 | 71ff4ca | VSTS 93023 - CMS is alowing search on an empty string (not preventing it)
+   * 2018-09-06 | 5ac9ebd | Updated changelog to v3.64
+ tag: v3.64  * 2018-09-06 | 47112fa | VSTS 93023 - CMS is alowing search on an empty string (not preventing it)
+ tag: 2018-09-05  * 2018-09-05 | bd37385 | Updated changelog to v3.63
+ tag: v3.63  * 2018-09-05 | 9fed729 | VSTS 93505 - Search terms in IE don't show up when typing into search field
+ tag: 2018-09-04  * 2018-09-04 | d467573 | Updated changelog to v3.62
+ tag: v3.62  * 2018-09-04 | 83dd55c | VSTS 93023 - CMS is alowing search on an empty string (not preventing it)
+ tag: v3.61  * 2018-08-31 | c711cc8 | Compiled CSS
+ tag: v3.60  * 2018-08-31 | a868765 | Fixing org chart missing style for 'boxed' class
+ tag: 2018-08-29  * 2018-08-30 | 4e0939f | Updated changelog to v3.59
+ tag: v3.59  * 2018-08-30 | bf4e1ac | VSTS 90625 - Closing the mobile footer menu then hides it on tablets and desktops on resize
+ tag: 2018-08-28  * 2018-08-29 | f9da3f4 | updated changelog v3.58
  tag: v3.58  * 2018-08-29 | ade7244 | VSTS 88019 news section
    * 2018-08-28 | 9b80e64 | Updated changelog to v3.57
  tag: v3.57  * 2018-08-28 | 881f8c8 | VSTS 81207 - Search button appearing on Search results page contains small text and is taller than the Search field
@@ -615,4 +631,3 @@
    * 2018-01-16 | 7bf56fa | THEME: Updated footer link styles and <hr>
  tag: v1.0  * 2018-01-15 | a44adc2 | THEME: Updated anchor link styles, added $purple colour variables
  tag: 2018-01-15  * 2018-01-15 | cf048bd | Merge branch 'subtheme'
-   * 2018-01-15 | 538423b | THEME: Added 'Skip to Content' links. Not sure why they were missing

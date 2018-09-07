@@ -121,6 +121,8 @@ $disabled-bg: #e2e0e0;
 $links-body: $primary-blue;
 $link-border-width: 1px;
 $focus-blue: #5294FE;
+$alertBackground: lighten($red, 40%);
+$alertBorder: solid 2px lighten($red, 10%);
 
 // Fonts
 
