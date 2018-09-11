@@ -630,3 +630,7 @@
  tag: v1.2  * 2018-01-16 | c28d517 | THEME: Updated typography, included Monsterrat font, removed blue heading colour for now
    * 2018-01-16 | 7bf56fa | THEME: Updated footer link styles and <hr>
  tag: v1.0  * 2018-01-15 | a44adc2 | THEME: Updated anchor link styles, added $purple colour variables
+<<<<<<< HEAD
+=======
+ tag: 2018-01-15  * 2018-01-15 | cf048bd | Merge branch 'subtheme'
+>>>>>>> 11268bcd47c5fa26b438a9b0c6ad029e78214f35
