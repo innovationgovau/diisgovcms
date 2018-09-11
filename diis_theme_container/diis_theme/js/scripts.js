@@ -644,9 +644,8 @@
         }
     }
 
-    /* ------- Main menu ------- */
 
-    // Main menu toggle
+    // Main menu
 
     Drupal.behaviors.mainMenu = {
         attach: function(context, settings) {
@@ -727,10 +726,10 @@
                 });
             });
         }
-    }; // End
+    }; // End Main Menu
 
-    /* ------- END Main menu ------- */
 
+    // Detect when the page is being printed and make some adjustments to suit paper
 
     Drupal.behaviors.printDetection = {
         attach: function(context, settings) {
@@ -779,6 +778,7 @@
 
 
     // Add an empty 'Alt' text attribute to images rendered with no Alt text
+
     Drupal.behaviors.imageAltText = {
         attach: function(context, settings) {
 
@@ -789,6 +789,8 @@
         }
     } // End imageAltText
 
+
+    // Add a wrapper to iframes, include a data-iframe-src for accessibility
     
     Drupal.behaviors.wrapIframe = {
         attach: function(context, settings) {
@@ -798,6 +800,69 @@
         } // End Attach
     }; // End wrapIframe
 
+
+    // Stop Users runing empty searches, since Drupal seems to ignore all settings
+    // that would do that through the UI.
+
+    Drupal.behaviors.preventEmptySearches = {
+        attach: function(context, settings) {
+
+            // Target only Views-generated search forms. Using attribue selectors to avoid ACSF/Sandbox ID clashes
+            var $searchForm = $('form[id^=views-exposed-form][id*=search-page]'),
+                popupAlertText = 'Please enter at least one word (3 characters or more), letters and numbers only.';
+            
+            // Evaluate the fields each time a submission is attempted,
+            // as the User can freely change the value post-pageload.
+            $searchForm.on('submit', function(event) {
+
+                // Block the form from submitting, for now
+                event.preventDefault();
+
+                var $this = $(this),
+                    permitSearch = false;
+                    // As the form PHP template uses a counter to prevent duplicate IDs,
+                    // use attribute selectors to find matches.
+                    var $searchField = $this.find('input[id^=edit-search-api-views-fulltext]');
+
+                // Add a  class to the form field wrapper if none exists 
+                if (!$searchField.parent().hasClass('.popupAlertWrapper')) {
+                    $searchField.parent().addClass('popupAlertWrapper');
+                }
+                
+                // Remove any existing alerts when the submission is attempted
+                $('.popupAlert').remove();
+
+                // Replace all non-alphanumeric characters with a space, then split into an array on the spaces:
+                // https://stackoverflow.com/questions/20864893/replace-all-non-alpha-numeric-characters-new-lines-and-multiple-white-space-wi 
+                var $searchStringParts = $searchField.val().replace(/[\W_]+/g, " ").split(' ');
+
+                // Count the length of terms entered. If nothing has 3+ characters, submit stays disabled
+                for (var i = 0; i < $searchStringParts.length; i++) {
+                    
+                    var $part = $searchStringParts[i];
+
+                    // If a single match is found, cancel the operation as the rest aren't needed
+                    if ($part.length >= 3) {
+                        permitSearch = true;
+                        break;
+                    }
+                }
+
+                // Add the alert when called, if it's not already there
+                function popupAlert() {
+                    if (!$searchField.next('popupAlert').length) {
+                        $searchField.after('<p class="popupAlert">' + popupAlertText + '</p>');
+                        // Reset the tab position to the search field, so keyboard users don't get led astray
+                        $searchField.focus();
+                    }
+                }
+
+                // 'undo' event.preventDefault(), or fire the alert 
+                // https://stackoverflow.com/questions/5651933/what-is-the-opposite-of-evt-preventdefault
+                permitSearch === true ? $(this).unbind('submit').submit() : popupAlert();
+            });
+        }
+    } // End preventEmptySearches
 
     // Anything that doesn't need a Drupal Behaviour and needs to runs on doc load goes in here VVVV
     /* $(function() {
