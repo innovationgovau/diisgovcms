@@ -1,7 +1,9 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v3.69  * 2018-09-14 | 5812805 | VSTS 94133 - Homepage news items break in 2-col mode, when odd numbered item descriptions are longer than even ones
- origin/govcms-update-2.22, origin/features, govcms-update-2.22  * 2018-09-07 | 081f8d1 | Updated changelog to v3.68, for real this time
+ HEAD -> features, tag: v3.70  * 2018-09-19 | 3429053 | VSTS 94079 - Hamburger menu issues on mobile phones and tables with Chrome and Firefox
+ origin/features  * 2018-09-17 | 89c4ae1 | Updated changelog to v3.69
+ tag: v3.69  * 2018-09-14 | 5812805 | VSTS 94133 - Homepage news items break in 2-col mode, when odd numbered item descriptions are longer than even ones
+ tag: 2018-09-14, origin/govcms-update-2.22  * 2018-09-07 | 081f8d1 | Updated changelog to v3.68, for real this time
    * 2018-09-07 | e9deed5 | Updated changelog to v3.68
  tag: v3.68  * 2018-09-07 | ab190e6 | VSTS 93505 - Search terms in IE don't show up when typing into search field
    * 2018-09-07 | 07ceff7 | Version 3.67
@@ -222,7 +224,7 @@
    * 2018-06-03 | b8fa0fa | initial commit
  tag: 2018-06-05, tag: 2018-06-04  * 2018-06-01 | 7de9dc5 | Updated Changelog to v2.62
    * 2018-06-01 | d0c014d | VSTS 81390 - DEV: Address outstanding accessibility issues to meet WCAG 2.0 AA compliance
- test-icon-revert  * 2018-06-01 | 6cd9cbb | VSTS 83411 user research
+   * 2018-06-01 | 6cd9cbb | VSTS 83411 user research
    * 2018-06-01 | ec477ab | vSTS 83411 user research feedback form
  tag: v2.61  * 2018-06-01 | befbfb5 | VSTS 82869 and 83411
    * 2018-06-01 | e71accc | VSTS 83411 user research beta website feedback
@@ -483,7 +485,7 @@
    * 2018-03-23 | 731e2ba | Updated changelog to v1.57
  tag: v1.57  * 2018-03-23 | b03b9a5 | VSTS 76045 - style feedback form
    * 2018-03-23 | 967ee6d | Updated changelog to v1.56
- tag: v1.56, origin/dev-hotfixes, dev-hotfixes  * 2018-03-23 | 37c1b09 | FIX: Tabbing out of Feedback form text field would close the entire form
+ tag: v1.56, origin/dev-hotfixes  * 2018-03-23 | 37c1b09 | FIX: Tabbing out of Feedback form text field would close the entire form
  tag: v1.55  * 2018-03-23 | e70b444 | VSTS 75992 - Platform dev - Rate this page
    * 2018-03-23 | d3b4f09 | Updated changelog to v1.54
  tag: v1.54  * 2018-03-23 | 79f092b | VSTS 75992 - Platform dev - Rate this page
@@ -635,5 +637,3 @@
  tag: v1.0  * 2018-01-15 | a44adc2 | THEME: Updated anchor link styles, added $purple colour variables
  tag: 2018-01-15  * 2018-01-15 | cf048bd | Merge branch 'subtheme'
    * 2018-01-15 | 538423b | THEME: Added 'Skip to Content' links. Not sure why they were missing
- tag: 2018-01-14.0  * 2018-01-15 | 11ce143 | THEME: Updated breadcrumbs, hero-list chevron icons and testing styles
-   * 2018-01-15 | 1978339 | THEME: Added function to rewrite <script> tag output, to reomve type attribute

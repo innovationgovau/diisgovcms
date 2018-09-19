@@ -2100,13 +2100,20 @@ img {
 }
 
 .collapsible-menu label::before {
-  content: '\2630';
+  /* known bootstrap issue with the hamburger menu icon glyph:
+             * https://github.com/twbs/bootstrap/issues/20234#issuecomment-235391017
+             */
+  content: '\2261';
   color: white;
+  font-size: 1.5em;
+  line-height: 1em;
 }
 
 @media (min-width: 768px) {
   .collapsible-menu label::before {
     content: '\2630  Menu';
+    font-size: 1em;
+    line-height: inherit;
   }
 }
 
@@ -2150,6 +2157,7 @@ img {
   font-weight: bold;
   content: 'X';
   color: white;
+  font-size: 1em;
 }
 
 @media (min-width: 768px) {
