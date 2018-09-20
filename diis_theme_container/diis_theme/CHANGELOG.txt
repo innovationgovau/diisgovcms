@@ -1,9 +1,13 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v3.70  * 2018-09-19 | 3429053 | VSTS 94079 - Hamburger menu issues on mobile phones and tables with Chrome and Firefox
- origin/features  * 2018-09-17 | 89c4ae1 | Updated changelog to v3.69
+ HEAD -> features, tag: v3.72  * 2018-09-21 | fcbf107 | VSTS 95217 - Hamburger menu icon and text is too large in IE
+ origin/features  * 2018-09-20 | 64f3003 | Updated changelog to v3.71
+ tag: v3.71  * 2018-09-20 | 36ed76e | VSTS 93417 - DEV: Investigate Salsa and Amazee govCMS setup
+ tag: 2018-09-19.0, tag: 2018-09-19  * 2018-09-19 | f4afde8 | Updated changelog to v3.70
+ tag: v3.70  * 2018-09-19 | 3429053 | VSTS 94079 - Hamburger menu issues on mobile phones and tables with Chrome and Firefox
+   * 2018-09-17 | 89c4ae1 | Updated changelog to v3.69
  tag: v3.69  * 2018-09-14 | 5812805 | VSTS 94133 - Homepage news items break in 2-col mode, when odd numbered item descriptions are longer than even ones
- tag: 2018-09-14, origin/govcms-update-2.22  * 2018-09-07 | 081f8d1 | Updated changelog to v3.68, for real this time
+ tag: 2018-09-14  * 2018-09-07 | 081f8d1 | Updated changelog to v3.68, for real this time
    * 2018-09-07 | e9deed5 | Updated changelog to v3.68
  tag: v3.68  * 2018-09-07 | ab190e6 | VSTS 93505 - Search terms in IE don't show up when typing into search field
    * 2018-09-07 | 07ceff7 | Version 3.67

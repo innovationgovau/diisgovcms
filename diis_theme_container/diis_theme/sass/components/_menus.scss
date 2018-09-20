@@ -354,22 +354,29 @@
         @include desktop {
             font-size: 1.7em;
             margin-top: -1.4em;
+
+            @include ie {
+                font-size: 1.2em;
+                margin-top: -2.5em;
+            }
         }
 
 
         &::before {
-            /* known bootstrap issue with the hamburger menu icon glyph:
-             * https://github.com/twbs/bootstrap/issues/20234#issuecomment-235391017
-             */
-            content: '\2261';
-            color: white;
             font-size: 1.5em;
             line-height: 1em;
 
+            /* known bootstrap issue with the hamburger menu icon glyph:
+             * https://github.com/twbs/bootstrap/issues/20234#issuecomment-235391017
+             */
+
+            content: '\2261';
+            color: white;
+
             @include tablet {
-                content: '\2630  Menu';
                 font-size: 1em;
                 line-height: inherit;
+                content: '\2630  Menu';
             }
         }
     }
@@ -412,10 +419,10 @@
 
     input:checked {
         & ~ label::before {
+            font-size: 1em;
             font-weight: bold;
             content: 'X';
             color: white;
-            font-size: 1em;
 
             @include tablet {
                 font-weight: normal;
