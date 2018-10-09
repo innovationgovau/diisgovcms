@@ -6477,12 +6477,12 @@ img {
   border-bottom: solid 1px #ccc;
 }
 
-.panel-pane .view-tag-cluster a {
+.panel-pane .view-data-and-publications-tag-lists a {
   text-decoration: none;
   border-bottom: none;
 }
 
-.panel-pane .view-tag-cluster a:hover, .panel-pane .view-tag-cluster a:focus {
+.panel-pane .view-data-and-publications-tag-lists a:hover, .panel-pane .view-data-and-publications-tag-lists a:focus {
   border-bottom: dotted 1px #005677;
 }
 
