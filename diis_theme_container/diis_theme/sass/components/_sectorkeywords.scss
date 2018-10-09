@@ -1,104 +1,110 @@
 // _sectorkeywords.scss
 // Sector Keywords View page
 #views-exposed-form-taxonomy-term-sector {
-  .views-exposed-widget {
-    float: none;
-    padding: none;
+    .views-exposed-widget {
+        float: none;
+        padding: none;
 
-    @include desktop {
-      float: left;
-      padding: .5em 1em 0 0;
+        @include desktop {
+            float: left;
+            padding: .5em 1em 0 0;
+        }
+
+
+        .view-header {
+            float: right;
+            margin-top: 1.6em;
+        }
+
+        .btn {
+            display: inline-block;
+
+            @include desktop {
+                margin-top: 2.8em;
+            }
+        }
     }
-
-
-    .view-header {
-      float: right;
-      margin-top: 1.6em;
-    }
-
-    .btn {
-      display: inline-block;
-
-      @include desktop {
-        margin-top: 2.8em;
-      }
-    }
-  }
 }
 
 // Sector keywords appearing near the footer of Content pages
 .field-name-field-sector-keywords {
-  margin: 1.5em 0;
+    margin: 1.5em 0;
 
-  .field-items {
-    .field-item {
-      display: inline-block;
-      font-size: .8em;
-      margin: 0 .5em;
+    .field-items {
+        .field-item {
+            display: inline-block;
+            font-size: .8em;
+            margin: 0 .5em;
 
-      a {
-        padding: 2px .5em;
-        border: solid 1px $primary-grey-light;
-        border-radius: 4px;
-        color: $primary-blue;
+            a {
+                padding: 2px .5em;
+                border: solid 1px $primary-grey-light;
+                border-radius: 4px;
+                color: $primary-blue;
 
-        &:hover {
-          border: solid 1px $primary-grey-light;
-          color: black;
-          background-color: $minor-blue;
+                &:hover {
+                    border: solid 1px $primary-grey-light;
+                    color: black;
+                    background-color: $minor-blue;
+                }
+
+                &:focus {
+                    border: solid 1px $primary-grey-light;
+                    color: $primary-blue;
+                    background-color: $white;
+                    box-shadow: 0px 0px 10px 3px rgba(81, 203, 238, 1);
+                }
+
+                &:active {
+                    border: solid 1px $primary-grey-light;
+                    color: black;
+                    background-color: $minor-teal;
+                    box-shadow: 0px 0px 0px rgba(81, 203, 238, 1);
+                }
+            }
         }
-        &:focus {
-          border: solid 1px $primary-grey-light;
-          color: $primary-blue;
-          background-color: $white;
-          box-shadow: 0px 0px 10px 3px rgba(81, 203, 238, 1);
-        }
-        &:active {
-          border: solid 1px $primary-grey-light;
-          color: black;
-          background-color: $minor-teal;
-          box-shadow: 0px 0px 0px rgba(81, 203, 238, 1);
-        }
-      }
     }
-  }
 }
+
 // Accessable  - Sector keywords appearing near the footer of Content pages
 .tags {
-  clear:both;
-  ul {
-    display: inline-block;
-    padding-left: 0px;
-    li {
-      display: inline-block;
-      margin: 0 .5em;
-    }
-  
+    clear: both;
 
-  a {
-    font-size: 0.8em !important;
-    padding: 2px .5em;
-    border: solid 1px $primary-grey-light;
-    border-radius: 4px;
-    color: $primary-blue;
+    ul {
+        display: inline-block;
+        padding-left: 0px;
 
-    &:hover {
-      border: solid 1px $primary-grey-light;
-      color: black;
-      background-color: $minor-blue;
+        li {
+            display: inline-block;
+            margin: 0 .5em;
+        }
+
+        a {
+            font-size: 0.8em !important;
+            padding: 2px .5em;
+            border: solid 1px $primary-grey-light;
+            border-radius: 4px;
+            color: $primary-blue;
+
+            &:hover {
+                border: solid 1px $primary-grey-light;
+                color: $white;
+                background-color: $minor-blue;
+            }
+
+            &:focus {
+                border: solid 1px $primary-grey-light;
+                color: $primary-blue;
+                background-color: $white;
+                box-shadow: 0px 0px 10px 3px rgba(81, 203, 238, 1);
+            }
+
+            &:active {
+                border: solid 1px $primary-grey-light;
+                color: black;
+                background-color: $minor-teal;
+                box-shadow: 0px 0px 0px rgba(81, 203, 238, 1);
+            }
+        }
     }
-    &:focus {
-      border: solid 1px $primary-grey-light;
-      color: $primary-blue;
-      background-color: $white;
-      box-shadow: 0px 0px 10px 3px rgba(81, 203, 238, 1);
-    }
-    &:active {
-      border: solid 1px $primary-grey-light;
-      color: black;
-      background-color: $minor-teal;
-      box-shadow: 0px 0px 0px rgba(81, 203, 238, 1);
-    }
-  }
-}
 }

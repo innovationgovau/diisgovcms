@@ -1,7 +1,12 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v3.72  * 2018-09-21 | fcbf107 | VSTS 95217 - Hamburger menu icon and text is too large in IE
- origin/features  * 2018-09-20 | 64f3003 | Updated changelog to v3.71
+ HEAD -> features, tag: v3.74, origin/features  * 2018-10-10 | 4cb466c | VSTS 95337 - DEV: DATA & PUBS: Landing page
+   * 2018-10-05 | 78cc45a | VSTS 95337 - DATA & PUBS: Landing page
+   * 2018-09-27 | a6ed50f | Updated changelog to v3.73
+ tag: v3.73  * 2018-09-27 | f313972 | Migrated 'components/_spacing-css.scss' into 'base/_builders.scss'
+ tag: 2018-09-20.2, tag: 2018-09-20.1  * 2018-09-21 | 921878d | Updated changelog to v3.72
+ tag: v3.72  * 2018-09-21 | fcbf107 | VSTS 95217 - Hamburger menu icon and text is too large in IE
+ tag: 2018-09-20.0, tag: 2018-09-20  * 2018-09-20 | 64f3003 | Updated changelog to v3.71
  tag: v3.71  * 2018-09-20 | 36ed76e | VSTS 93417 - DEV: Investigate Salsa and Amazee govCMS setup
  tag: 2018-09-19.0, tag: 2018-09-19  * 2018-09-19 | f4afde8 | Updated changelog to v3.70
  tag: v3.70  * 2018-09-19 | 3429053 | VSTS 94079 - Hamburger menu issues on mobile phones and tables with Chrome and Firefox
@@ -641,3 +646,5 @@
  tag: v1.0  * 2018-01-15 | a44adc2 | THEME: Updated anchor link styles, added $purple colour variables
  tag: 2018-01-15  * 2018-01-15 | cf048bd | Merge branch 'subtheme'
    * 2018-01-15 | 538423b | THEME: Added 'Skip to Content' links. Not sure why they were missing
+ tag: 2018-01-14.0  * 2018-01-15 | 11ce143 | THEME: Updated breadcrumbs, hero-list chevron icons and testing styles
+   * 2018-01-15 | 1978339 | THEME: Added function to rewrite <script> tag output, to reomve type attribute
