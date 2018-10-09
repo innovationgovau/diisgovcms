@@ -246,10 +246,12 @@
 
 // Data and publications view-content
 
-.view-faceted-search.view-display-id-page_2 {
-    .views-row:not(:nth-last-child(1)) {
-        margin: 20px 0;
-        border-bottom: solid 1px #ccc;
+.view-faceted-search {
+    &.result-divider {
+        .views-row:not(:nth-last-child(1)) {
+            margin: 20px 0;
+            border-bottom: solid 1px #ccc;
+        }
     }
 }
 

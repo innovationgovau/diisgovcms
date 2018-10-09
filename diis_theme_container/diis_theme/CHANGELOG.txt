@@ -1,6 +1,8 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v3.74, origin/features  * 2018-10-10 | 4cb466c | VSTS 95337 - DEV: DATA & PUBS: Landing page
+ HEAD -> features, tag: v3.75  * 2018-10-10 | 05d66cf | VSTS 95337 - DEV: DATA & PUBS: Landing page
+ origin/features  * 2018-10-10 | e64fee3 | Updated changelog to v3.74
+ tag: v3.74  * 2018-10-10 | 4cb466c | VSTS 95337 - DEV: DATA & PUBS: Landing page
    * 2018-10-05 | 78cc45a | VSTS 95337 - DATA & PUBS: Landing page
    * 2018-09-27 | a6ed50f | Updated changelog to v3.73
  tag: v3.73  * 2018-09-27 | f313972 | Migrated 'components/_spacing-css.scss' into 'base/_builders.scss'
