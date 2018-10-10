@@ -2121,6 +2121,7 @@ th.active a, th.active a:active, th.active a:focus, th.active a:hover {
   h6,
   caption,
   figure {
+    page-break-after: avoid;
     break-after: avoid;
   }
   h2 + *,
@@ -2128,6 +2129,7 @@ th.active a, th.active a:active, th.active a:focus, th.active a:hover {
   h4 + *,
   h5 + *,
   h6 + * {
+    page-break-before: avoid;
     break-before: avoid;
   }
   div + h2,
@@ -2205,6 +2207,7 @@ th.active a, th.active a:active, th.active a:focus, th.active a:hover {
   input h4,
   input h5,
   input h6 {
+    page-break-before: auto;
     break-before: auto;
   }
   img {
@@ -3137,10 +3140,6 @@ ul li #mc_embed_signup .mc-field-group select:active {
   /* IE 10+ */
 }
 
-.form-control:-ms-input-placeholder {
-  color: #333;
-}
-
 .form-control::placeholder {
   color: #333;
 }
@@ -3785,3 +3784,5 @@ form .btn {
   transform-origin: bottom right;
   background: #fff;
 }
+
+/*# sourceMappingURL=maps/print.css.map */

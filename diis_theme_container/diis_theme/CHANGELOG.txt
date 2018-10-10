@@ -1,6 +1,8 @@
 /* Changelog for DIIS theme */
         
- HEAD -> features, tag: v3.76, origin/features  * 2018-10-10 | dc8ccc3 | VSTS 95337 - DEV: DATA & PUBS: Landing page
+ HEAD -> features, tag: v3.77  * 2018-10-10 | c58e561 | VSTS 95337 - DEV: DATA & PUBS: Landing page
+ origin/features  * 2018-10-10 | d6f99cc | Updated changelog to v3.76
+ tag: v3.76  * 2018-10-10 | dc8ccc3 | VSTS 95337 - DEV: DATA & PUBS: Landing page
    * 2018-10-10 | 06b1310 | Updated changelog to v3.75
  tag: v3.75  * 2018-10-10 | 05d66cf | VSTS 95337 - DEV: DATA & PUBS: Landing page
    * 2018-10-10 | e64fee3 | Updated changelog to v3.74
@@ -647,8 +649,3 @@
  tag: v1.1  * 2018-01-16 | b8919b9 | test file
  tag: v1.2  * 2018-01-16 | c28d517 | THEME: Updated typography, included Monsterrat font, removed blue heading colour for now
    * 2018-01-16 | 7bf56fa | THEME: Updated footer link styles and <hr>
- tag: v1.0  * 2018-01-15 | a44adc2 | THEME: Updated anchor link styles, added $purple colour variables
- tag: 2018-01-15  * 2018-01-15 | cf048bd | Merge branch 'subtheme'
-   * 2018-01-15 | 538423b | THEME: Added 'Skip to Content' links. Not sure why they were missing
- tag: 2018-01-14.0  * 2018-01-15 | 11ce143 | THEME: Updated breadcrumbs, hero-list chevron icons and testing styles
-   * 2018-01-15 | 1978339 | THEME: Added function to rewrite <script> tag output, to reomve type attribute
