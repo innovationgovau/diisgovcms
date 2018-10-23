@@ -24,6 +24,11 @@
     .coa-inline {
         // inline crest styles
         float: none;
+        
+        p {
+            font-size: $crest-font-size-l2;
+            line-height: $crest-line-height;
+        }
 
         @include mobile-sm-only {
             position: relative;
@@ -45,7 +50,7 @@
     }
 
     .coa-titles {
-        font-family: 'Times New Roman', Arial;
+        font-family: 'Times New Roman', Times, serif;
         font-weight: bold;
         position: relative;
         width: 100%;
@@ -63,7 +68,7 @@
             display: block;
             width: 22em; // larger width handles Android crest-split bug
             min-width: 16.5em;
-            padding: 1em;
+            padding: 1em 0;
             border-color: transparent;
 
             @include mobile-only {
@@ -73,13 +78,14 @@
 
 
             @include mobile-sm-only {
-                width: 18em;
+                width: 20em;
             }
 
 
             @include tablet {
                 left: 0;
                 transform: none;
+                padding: 1em;
             }
 
 
@@ -124,7 +130,7 @@
                 // First line of Crest text, 'Austrlian government'
                 & > div:first-child {
                     margin-bottom: 3px;
-                    padding-bottom: 3px $imp;
+                    padding-bottom: 2px $imp;
                     border-bottom: solid 1px $white;
 
                     @include print {
@@ -155,7 +161,7 @@
 
             + div {
                 display: inline-block;
-                margin: 18px 0 0 10px; // use px here as the crest is a fixed size and spacing must be maintained for branding purposes
+                margin: 15px 0 0 10px; // use px here as the crest is a fixed size and spacing must be maintained for branding purposes
                 + p {
                     // 'Beta' text
                     font-size: 2em;
@@ -171,6 +177,11 @@
         div[class*='coa-lines-'] {
             padding: 0;
             color: $white;
+        }
+        
+        .coa-line-one {
+            font-size: $crest-font-size-l1;
+            line-height: $crest-line-height;
         }
     }
 }
