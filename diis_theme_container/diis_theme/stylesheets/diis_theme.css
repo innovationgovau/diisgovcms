@@ -5541,7 +5541,7 @@ form .btn {
 .tags {
   clear: both; }
   .tags ul {
-    display: inline-block;
+    display: inline-grid;
     padding-left: 0px; }
     .tags ul li {
       display: inline-block;

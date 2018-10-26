@@ -822,7 +822,8 @@
                     permitSearch = false;
                     // As the form PHP template uses a counter to prevent duplicate IDs,
                     // use attribute selectors to find matches.
-                    var $searchField = $this.find('input[id^=edit-search-api-views-fulltext]');
+                    var $searchField = $this.find('input[id^=edit-search-api-views-fulltext], input[id^=edit-search-api-views-publications]');
+                    
 
                 // Add a  class to the form field wrapper if none exists 
                 if (!$searchField.parent().hasClass('.popupAlertWrapper')) {
