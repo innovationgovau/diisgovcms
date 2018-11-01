@@ -5540,9 +5540,6 @@ form .btn {
 
 .tags {
   clear: both; }
-  @media (max-width: 768px) {
-    .tags ul {
-      display: inline-grid; } }
   .tags ul {
     display: inline-block;
     padding-left: 0px; }
@@ -5569,6 +5566,9 @@ form .btn {
         color: black;
         background-color: #61c6c6;
         box-shadow: 0px 0px 0px #51cbee; }
+  @media (max-width: 768px) {
+    .tags ul {
+      display: inline-grid; } }
 
 .text-resize-social-widget-wrapper {
   display: none; }
