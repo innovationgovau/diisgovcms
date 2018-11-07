@@ -3060,3 +3060,7 @@ body.adminimal-skin-alternative.adminimal-theme.page-admin-structure-features #e
 .fpa-container .dummy-checkbox {
   display: none !important;
 }
+
+.hidden-ct{
+  display: none;
+}
