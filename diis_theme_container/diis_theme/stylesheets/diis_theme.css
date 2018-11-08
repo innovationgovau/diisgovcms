@@ -4986,10 +4986,11 @@ img {
 ul.nolist {
   padding-left: 0;
   list-style: none; }
-
-li .linkwrap {
+ul li.dl > span.linkwrap {
   margin-left: -20px;
   background-color: white; }
+  ul li.dl > span.linkwrap + span.linkwrap {
+    margin-left: 0; }
 
 #skip-links a {
   visibility: none;
