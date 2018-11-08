@@ -4987,6 +4987,10 @@ ul.nolist {
   padding-left: 0;
   list-style: none; }
 
+li .linkwrap {
+  margin-left: -20px;
+  background-color: white; }
+
 #skip-links a {
   visibility: none;
   width: 100%;
