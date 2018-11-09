@@ -65,11 +65,15 @@
     }
 
 
-    #edit-search-api-views-fulltext,
-    .form-item-search-api-views-publications .form-control  {
+    #edit-search-api-views-fulltext {
         font-size: .9em;
         height: 2.3em;
     }
+}
+
+.form-item-search-api-views-publications .form-control  {
+    font-size: .9em;
+    height: 2.3em;
 }
 
 /* hide last updated label and date for publications */
