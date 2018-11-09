@@ -5340,7 +5340,9 @@ table {
   #views-exposed-form-faceted-search-page-inner .views-exposed-widgets #edit-search-api-views-fulltext-wrapper label {
     margin-top: 0; } }
 #views-exposed-form-advanced-search-page-inner #edit-search-api-views-fulltext,
-#views-exposed-form-faceted-search-page-inner #edit-search-api-views-fulltext {
+#views-exposed-form-advanced-search-page-inner .form-item-search-api-views-publications .form-control,
+#views-exposed-form-faceted-search-page-inner #edit-search-api-views-fulltext,
+#views-exposed-form-faceted-search-page-inner .form-item-search-api-views-publications .form-control {
   font-size: .9em;
   height: 2.3em; }
 
