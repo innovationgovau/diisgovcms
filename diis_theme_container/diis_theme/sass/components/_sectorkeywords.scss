@@ -49,10 +49,9 @@
                 }
 
                 &:focus {
-                    border: solid 1px $primary-grey-light;
+                    border: solid 3px rgba(81, 203, 238, 1);
                     color: $primary-blue;
                     background-color: $white;
-                    box-shadow: 0px 0px 10px 3px rgba(81, 203, 238, 1);
                 }
 
                 &:active {
