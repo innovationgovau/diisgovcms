@@ -110,5 +110,31 @@
         ul {
             display: inline-grid;
         }
+        // Browser hacks to target safari only
+        // Include Chrome ≥ 28   Safari ≥ 9   Internet Explorer/Edge ≥ 12   Opera ≥ 14
+        @supports (-webkit-appearance:none) {
+            .label-inline {
+                position: relative;
+                top: -10px;
+            }
+        }
+        // Exclude Opera ≥ 12
+        @media (min-resolution: .001dpcm) {
+            .label-inline {
+                    position: static;
+            }
+        }
+        // Exclude Chrome ≥ 29   Opera ≥ 16
+        @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+            .label-inline {
+                    position: static;
+            }
+        }
+        // Exclude Internet Explorer/Edge ≥ 10
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
+            .label-inline {
+                    position: static;
+            }
+        }
     }
 }

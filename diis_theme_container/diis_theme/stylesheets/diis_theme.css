@@ -5576,7 +5576,20 @@ form .btn {
         box-shadow: 0px 0px 0px #51cbee; }
   @media (max-width: 768px) {
     .tags ul {
-      display: inline-grid; } }
+      display: inline-grid; }
+    @supports (-webkit-appearance: none) {
+      .tags .label-inline {
+        position: relative;
+        top: -10px; } } }
+@media (max-width: 768px) and (min-resolution: 0.001dpcm) {
+  .tags .label-inline {
+    position: static; } }
+@media all and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .tags .label-inline {
+    position: static; } }
+@media screen and (max-width: 768px) and (-ms-high-contrast: active), (max-width: 768px) and (-ms-high-contrast: none) {
+  .tags .label-inline {
+    position: static; } }
 
 .text-resize-social-widget-wrapper {
   display: none; }
